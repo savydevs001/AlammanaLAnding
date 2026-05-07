@@ -1,26 +1,11 @@
-import type { Metadata } from 'next';
-import ContactClient from './ContactClient';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'Contact Alammana Developers | Faisal Hills Real Estate Consultation',
-  description: 'Get in touch with Alammana Developers for Faisal Hills real estate inquiries, property consultations, and investment opportunities in Islamabad.',
-  keywords: [
-    'contact Alammana',
-    'real estate consultation',
-    'Faisal Hills properties',
-    'Islamabad real estate inquiry',
-    'property investment'
-  ],
-  openGraph: {
-    title: 'Contact Alammana Developers',
-    description: 'Reach out to our team for Faisal Hills and Islamabad real estate services',
-    type: 'website',
-  },
-};
+import { motion } from 'motion/react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
-export default function Contact() {
-  return <ContactClient />;
-}
+export default function ContactClient() {
+  return (
+    <div className="pt-32 pb-24 bg-beige/20 min-h-screen">
       <div className="max-w-7xl mx-auto px-4">
         <header className="mb-20">
           <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold mb-6 block text-center">Get in Touch</span>
@@ -65,7 +50,7 @@ export default function Contact() {
             <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
               <img 
                 src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=800&auto=format&fit=crop" 
-                alt="Our Office"
+                alt="Alammana Office in Faisal Hills"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -95,20 +80,25 @@ export default function Contact() {
                 <select className="w-full bg-paper px-6 py-4 rounded-2xl outline-none focus:ring-2 ring-burgundy/20 transition-all font-serif appearance-none">
                   <option>Architectural Consultation</option>
                   <option>Project Development</option>
-                  <option>Real Estate Marketing</option>
-                  <option>Investment Opportunities</option>
+                  <option>Real Estate Investment</option>
+                  <option>Strategic Marketing</option>
+                  <option>Other</option>
                 </select>
               </div>
 
               <div className="space-y-4">
-                <label className="text-[10px] uppercase tracking-[0.2em] font-black text-ink/30 block ml-1">Project Details</label>
-                <textarea rows={6} className="w-full bg-paper px-6 py-4 rounded-2xl outline-none focus:ring-2 ring-burgundy/20 transition-all font-serif resize-none" placeholder="How can we help you build your legacy?" />
+                <label className="text-[10px] uppercase tracking-[0.2em] font-black text-ink/30 block ml-1">Message</label>
+                <textarea rows={6} className="w-full bg-paper px-6 py-4 rounded-2xl outline-none focus:ring-2 ring-burgundy/20 transition-all font-serif resize-none" placeholder="Tell us more about your vision..."></textarea>
               </div>
 
-              <button className="w-full bg-burgundy text-white py-6 rounded-2xl text-xs font-bold uppercase tracking-[0.3em] hover:bg-black transition-all flex items-center justify-center space-x-3">
-                <span>Send Message</span>
-                <ArrowRight size={18} />
-              </button>
+              <motion.button 
+                type="submit"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="w-full bg-burgundy text-white py-4 rounded-full font-bold uppercase tracking-widest hover:opacity-90 transition-all"
+              >
+                Send Consultation Request
+              </motion.button>
             </form>
           </div>
         </div>

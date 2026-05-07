@@ -1,26 +1,16 @@
-import type { Metadata } from 'next';
-import AboutClient from './AboutClient';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'About Alammana Developers | Faisal Hills Real Estate Excellence',
-  description: 'Learn about Alammana Developers, a leading luxury real estate and construction company in Faisal Hills and Islamabad. Our vision, mission, and commitment to excellence.',
-  keywords: [
-    'Alammana Developers',
-    'Faisal Hills developer',
-    'real estate company',
-    'luxury construction',
-    'Islamabad development company'
-  ],
-  openGraph: {
-    title: 'About Alammana Developers',
-    description: 'Premier luxury real estate and construction company specializing in Faisal Hills and Islamabad properties.',
-    type: 'website',
-  },
-};
+import { motion } from 'motion/react';
+import { Award, Shield, History } from 'lucide-react';
+import Link from 'next/link';
 
-export default function About() {
-  return <AboutClient />;
-}
+export default function AboutClient() {
+  const milestones = [
+    { year: '2015', event: 'Founded in Islamabad', desc: 'Starting as a boutique marketing agency for elite sectors.' },
+    { year: '2018', event: 'First Development Project', desc: 'Successful completion of Islamabad Heights residency.' },
+    { year: '2022', event: 'Faisal Hills Expansion', desc: 'Securing major territory for strategic urban development.' },
+    { year: '2026', event: 'National Recognition', desc: 'Voted top luxury developer in the capital region.' }
+  ];
 
   return (
     <div className="pt-24 md:pt-32 pb-16 md:pb-24">
@@ -65,7 +55,7 @@ export default function About() {
             <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" 
-                alt="Abeeyah Headquarters"
+                alt="Alammana Headquarters"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"
               />
@@ -92,33 +82,40 @@ export default function About() {
         </section>
 
         {/* Timeline */}
-        <section className="mb-32">
-          <h2 className="text-4xl font-serif mb-20 text-center italic">Our Timeline</h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-            {milestones.map((m, i) => (
+        <section className="mb-24">
+          <h2 className="text-5xl md:text-7xl font-serif italic mb-16">Our <span className="opacity-40">Journey</span></h2>
+          <div className="space-y-12">
+            {milestones.map((milestone, i) => (
               <motion.div 
-                key={i} 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                key={i}
+                initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="relative pt-8 border-t border-burgundy/20"
+                className={`grid grid-cols-1 md:grid-cols-12 gap-8 items-center ${i % 2 === 1 ? 'md:text-right' : ''}`}
               >
-                <span className="text-5xl font-serif text-burgundy/20 absolute top-0 left-0 -translate-y-1/2 bg-paper px-4">{m.year}</span>
-                <h4 className="text-lg font-serif mb-4 mt-8">{m.event}</h4>
-                <p className="text-sm text-ink/60">{m.desc}</p>
+                <div className={`md:col-span-5 ${i % 2 === 1 ? 'md:order-2' : ''}`}>
+                  <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold block mb-2">{milestone.year}</span>
+                  <h3 className="text-4xl font-serif mb-4 italic">{milestone.event}</h3>
+                  <p className="text-ink/60 text-lg leading-relaxed">{milestone.desc}</p>
+                </div>
+                <div className="md:col-span-2 flex justify-center">
+                  <div className="w-4 h-4 rounded-full bg-burgundy shadow-lg shadow-burgundy/30" />
+                </div>
+                <div className={`md:col-span-5 ${i % 2 === 1 ? 'md:order-1' : ''}`} />
               </motion.div>
             ))}
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="bg-ink text-beige p-16 md:p-24 rounded-3xl relative overflow-hidden text-center">
-            <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_#D4C3A3_1px,_transparent_1px)] bg-[length:24px_24px]" />
-            <h2 className="text-5xl font-serif mb-8 italic">Ready to Discuss <br />Your Vision?</h2>
-            <Link href="/contact" className="inline-flex items-center space-x-4 bg-burgundy text-white px-12 py-6 rounded-full text-sm font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-ink transition-all">
-                <span>Contact Us Now</span>
-                <ArrowRight size={20} />
-            </Link>
+        {/* CTA */}
+        <section className="bg-burgundy text-white p-12 md:p-20 rounded-3xl text-center">
+          <h2 className="text-4xl md:text-6xl font-serif italic mb-6">Be Part of the Alammana Legacy</h2>
+          <p className="text-xl opacity-90 mb-10 max-w-2xl mx-auto">
+            Join us in reshaping Islamabad&apos;s real estate landscape. Explore investment opportunities in Faisal Hills and beyond.
+          </p>
+          <Link href="/contact" className="inline-block bg-white text-burgundy px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-beige transition-all">
+            Start Your Journey
+          </Link>
         </section>
       </div>
     </div>
