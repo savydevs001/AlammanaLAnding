@@ -31,7 +31,7 @@ export default function TeamMemberClient({ params }: { params: Promise<{ id: str
             animate={{ opacity: 1, x: 0 }}
             className="relative"
           >
-            <div className="aspect-[3/4] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+            <div className="aspect-[3/4] overflow-hidden transition-all duration-700">
                <img 
                  src={member.image} 
                  alt={member.name} 

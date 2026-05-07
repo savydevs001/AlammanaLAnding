@@ -20,7 +20,7 @@ export const blogs: BlogPost[] = [
     date: 'May 12, 2026',
     author: 'Ali Khan',
     category: 'Market Insights',
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800&auto=format&fit=crop',
     readTime: '5 min read'
   },
   {
@@ -39,7 +39,7 @@ export const blogs: BlogPost[] = [
     date: 'April 28, 2026',
     author: 'Sara Ahmed',
     category: 'Architecture',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop',
     readTime: '4 min read'
   },
   {
@@ -58,7 +58,7 @@ export const blogs: BlogPost[] = [
     date: 'April 15, 2026',
     author: 'Zain Malik',
     category: 'Investment',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop',
     readTime: '6 min read'
   }
 ];

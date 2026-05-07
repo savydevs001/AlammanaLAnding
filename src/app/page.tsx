@@ -76,9 +76,10 @@ export default function Home() {
           <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_#D4C3A3_1px,_transparent_1px)] bg-[length:24px_24px]"></div>
           
           <img 
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=800&q=80" 
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" 
             alt="Faisal Hills Residency"
-            className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50"
+            className="absolute inset-0 w-full h-full object-cover opacity-60"
+            referrerPolicy="no-referrer"
           />
 
           <motion.div 
@@ -197,9 +198,9 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden">
                 <img 
-                   src="https://images.unsplash.com/photo-1541888941259-7997a58d355b?auto=format&fit=crop&w=1000&q=80" 
+                   src="https://images.unsplash.com/photo-1541888941259-7997a58d355b?q=80&w=1000&auto=format&fit=crop" 
                    alt="Construction Site"
-                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                   className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
                    referrerPolicy="no-referrer"
                 />
               </div>
@@ -229,12 +230,12 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="relative h-[400px] group overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1581456101257-817666ee3831?auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=800&auto=format&fit=crop" 
                 alt="Islamabad"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-ink/30 flex items-center justify-center">
+              <div className="absolute inset-0 bg-ink/10 flex items-center justify-center group-hover:bg-ink/30 transition-colors">
                 <div className="text-center text-paper">
                   <MapPin className="mx-auto mb-4 text-beige" />
                   <h3 className="text-3xl font-serif uppercase tracking-widest">Islamabad</h3>
@@ -243,12 +244,12 @@ export default function Home() {
             </div>
             <div className="relative h-[400px] group overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1503387762-592be5a52680?auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800&auto=format&fit=crop" 
                 alt="Faisal Hills"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-ink/30 flex items-center justify-center">
+              <div className="absolute inset-0 bg-ink/10 flex items-center justify-center group-hover:bg-ink/30 transition-colors">
                 <div className="text-center text-paper">
                   <MapPin className="mx-auto mb-4 text-beige" />
                   <h3 className="text-3xl font-serif uppercase tracking-widest">Faisal Hills</h3>

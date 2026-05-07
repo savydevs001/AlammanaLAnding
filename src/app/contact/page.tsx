@@ -47,9 +47,9 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl grayscale brightness-75">
+            <div className="relative aspect-video rounded-3xl overflow-hidden shadow-xl">
               <img 
-                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=800&auto=format&fit=crop" 
                 alt="Our Office"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

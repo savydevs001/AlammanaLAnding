@@ -16,7 +16,7 @@ export default function TeamCard({ member }: TeamCardProps) {
       className="group"
     >
       <Link href={`/team/${member.id}`} className="block">
-        <div className="relative aspect-square overflow-hidden mb-6 filter grayscale group-hover:grayscale-0 transition-all duration-500 rounded-3xl">
+        <div className="relative aspect-square overflow-hidden mb-6 transition-all duration-500 rounded-3xl">
           <img
             src={member.image}
             alt={member.name}
