@@ -1,24 +1,21 @@
-import { useParams, Link } from 'react-router-dom';
-import { team } from '../data/team';
-import SEO from '../components/SEO';
+'use client';
+
+import { use } from 'react';
+import { team } from '../../../data/team';
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ArrowLeft, Mail, Linkedin, Instagram } from 'lucide-react';
-import { useEffect } from 'react';
 
-export default function TeamMember() {
-  const { id } = useParams();
+export default function TeamMemberClient({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params);
   const member = team.find(m => m.id === id);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [id]);
 
   if (!member) {
     return (
       <div className="h-screen flex items-center justify-center text-center">
         <div>
           <h1 className="text-4xl font-serif mb-4">Member Not Found</h1>
-          <Link to="/" className="text-burgundy underline uppercase tracking-widest text-xs font-bold">Back to Home</Link>
+          <Link href="/team" className="text-burgundy underline uppercase tracking-widest text-xs font-bold">Back to Team</Link>
         </div>
       </div>
     );
@@ -26,13 +23,6 @@ export default function TeamMember() {
 
   return (
     <div className="pt-32 pb-24 min-h-screen bg-paper">
-      <SEO 
-        title={member.name} 
-        description={`${member.name} - ${member.role} at Alammana Developers.`}
-        image={member.image}
-        article
-      />
-
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Image */}
@@ -59,7 +49,7 @@ export default function TeamMember() {
             className="space-y-10"
           >
             <div>
-              <Link to="/#team" className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.4em] font-bold mb-10 hover:text-burgundy transition-colors">
+              <Link href="/team" className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.4em] font-bold mb-10 hover:text-burgundy transition-colors">
                 <ArrowLeft size={14} />
                 <span>Executive Team</span>
               </Link>

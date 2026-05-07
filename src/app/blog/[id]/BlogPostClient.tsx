@@ -1,39 +1,29 @@
-import { useParams, Link } from 'react-router-dom';
-import { blogs } from '../data/blogs';
-import SEO from '../components/SEO';
+'use client';
+
+import { use } from 'react';
+import { blogs } from '../../../data/blogs';
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ArrowLeft, Clock, User, Share2 } from 'lucide-react';
 import Markdown from 'react-markdown';
-import { useEffect } from 'react';
 
-export default function BlogPost() {
-  const { id } = useParams();
+export default function BlogPostClient({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params);
   const post = blogs.find(b => b.id === id);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [id]);
 
   if (!post) return (
     <div className="h-screen flex items-center justify-center">
       <div className="text-center">
         <h1 className="text-4xl font-serif mb-4">Article Not Found</h1>
-        <Link to="/blog" className="text-burgundy underline uppercase tracking-widest text-xs font-bold">Back to Journal</Link>
+        <Link href="/blog" className="text-burgundy underline uppercase tracking-widest text-xs font-bold">Back to Journal</Link>
       </div>
     </div>
   );
 
   return (
     <div className="pt-32 pb-24 bg-paper">
-      <SEO 
-        title={post.title} 
-        description={post.excerpt}
-        image={post.image}
-        article
-      />
-
       <div className="max-w-4xl mx-auto px-4">
-        <Link to="/blog" className="inline-flex items-center space-x-2 text-[10px] uppercase tracking-[0.4em] font-bold mb-12 hover:text-burgundy transition-colors">
+        <Link href="/blog" className="inline-flex items-center space-x-2 text-[10px] uppercase tracking-[0.4em] font-bold mb-12 hover:text-burgundy transition-colors">
           <ArrowLeft size={14} />
           <span>Back to Journal</span>
         </Link>

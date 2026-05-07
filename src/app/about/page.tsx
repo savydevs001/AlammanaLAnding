@@ -1,7 +1,8 @@
+'use client';
+
 import { motion } from 'motion/react';
-import SEO from '../components/SEO';
-import { ArrowRight, Award, Shield, History, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowRight, Award, Shield, History } from 'lucide-react';
+import Link from 'next/link';
 
 export default function About() {
   const milestones = [
@@ -13,11 +14,6 @@ export default function About() {
 
   return (
     <div className="pt-24 md:pt-32 pb-16 md:pb-24">
-      <SEO 
-        title="About Us" 
-        description="Learn about the heritage and vision of Alammana Developers."
-      />
-
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Story Section */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24 md:mb-32">
@@ -109,7 +105,7 @@ export default function About() {
         <section className="bg-ink text-beige p-16 md:p-24 rounded-3xl relative overflow-hidden text-center">
             <div className="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_#D4C3A3_1px,_transparent_1px)] bg-[length:24px_24px]" />
             <h2 className="text-5xl font-serif mb-8 italic">Ready to Discuss <br />Your Vision?</h2>
-            <Link to="/contact" className="inline-flex items-center space-x-4 bg-burgundy text-white px-12 py-6 rounded-full text-sm font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-ink transition-all">
+            <Link href="/contact" className="inline-flex items-center space-x-4 bg-burgundy text-white px-12 py-6 rounded-full text-sm font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-ink transition-all">
                 <span>Contact Us Now</span>
                 <ArrowRight size={20} />
             </Link>

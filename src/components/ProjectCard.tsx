@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Project } from '../types';
 
@@ -30,7 +30,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         <p className="text-sm text-paper/80 mb-6 italic line-clamp-2">{project.description}</p>
         
         <Link 
-          to={`/portfolio/${project.id}`}
+          href={`/portfolio/${project.id}`}
           className="flex items-center space-x-2 text-xs uppercase tracking-widest font-bold hover:text-beige transition-colors"
         >
           <span>View Details</span>

@@ -1,15 +1,11 @@
+'use client';
+
 import { motion } from 'motion/react';
-import SEO from '../components/SEO';
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 
 export default function Contact() {
   return (
     <div className="pt-32 pb-24 bg-beige/20 min-h-screen">
-      <SEO 
-        title="Contact" 
-        description="Connect with Alammana Developers for construction, development, and real estate marketing inquiries."
-      />
-
       <div className="max-w-7xl mx-auto px-4">
         <header className="mb-20">
           <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold mb-6 block text-center">Get in Touch</span>

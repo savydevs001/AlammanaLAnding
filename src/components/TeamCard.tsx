@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { TeamMember } from '../types';
 
 interface TeamCardProps {
@@ -15,7 +15,7 @@ export default function TeamCard({ member }: TeamCardProps) {
       viewport={{ once: true }}
       className="group"
     >
-      <Link to={`/team/${member.id}`} className="block">
+      <Link href={`/team/${member.id}`} className="block">
         <div className="relative aspect-square overflow-hidden mb-6 filter grayscale group-hover:grayscale-0 transition-all duration-500 rounded-3xl">
           <img
             src={member.image}

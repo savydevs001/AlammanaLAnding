@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
 
 export default function Footer() {
@@ -54,8 +54,8 @@ export default function Footer() {
         <div className="mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] text-beige/30 tracking-[0.2em] uppercase font-bold">
           <p>© 2026 Alammana Developers. Architecting Legacies.</p>
           <div className="flex space-x-8 mt-6 md:mt-0">
-            <Link to="/privacy" className="hover:text-beige transition-colors">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-beige transition-colors">Terms of Service</Link>
+            <Link href="/privacy" className="hover:text-beige transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-beige transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

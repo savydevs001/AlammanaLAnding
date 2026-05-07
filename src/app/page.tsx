@@ -1,11 +1,12 @@
+'use client';
+
 import { motion } from 'motion/react';
 import { projects } from '../data/projects';
 import { team } from '../data/team';
 import ProjectCard from '../components/ProjectCard';
 import TeamCard from '../components/TeamCard';
-import SEO from '../components/SEO';
 import { ArrowRight, MapPin, Building2, Paintbrush, TrendingUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const services = [
   {
@@ -28,11 +29,6 @@ const services = [
 export default function Home() {
   return (
     <div className="pt-20">
-      <SEO 
-        title="Luxury Real Estate & Construction" 
-        description="Alammana Developers - Leading real estate construction and marketing agency in Islamabad and Faisal Hills."
-      />
-
       {/* Hero Section */}
       <section className="relative min-h-[90vh] lg:h-[90vh] grid grid-cols-1 md:grid-cols-12 overflow-hidden bg-beige">
         {/* Left Content */}
@@ -54,12 +50,12 @@ export default function Home() {
               We turn visions into tangible luxury landmarks.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link to="/portfolio" className="bg-burgundy text-white px-8 py-4 rounded-full text-sm uppercase tracking-widest font-bold hover:opacity-90 transition-opacity text-center shadow-lg shadow-burgundy/20">
+              <Link href="/portfolio" className="bg-burgundy text-white px-8 py-4 rounded-full text-sm uppercase tracking-widest font-bold hover:opacity-90 transition-opacity text-center shadow-lg shadow-burgundy/20">
                 View Portfolio
               </Link>
-              <a href="#contact" className="border border-sand text-ink px-8 py-4 rounded-full text-sm uppercase tracking-widest font-bold hover:bg-white transition-all text-center">
+              <Link href="/contact" className="border border-sand text-ink px-8 py-4 rounded-full text-sm uppercase tracking-widest font-bold hover:bg-white transition-all text-center">
                 Consultation
-              </a>
+              </Link>
             </div>
 
             <div className="flex flex-wrap gap-4 md:gap-6 mt-12 md:mt-16">
@@ -107,7 +103,7 @@ export default function Home() {
                 <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-400"></div>
                 <div className="w-10 h-10 rounded-full border-2 border-white bg-burgundy flex items-center justify-center text-[10px] text-white font-bold">+3</div>
               </div>
-              <Link to="/portfolio/faisal-hills-residency" className="text-burgundy font-bold text-sm uppercase tracking-widest hover:underline">
+              <Link href="/portfolio/faisal-hills-residency" className="text-burgundy font-bold text-sm uppercase tracking-widest hover:underline">
                 View Project
               </Link>
             </div>
@@ -157,7 +153,7 @@ export default function Home() {
               <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">Portfolio</span>
               <h2 className="text-5xl font-serif italic tracking-tight">Featured Projects</h2>
             </div>
-            <Link to="/portfolio" className="text-xs uppercase tracking-[0.2em] font-bold border-b border-burgundy pb-2 hover:opacity-70 transition-opacity">
+            <Link href="/portfolio" className="text-xs uppercase tracking-[0.2em] font-bold border-b border-burgundy pb-2 hover:opacity-70 transition-opacity">
               View All Works
             </Link>
           </div>
@@ -218,7 +214,7 @@ export default function Home() {
       </section>
 
       {/* Locations Section */}
-      <section className="py-24 bg-paper" id="about">
+      <section className="py-24 bg-paper" id="about-info">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">Our Reach</span>
@@ -264,7 +260,7 @@ export default function Home() {
       </section>
 
       {/* Team Section */}
-      <section className="py-24 bg-beige/10" id="team">
+      <section className="py-24 bg-beige/10" id="team-info">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-serif italic tracking-tight mb-4">Meet the Visionaries</h2>
@@ -280,7 +276,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 border-t border-burgundy/10" id="contact">
+      <section className="py-24 border-t border-burgundy/10" id="contact-info">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>

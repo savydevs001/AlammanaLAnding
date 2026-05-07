@@ -1,17 +1,13 @@
+'use client';
+
 import { motion } from 'motion/react';
-import { blogs } from '../data/blogs';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import { blogs } from '../../data/blogs';
+import Link from 'next/link';
 import { ArrowRight, Clock, User } from 'lucide-react';
 
 export default function Blog() {
   return (
     <div className="pt-32 pb-24 bg-beige/30 min-h-screen">
-      <SEO 
-        title="Journal" 
-        description="Insights on real estate, architecture, and urban development in Islamabad."
-      />
-
       <div className="max-w-7xl mx-auto px-4">
         <header className="mb-20 text-center max-w-3xl mx-auto">
           <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold mb-6 block">The Journal</span>
@@ -31,7 +27,7 @@ export default function Blog() {
               transition={{ delay: i * 0.1 }}
               className="bg-white group rounded-3xl overflow-hidden shadow-sm border border-sand/20 flex flex-col h-full"
             >
-              <Link to={`/blog/${post.id}`} className="block relative aspect-[16/10] overflow-hidden">
+              <Link href={`/blog/${post.id}`} className="block relative aspect-[16/10] overflow-hidden">
                 <img 
                   src={post.image} 
                   alt={post.title} 
@@ -58,7 +54,7 @@ export default function Blog() {
                 </div>
 
                 <h2 className="text-2xl font-serif mb-4 group-hover:text-burgundy transition-colors line-clamp-2 italic">
-                  <Link to={`/blog/${post.id}`}>{post.title}</Link>
+                  <Link href={`/blog/${post.id}`}>{post.title}</Link>
                 </h2>
                 
                 <p className="text-sm text-ink/60 mb-6 line-clamp-3 leading-relaxed">
@@ -66,7 +62,7 @@ export default function Blog() {
                 </p>
 
                 <div className="mt-auto pt-6 border-t border-sand/10">
-                  <Link to={`/blog/${post.id}`} className="flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-burgundy group-hover:gap-4 transition-all">
+                  <Link href={`/blog/${post.id}`} className="flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-burgundy group-hover:gap-4 transition-all">
                     <span>Read Article</span>
                     <ArrowRight size={14} />
                   </Link>

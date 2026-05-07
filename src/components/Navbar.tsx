@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client';
+
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
@@ -19,7 +21,7 @@ export default function Navbar() {
     <nav className="fixed w-full z-50 bg-white/50 backdrop-blur-md border-b border-sand/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
-          <Link to="/" className="flex items-center space-x-2 md:space-x-3">
+          <Link href="/" className="flex items-center space-x-2 md:space-x-3">
             <div className="w-8 h-8 md:w-10 md:h-10 bg-burgundy rounded-lg flex items-center justify-center text-white font-bold text-lg md:text-xl">A</div>
             <span className="text-lg md:text-2xl font-bold uppercase tracking-[0.2em] md:tracking-widest text-burgundy">ALAMMANA</span>
           </Link>
@@ -29,13 +31,13 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                to={link.path}
+                href={link.path}
                 className="text-sm uppercase tracking-wider font-semibold hover:text-burgundy transition-colors"
               >
                 {link.name}
               </Link>
             ))}
-            <a href="#contact" className="bg-burgundy text-white px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity">
+            <a href="/contact" className="bg-burgundy text-white px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity">
               Consultation
             </a>
           </div>
@@ -60,7 +62,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <Link
                 key={link.name}
-                to={link.path}
+                href={link.path}
                 onClick={() => setIsOpen(false)}
                 className="text-lg uppercase tracking-widest font-serif font-medium"
               >

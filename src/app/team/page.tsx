@@ -1,16 +1,11 @@
-import { motion } from 'motion/react';
-import { team } from '../data/team';
-import TeamCard from '../components/TeamCard';
-import SEO from '../components/SEO';
+'use client';
+
+import { team } from '../../data/team';
+import TeamCard from '../../components/TeamCard';
 
 export default function Team() {
   return (
     <div className="pt-32 pb-24 bg-beige/10 min-h-screen">
-      <SEO 
-        title="Our Team" 
-        description="Meet the expert team of architects, developers, and marketers at Alammana Developers."
-      />
-
       <div className="max-w-7xl mx-auto px-4">
         <header className="mb-20 text-center max-w-3xl mx-auto">
           <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold mb-6 block">The Visionaries</span>

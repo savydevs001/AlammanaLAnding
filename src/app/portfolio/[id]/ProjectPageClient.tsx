@@ -1,25 +1,21 @@
-import { useParams, Link, useNavigate } from 'react-router-dom';
-import { projects } from '../data/projects';
-import SEO from '../components/SEO';
+'use client';
+
+import { use } from 'react';
+import { projects } from '../../../data/projects';
+import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ArrowLeft, MapPin, CheckCircle2 } from 'lucide-react';
-import { useEffect } from 'react';
 
-export default function ProjectDetail() {
-  const { id } = useParams();
-  const navigate = useNavigate();
+export default function ProjectPageClient({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params);
   const project = projects.find(p => p.id === id);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [id]);
 
   if (!project) {
     return (
       <div className="h-screen flex items-center justify-center text-center">
         <div>
           <h1 className="text-4xl font-serif mb-4">Project Not Found</h1>
-          <Link to="/portfolio" className="text-burgundy underline uppercase tracking-widest text-xs font-bold">Back to Portfolio</Link>
+          <Link href="/portfolio" className="text-burgundy underline uppercase tracking-widest text-xs font-bold">Back to Portfolio</Link>
         </div>
       </div>
     );
@@ -27,13 +23,6 @@ export default function ProjectDetail() {
 
   return (
     <div className="pt-20">
-      <SEO 
-        title={project.title} 
-        description={project.description}
-        image={project.thumbnail}
-        article
-      />
-
       {/* Hero */}
       <section className="relative h-[60vh] md:h-[80vh] overflow-hidden">
         <img 
@@ -44,7 +33,7 @@ export default function ProjectDetail() {
         />
         <div className="absolute inset-0 bg-ink/30" />
         <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-24 text-paper">
-           <Link to="/portfolio" className="flex items-center space-x-2 text-xs uppercase tracking-[0.3em] font-bold mb-8 hover:text-beige transition-colors">
+           <Link href="/portfolio" className="flex items-center space-x-2 text-xs uppercase tracking-[0.3em] font-bold mb-8 hover:text-beige transition-colors">
             <ArrowLeft size={14} />
             <span>Back to Portfolio</span>
            </Link>

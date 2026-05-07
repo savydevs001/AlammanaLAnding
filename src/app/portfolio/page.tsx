@@ -1,7 +1,8 @@
+'use client';
+
 import { motion } from 'motion/react';
-import { projects } from '../data/projects';
-import ProjectCard from '../components/ProjectCard';
-import SEO from '../components/SEO';
+import { projects } from '../../data/projects';
+import ProjectCard from '../../components/ProjectCard';
 import { useState } from 'react';
 
 export default function Portfolio() {
@@ -14,11 +15,6 @@ export default function Portfolio() {
 
   return (
     <div className="pt-32 pb-24">
-      <SEO 
-        title="Portfolio" 
-        description="Explore the architectural and development portfolio of Alammana Developers."
-      />
-
       <div className="max-w-7xl mx-auto px-4">
         <header className="mb-20">
           <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold mb-6 block">Our Legacy</span>
