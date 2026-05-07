@@ -25,8 +25,8 @@ export default function About() {
             <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold block">Our Story</span>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif italic mb-6 md:mb-10 leading-none">A Legacy of <br /> <span className="opacity-40">Excellence</span></h1>
             <p className="text-lg md:text-xl text-ink/60 leading-relaxed font-serif italic">
-              "We don't just build structures; we architect experiences. Every stone laid by Alammana 
-              is a testament to our commitment to luxury, integrity, and future-ready urban development."
+              &quot;We don&apos;t just build structures; we architect experiences. Every stone laid by Alammana 
+              is a testament to our commitment to luxury, integrity, and future-ready urban development.&quot;
             </p>
             <p className="text-sm md:text-base text-ink/80 leading-relaxed max-w-xl">
               Since 2015, Alammana Developers has been at the forefront of the Pakistani real estate 

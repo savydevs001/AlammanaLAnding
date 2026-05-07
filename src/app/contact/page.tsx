@@ -9,7 +9,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4">
         <header className="mb-20">
           <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold mb-6 block text-center">Get in Touch</span>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-center italic mb-12">Let's build your <span className="opacity-30">legacy</span>.</h1>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-center italic mb-12">Let&apos;s build your <span className="opacity-30">legacy</span>.</h1>
         </header>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">

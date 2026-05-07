@@ -60,7 +60,7 @@ export default function TeamMemberClient({ params }: { params: Promise<{ id: str
             <div className="space-y-6">
               <h2 className="text-[10px] uppercase tracking-widest font-bold text-burgundy/40 underline decoration-burgundy/10 pb-2">Philosophy & Specialization</h2>
               <div className="text-3xl font-serif leading-tight italic">
-                "{member.specialization}"
+                &quot;{member.specialization}&quot;
               </div>
               <p className="text-ink/80 text-lg leading-relaxed max-w-xl font-serif italic">
                 {member.longBio}

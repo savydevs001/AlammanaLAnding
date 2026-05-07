@@ -206,7 +206,7 @@ export default function Home() {
               </div>
               <div className="absolute -bottom-10 -left-10 bg-burgundy p-12 hidden lg:block">
                 <blockquote className="text-2xl font-serif italic max-w-xs">
-                  "Architecture is a visual art, and the buildings speak for themselves."
+                  &quot;Architecture is a visual art, and the buildings speak for themselves.&quot;
                 </blockquote>
               </div>
             </div>
@@ -281,9 +281,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
-              <h2 className="text-5xl font-serif mb-8 leading-tight italic">Let's Discuss <br />Your Future Project</h2>
+              <h2 className="text-5xl font-serif mb-8 leading-tight italic">Let&apos;s Discuss <br />Your Future Project</h2>
               <p className="text-ink/60 mb-12 max-w-md">
-                Whether you're looking for an investment opportunity in Faisal Hills or architectural 
+                Whether you&apos;re looking for an investment opportunity in Faisal Hills or architectural 
                 consultation in Islamabad, our team is ready to help you build your vision.
               </p>
               
