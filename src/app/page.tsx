@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'motion/react';
 import { projects } from '../data/projects';
 import { team } from '../data/team';
@@ -40,14 +41,14 @@ export default function Home() {
           >
             <div className="flex items-center gap-2 mb-6">
               <div className="h-[1px] w-12 bg-burgundy"></div>
-              <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] font-bold text-burgundy">Elite Real Estate & Development</span>
+              <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] font-bold text-burgundy">Faisal Hills, Faisal Town & Islamabad Real Estate</span>
             </div>
             <h1 className="text-4xl md:text-6xl lg:text-8xl font-serif text-ink leading-tight mb-8">
-              Constructing <span className="italic font-normal text-burgundy">Legacies</span> <br className="hidden lg:block" /> in Islamabad.
+              Faisal Hills Real Estate <span className="italic font-normal text-burgundy">& Luxury Construction</span> <br className="hidden lg:block" /> in Islamabad.
             </h1>
             <p className="text-base md:text-lg text-ink/70 max-w-lg mb-10 leading-relaxed">
-              Alammana Developers specializes in premium construction and strategic marketing across Islamabad and Faisal Hills. 
-              We turn visions into tangible luxury landmarks.
+              Alammana Developers specializes in premium Faisal Hills and Faisal Town properties, luxury construction, and strategic marketing across Islamabad. 
+              We turn property visions into tangible, high-end real estate landmarks.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link href="/portfolio" className="bg-burgundy text-white px-8 py-4 rounded-full text-sm uppercase tracking-widest font-bold hover:opacity-90 transition-opacity text-center shadow-lg shadow-burgundy/20">
@@ -75,18 +76,23 @@ export default function Home() {
         <div className="hidden md:flex col-span-5 bg-burgundy relative flex-col justify-end p-12 overflow-hidden">
           <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_#D4C3A3_1px,_transparent_1px)] bg-[length:24px_24px]"></div>
           
-          <img 
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop" 
-            alt="Faisal Hills Residency"
-            className="absolute inset-0 w-full h-full object-cover opacity-60"
-            referrerPolicy="no-referrer"
-          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.16)_0%,_rgba(0,0,0,0.35)_80%)]"></div>
+          <div className="absolute inset-0 flex items-center justify-center p-12">
+            <Image
+              src="/assets/logo.png"
+              alt="Alammana Developers logo for Faisal Hills real estate and luxury construction"
+              width={520}
+              height={520}
+              className="relative z-10 max-w-full max-h-full object-contain opacity-90"
+              priority
+            />
+          </div>
 
           <motion.div 
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="bg-white rounded-3xl p-8 relative z-10 shadow-2xl"
+            className="bg-white rounded-3xl p-8 relative z-20 shadow-2xl backdrop-blur-sm bg-white/80"
           >
             <div className="flex justify-between items-start mb-6">
               <span className="bg-beige text-burgundy px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Featured Project</span>

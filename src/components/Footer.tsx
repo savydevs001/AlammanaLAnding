@@ -8,7 +8,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <h2 className="text-4xl font-serif mb-6 tracking-tight">ALAMMANA <span className="text-sand/60 italic">Developers</span></h2>
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-12 h-12 rounded-lg overflow-hidden bg-white border border-sand/30">
+                <img src="/assets/logo.png" alt="Alammana Developers logo" className="h-full w-full object-contain" />
+              </div>
+              <h2 className="text-4xl font-serif tracking-tight">ALAMMANA <span className="text-sand/60 italic">Developers</span></h2>
+            </div>
             <p className="text-beige/60 max-w-sm mb-8 italic leading-relaxed">
               Building the future of Islamabad and Faisal Hills with excellence in architecture, 
               strategic marketing, and premium real estate development.

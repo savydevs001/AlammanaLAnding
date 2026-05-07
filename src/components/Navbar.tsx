@@ -22,7 +22,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <Link href="/" className="flex items-center space-x-2 md:space-x-3">
-            <div className="w-8 h-8 md:w-10 md:h-10 bg-burgundy rounded-lg flex items-center justify-center text-white font-bold text-lg md:text-xl">A</div>
+            <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden bg-white border border-sand">
+              <img src="/assets/logo.png" alt="Alammana Developers logo" className="h-full w-full object-contain" />
+            </div>
             <span className="text-lg md:text-2xl font-bold uppercase tracking-[0.2em] md:tracking-widest text-burgundy">ALAMMANA</span>
           </Link>
 
