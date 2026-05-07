@@ -130,7 +130,8 @@ export default function Home() {
       <section className="bg-white border-y border-sand/40 grid grid-cols-1 md:grid-cols-4">
         <div className="border-b md:border-b-0 md:border-r border-sand/40 p-8 flex flex-col justify-center">
           <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mb-1">Headquarters</span>
-          <p className="text-sm font-semibold">E-11/3, Islamabad, PK</p>
+          <p className="text-sm font-semibold">Allah hu chowk, Faisal Hills</p>
+          <p className="text-[11px] text-ink/50">Islamabad, Pakistan</p>
         </div>
         <div className="border-b md:border-b-0 md:border-r border-sand/40 p-8 flex flex-col justify-center">
           <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mb-1">Development Lead</span>

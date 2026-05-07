@@ -1,15 +1,11 @@
 'use client';
 
-import { use } from 'react';
-import { team } from '../../../data/team';
+import { TeamMember } from '../../../types';
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ArrowLeft, Mail, Linkedin, Instagram } from 'lucide-react';
 
-export default function TeamMemberClient({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
-  const member = team.find(m => m.id === id);
-
+export default function TeamMemberClient({ member }: { member?: TeamMember }) {
   if (!member) {
     return (
       <div className="h-screen flex items-center justify-center text-center">
@@ -21,8 +17,29 @@ export default function TeamMemberClient({ params }: { params: Promise<{ id: str
     );
   }
 
+  const memberSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: member.name,
+    jobTitle: member.role,
+    description: member.longBio,
+    image: member.image,
+    email: member.email,
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Alammana Developers',
+      url: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
+    },
+    areaServed: ['Faisal Hills', 'Islamabad', 'Pakistan'],
+    knowsAbout: [member.specialization, 'Faisal Hills real estate', 'Islamabad development'],
+  };
+
   return (
     <div className="pt-32 pb-24 min-h-screen bg-paper">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(memberSchema) }}
+      />
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Image */}
@@ -34,7 +51,7 @@ export default function TeamMemberClient({ params }: { params: Promise<{ id: str
             <div className="aspect-[3/4] overflow-hidden transition-all duration-700">
                <img 
                  src={member.image} 
-                 alt={member.name} 
+                 alt={`${member.name}, ${member.role} at Alammana Developers`}
                  className="w-full h-full object-cover"
                  referrerPolicy="no-referrer"
                />

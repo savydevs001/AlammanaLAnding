@@ -1,0 +1,11 @@
+# Allow all crawlers to access the site
+User-agent: *
+Allow: /
+
+# Disallow crawling of irrelevant paths
+Disallow: /admin/
+Disallow: /.next/
+Disallow: /__nextjs_original-stack-frame/
+
+# Sitemap location
+Sitemap: https://alammana.com/sitemap.xml

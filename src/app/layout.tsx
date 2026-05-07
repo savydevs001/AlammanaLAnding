@@ -17,7 +17,10 @@ const structuredData = {
   description: 'Premium Faisal Hills and Faisal Town real estate development, architecture, and luxury construction in Islamabad.',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Islamabad',
+    streetAddress: 'Allah hu chowk',
+    addressLocality: 'Faisal Hills',
+    addressRegion: 'Islamabad',
+    postalCode: '44000',
     addressCountry: 'PK',
   },
   areaServed: ['Faisal Hills', 'Faisal Town', 'Islamabad', 'Pakistan'],

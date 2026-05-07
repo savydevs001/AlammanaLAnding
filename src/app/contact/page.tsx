@@ -1,7 +1,25 @@
 'use client';
 
+import type { Metadata } from 'next';
 import { motion } from 'motion/react';
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Contact Alammana Developers | Faisal Hills Real Estate Consultation',
+  description: 'Get in touch with Alammana Developers for Faisal Hills real estate inquiries, property consultations, and investment opportunities in Islamabad.',
+  keywords: [
+    'contact Alammana',
+    'real estate consultation',
+    'Faisal Hills properties',
+    'Islamabad real estate inquiry',
+    'property investment'
+  ],
+  openGraph: {
+    title: 'Contact Alammana Developers',
+    description: 'Reach out to our team for Faisal Hills and Islamabad real estate services',
+    type: 'website',
+  },
+};
 
 export default function Contact() {
   return (
@@ -42,7 +60,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-[10px] uppercase tracking-widest font-bold text-ink/40 mb-1">Head Office</h3>
-                  <address className="text-xl md:text-2xl font-serif not-italic">Plot 12, Main Boulevard, E-11/3, Islamabad, Pakistan</address>
+                  <address className="text-xl md:text-2xl font-serif not-italic">Allah hu chowk, Faisal Hills, Islamabad, Pakistan</address>
                 </div>
               </div>
             </div>
