@@ -38,13 +38,25 @@ export const metadata: Metadata = {
   },
   description: 'Alammana Developers delivers premium Faisal Hills and Faisal Town real estate, luxury construction, and strategic property development in Islamabad.',
   keywords: [
+    'Al Ammana',
+    'Al Ammana Developers',
     'Faisal Hills',
     'Faisal Town',
     'Faisal Hills real estate',
     'Faisal Town property',
     'Islamabad real estate',
     'luxury construction Pakistan',
-    'Alammana Developers'
+    'Alammana Developers',
+    'real estate Islamabad',
+    'property development Faisal Hills',
+    'luxury homes Islamabad',
+    'construction company Pakistan',
+    'architectural design Islamabad',
+    'premium properties Faisal Town',
+    'real estate marketing Islamabad',
+    'Faisal Hills investment',
+    'Islamabad luxury construction',
+    'Pakistan real estate developers'
   ],
   robots: {
     index: true,
