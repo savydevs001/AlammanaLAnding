@@ -1,14 +1,12 @@
 'use client';
 
-import { use } from 'react';
 import { projects } from '../../../data/projects';
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ArrowLeft, MapPin, CheckCircle2 } from 'lucide-react';
 
-export default function ProjectPageClient({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
-  const project = projects.find(p => p.id === id);
+export default function ProjectPageClient({ params }: { params: { id: string } }) {
+  const project = projects.find(p => p.id === params.id);
 
   if (!project) {
     return (

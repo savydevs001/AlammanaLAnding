@@ -1,15 +1,13 @@
 'use client';
 
-import { use } from 'react';
 import { blogs } from '../../../data/blogs';
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ArrowLeft, Clock, User, Share2 } from 'lucide-react';
 import Markdown from 'react-markdown';
 
-export default function BlogPostClient({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params);
-  const post = blogs.find(b => b.id === id);
+export default function BlogPostClient({ params }: { params: { id: string } }) {
+  const post = blogs.find(p => p.id === params.id);
 
   if (!post) return (
     <div className="h-screen flex items-center justify-center">
