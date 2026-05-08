@@ -3,19 +3,19 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Homepage -->
   <url>
-    <loc>https://alammana.com/</loc>
+    <loc>https://alammana.pk/</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://alammana.com/assets/logo.png</image:loc>
+      <image:loc>https://alammana.pk/assets/logo.png</image:loc>
       <image:title>Alammana Developers - Faisal Hills Real Estate and Luxury Construction</image:title>
     </image:image>
   </url>
 
   <!-- About Page -->
   <url>
-    <loc>https://alammana.com/about</loc>
+    <loc>https://alammana.pk/about</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -23,7 +23,7 @@
 
   <!-- Contact Page -->
   <url>
-    <loc>https://alammana.com/contact</loc>
+    <loc>https://alammana.pk/contact</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -31,7 +31,7 @@
 
   <!-- Portfolio Page -->
   <url>
-    <loc>https://alammana.com/portfolio</loc>
+    <loc>https://alammana.pk/portfolio</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -39,19 +39,19 @@
 
   <!-- Portfolio Projects -->
   <url>
-    <loc>https://alammana.com/portfolio/faisal-hills-residency</loc>
+    <loc>https://alammana.pk/portfolio/faisal-hills-residency</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alammana.com/portfolio/islamabad-heights</loc>
+    <loc>https://alammana.pk/portfolio/islamabad-heights</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://alammana.com/portfolio/margalla-view-villas</loc>
+    <loc>https://alammana.pk/portfolio/margalla-view-villas</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -59,7 +59,7 @@
 
   <!-- Team Page -->
   <url>
-    <loc>https://alammana.com/team</loc>
+    <loc>https://alammana.pk/team</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -67,19 +67,19 @@
 
   <!-- Team Members -->
   <url>
-    <loc>https://alammana.com/team/ali-khan</loc>
+    <loc>https://alammana.pk/team/ali-khan</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://alammana.com/team/sara-ahmed</loc>
+    <loc>https://alammana.pk/team/sara-ahmed</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://alammana.com/team/zain-malik</loc>
+    <loc>https://alammana.pk/team/zain-malik</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -87,7 +87,7 @@
 
   <!-- Blog Page -->
   <url>
-    <loc>https://alammana.com/blog</loc>
+    <loc>https://alammana.pk/blog</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -95,19 +95,19 @@
 
   <!-- Blog Posts -->
   <url>
-    <loc>https://alammana.com/blog/future-of-islamabad-real-estate</loc>
+    <loc>https://alammana.pk/blog/future-of-islamabad-real-estate</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://alammana.com/blog/modern-architectural-trends</loc>
+    <loc>https://alammana.pk/blog/modern-architectural-trends</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://alammana.com/blog/investing-in-faisal-hills</loc>
+    <loc>https://alammana.pk/blog/investing-in-faisal-hills</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
