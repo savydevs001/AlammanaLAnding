@@ -73,7 +73,7 @@ export default function Home() {
         </div>
 
         {/* Right Visual */}
-        <div className="hidden md:flex col-span-5 bg-burgundy relative flex-col justify-end p-12 overflow-hidden">
+        <div className="flex md:flex col-span-1 md:col-span-5 bg-burgundy relative flex-col justify-end p-8 md:p-12 overflow-hidden min-h-[500px] md:min-h-0">
           <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_#D4C3A3_1px,_transparent_1px)] bg-[length:24px_24px]"></div>
           
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.16)_0%,_rgba(0,0,0,0.35)_80%)]"></div>
@@ -102,15 +102,15 @@ export default function Home() {
                 <div className="w-2 h-2 rounded-full bg-gray-200"></div>
               </div>
             </div>
-            <h3 className="text-3xl font-serif mb-2 text-ink italic">Faisal Hills Heights</h3>
-            <p className="text-ink/60 text-sm mb-6">Exclusive mixed-use development featuring luxury penthouses and premium commercial zones.</p>
+            <h3 className="text-3xl font-serif mb-2 text-ink italic">Faisal Jewel</h3>
+            <p className="text-ink/60 text-sm mb-6">A premium landmark offering unmatched commercial spaces and luxury amenities.</p>
             <div className="flex items-center justify-between border-t border-sand/20 pt-6">
               <div className="flex -space-x-3">
                 <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-300"></div>
                 <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-400"></div>
                 <div className="w-10 h-10 rounded-full border-2 border-white bg-burgundy flex items-center justify-center text-[10px] text-white font-bold">+3</div>
               </div>
-              <Link href="/portfolio/faisal-hills-residency" className="text-burgundy font-bold text-sm uppercase tracking-widest hover:underline">
+              <Link href="/portfolio/faisal-jewel" className="text-burgundy font-bold text-sm uppercase tracking-widest hover:underline">
                 View Project
               </Link>
             </div>
@@ -165,9 +165,28 @@ export default function Home() {
               View All Works
             </Link>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {projects.slice(0, 3).map((project) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.filter(p => p.category !== 'Development').map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Construction & Development Focus Section */}
+      <section className="py-24 bg-beige/30" id="development-projects">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex justify-between items-end mb-16">
+            <div>
+              <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">Construction & Development</span>
+              <h2 className="text-5xl font-serif italic tracking-tight">Our Developments</h2>
+              <p className="text-ink/60 mt-4 max-w-2xl">
+                Explore our ongoing and completed construction milestones, featuring approved architectural diagrams, custom elevations, and premium turnkey development models.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.filter(p => p.category === 'Development').map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
