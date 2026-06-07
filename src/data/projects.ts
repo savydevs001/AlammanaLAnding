@@ -15,6 +15,63 @@ export const projects: Project[] = [
     ],
     features: ['Luxury Retail Shops', 'Premium Corporate Offices', 'High-speed Elevators', 'Ample Parking Space'],
     status: 'In Progress'
+    ,
+    amenities: [
+      '24/7 Security',
+      'Central HVAC',
+      'Food Court & Cafés',
+      'Rooftop Terrace & Events Area',
+      'Conference & Meeting Halls',
+      'Basement & Surface Parking',
+      'High-speed Elevators',
+      'Backup Power & Emergency Systems'
+    ],
+    structure: 'G + 5 levels: Ground floor retail and showrooms, Mezzanine for premium outlets, Floors 1–5 dedicated to corporate offices and luxury suites. Two-level basement parking with separate delivery and service access.',
+    mapLink: 'https://maps.google.com/?q=Faisal+Hills+Islamabad',
+    paymentPlans: [
+      { name: 'Standard 24-month', duration: '24 months', downPayment: '30%', monthly: 'PKR 150,000', notes: 'No markup for first 6 months', image: 'https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Flexible 36-month', duration: '36 months', downPayment: '20%', monthly: 'PKR 105,000', notes: 'Low down-payment option', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop' },
+      { name: 'Spot Cash', duration: 'One-time', downPayment: '100%', notes: '5% discount on full payment', image: 'https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=800&auto=format&fit=crop' }
+    ],
+    pricing: {
+      pricePerSqft: 'PKR 30,000 (Retail)',
+      units: [
+        { type: 'Shop - Ground', size: '200 sqft', price: 'PKR 6,000,000' },
+        { type: 'Retail Unit - Mezzanine', size: '350 sqft', price: 'PKR 10,500,000' },
+        { type: 'Office - Typical Floor', size: '1000 sqft', price: 'PKR 30,000,000' },
+        { type: 'Parking (Basement)', price: 'PKR 1,000,000' }
+      ]
+    }
+    ,
+    startingPrice: 'PKR 580,000',
+    completionDate: 'Q4 2027',
+    summaryStats: [
+      { label: 'Square Feet', value: '1,295' },
+      { label: 'Commercial Floors', value: '6' },
+      { label: 'Residential Floors', value: '18' },
+      { label: 'Basement Parking', value: '3' }
+    ],
+    surroundings: [
+      'Margalla Avenue',
+      'HITECH University',
+      'Taxila City',
+      'Wah Cantt',
+      'Sector D-12',
+      'Islamabad Int. Airport',
+      'Sector F-10',
+      'Blue Area'
+    ],
+    unitBreakdown: [
+      { label: 'Total Area', size: '1,295 sqft' },
+      { label: 'Bedroom', size: '200 sqft' },
+      { label: 'Kitchen', size: '150 sqft' },
+      { label: 'Bathroom', size: '50 sqft' }
+    ],
+    contact: {
+      phone: '051-4500000-2',
+      email: 'info@alammana.com',
+      address: 'Faisal Hills, Islamabad'
+    }
   },
   {
     id: 'j7-faisal-hills',

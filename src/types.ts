@@ -24,6 +24,34 @@ export interface Project {
   status: 'Completed' | 'In Progress' | 'Planned';
   completionDate?: string;
   client?: string;
+  amenities?: string[];
+  structure?: string;
+  mapLink?: string;
+  paymentPlans?: Array<{
+    name: string;
+    duration: string;
+    downPayment: string;
+    monthly?: string;
+    notes?: string;
+    image?: string;
+  }>;
+  pricing?: {
+    pricePerSqft?: string;
+    units?: Array<{
+      type: string;
+      size?: string;
+      price: string;
+    }>;
+  };
+  startingPrice?: string;
+  summaryStats?: Array<{ label: string; value: string }>;
+  surroundings?: string[];
+  unitBreakdown?: Array<{ label: string; size?: string }>;
+  contact?: {
+    phone?: string;
+    email?: string;
+    address?: string;
+  };
 }
 
 export interface BlogPost {
