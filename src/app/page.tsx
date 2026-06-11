@@ -140,7 +140,7 @@ export default function Home() {
         </div>
         <div className="border-b md:border-b-0 md:border-r border-sand/40 p-8 flex flex-col justify-center">
           <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mb-1">Architecture</span>
-          <p className="text-sm font-semibold">Sara Ahmed</p>
+          <p className="text-sm font-semibold">Mohsin Ali</p>
           <p className="text-[11px] text-ink/50 italic">Chief Architect</p>
         </div>
         <div className="p-8 flex items-center justify-center md:justify-end">
