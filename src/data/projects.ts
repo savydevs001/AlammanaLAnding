@@ -80,9 +80,9 @@ export const projects: Project[] = [
     location: 'Faisal Hills, Islamabad',
     description: 'The iconic J7 project in Faisal Hills bringing world-class retail and luxury apartments.',
     fullDescription: 'J7 in Faisal Hills redefines urban living and commercial excellence. This mega-project combines sprawling retail malls, corporate floors, and luxury residential apartments into one integrated vertical community.',
-    thumbnail: 'https://images.unsplash.com/photo-1582682255760-b88eb3be4cb5?q=80&w=800&auto=format&fit=crop',
+    thumbnail: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAG-eK5SSFbDF4gtcIh8gn529_2-xAr7BP5w46O41IIwwFDSg70kA3tFINXjD6Ax-IvnRKmbNlhBz79CgRi4OMowSe7fbCJJgjj5EkdSVVNI-zT28quOnsWMsd6TEk-8iuCAo_8n=s680-w680-h510-rw',
     images: [
-      'https://images.unsplash.com/photo-1582682255760-b88eb3be4cb5?q=80&w=1200&auto=format&fit=crop',
+      'https://lh3.googleusercontent.com/gps-cs-s/APNQkAG-eK5SSFbDF4gtcIh8gn529_2-xAr7BP5w46O41IIwwFDSg70kA3tFINXjD6Ax-IvnRKmbNlhBz79CgRi4OMowSe7fbCJJgjj5EkdSVVNI-zT28quOnsWMsd6TEk-8iuCAo_8n=s680-w680-h510-rw',
       'https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop'
     ],
     features: ['World-class Shopping Mall', 'Luxury Apartments', 'Food Courts', 'Smart Security System'],
