@@ -95,9 +95,9 @@ export const projects: Project[] = [
     location: 'B-17 Multi Gardens, Islamabad',
     description: 'Prime commercial shops and contemporary apartments in the vibrant B-17 sector.',
     fullDescription: 'Located in the highly sought-after B-17 Multi Gardens, this project offers high-visibility commercial shops on the lower floors and beautifully designed contemporary apartments above, making it perfect for both investors and residents.',
-    thumbnail: 'https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=800&auto=format&fit=crop',
+    thumbnail: 'https://vipgroup.com.pk/wp-content/uploads/2026/04/B17.png',
     images: [
-      'https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200&auto=format&fit=crop',
+      'https://vipgroup.com.pk/wp-content/uploads/2026/04/B17.png',
       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop'
     ],
     features: ['High-visibility Retail', 'Spacious Apartments', 'Modern Fittings', 'Easy Access to Kashmir Highway'],
