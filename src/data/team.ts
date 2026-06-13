@@ -7,7 +7,7 @@ export const team: TeamMember[] = [
     role: 'CEO',
     bio: 'Visionary leader steering Alammana Developers toward premium real estate excellence in Islamabad and Faisal Hills.',
     longBio: 'Muhammad Abdullah brings strategic vision and decisive leadership to Alammana Developers. With a proven track record in real estate development, he shapes the company\'s direction in luxury construction and Faisal Hills real estate. His commitment to quality and innovation drives the organization\'s growth in Islamabad\'s premier development sector.',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop',
+    image: '/assets/Abdullah1.png',
     specialization: 'Visionary Leadership & Strategic Direction',
     email: 'muhammad@alammana.com',
     education: 'MBA in Business Administration',
