@@ -41,7 +41,7 @@ export default function AboutClient() {
                 <span className="text-[10px] uppercase tracking-widest font-bold opacity-40">Experience</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-3xl md:text-4xl font-serif text-burgundy">50+</span>
+                <span className="text-3xl md:text-4xl font-serif text-burgundy">60+</span>
                 <span className="text-[10px] uppercase tracking-widest font-bold opacity-40">Global Partners</span>
               </div>
             </div>

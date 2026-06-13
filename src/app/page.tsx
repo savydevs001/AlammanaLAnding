@@ -61,7 +61,7 @@ export default function Home() {
 
             <div className="flex flex-wrap gap-4 md:gap-6 mt-12 md:mt-16">
               <div className="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-sand/30 w-full sm:w-40 md:w-48">
-                <p className="text-2xl md:text-3xl font-bold text-burgundy mb-1">50+</p>
+                <p className="text-2xl md:text-3xl font-bold text-burgundy mb-1">60+</p>
                 <p className="text-[10px] uppercase font-bold text-ink/40 tracking-wider">Projects Completed</p>
               </div>
               <div className="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-sand/30 w-full sm:w-40 md:w-48">
