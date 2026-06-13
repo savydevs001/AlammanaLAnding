@@ -55,7 +55,7 @@ export const team: TeamMember[] = [
     role: 'Director of Sales',
     bio: 'Sales leader driving revenue growth and client acquisition for Alammana\'s Faisal Hills and Islamabad projects.',
     longBio: 'Shahzeb spearheads Alammana\'s sales strategy, connecting investors and end-users with premium real estate opportunities in Faisal Hills and Islamabad. His dynamic approach and market insights drive consistent sales performance and client satisfaction.',
-    image: '/assets/Shahzeb1.png',
+    image: '/assets/shahzeb2.png',
     specialization: 'Sales Excellence & Client Relations',
     email: 'shahzeb@alammana.com',
     education: 'MBA in Sales & Marketing',
