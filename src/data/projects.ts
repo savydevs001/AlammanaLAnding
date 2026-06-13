@@ -8,9 +8,9 @@ export const projects: Project[] = [
     location: 'Faisal Hills, Islamabad',
     description: 'A premium landmark in Faisal Hills offering unmatched commercial spaces and luxury amenities.',
     fullDescription: 'Faisal Jewel stands as a magnificent commercial hub in the heart of Faisal Hills. Featuring state-of-the-art architecture, luxury shopping experiences, and premium office spaces, it is designed to be the ultimate destination for businesses and high-end retail.',
-    thumbnail: 'https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=800&auto=format&fit=crop',
+    thumbnail: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEjnjfwNPKoNZS7eiW428vlqnt5G1R18DjMfcq84bbBbRZwtklIgMgiHp5fa1qTf-tCiPJRqnfx7MAR2Y059CAWjkrKjfZVC9mYSuAJlxSqlKxWIewSeECbQ16uC68eMsDUazxW45uykrof=s680-w680-h510-rw',
     images: [
-      'https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=1200&auto=format&fit=crop',
+      'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEjnjfwNPKoNZS7eiW428vlqnt5G1R18DjMfcq84bbBbRZwtklIgMgiHp5fa1qTf-tCiPJRqnfx7MAR2Y059CAWjkrKjfZVC9mYSuAJlxSqlKxWIewSeECbQ16uC68eMsDUazxW45uykrof=s680-w680-h510-rw',
       'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop'
     ],
     features: ['Luxury Retail Shops', 'Premium Corporate Offices', 'High-speed Elevators', 'Ample Parking Space'],
@@ -29,9 +29,9 @@ export const projects: Project[] = [
     structure: 'G + 5 levels: Ground floor retail and showrooms, Mezzanine for premium outlets, Floors 1–5 dedicated to corporate offices and luxury suites. Two-level basement parking with separate delivery and service access.',
     mapLink: 'https://maps.google.com/?q=Faisal+Hills+Islamabad',
     paymentPlans: [
-      { name: 'Standard 24-month', duration: '24 months', downPayment: '30%', monthly: 'PKR 150,000', notes: 'No markup for first 6 months', image: 'https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Flexible 36-month', duration: '36 months', downPayment: '20%', monthly: 'PKR 105,000', notes: 'Low down-payment option', image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop' },
-      { name: 'Spot Cash', duration: 'One-time', downPayment: '100%', notes: '5% discount on full payment', image: 'https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=800&auto=format&fit=crop' }
+      { name: 'Standard 24-month', duration: '24 months', downPayment: '30%', monthly: 'PKR 150,000', notes: 'No markup for first 6 months', image: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEjnjfwNPKoNZS7eiW428vlqnt5G1R18DjMfcq84bbBbRZwtklIgMgiHp5fa1qTf-tCiPJRqnfx7MAR2Y059CAWjkrKjfZVC9mYSuAJlxSqlKxWIewSeECbQ16uC68eMsDUazxW45uykrof=s680-w680-h510-rw' },
+      { name: 'Flexible 36-month', duration: '36 months', downPayment: '20%', monthly: 'PKR 105,000', notes: 'Low down-payment option', image: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEjnjfwNPKoNZS7eiW428vlqnt5G1R18DjMfcq84bbBbRZwtklIgMgiHp5fa1qTf-tCiPJRqnfx7MAR2Y059CAWjkrKjfZVC9mYSuAJlxSqlKxWIewSeECbQ16uC68eMsDUazxW45uykrof=s680-w680-h510-rw' },
+      { name: 'Spot Cash', duration: 'One-time', downPayment: '100%', notes: '5% discount on full payment', image: 'https://lh3.googleusercontent.com/gps-cs-s/APNQkAEjnjfwNPKoNZS7eiW428vlqnt5G1R18DjMfcq84bbBbRZwtklIgMgiHp5fa1qTf-tCiPJRqnfx7MAR2Y059CAWjkrKjfZVC9mYSuAJlxSqlKxWIewSeECbQ16uC68eMsDUazxW45uykrof=s680-w680-h510-rw' }
     ],
     pricing: {
       pricePerSqft: 'PKR 30,000 (Retail)',
