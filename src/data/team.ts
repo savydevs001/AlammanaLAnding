@@ -4,7 +4,7 @@ export const team: TeamMember[] = [
   {
     id: 'muhammad-abdullah',
     name: 'Muhammad Abdullah',
-    role: 'CEO',
+    role: 'Chairman',
     bio: 'Visionary leader steering Alammana Developers toward premium real estate excellence in Islamabad and Faisal Hills.',
     longBio: 'Muhammad Abdullah brings strategic vision and decisive leadership to Alammana Developers. With a proven track record in real estate development, he shapes the company\'s direction in luxury construction and Faisal Hills real estate. His commitment to quality and innovation drives the organization\'s growth in Islamabad\'s premier development sector.',
     image: '/assets/Abdullah1.png',
@@ -16,7 +16,7 @@ export const team: TeamMember[] = [
   {
     id: 'ashal',
     name: 'Ashal',
-    role: 'Director of Social Media',
+    role: 'Director of Finance',
     bio: 'Digital engagement strategist building Alammana\'s brand presence across social platforms and digital channels.',
     longBio: 'Ashal directs Alammana\'s comprehensive social media strategy, leveraging modern digital platforms to connect with investors and clients interested in Faisal Hills and Islamabad real estate. With expertise in social engagement and community building, Ashal ensures Alammana maintains a strong, authentic digital presence.',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop',
@@ -28,7 +28,7 @@ export const team: TeamMember[] = [
   {
     id: 'haseeb-bhatti',
     name: 'Haseeb Bhatti',
-    role: 'Director of Construction',
+    role: 'Director of Sales',
     bio: 'Construction excellence leader ensuring quality delivery and timely project completion across all Alammana developments.',
     longBio: 'Haseeb Bhatti oversees all construction operations for Alammana\'s Faisal Hills and Islamabad projects. With extensive experience in luxury construction and project management, he ensures every development meets the highest standards of quality, safety, and engineering excellence.',
     image: '/assets/Haseeb1.png',
@@ -39,10 +39,10 @@ export const team: TeamMember[] = [
   },
   {
     id: 'muhammad-mohsin',
-    name: 'Muhammad Mohsin',
-    role: 'Director of Finance',
+    name: 'Mohsin Ali',
+    role: 'Director of Construction',
     bio: 'Financial strategist managing capital allocation, investments, and fiscal planning for sustainable growth.',
-    longBio: 'Muhammad Mohsin directs Alammana\'s financial operations with meticulous planning and strategic investment management. His expertise ensures robust financial health and sustainable growth in the competitive Faisal Hills and Islamabad real estate market.',
+    longBio: 'Mohsin Ali directs Alammana\'s financial operations with meticulous planning and strategic investment management. His expertise ensures robust financial health and sustainable growth in the competitive Faisal Hills and Islamabad real estate market.',
     image: '/assets/Mohsin1.png',
     specialization: 'Financial Planning & Investment Management',
     email: 'mohsin@alammana.com',
@@ -52,7 +52,7 @@ export const team: TeamMember[] = [
   {
     id: 'shahzeb',
     name: 'Muhammad Shahzeb',
-    role: 'Director of Sales',
+    role: 'Director of Media',
     bio: 'Sales leader driving revenue growth and client acquisition for Alammana\'s Faisal Hills and Islamabad projects.',
     longBio: 'Shahzeb spearheads Alammana\'s sales strategy, connecting investors and end-users with premium real estate opportunities in Faisal Hills and Islamabad. His dynamic approach and market insights drive consistent sales performance and client satisfaction.',
     image: '/assets/shahzeb2.png',

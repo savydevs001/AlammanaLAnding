@@ -110,9 +110,9 @@ export const projects: Project[] = [
     location: 'Faisal Hills, Taxila/Islamabad',
     description: 'Exclusive plots in the newly launched block of Faisal Hills with flexible payment plans.',
     fullDescription: 'The newly launched block in Faisal Hills offers an incredible opportunity for buyers and investors. With an attractive installment-based payment plan, secure your plot in a master-planned community with lush parks, grand mosques, and wide boulevards.',
-    thumbnail: '/assets/prime%20block%20new%20block%20faisal%20hills.png',
+    thumbnail: '/assets/primeblock.png',
     images: [
-      '/assets/prime%20block%20new%20block%20faisal%20hills.png'
+      '/assets/primeblock.png'
     ],
     features: ['Easy Installment Plans', 'Parks & Greenery', 'Underground Electrification', 'Gated Community'],
     status: 'Planned'
