@@ -329,7 +329,7 @@ export default function Home() {
                   </div>
                   <div>
                     <span className="text-[10px] uppercase tracking-widest block font-bold opacity-50">Call Us</span>
-                    <span className="text-xl font-serif">+92 3XX XXXXXXX</span>
+                    <span className="text-xl font-serif">+92 3020542400</span>
                   </div>
                 </div>
               </div>

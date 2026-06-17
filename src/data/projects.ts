@@ -68,7 +68,7 @@ export const projects: Project[] = [
       { label: 'Bathroom', size: '50 sqft' }
     ],
     contact: {
-      phone: '051-4500000-2',
+      phone: '051-4500000-2, +92 3020542400',
       email: 'info@alammana.com',
       address: 'Faisal Hills, Islamabad'
     }
