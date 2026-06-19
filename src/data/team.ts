@@ -15,10 +15,10 @@ export const team: TeamMember[] = [
   },
   {
     id: 'ashal',
-    name: 'Ashal',
+    name: 'Ashhal Ch',
     role: 'Director of Finance',
     bio: 'Digital engagement strategist building Alammana\'s brand presence across social platforms and digital channels.',
-    longBio: 'Ashal directs Alammana\'s comprehensive social media strategy, leveraging modern digital platforms to connect with investors and clients interested in Faisal Hills and Islamabad real estate. With expertise in social engagement and community building, Ashal ensures Alammana maintains a strong, authentic digital presence.',
+    longBio: 'Ashhal Ch directs Alammana\'s comprehensive social media strategy, leveraging modern digital platforms to connect with investors and clients interested in Faisal Hills and Islamabad real estate. With expertise in social engagement and community building, Ashhal Ch ensures Alammana maintains a strong, authentic digital presence.',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop',
     specialization: 'Digital Strategy & Social Engagement',
     email: 'ashal@alammana.com',
