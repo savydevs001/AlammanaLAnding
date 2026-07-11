@@ -1,5 +1,27 @@
 import { TeamMember } from '../types';
 
+/**
+ * ─── HOW TO ADD A MEMBER'S CONTACT & SOCIAL LINKS ───────────────────────────
+ *
+ * Paste a `socials` block into the member's entry below. Every field is
+ * optional — leave out anything they don't have, and it simply won't show.
+ * Filled links appear as buttons on the member's page (alammana.pk/team/<id>)
+ * AND get linked in their Google profile schema, which helps them appear in
+ * Google searches for their name.
+ *
+ *   socials: {
+ *     phone: '+92 300 1234567',
+ *     whatsapp: '923001234567',                          // digits only, with country code
+ *     facebook: 'https://www.facebook.com/username',
+ *     instagram: 'https://www.instagram.com/username/',
+ *     linkedin: 'https://www.linkedin.com/in/username/',
+ *     tiktok: 'https://www.tiktok.com/@username',
+ *     youtube: 'https://www.youtube.com/@username',
+ *     twitter: 'https://x.com/username',
+ *   },
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+
 export const team: TeamMember[] = [
   {
     id: 'muhammad-abdullah',

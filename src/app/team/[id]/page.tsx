@@ -50,14 +50,28 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
 
+  // Links Google uses to connect this person to their profiles (sameAs)
+  const sameAs = [
+    member.socials?.facebook,
+    member.socials?.instagram,
+    member.socials?.linkedin,
+    member.socials?.tiktok,
+    member.socials?.youtube,
+    member.socials?.twitter,
+  ].filter(Boolean);
+
   // Person Schema for Team Member
   const personSchema = {
     '@context': 'https://schema.org',
     '@type': 'Person',
+    '@id': `${baseUrl}/team/${member.id}#person`,
     name: member.name,
     jobTitle: member.role,
     description: `${member.name} is the ${member.role} at Alammana Developers, specializing in ${member.specialization}. ${member.experience}`,
-    image: `${baseUrl}${member.image}`,
+    image: member.image.startsWith('http') ? member.image : `${baseUrl}${member.image}`,
+    url: `${baseUrl}/team/${member.id}`,
+    email: member.email,
+    ...(member.socials?.phone ? { telephone: member.socials.phone } : {}),
     worksFor: {
       '@type': 'Organization',
       name: 'Alammana Developers',
@@ -70,7 +84,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       'Islamabad Construction',
       'Property Development'
     ],
-    sameAs: member.socialLinks || [], // Will be populated when team members provide their links
+    ...(sameAs.length > 0 ? { sameAs } : {}),
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Islamabad',

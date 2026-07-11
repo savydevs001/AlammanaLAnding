@@ -148,9 +148,8 @@ export default function Home() {
         <div className="p-8 flex items-center justify-center md:justify-end">
           <div className="flex gap-4">
             <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mr-4">Connect</span>
-            <div className="w-10 h-10 rounded-full border border-sand flex items-center justify-center text-xs hover:bg-burgundy hover:text-white transition-all cursor-pointer">FB</div>
-            <div className="w-10 h-10 rounded-full border border-sand flex items-center justify-center text-xs hover:bg-burgundy hover:text-white transition-all cursor-pointer">IG</div>
-            <div className="w-10 h-10 rounded-full border border-sand flex items-center justify-center text-xs hover:bg-burgundy hover:text-white transition-all cursor-pointer">LI</div>
+            <a href="https://www.facebook.com/alammana.pk" target="_blank" rel="noopener noreferrer" aria-label="Alammana Developers on Facebook" className="w-10 h-10 rounded-full border border-sand flex items-center justify-center text-xs hover:bg-burgundy hover:text-white transition-all">FB</a>
+            <a href="https://www.instagram.com/alammanapk/" target="_blank" rel="noopener noreferrer" aria-label="Alammana Developers on Instagram" className="w-10 h-10 rounded-full border border-sand flex items-center justify-center text-xs hover:bg-burgundy hover:text-white transition-all">IG</a>
           </div>
         </div>
       </section>

@@ -9,6 +9,18 @@ export interface TeamMember {
   email: string;
   education: string;
   experience: string;
+  // Personal contact & social profiles. All optional — only filled ones are
+  // shown on the member's page and linked in their Google (Person) schema.
+  socials?: {
+    phone?: string;      // e.g. '+92 300 1234567'
+    whatsapp?: string;   // number with country code, digits only: '923001234567'
+    facebook?: string;   // full URL: 'https://www.facebook.com/username'
+    instagram?: string;  // full URL: 'https://www.instagram.com/username/'
+    linkedin?: string;   // full URL: 'https://www.linkedin.com/in/username/'
+    tiktok?: string;     // full URL: 'https://www.tiktok.com/@username'
+    youtube?: string;    // full URL: 'https://www.youtube.com/@username'
+    twitter?: string;    // full URL: 'https://x.com/username'
+  };
 }
 
 export interface Project {

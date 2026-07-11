@@ -84,10 +84,8 @@ const structuredData = [
       }
     ],
     sameAs: [
-      'https://www.facebook.com/alammana',
-      'https://www.instagram.com/alammana',
-      'https://www.linkedin.com/company/alammana-developers',
-      // Team member social links will be added here later
+      'https://www.facebook.com/alammana.pk',
+      'https://www.instagram.com/alammanapk/',
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
