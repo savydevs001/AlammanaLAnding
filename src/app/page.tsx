@@ -184,7 +184,13 @@ export default function Home() {
                 Explore our ongoing and completed construction milestones, featuring approved architectural diagrams, custom elevations, and premium turnkey development models.
               </p>
             </div>
+            <Link href="/payment-plans" className="hidden md:block text-xs uppercase tracking-[0.2em] font-bold border-b border-burgundy pb-2 hover:opacity-70 transition-opacity whitespace-nowrap">
+              View Construction Rates
+            </Link>
           </div>
+          <Link href="/payment-plans" className="md:hidden inline-block mb-10 text-xs uppercase tracking-[0.2em] font-bold border-b border-burgundy pb-2">
+            View Construction Rates
+          </Link>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.filter(p => p.category === 'Development').map((project) => (
               <ProjectCard key={project.id} project={project} />
