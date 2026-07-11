@@ -3,8 +3,10 @@
 import Image from 'next/image';
 import { motion } from 'motion/react';
 import { projects } from '../data/projects';
+import { constructions } from '../data/constructions';
 import { team } from '../data/team';
 import ProjectCard from '../components/ProjectCard';
+import ConstructionCard from '../components/ConstructionCard';
 import TeamCard from '../components/TeamCard';
 import { ArrowRight, MapPin, Building2, Paintbrush, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
@@ -166,7 +168,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.filter(p => p.category !== 'Development').map((project) => (
+            {projects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
@@ -192,9 +194,14 @@ export default function Home() {
             View Construction Rates
           </Link>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.filter(p => p.category === 'Development').map((project) => (
-              <ProjectCard key={project.id} project={project} />
+            {constructions.slice(0, 3).map((project) => (
+              <ConstructionCard key={project.id} project={project} />
             ))}
+          </div>
+          <div className="mt-12 text-center">
+            <Link href="/constructions" className="inline-block text-xs uppercase tracking-[0.2em] font-bold border-b border-burgundy pb-2 hover:opacity-70 transition-opacity">
+              See All Homes We&apos;re Building
+            </Link>
           </div>
         </div>
       </section>
@@ -326,7 +333,7 @@ export default function Home() {
                   </div>
                   <div>
                     <span className="text-[10px] uppercase tracking-widest block font-bold opacity-50">Email Us</span>
-                    <span className="text-xl font-serif">info@alammana.com</span>
+                    <span className="text-xl font-serif">rabta@alammana.pk</span>
                   </div>
                 </div>
                 <div className="flex items-center space-x-6 group">
@@ -335,7 +342,7 @@ export default function Home() {
                   </div>
                   <div>
                     <span className="text-[10px] uppercase tracking-widest block font-bold opacity-50">Call Us</span>
-                    <span className="text-xl font-serif">+92 3020542400</span>
+                    <span className="text-xl font-serif">+92 335 8078262</span>
                   </div>
                 </div>
               </div>

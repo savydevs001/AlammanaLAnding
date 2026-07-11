@@ -42,11 +42,11 @@ export default function Footer() {
             <ul className="space-y-6 text-beige/70 text-sm">
               <li className="flex items-center space-x-3">
                 <Mail size={16} className="text-sand" />
-                <span className="font-semibold">info@alammana.com</span>
+                <span className="font-semibold">rabta@alammana.pk</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={16} className="text-sand" />
-                <span className="font-semibold">+92 3020542400</span>
+                <span className="font-semibold">+92 335 8078262</span>
               </li>
               <li className="flex items-center space-x-3">
                 <MapPin size={16} className="text-sand" />

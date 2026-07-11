@@ -54,6 +54,28 @@ export interface Project {
   };
 }
 
+// A home Alammana is constructing (or has constructed) on the published
+// payment-plan rates. Rendered by the standard template at /constructions/[id].
+export interface ConstructionProject {
+  id: string;                       // URL slug, e.g. 'block-a-10-marla-modern'
+  title: string;                    // e.g. '10 Marla Modern Home — Block A'
+  block: string;                    // e.g. 'Block A, Faisal Hills'
+  plotSize: string;                 // e.g. '10 Marla'
+  finishType: 'Gray Structure' | 'Fully Finished';
+  status: 'Under Construction' | 'Completed' | 'Starting Soon';
+  shortDescription: string;         // one line, shown on cards
+  fullDescription: string;          // full paragraph, shown on detail page
+  elevationImage: string;           // front elevation render/photo (hero image)
+  approvedMapImage?: string;        // photo/scan of the approved map (naqsha)
+  gallery: string[];                // additional site/interior photos
+  locationLabel: string;            // e.g. 'Street 12, Block A, Faisal Hills, Taxila'
+  mapEmbedUrl?: string;             // Google Maps embed URL (free, no API key):
+                                    // https://maps.google.com/maps?q=<search or lat,lng>&output=embed
+  specs?: Array<{ label: string; value: string }>; // e.g. Bedrooms 5, Bathrooms 6, Covered Area 4200 sqft
+  amenities?: string[];             // e.g. 'Solar-ready wiring', 'Imported tiles'
+  expectedCompletion?: string;      // e.g. 'Q2 2027'
+}
+
 export interface BlogPost {
   id: string;
   title: string;

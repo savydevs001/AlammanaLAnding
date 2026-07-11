@@ -70,14 +70,14 @@ const structuredData = [
     contactPoint: [
       {
         '@type': 'ContactPoint',
-        telephone: '+92-XXX-XXXXXXX',
+        telephone: '+92-335-8078262',
         contactType: 'customer service',
         areaServed: 'PK',
         availableLanguage: 'English'
       },
       {
         '@type': 'ContactPoint',
-        email: 'info@alammana.com',
+        email: 'rabta@alammana.pk',
         contactType: 'customer service',
         areaServed: 'PK',
         availableLanguage: 'English'

@@ -7,7 +7,7 @@ import { Project } from '../../types';
 
 export default function PortfolioClient({ projects }: { projects: Project[] }) {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', 'Residential', 'Commercial', 'Development', 'Marketing'];
+  const categories = ['All', ...Array.from(new Set(projects.map(p => p.category)))];
 
   const filteredProjects = filter === 'All' 
     ? projects 
