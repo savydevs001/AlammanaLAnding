@@ -40,6 +40,7 @@ export default function PaymentPlansClient() {
   const [block, setBlock] = useState(blocks[0]);
 
   const currentPdf = pdfPath(block.id, finish);
+  const currentImage = currentPdf.replace(/\.pdf$/, '.webp');
   const currentFinish = finishTypes.find(f => f.id === finish)!;
   const planTitle = `${block.label} — ${currentFinish.label} Payment Plan`;
 
@@ -162,42 +163,20 @@ export default function PaymentPlansClient() {
                 </div>
               </div>
 
-              {/* PDF preview */}
-              <div className="bg-ink/5">
-                <object
-                  data={`${currentPdf}#toolbar=0&navpanes=0`}
-                  type="application/pdf"
-                  className="w-full h-[60vh] md:h-[80vh]"
-                  aria-label={planTitle}
-                >
-                  {/* Fallback for browsers (mostly mobile) that can't embed PDFs */}
-                  <div className="flex flex-col items-center justify-center text-center h-[60vh] px-8 gap-6">
-                    <div className="w-16 h-16 rounded-full bg-beige flex items-center justify-center text-burgundy">
-                      <FileText size={28} />
-                    </div>
-                    <p className="text-ink/60 max-w-sm text-sm leading-relaxed">
-                      Your browser can&apos;t preview PDFs inline. Open the plan in a new tab or
-                      download it to view the full rate list.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <a
-                        href={currentPdf}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2 bg-burgundy text-white px-6 py-3 rounded-full text-xs uppercase tracking-widest font-bold"
-                      >
-                        <ExternalLink size={16} /> Open PDF
-                      </a>
-                      <a
-                        href={currentPdf}
-                        download
-                        className="flex items-center justify-center gap-2 border border-sand text-ink px-6 py-3 rounded-full text-xs uppercase tracking-widest font-bold"
-                      >
-                        <Download size={16} /> Download PDF
-                      </a>
-                    </div>
-                  </div>
-                </object>
+              {/* Plan preview — pre-rendered image of the PDF, works on every
+                  device (mobile browsers can't embed PDFs). Tap to open the PDF. */}
+              <div className="bg-ink/5 p-3 md:p-6">
+                <a href={currentPdf} target="_blank" rel="noopener noreferrer" title="Open the PDF in full screen">
+                  <img
+                    src={currentImage}
+                    alt={`${planTitle} — rate list for house construction in Faisal Hills`}
+                    className="w-full h-auto rounded-xl border border-sand/60 shadow-md"
+                    loading="lazy"
+                  />
+                </a>
+                <p className="text-center text-[10px] uppercase tracking-widest font-bold text-ink/40 mt-4">
+                  Tap the plan to open the PDF — or use the download button above
+                </p>
               </div>
             </motion.div>
           </AnimatePresence>
