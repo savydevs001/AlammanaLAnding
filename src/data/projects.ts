@@ -1,5 +1,26 @@
 import { Project } from '../types';
 
+/**
+ * ─── PARTNER PROJECTS (PORTFOLIO) ────────────────────────────────────────────
+ *
+ * These are the developments Alammana partners with and sells inventory for
+ * (apartments, shops, offices, plots) — e.g. Faisal Jewel, J7, 107 Plaza.
+ * Each entry becomes a page at  alammana.pk/portfolio/<id>  and a card on
+ * /portfolio and the home page.
+ *
+ * To add a new partner project: copy an entry, give it a unique `id`
+ * (lowercase-with-hyphens — becomes the URL), and fill in what you have.
+ * Optional sections (amenities, paymentPlans, pricing, summaryStats,
+ * surroundings, unitBreakdown...) are simply hidden on the page if omitted.
+ *
+ * Images: put them in  public/assets/portfolio/<id>/  and reference them as
+ * '/assets/portfolio/<id>/photo1.jpg'. The `thumbnail` is the card + hero
+ * image; `images` are the gallery.
+ *
+ * Homes WE construct on our published rates live in constructions.ts instead.
+ * ─────────────────────────────────────────────────────────────────────────────
+ */
+
 export const projects: Project[] = [
   {
     id: 'faisal-jewel',
@@ -68,8 +89,8 @@ export const projects: Project[] = [
       { label: 'Bathroom', size: '50 sqft' }
     ],
     contact: {
-      phone: '051-4500000-2, +92 3020542400',
-      email: 'info@alammana.com',
+      phone: '+92 335 8078262',
+      email: 'rabta@alammana.pk',
       address: 'Faisal Hills, Islamabad'
     }
   },
@@ -87,6 +108,27 @@ export const projects: Project[] = [
     ],
     features: ['World-class Shopping Mall', 'Luxury Apartments', 'Food Courts', 'Smart Security System'],
     status: 'In Progress'
+  },
+  {
+    id: '107-plaza',
+    title: '107 Plaza',
+    category: 'Commercial',
+    location: 'Faisal Hills, Taxila',
+    description: 'A modern commercial plaza in Faisal Hills offering shops, offices, and investment-grade retail units.',
+    fullDescription: '107 Plaza is a contemporary commercial development in Faisal Hills. Alammana Developers is an official sales partner, offering shops, offices, and retail units with flexible booking and installment options. Its prime positioning ensures strong footfall and rental yield for investors.',
+    // TODO(team): replace with real 107 Plaza photos in /assets/portfolio/107-plaza/
+    thumbnail: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop',
+    images: [
+      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop',
+      'https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop'
+    ],
+    features: ['Prime Retail Shops', 'Executive Offices', 'Flexible Installments', 'High Rental Yield'],
+    status: 'In Progress',
+    contact: {
+      phone: '+92 335 8078262',
+      email: 'rabta@alammana.pk',
+      address: 'Faisal Hills, Taxila'
+    }
   },
   {
     id: 'b17-shops-apartments',
@@ -116,81 +158,5 @@ export const projects: Project[] = [
     ],
     features: ['Easy Installment Plans', 'Parks & Greenery', 'Underground Electrification', 'Gated Community'],
     status: 'Planned'
-  },
-  {
-    id: 'house-construction-projects',
-    title: 'Custom House Construction',
-    category: 'Development',
-    location: 'Faisal Hills & B-17, Islamabad',
-    description: 'Premium custom home construction featuring front elevation, approved architect diagrams, and full execution.',
-    fullDescription: 'Alammana Developers excels in custom house construction. We manage the entire lifecycle from approved architectural diagrams and breathtaking front elevation designs to final execution. Our homes are built with top-tier materials, adhering to the highest structural standards and aesthetics.',
-    thumbnail: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800&auto=format&fit=crop',
-    images: [
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop' // architectural feeling
-    ],
-    features: ['Modern Front Elevations', 'Approved Architectural Diagrams', 'Turnkey Construction', 'Premium Finishes'],
-    status: 'Completed'
-  },
-  {
-    id: 'luxury-villa-b17',
-    title: 'Luxury Villa - B-17 Sector',
-    category: 'Development',
-    location: 'B-17 Multi Gardens, Islamabad',
-    description: 'A 10-marla luxury villa featuring high-end finishes, modern front elevation, and smart home systems.',
-    fullDescription: 'This 10-marla luxury villa in B-17 Multi Gardens is a testament to our turnkey construction capabilities. The architectural diagram was meticulously designed to maximize natural light. It features a contemporary front elevation, 5 spacious bedrooms, imported fixtures, and a landscaped front yard.',
-    thumbnail: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop',
-    images: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1600607687940-c52fe0463949?q=80&w=1200&auto=format&fit=crop'
-    ],
-    features: ['Contemporary Front Elevation', 'Smart Home Integration', 'Imported Fixtures', 'Turnkey Delivery'],
-    status: 'Completed'
-  },
-  {
-    id: 'minimalist-home-faisal-hills',
-    title: 'Modern Minimalist Home',
-    category: 'Development',
-    location: 'Faisal Hills, Taxila/Islamabad',
-    description: 'A sleek, minimalist 1-kanal residence currently under construction in Faisal Hills.',
-    fullDescription: 'Currently in the grey structure phase, this 1-kanal minimalist home in Faisal Hills is built on an approved open-plan architectural diagram. The front elevation showcases clean geometric lines and large glass facades. We are managing the entire end-to-end construction.',
-    thumbnail: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop',
-    images: [
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop'
-    ],
-    features: ['Geometric Front Elevation', 'Open-Plan Layout', 'Energy Efficient', 'Under Construction'],
-    status: 'In Progress'
-  },
-  {
-    id: 'spanish-style-residence',
-    title: 'Spanish Style Residence',
-    category: 'Development',
-    location: 'Faisal Town, Islamabad',
-    description: 'An elegant 14-marla house featuring classic Spanish architectural elements and modern interiors.',
-    fullDescription: 'This custom construction project blends traditional Spanish exterior aesthetics with ultra-modern interior layouts. The front elevation features classic terracotta roof tiles, arched windows, and a warm color palette. Delivered fully finished to the client.',
-    thumbnail: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=800&auto=format&fit=crop',
-    images: [
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop'
-    ],
-    features: ['Spanish Architecture', 'Terracotta Roofing', 'Custom Woodwork', 'Approved Layouts'],
-    status: 'Completed'
-  },
-  {
-    id: 'faisal-hills-commercial-plaza',
-    title: 'Mid-Rise Commercial Plaza',
-    category: 'Development',
-    location: 'Faisal Hills, Taxila/Islamabad',
-    description: 'A 5-story commercial plaza currently being developed in the commercial hub of Faisal Hills.',
-    fullDescription: 'We are spearheading the construction of this mid-rise commercial plaza. It includes lower-floor retail shops and upper-floor executive offices. The architectural diagram optimizes commercial visibility, and the modern glass front elevation is designed to attract top-tier businesses.',
-    thumbnail: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop',
-    images: [
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1200&auto=format&fit=crop'
-    ],
-    features: ['Glass Front Elevation', 'Retail & Corporate Space', 'Basement Parking', 'Earthquake Resistant'],
-    status: 'In Progress'
   }
 ];

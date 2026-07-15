@@ -11,6 +11,8 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Constructions', path: '/constructions' },
+    { name: 'Payment Plans', path: '/payment-plans' },
     { name: 'About', path: '/about' },
     { name: 'Team', path: '/team' },
     { name: 'Journal', path: '/blog' },
@@ -29,23 +31,23 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-10">
+          <div className="hidden lg:flex items-center space-x-5 xl:space-x-7">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.path}
-                className="text-sm uppercase tracking-wider font-semibold hover:text-burgundy transition-colors"
+                className="text-xs xl:text-sm uppercase tracking-wider font-semibold hover:text-burgundy transition-colors whitespace-nowrap"
               >
                 {link.name}
               </Link>
             ))}
-            <a href="/contact" className="bg-burgundy text-white px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity">
+            <a href="/contact" className="bg-burgundy text-white px-5 py-2 rounded-full text-xs xl:text-sm font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap">
               Consultation
             </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button onClick={() => setIsOpen(!isOpen)} className="text-burgundy p-2">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -58,7 +60,7 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-paper border-b border-burgundy/10 px-4 py-8"
+          className="lg:hidden bg-paper border-b border-burgundy/10 px-4 py-8"
         >
           <div className="flex flex-col space-y-4 items-center">
             {navLinks.map((link) => (

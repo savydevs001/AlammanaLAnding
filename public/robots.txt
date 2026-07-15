@@ -8,4 +8,4 @@ Disallow: /.next/
 Disallow: /__nextjs_original-stack-frame/
 
 # Sitemap location
-Sitemap: https://alammana.com/sitemap.xml
+Sitemap: https://alammana.pk/sitemap.xml

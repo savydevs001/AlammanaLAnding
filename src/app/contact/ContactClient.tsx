@@ -22,7 +22,7 @@ export default function ContactClient() {
                 </div>
                 <div>
                   <h3 className="text-[10px] uppercase tracking-widest font-bold text-ink/40 mb-1">Electronic Mail</h3>
-                  <a href="mailto:info@alammana.com" className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors break-all">info@alammana.com</a>
+                  <a href="mailto:rabta@alammana.pk" className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors break-all">rabta@alammana.pk</a>
                 </div>
               </div>
 
@@ -32,7 +32,7 @@ export default function ContactClient() {
                 </div>
                 <div>
                   <h3 className="text-[10px] uppercase tracking-widest font-bold text-ink/40 mb-1">Direct Line</h3>
-                  <a href="tel:+923001234567" className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors">+92 300 123 4567</a>
+                  <a href="tel:+923358078262" className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors">+92 335 8078262</a>
                 </div>
               </div>
 

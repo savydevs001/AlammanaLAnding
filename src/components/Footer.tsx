@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -19,9 +19,8 @@ export default function Footer() {
               strategic marketing, and premium real estate development.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-beige hover:text-ink transition-all"><Instagram size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-beige hover:text-ink transition-all"><Facebook size={18} /></a>
-              <a href="#" className="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-beige hover:text-ink transition-all"><Linkedin size={18} /></a>
+              <a href="https://www.instagram.com/alammanapk/" target="_blank" rel="noopener noreferrer" aria-label="Alammana Developers on Instagram" className="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-beige hover:text-ink transition-all"><Instagram size={18} /></a>
+              <a href="https://www.facebook.com/alammana.pk" target="_blank" rel="noopener noreferrer" aria-label="Alammana Developers on Facebook" className="w-10 h-10 rounded-full border border-sand/30 flex items-center justify-center hover:bg-beige hover:text-ink transition-all"><Facebook size={18} /></a>
             </div>
           </div>
 
@@ -42,11 +41,11 @@ export default function Footer() {
             <ul className="space-y-6 text-beige/70 text-sm">
               <li className="flex items-center space-x-3">
                 <Mail size={16} className="text-sand" />
-                <span className="font-semibold">info@alammana.com</span>
+                <span className="font-semibold">rabta@alammana.pk</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={16} className="text-sand" />
-                <span className="font-semibold">+92 3020542400</span>
+                <span className="font-semibold">+92 335 8078262</span>
               </li>
               <li className="flex items-center space-x-3">
                 <MapPin size={16} className="text-sand" />
