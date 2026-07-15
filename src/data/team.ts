@@ -31,7 +31,7 @@ export const team: TeamMember[] = [
     role: 'Director of Sales',
     bio: 'Construction excellence leader ensuring quality delivery and timely project completion across all Alammana developments.',
     longBio: 'Haseeb Bhatti oversees all construction operations for Alammana\'s Faisal Hills and Islamabad projects. With extensive experience in luxury construction and project management, he ensures every development meets the highest standards of quality, safety, and engineering excellence.',
-    image: '/assets/Haseeb1.png',
+    image: '/assets/Haseeb2.png',
     specialization: 'Construction Management & Quality Assurance',
     email: 'haseeb@alammana.com',
     education: 'BS in Civil Engineering',
