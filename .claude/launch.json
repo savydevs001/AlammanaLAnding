@@ -6,6 +6,18 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 3000
+    },
+    {
+      "name": "erp-web",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "D:/AlAmmana/Web/alammana-erp-web"],
+      "port": 5173
+    },
+    {
+      "name": "erp-api",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "D:/AlAmmana/Web/alammana-erp-api"],
+      "port": 4000
     }
   ]
 }
