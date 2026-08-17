@@ -36,12 +36,11 @@ export const constructions: ConstructionProject[] = [
     shortDescription: 'A sleek 1-kanal minimalist home with clean geometric lines and large glass facades.',
     fullDescription:
       'Currently in the gray structure phase, this 1-kanal minimalist home in Faisal Hills is built on an approved open-plan architectural map. The front elevation showcases clean geometric lines and large glass facades. Alammana is managing the entire end-to-end construction on our published Block A rates.',
-    // TODO(team): replace with real photos in /assets/constructions/block-a-modern-minimalist/
-    elevationImage: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1600&auto=format&fit=crop',
-    approvedMapImage: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop',
+    // TODO(team): send real elevation + approved-map (naqsha) + site photos for /assets/constructions/block-a-modern-minimalist/
+    elevationImage: '/assets/stock/modern-house-1.webp',
     gallery: [
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1600607687940-c52fe0463949?q=80&w=1200&auto=format&fit=crop',
+      '/assets/stock/modern-house-2.webp',
+      '/assets/stock/modern-house-1.webp',
     ],
     locationLabel: 'Block A, Faisal Hills, Taxila',
     mapEmbedUrl: 'https://maps.google.com/maps?q=Block+A+Faisal+Hills+Taxila&output=embed',
@@ -64,12 +63,11 @@ export const constructions: ConstructionProject[] = [
     shortDescription: 'A 10-marla luxury villa with high-end finishes, modern elevation, and smart home systems.',
     fullDescription:
       'This 10-marla luxury villa is a testament to our turnkey construction capabilities on Faisal Hills published rates. The approved map was meticulously designed to maximize natural light. It features a contemporary front elevation, 5 spacious bedrooms, imported fixtures, and a landscaped front yard — delivered fully finished, key in hand.',
-    // TODO(team): replace with real photos in /assets/constructions/block-b-luxury-villa/
-    elevationImage: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1600&auto=format&fit=crop',
-    approvedMapImage: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop',
+    // TODO(team): send real elevation + approved-map (naqsha) + site photos for /assets/constructions/block-b-luxury-villa/
+    elevationImage: '/assets/stock/villa-exterior.webp',
     gallery: [
-      'https://images.unsplash.com/photo-1600607687940-c52fe0463949?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1200&auto=format&fit=crop',
+      '/assets/stock/modern-house-2.webp',
+      '/assets/stock/villa-front.webp',
     ],
     locationLabel: 'Block B, Faisal Hills, Taxila',
     mapEmbedUrl: 'https://maps.google.com/maps?q=Block+B+Faisal+Hills+Taxila&output=embed',
@@ -92,12 +90,11 @@ export const constructions: ConstructionProject[] = [
     shortDescription: 'An elegant 14-marla house blending classic Spanish architecture with modern interiors.',
     fullDescription:
       'This completed project blends traditional Spanish exterior aesthetics with ultra-modern interior layouts. The front elevation features classic terracotta roof tiles, arched windows, and a warm color palette. Built on the approved map and delivered fully finished to a delighted client in Faisal Town.',
-    // TODO(team): replace with real photos in /assets/constructions/faisal-town-spanish-residence/
-    elevationImage: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=1600&auto=format&fit=crop',
-    approvedMapImage: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop',
+    // TODO(team): send real elevation + approved-map (naqsha) + site photos for /assets/constructions/faisal-town-spanish-residence/
+    elevationImage: '/assets/stock/villa-front.webp',
     gallery: [
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop',
+      '/assets/stock/villa-exterior.webp',
+      '/assets/stock/modern-house-2.webp',
     ],
     locationLabel: 'Faisal Town Phase 1, Islamabad',
     mapEmbedUrl: 'https://maps.google.com/maps?q=Faisal+Town+Phase+1+Islamabad&output=embed',

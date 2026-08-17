@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="flex justify-between h-20 items-center">
           <Link href="/" className="flex items-center space-x-2 md:space-x-3">
             <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg overflow-hidden bg-white border border-sand">
-              <img src="/assets/logo.png" alt="Alammana Developers logo" className="h-full w-full object-contain" />
+              <img src="/assets/logo.webp" alt="Alammana Developers logo" className="h-full w-full object-contain" />
             </div>
             <span className="text-lg md:text-2xl font-bold uppercase tracking-[0.2em] md:tracking-widest text-burgundy">ALAMMANA</span>
           </Link>

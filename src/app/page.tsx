@@ -8,8 +8,10 @@ import { team } from '../data/team';
 import ProjectCard from '../components/ProjectCard';
 import ConstructionCard from '../components/ConstructionCard';
 import TeamCard from '../components/TeamCard';
+import LeadForm from '../components/LeadForm';
 import { ArrowRight, MapPin, Building2, Paintbrush, TrendingUp } from 'lucide-react';
 import Link from 'next/link';
+import { CONTACT } from '../lib/contact';
 
 const services = [
   {
@@ -67,8 +69,8 @@ export default function Home() {
                 <p className="text-[10px] uppercase font-bold text-ink/40 tracking-wider">Projects Completed</p>
               </div>
               <div className="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-sand/30 w-full sm:w-40 md:w-48">
-                <p className="text-2xl md:text-3xl font-bold text-burgundy mb-1">98%</p>
-                <p className="text-[10px] uppercase font-bold text-ink/40 tracking-wider">Investor Returns</p>
+                <p className="text-2xl md:text-3xl font-bold text-burgundy mb-1">5</p>
+                <p className="text-[10px] uppercase font-bold text-ink/40 tracking-wider">Faisal Hills Blocks Covered</p>
               </div>
             </div>
           </motion.div>
@@ -81,7 +83,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.16)_0%,_rgba(0,0,0,0.35)_80%)]"></div>
           <div className="absolute inset-0 flex items-center justify-center p-12">
             <Image
-              src="/assets/logo.png"
+              src="/assets/logo.webp"
               alt="Alammana Developers logo for Faisal Hills real estate and luxury construction"
               width={520}
               height={520}
@@ -136,14 +138,14 @@ export default function Home() {
           <p className="text-[11px] text-ink/50">Islamabad, Pakistan</p>
         </div>
         <div className="border-b md:border-b-0 md:border-r border-sand/40 p-8 flex flex-col justify-center">
-          <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mb-1">Development Lead</span>
-          <p className="text-sm font-semibold">Ali Khan</p>
-          <p className="text-[11px] text-ink/50 italic">Managing Director</p>
+          <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mb-1">Chairman</span>
+          <p className="text-sm font-semibold">Ch. Muhammad Abdullah</p>
+          <p className="text-[11px] text-ink/50 italic">Alammana Developers</p>
         </div>
         <div className="border-b md:border-b-0 md:border-r border-sand/40 p-8 flex flex-col justify-center">
-          <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mb-1">Architecture</span>
+          <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mb-1">Construction</span>
           <p className="text-sm font-semibold">Mohsin Ali</p>
-          <p className="text-[11px] text-ink/50 italic">Chief Architect</p>
+          <p className="text-[11px] text-ink/50 italic">Director of Construction</p>
         </div>
         <div className="p-8 flex items-center justify-center md:justify-end">
           <div className="flex gap-4">
@@ -236,10 +238,9 @@ export default function Home() {
             <div className="relative">
               <div className="aspect-[4/5] overflow-hidden">
                 <img 
-                   src="https://images.unsplash.com/photo-1541888941259-7997a58d355b?q=80&w=1000&auto=format&fit=crop" 
-                   alt="Construction Site"
+                   src="/assets/stock/architectural-plans.webp" 
+                   alt="Architect preparing house construction drawings for an Alammana project"
                    className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
-                   referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute -bottom-10 -left-10 bg-burgundy p-12 hidden lg:block">
@@ -268,10 +269,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="relative h-[400px] group overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?q=80&w=800&auto=format&fit=crop" 
-                alt="Islamabad"
+                src="/assets/locations/islamabad.webp" 
+                alt="Islamabad — Alammana Developers service area"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-ink/10 flex items-center justify-center group-hover:bg-ink/30 transition-colors">
                 <div className="text-center text-paper">
@@ -282,10 +282,9 @@ export default function Home() {
             </div>
             <div className="relative h-[400px] group overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800&auto=format&fit=crop" 
-                alt="Faisal Hills"
+                src="/assets/locations/faisal-hills.webp" 
+                alt="Faisal Hills master plan, Taxila — where Alammana Developers builds"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-ink/10 flex items-center justify-center group-hover:bg-ink/30 transition-colors">
                 <div className="text-center text-paper">
@@ -326,55 +325,28 @@ export default function Home() {
               </p>
               
               <div className="space-y-8">
-                <div className="flex items-center space-x-6 group">
-                  <div className="w-12 h-12 rounded-full border border-burgundy flex items-center justify-center group-hover:bg-burgundy group-hover:text-paper transition-all">
+                <a href={`mailto:${CONTACT.email}`} className="flex items-center space-x-6 group">
+                  <div className="w-12 h-12 rounded-full border border-burgundy flex items-center justify-center group-hover:bg-burgundy group-hover:text-paper transition-all shrink-0">
                     <ArrowRight size={20} />
                   </div>
                   <div>
                     <span className="text-[10px] uppercase tracking-widest block font-bold opacity-50">Email Us</span>
-                    <span className="text-xl font-serif">rabta@alammana.pk</span>
+                    <span className="text-xl font-serif group-hover:text-burgundy transition-colors">{CONTACT.email}</span>
                   </div>
-                </div>
-                <div className="flex items-center space-x-6 group">
-                  <div className="w-12 h-12 rounded-full border border-burgundy flex items-center justify-center group-hover:bg-burgundy group-hover:text-paper transition-all">
+                </a>
+                <a href={`tel:${CONTACT.phoneHref}`} className="flex items-center space-x-6 group">
+                  <div className="w-12 h-12 rounded-full border border-burgundy flex items-center justify-center group-hover:bg-burgundy group-hover:text-paper transition-all shrink-0">
                     <ArrowRight size={20} />
                   </div>
                   <div>
                     <span className="text-[10px] uppercase tracking-widest block font-bold opacity-50">Call Us</span>
-                    <span className="text-xl font-serif">+92 335 8078262</span>
+                    <span className="text-xl font-serif group-hover:text-burgundy transition-colors">{CONTACT.phoneDisplay}</span>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
-            
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest font-bold opacity-60">Full Name</label>
-                  <input type="text" className="w-full bg-transparent border-b border-ink/20 py-3 outline-none focus:border-burgundy transition-colors font-serif text-xl" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-[10px] uppercase tracking-widest font-bold opacity-60">Email Address</label>
-                  <input type="email" className="w-full bg-transparent border-b border-ink/20 py-3 outline-none focus:border-burgundy transition-colors font-serif text-xl" />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <label className="text-[10px] uppercase tracking-widest font-bold opacity-60">Interested In</label>
-                <select className="w-full bg-transparent border-b border-ink/20 py-3 outline-none focus:border-burgundy transition-colors font-serif text-xl appearance-none">
-                  <option>Construction Development</option>
-                  <option>Investment Opportunities</option>
-                  <option>Architectural Design</option>
-                  <option>Real Estate Marketing</option>
-                </select>
-              </div>
-              <div className="space-y-2">
-                <label className="text-[10px] uppercase tracking-widest font-bold opacity-60">Message</label>
-                <textarea rows={4} className="w-full bg-transparent border-b border-ink/20 py-3 outline-none focus:border-burgundy transition-colors font-serif text-xl resize-none" />
-              </div>
-              <button className="bg-burgundy text-paper w-full py-6 text-sm uppercase tracking-[0.3em] font-bold hover:bg-black transition-colors">
-                Send Inquiry
-              </button>
-            </form>
+
+            <LeadForm variant="plain" subjectPrefix="Homepage Enquiry" />
           </div>
         </div>
       </section>

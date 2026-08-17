@@ -1,0 +1,16 @@
+# Cloudflare Pages redirects.
+# Keeps previously published/indexed URLs alive after slugs were corrected.
+# Format: <from>  <to>  <status>
+
+# Project slugs corrected for accuracy (Aug 2026)
+/portfolio/j7-faisal-hills         /portfolio/j7-emporium              301
+/portfolio/faisal-hills-new-block  /portfolio/faisal-hills-prime-block 301
+/portfolio/b17-shops-apartments    /portfolio                          301
+
+# Pages that appeared in the old hand-written sitemap but never existed
+/portfolio/faisal-hills-residency  /portfolio                          301
+/portfolio/islamabad-heights       /portfolio                          301
+/portfolio/margalla-view-villas    /portfolio                          301
+/team/ali-khan                     /team                               301
+/team/sara-ahmed                   /team                               301
+/team/zain-malik                   /team                               301

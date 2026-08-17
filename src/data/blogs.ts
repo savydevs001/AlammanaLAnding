@@ -18,9 +18,9 @@ export const blogs: BlogPost[] = [
       At Alammana Developers, we are leading the charge in eco-friendly construction. Future projects will focus heavily on energy efficiency and green spaces within urban structures.
     `,
     date: 'May 12, 2026',
-    author: 'Ali Khan',
+    author: 'Ch. Muhammad Abdullah',
     category: 'Market Insights',
-    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=800&auto=format&fit=crop',
+    image: '/assets/locations/faisal-hills.webp',
     readTime: '5 min read'
   },
   {
@@ -37,9 +37,9 @@ export const blogs: BlogPost[] = [
       One of the biggest requests we hear in Islamabad is for better flow between indoor living spaces and the natural beauty of the Margalla Hills. Our latest villa designs feature wider glass portals and interior courtyards.
     `,
     date: 'April 28, 2026',
-    author: 'Sara Ahmed',
+    author: 'Mohsin Ali',
     category: 'Architecture',
-    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop',
+    image: '/assets/stock/modern-house-1.webp',
     readTime: '4 min read'
   },
   {
@@ -56,9 +56,9 @@ export const blogs: BlogPost[] = [
       Unlike scattered developments, Faisal Hills offers a gated community lifestyle that prioritizes security and communal harmony.
     `,
     date: 'April 15, 2026',
-    author: 'Zain Malik',
+    author: 'Ashhal Ch',
     category: 'Investment',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop',
+    image: '/assets/stock/aerial-housing.webp',
     readTime: '6 min read'
   }
 ];

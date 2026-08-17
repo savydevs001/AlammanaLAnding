@@ -28,6 +28,13 @@ export interface Project {
   title: string;
   category: 'Residential' | 'Commercial' | 'Development' | 'Marketing';
   location: string;
+  /** Who is building it. These are partner projects — Alammana sells inventory,
+   *  it does not develop them. Stating this keeps the site accurate and honest. */
+  developer?: string;
+  /** Alammana's role, e.g. 'Authorised Sales Partner'. */
+  role?: string;
+  /** Regulatory approval, e.g. 'RDA Approved (Faisal Hills NOC)'. */
+  approval?: string;
   description: string;
   fullDescription: string;
   thumbnail: string;

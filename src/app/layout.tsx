@@ -3,6 +3,7 @@ import { Inter, Cormorant_Garamond } from 'next/font/google';
 import '../index.css';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import WhatsAppFloat from '../components/WhatsAppFloat';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans' });
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], variable: '--font-serif', weight: ['300', '400', '500', '600', '700'], style: ['italic', 'normal'] });
@@ -21,12 +22,13 @@ const structuredData = [
     url: siteUrl,
     logo: {
       '@type': 'ImageObject',
-      url: `${siteUrl}/assets/logo.png`,
-      width: 1200,
-      height: 1200
+      url: `${siteUrl}/assets/icon-512.png`,
+      width: 512,
+      height: 512
     },
+    image: `${siteUrl}/assets/og-image.jpg`,
     description: 'Premium Faisal Hills and Faisal Town real estate development, architecture, and luxury construction in Islamabad. Specializing in luxury homes, property development, and strategic real estate marketing.',
-    foundingDate: '2020',
+    foundingDate: '2015',
     industry: 'Real Estate Development',
     areaServed: [
       {
@@ -117,13 +119,9 @@ const structuredData = [
         }
       ]
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '50',
-      bestRating: '5',
-      worstRating: '1'
-    },
+    // NOTE: no aggregateRating here on purpose. Review markup must reflect
+    // real, verifiable reviews shown on the page — inventing one risks a
+    // Google manual action. Add it back only when genuine reviews are live.
     priceRange: '$$'
   },
 
@@ -139,14 +137,8 @@ const structuredData = [
     publisher: {
       '@id': `${siteUrl}#organization`
     },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${siteUrl}/search?q={search_term_string}`
-      },
-      'query-input': 'required name=search_term_string'
-    },
+    // No SearchAction — the site has no /search page, and advertising one
+    // that 404s is worse than omitting it.
     inLanguage: 'en-PK'
   },
 
@@ -219,9 +211,9 @@ export const metadata: Metadata = {
     nocache: false,
   },
   icons: {
-    icon: '/assets/logo.png',
-    shortcut: '/assets/logo.png',
-    apple: '/assets/logo.png',
+    icon: '/assets/icon-192.png',
+    shortcut: '/assets/icon-192.png',
+    apple: '/assets/icon-192.png',
   },
   openGraph: {
     title: 'Alammana Developers — Faisal Hills Real Estate & Luxury Construction',
@@ -231,10 +223,10 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/assets/logo.png',
+        url: '/assets/og-image.jpg',
         width: 1200,
-        height: 1200,
-        alt: 'Alammana Developers logo — Faisal Hills real estate and luxury construction',
+        height: 630,
+        alt: 'Alammana Developers — Faisal Hills construction and real estate in Taxila and Islamabad',
       },
     ],
   },
@@ -242,7 +234,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Alammana Developers — Faisal Hills Real Estate & Luxury Construction',
     description: 'Premium Faisal Hills and Faisal Town real estate development in Islamabad, with luxury construction and architectural excellence.',
-    images: ['/assets/logo.png'],
+    images: ['/assets/og-image.jpg'],
   },
 };
 
@@ -264,6 +256,7 @@ export default function RootLayout({
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );

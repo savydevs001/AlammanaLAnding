@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 rounded-lg overflow-hidden bg-white border border-sand/30">
-                <img src="/assets/logo.png" alt="Alammana Developers logo" className="h-full w-full object-contain" />
+                <img src="/assets/logo.webp" alt="Alammana Developers logo" className="h-full w-full object-contain" />
               </div>
               <h2 className="text-4xl font-serif tracking-tight">ALAMMANA <span className="text-sand/60 italic">Developers</span></h2>
             </div>

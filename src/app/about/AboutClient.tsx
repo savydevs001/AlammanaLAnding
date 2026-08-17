@@ -5,11 +5,12 @@ import { Award, Shield, History } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AboutClient() {
+  // Keep these factual — every claim here should be one we can evidence if asked.
   const milestones = [
-    { year: '2015', event: 'Founded in Islamabad', desc: 'Starting as a boutique marketing agency for elite sectors.' },
-    { year: '2018', event: 'First Development Project', desc: 'Successful completion of Islamabad Heights residency.' },
-    { year: '2022', event: 'Faisal Hills Expansion', desc: 'Securing major territory for strategic urban development.' },
-    { year: '2026', event: 'National Recognition', desc: 'Voted top luxury developer in the capital region.' }
+    { year: '2015', event: 'Founded', desc: 'Started as a boutique real estate marketing firm serving the Islamabad region.' },
+    { year: '2018', event: 'First Turnkey Homes', desc: 'Moved from marketing into full construction delivery for private clients.' },
+    { year: '2022', event: 'Faisal Hills Focus', desc: 'Concentrated our construction and sales operations in Faisal Hills, Taxila.' },
+    { year: '2026', event: 'Published Rate Lists', desc: 'Made block-wise construction rates public so clients can compare before committing.' }
   ];
 
   return (
@@ -41,8 +42,8 @@ export default function AboutClient() {
                 <span className="text-[10px] uppercase tracking-widest font-bold opacity-40">Experience</span>
               </div>
               <div className="flex flex-col">
-                <span className="text-3xl md:text-4xl font-serif text-burgundy">60+</span>
-                <span className="text-[10px] uppercase tracking-widest font-bold opacity-40">Global Partners</span>
+                <span className="text-3xl md:text-4xl font-serif text-burgundy">5</span>
+                <span className="text-[10px] uppercase tracking-widest font-bold opacity-40">Faisal Hills Blocks</span>
               </div>
             </div>
           </motion.div>
@@ -53,11 +54,11 @@ export default function AboutClient() {
             className="relative"
           >
             <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl">
-              <img 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" 
-                alt="Alammana Headquarters"
+              {/* TODO(team): replace with a real photo of the Allah Hu Chowk office or a site in progress. */}
+              <img
+                src="/assets/projects/prime-block.webp"
+                alt="Faisal Hills Prime Block master plan — the area Alammana Developers builds in"
                 className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
               />
             </div>
             <div className="absolute -top-10 -right-10 w-64 h-64 bg-burgundy rounded-3xl -z-10 opacity-10" />

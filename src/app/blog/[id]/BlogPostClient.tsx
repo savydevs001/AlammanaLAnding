@@ -1,6 +1,7 @@
 'use client';
 
 import { blogs } from '../../../data/blogs';
+import { team } from '../../../data/team';
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { ArrowLeft, Clock, User, Share2 } from 'lucide-react';
@@ -38,9 +39,25 @@ export default function BlogPostClient({ params }: { params: { id: string } }) {
           
           <div className="flex items-center justify-between border-y border-sand/20 py-6">
             <div className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-full overflow-hidden bg-sand">
-                <img src={`https://ui-avatars.com/api/?name=${post.author}&background=630D16&color=fff`} alt={post.author} />
-              </div>
+              {/* Initials avatar rendered locally — no third-party image service
+                  to break or leak reader data. Uses the author's real photo
+                  when they are on the team page. */}
+              {(() => {
+                const member = team.find(m => m.name === post.author);
+                if (member) {
+                  return (
+                    <div className="w-12 h-12 rounded-full overflow-hidden bg-sand shrink-0">
+                      <img src={member.image} alt={post.author} className="w-full h-full object-cover" />
+                    </div>
+                  );
+                }
+                const initials = post.author.split(' ').filter(w => !w.endsWith('.')).slice(0, 2).map(w => w[0]).join('');
+                return (
+                  <div className="w-12 h-12 rounded-full bg-burgundy text-white flex items-center justify-center font-bold text-sm shrink-0">
+                    {initials}
+                  </div>
+                );
+              })()}
               <div>
                 <span className="text-[10px] uppercase tracking-widest font-bold opacity-40 block">Written By</span>
                 <span className="text-sm font-semibold">{post.author}</span>

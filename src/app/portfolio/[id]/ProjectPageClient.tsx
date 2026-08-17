@@ -3,7 +3,9 @@
 import { projects } from '../../../data/projects';
 import Link from 'next/link';
 import { motion } from 'motion/react';
-import { ArrowLeft, MapPin, CheckCircle2, ShieldCheck, Wind, Coffee, Home, Users, Truck, Zap } from 'lucide-react';
+import { ArrowLeft, MapPin, CheckCircle2, ShieldCheck, Wind, Coffee, Home, Users, Truck, Zap, Building } from 'lucide-react';
+import LeadForm from '../../../components/LeadForm';
+import { whatsappLink } from '../../../lib/contact';
 
 import { useEffect, useState } from 'react';
 
@@ -49,20 +51,6 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
         </div>
       </div>
     );
-  }
-
-  const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleChange(e: any) {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  }
-
-  function handleSubmit(e: any) {
-    e.preventDefault();
-    setSubmitted(true);
-    // TODO: wire to API
   }
 
   return (
@@ -122,6 +110,36 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                   </div>
                 </div>
 
+                {project.developer && (
+                  <div>
+                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block mb-2">Developed By</span>
+                    <div className="flex items-start space-x-2 text-burgundy">
+                      <Building size={18} className="mt-1 shrink-0" />
+                      <span className="font-serif text-lg leading-snug">{project.developer}</span>
+                    </div>
+                  </div>
+                )}
+
+                {project.role && (
+                  <div>
+                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block mb-2">Our Role</span>
+                    <div className="flex items-center space-x-2 text-burgundy">
+                      <ShieldCheck size={18} />
+                      <span className="font-serif text-lg">{project.role}</span>
+                    </div>
+                  </div>
+                )}
+
+                {project.approval && (
+                  <div>
+                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block mb-2">Approval</span>
+                    <div className="flex items-start space-x-2 text-burgundy">
+                      <CheckCircle2 size={18} className="mt-1 shrink-0" />
+                      <span className="font-serif text-lg leading-snug">{project.approval}</span>
+                    </div>
+                  </div>
+                )}
+
                 <div className="pt-8 border-t border-burgundy/10">
                   <h3 className="text-xs uppercase tracking-widest font-bold mb-6">Key Features</h3>
                   <ul className="space-y-4">
@@ -140,9 +158,14 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                  <p className="text-sm text-paper/60 leading-relaxed italic">
                    Schedule a private viewing or request the detailed brochure for this development.
                  </p>
-                 <button className="w-full bg-burgundy py-4 text-xs uppercase tracking-widest font-bold hover:bg-paper hover:text-burgundy transition-all">
-                   Request Details
-                 </button>
+                 <a
+                   href={whatsappLink(`Hello Alammana, I'd like the details and current payment plan for ${project.title} (${project.location}).`)}
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   className="block text-center w-full bg-burgundy py-4 text-xs uppercase tracking-widest font-bold hover:bg-paper hover:text-burgundy transition-all"
+                 >
+                   Request Details on WhatsApp
+                 </a>
               </div>
             </div>
 
@@ -319,7 +342,14 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                               <div className="text-3xl md:text-4xl font-serif font-bold text-burgundy mt-3">{plan.duration}</div>
                               {plan.notes && <p className="text-sm text-ink/70 mt-4">{plan.notes}</p>}
                             </div>
-                            <button className="mt-8 w-full rounded-full bg-burgundy px-6 py-4 text-sm uppercase tracking-[0.35em] font-bold text-paper">Enquire About This Plan</button>
+                            <a
+                              href={whatsappLink(`Hello Alammana, I'm interested in the "${plan.name}" payment plan for ${project.title}.`)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="mt-8 block text-center w-full rounded-full bg-burgundy px-6 py-4 text-sm uppercase tracking-[0.35em] font-bold text-paper hover:opacity-90 transition-opacity"
+                            >
+                              Enquire About This Plan
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -361,7 +391,14 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                             </div>
                           </div>
                           <div className="mt-8 flex justify-end">
-                            <button className="rounded-full bg-burgundy px-6 py-3 text-sm uppercase tracking-[0.35em] font-bold text-paper">Enquire</button>
+                            <a
+                              href={whatsappLink(`Hello Alammana, I'd like details on the ${u.type}${u.size ? ` (${u.size})` : ''} at ${project.title}.`)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="rounded-full bg-burgundy px-6 py-3 text-sm uppercase tracking-[0.35em] font-bold text-paper hover:opacity-90 transition-opacity"
+                            >
+                              Enquire
+                            </a>
                           </div>
                         </motion.div>
                       ))}
@@ -439,36 +476,16 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                   </div>
                 </div>
 
-                {!submitted ? (
-                  <form onSubmit={handleSubmit} className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                    <div className="space-y-4">
-                      <label className="block text-xs uppercase tracking-[0.35em] text-ink/60">Full Name</label>
-                      <input name="name" value={formData.name} onChange={handleChange} required className="w-full rounded-3xl border border-burgundy/10 bg-white px-4 py-4 text-sm text-ink shadow-sm" />
-
-                      <label className="block text-xs uppercase tracking-[0.35em] text-ink/60">Email</label>
-                      <input name="email" value={formData.email} onChange={handleChange} required className="w-full rounded-3xl border border-burgundy/10 bg-white px-4 py-4 text-sm text-ink shadow-sm" />
-                    </div>
-
-                    <div className="space-y-4">
-                      <label className="block text-xs uppercase tracking-[0.35em] text-ink/60">Phone</label>
-                      <input name="phone" value={formData.phone} onChange={handleChange} className="w-full rounded-3xl border border-burgundy/10 bg-white px-4 py-4 text-sm text-ink shadow-sm" />
-
-                      <label className="block text-xs uppercase tracking-[0.35em] text-ink/60">Message</label>
-                      <textarea name="message" value={formData.message} onChange={handleChange} rows={4} className="w-full rounded-3xl border border-burgundy/10 bg-white px-4 py-4 text-sm text-ink shadow-sm" />
-                    </div>
-
-                    <div className="lg:col-span-2 flex flex-col gap-3">
-                      <button type="submit" className="w-full rounded-full bg-burgundy px-8 py-4 text-sm uppercase tracking-[0.35em] font-bold text-paper">Submit Interest</button>
-                      <p className="text-xs text-ink/60">We respect your privacy. Your details are safe and will only be used to share project updates.</p>
-                      <p className="text-xs text-ink/60">Prefer direct contact? <a href={`mailto:${project.contact?.email}`} className="text-burgundy underline">{project.contact?.email}</a> or call <span className="font-semibold">{project.contact?.phone}</span>.</p>
-                    </div>
-                  </form>
-                ) : (
-                  <div className="rounded-3xl border border-burgundy/10 bg-white p-6 text-ink shadow-sm">
-                    <h3 className="text-2xl font-serif font-bold text-ink">Thank you!</h3>
-                    <p className="mt-3 text-sm text-ink/70">Your interest has been registered. Our team will contact you shortly with the brochure and pricing schedule.</p>
-                  </div>
-                )}
+                <LeadForm
+                  subjectPrefix="Project Enquiry"
+                  context={`${project.title} — ${project.location}`}
+                  interests={[
+                    `${project.title} — Availability & Pricing`,
+                    `${project.title} — Payment Plan`,
+                    `${project.title} — Site Visit`,
+                    'Other',
+                  ]}
+                />
               </div>
             </div>
           </div>
@@ -512,7 +529,14 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center gap-3 mt-6 md:mt-8">
-            <button className="w-full sm:flex-1 rounded-full bg-burgundy px-6 md:px-8 py-3 md:py-4 text-xs uppercase tracking-[0.3em] font-bold text-paper hover:bg-burgundy/90 transition">View Details</button>
+            <a
+              href={whatsappLink(`Hello Alammana, I'd like more information about ${project.title} (${project.location}).`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:flex-1 rounded-full bg-burgundy px-6 md:px-8 py-3 md:py-4 text-center text-xs uppercase tracking-[0.3em] font-bold text-paper hover:bg-burgundy/90 transition"
+            >
+              WhatsApp Us
+            </a>
             <a href={`mailto:${project.contact?.email}`} className="w-full sm:flex-1 sm:w-auto rounded-full border border-burgundy/20 bg-paper px-6 md:px-8 py-3 md:py-4 text-center text-xs font-semibold text-ink hover:bg-beige/40 transition">Email Us</a>
           </div>
         </div>

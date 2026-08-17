@@ -19,80 +19,93 @@ import { TeamMember } from '../types';
  *     youtube: 'https://www.youtube.com/@username',
  *     twitter: 'https://x.com/username',
  *   },
+ *
+ * NOTE ON EMAIL: every member currently points at the company address
+ * rabta@alammana.pk so that no enquiry is ever lost to a mailbox that doesn't
+ * exist. Replace with a personal address only once that mailbox is live.
  * ─────────────────────────────────────────────────────────────────────────────
  */
+
+const COMPANY_EMAIL = 'rabta@alammana.pk';
 
 export const team: TeamMember[] = [
   {
     id: 'muhammad-abdullah',
-    name: 'Muhammad Abdullah',
+    name: 'Ch. Muhammad Abdullah',
     role: 'Chairman',
-    bio: 'Visionary leader steering Alammana Developers toward premium real estate excellence in Islamabad and Faisal Hills.',
-    longBio: 'Muhammad Abdullah brings strategic vision and decisive leadership to Alammana Developers. With a proven track record in real estate development, he shapes the company\'s direction in luxury construction and Faisal Hills real estate. His commitment to quality and innovation drives the organization\'s growth in Islamabad\'s premier development sector.',
-    image: '/assets/Abdullah1.png',
+    bio: 'Visionary leader steering Alammana Developers toward premium real estate excellence in Faisal Hills and Islamabad.',
+    longBio:
+      'Ch. Muhammad Abdullah brings strategic vision and decisive leadership to Alammana Developers. He sets the company\'s direction across construction, plot sales and partner projects in Faisal Hills and the wider Islamabad region, and holds the firm to its commitment of publishing transparent rates rather than negotiating in the dark.',
+    image: '/assets/team/abdullah.webp',
     specialization: 'Visionary Leadership & Strategic Direction',
-    email: 'muhammad@alammana.com',
+    email: COMPANY_EMAIL,
     education: 'MBA in Business Administration',
-    experience: '20+ Years'
+    experience: '20+ Years',
   },
   {
     id: 'ashal',
     name: 'Ashhal Ch',
     role: 'Director of Finance',
-    bio: 'Digital engagement strategist building Alammana\'s brand presence across social platforms and digital channels.',
-    longBio: 'Ashhal Ch directs Alammana\'s comprehensive social media strategy, leveraging modern digital platforms to connect with investors and clients interested in Faisal Hills and Islamabad real estate. With expertise in social engagement and community building, Ashhal Ch ensures Alammana maintains a strong, authentic digital presence.',
-    image: '/assets/Ashhal Ch.jpg',
-    specialization: 'Digital Strategy & Social Engagement',
-    email: 'ashal@alammana.com',
-    education: 'Bachelor\'s in Marketing & Communications',
-    experience: '8+ Years'
+    bio: 'Financial lead overseeing costing, payment plans and the transparent rate lists Alammana publishes.',
+    longBio:
+      'Ashhal Ch directs Alammana\'s financial operations — costing every construction stage, structuring the instalment schedules clients pay against, and keeping the published block-wise rate lists honest and current. His work is what allows Alammana to quote openly instead of case by case.',
+    image: '/assets/team/ashhal.webp',
+    specialization: 'Financial Planning & Transparent Costing',
+    email: COMPANY_EMAIL,
+    education: 'Bachelor\'s in Finance & Accounting',
+    experience: '8+ Years',
   },
   {
     id: 'haseeb-bhatti',
     name: 'Haseeb Bhatti',
     role: 'Director of Sales',
-    bio: 'Construction excellence leader ensuring quality delivery and timely project completion across all Alammana developments.',
-    longBio: 'Haseeb Bhatti oversees all construction operations for Alammana\'s Faisal Hills and Islamabad projects. With extensive experience in luxury construction and project management, he ensures every development meets the highest standards of quality, safety, and engineering excellence.',
-    image: '/assets/Haseeb2.png',
-    specialization: 'Construction Management & Quality Assurance',
-    email: 'haseeb@alammana.com',
-    education: 'BS in Civil Engineering',
-    experience: '18+ Years'
+    bio: 'Sales lead connecting investors and families with the right plot, apartment or construction package.',
+    longBio:
+      'Haseeb Bhatti leads Alammana\'s sales across Faisal Hills plots, partner project inventory and turnkey construction packages. He guides clients from first enquiry through block selection, payment plan and booking, and is usually the first person a new client speaks to.',
+    image: '/assets/team/haseeb.webp',
+    specialization: 'Sales Excellence & Client Relations',
+    email: COMPANY_EMAIL,
+    education: 'MBA in Sales & Marketing',
+    experience: '18+ Years',
   },
   {
     id: 'muhammad-mohsin',
     name: 'Mohsin Ali',
     role: 'Director of Construction',
-    bio: 'Financial strategist managing capital allocation, investments, and fiscal planning for sustainable growth.',
-    longBio: 'Mohsin Ali directs Alammana\'s financial operations with meticulous planning and strategic investment management. His expertise ensures robust financial health and sustainable growth in the competitive Faisal Hills and Islamabad real estate market.',
-    image: '/assets/Mohsin1.png',
-    specialization: 'Financial Planning & Investment Management',
-    email: 'mohsin@alammana.com',
-    education: 'CFA Level III, Masters in Finance',
-    experience: '15+ Years'
+    bio: 'Construction lead ensuring every home is built to the approved map and to Alammana\'s quality standard.',
+    longBio:
+      'Mohsin Ali oversees construction on every Alammana site in Faisal Hills and Faisal Town — from excavation and gray structure through to final finishing. He is responsible for building strictly to the society-approved map, holding material quality, and keeping milestones on the schedule clients are paying against.',
+    image: '/assets/team/mohsin.webp',
+    specialization: 'Construction Management & Quality Assurance',
+    email: COMPANY_EMAIL,
+    education: 'BS in Civil Engineering',
+    experience: '15+ Years',
   },
   {
     id: 'shahzeb',
     name: 'Muhammad Shahzeb',
     role: 'Director of Media',
-    bio: 'Sales leader driving revenue growth and client acquisition for Alammana\'s Faisal Hills and Islamabad projects.',
-    longBio: 'Shahzeb spearheads Alammana\'s sales strategy, connecting investors and end-users with premium real estate opportunities in Faisal Hills and Islamabad. His dynamic approach and market insights drive consistent sales performance and client satisfaction.',
-    image: '/assets/shahzeb2.png',
-    specialization: 'Sales Excellence & Client Relations',
-    email: 'shahzeb@alammana.com',
-    education: 'MBA in Sales & Marketing',
-    experience: '12+ Years'
+    bio: 'Media lead building Alammana\'s presence across social platforms and project marketing.',
+    longBio:
+      'Muhammad Shahzeb directs Alammana\'s media and social strategy, documenting live construction progress and presenting Faisal Hills opportunities to investors and end-buyers. His work keeps clients informed about what is actually being built, not just what is being sold.',
+    image: '/assets/team/shahzeb.webp',
+    specialization: 'Media Strategy & Social Engagement',
+    email: COMPANY_EMAIL,
+    education: 'Bachelor\'s in Marketing & Communications',
+    experience: '12+ Years',
   },
   {
     id: 'muhammad-bilal-gul',
     name: 'Muhammad Bilal Gul',
     role: 'Director of Technology',
-    bio: 'Tech innovator modernizing Alammana\'s digital infrastructure and digital presence.',
-    longBio: 'Muhammad Bilal Gul leads Alammana\'s technological initiatives, ensuring cutting-edge solutions for real estate management, client engagement, and digital innovation. His expertise modernizes how Alammana connects with clients interested in Faisal Hills and Islamabad properties.',
-    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600&auto=format&fit=crop',
+    bio: 'Technology lead modernising how Alammana manages projects and reaches clients online.',
+    longBio:
+      'Muhammad Bilal Gul leads Alammana\'s technology work — the website and published rate lists, internal project and payment tracking, and the systems that let clients find accurate information about Faisal Hills construction without having to ask for it first.',
+    // TODO(team): replace with a real photograph of Bilal.
+    image: '/assets/logo.webp',
     specialization: 'Technology & Digital Innovation',
-    email: 'bilal@alammana.com',
+    email: COMPANY_EMAIL,
     education: 'BS in Computer Science, MS in Software Engineering',
-    experience: '10+ Years'
-  }
+    experience: '10+ Years',
+  },
 ];

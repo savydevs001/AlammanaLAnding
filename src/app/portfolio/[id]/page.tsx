@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { projects } from '../../../data/projects';
 import ProjectPageClient from './ProjectPageClient';
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alammana.pk';
+
 export async function generateStaticParams() {
   return projects.map((project) => ({
     id: project.id,
@@ -15,28 +17,32 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   if (!project) {
     return {
       title: 'Project Not Found | Alammana Developers',
+      robots: { index: false, follow: true },
     };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
-
   return {
-    title: `${project.title} | Faisal Hills Real Estate | Alammana Developers`,
-    description: `${project.description} Located in ${project.location}, ${project.title} represents Alammana Developers' commitment to luxury construction and architectural excellence in Islamabad.`,
+    title: `${project.title} — ${project.location} | Payment Plan & Availability`,
+    description: `${project.description} Alammana Developers${project.role ? ` is an ${project.role.toLowerCase()}` : ''} for ${project.title} in ${project.location}. Enquire for current pricing and payment plans.`,
     keywords: [
       project.title,
       project.location,
+      `${project.title} payment plan`,
+      `${project.title} price`,
       'Faisal Hills',
-      'luxury construction',
       'Islamabad real estate',
       'Alammana Developers',
-      project.type,
+      project.category,
     ],
+    alternates: {
+      canonical: `/portfolio/${project.id}`,
+    },
     openGraph: {
-      title: `${project.title} - ${project.location}`,
+      title: `${project.title} — ${project.location}`,
       description: project.description,
+      url: `/portfolio/${project.id}`,
       type: 'article',
-      images: [project.image],
+      images: [{ url: project.thumbnail, alt: `${project.title}, ${project.location}` }],
     },
   };
 }
@@ -49,33 +55,32 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
     return <div>Project not found</div>;
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+  const absolute = (p: string) => (p.startsWith('http') ? p : `${baseUrl}${p}`);
 
-  // Product/Service Schema for Project
   const projectSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
+    '@id': `${baseUrl}/portfolio/${project.id}#product`,
     name: project.title,
     description: project.description,
-    image: `${baseUrl}${project.image}`,
-    category: project.type,
+    image: absolute(project.thumbnail),
+    category: project.category,
+    url: `${baseUrl}/portfolio/${project.id}`,
+    ...(project.developer ? { manufacturer: { '@type': 'Organization', name: project.developer } } : {}),
     brand: {
       '@type': 'Brand',
-      name: 'Alammana Developers'
-    },
-    manufacturer: {
-      '@type': 'Organization',
-      name: 'Alammana Developers',
-      url: baseUrl
+      name: project.developer ?? 'Alammana Developers',
     },
     offers: {
       '@type': 'Offer',
       availability: 'https://schema.org/InStock',
       priceCurrency: 'PKR',
+      url: `${baseUrl}/portfolio/${project.id}`,
       seller: {
         '@type': 'Organization',
-        name: 'Alammana Developers'
-      }
+        name: 'Alammana Developers',
+        url: baseUrl,
+      },
     },
     areaServed: {
       '@type': 'Place',
@@ -83,29 +88,40 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Islamabad',
-        addressCountry: 'PK'
-      }
+        addressCountry: 'PK',
+      },
     },
     additionalProperty: [
-      {
-        '@type': 'PropertyValue',
-        name: 'Property Type',
-        value: project.type
-      },
-      {
-        '@type': 'PropertyValue',
-        name: 'Location',
-        value: project.location
-      }
-    ]
+      { '@type': 'PropertyValue', name: 'Property Type', value: project.category },
+      { '@type': 'PropertyValue', name: 'Location', value: project.location },
+      ...(project.developer
+        ? [{ '@type': 'PropertyValue', name: 'Developer', value: project.developer }]
+        : []),
+      ...(project.status
+        ? [{ '@type': 'PropertyValue', name: 'Status', value: project.status }]
+        : []),
+    ],
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+      { '@type': 'ListItem', position: 2, name: 'Portfolio', item: `${baseUrl}/portfolio` },
+      { '@type': 'ListItem', position: 3, name: project.title, item: `${baseUrl}/portfolio/${project.id}` },
+    ],
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(projectSchema) }}
-      />
+      {[projectSchema, breadcrumbSchema].map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <ProjectPageClient params={resolvedParams} />
     </>
   );
