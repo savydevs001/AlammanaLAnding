@@ -165,7 +165,7 @@ export const societies: Society[] = [
     paymentNote:
       'Plots are available on instalment plans as well as outright purchase, and terms differ by block and by whether the file is fresh or resale. Contact us for the current schedule.',
     image: '/assets/societies/faisal-hills.webp',
-    masterPlanImage: '/assets/projects/prime-block-map.webp',
+    masterPlanImage: '/assets/societies/faisal-hills-master-plan.webp',
     mapEmbedUrl: 'https://maps.google.com/maps?q=Faisal+Hills+Taxila&output=embed',
     faqs: [
       {

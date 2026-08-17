@@ -311,32 +311,59 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="relative h-[400px] group overflow-hidden">
-              <img 
-                src="/assets/locations/islamabad.webp" 
-                alt="Islamabad — Alammana Developers service area"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+          {/* Was two large images with no link at all. Now every area is a real
+              destination — and the Faisal Hills master plan does more work here
+              than a decorative photo. */}
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+            <Link
+              href="/societies/faisal-hills"
+              className="lg:col-span-3 group relative block h-[300px] md:h-[420px] overflow-hidden rounded-3xl border border-sand/40 shadow-lg"
+            >
+              <img
+                src="/assets/societies/faisal-hills-master-plan.webp"
+                alt="Faisal Hills master plan showing Blocks A, B, C, D and the Executive Block, Taxila"
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                loading="lazy"
               />
-              <div className="absolute inset-0 bg-ink/10 flex items-center justify-center group-hover:bg-ink/30 transition-colors">
-                <div className="text-center text-paper">
-                  <MapPin className="mx-auto mb-4 text-beige" />
-                  <h3 className="text-3xl font-serif uppercase tracking-widest">Islamabad</h3>
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/25 to-transparent" />
+              <div className="absolute inset-0 p-8 flex flex-col justify-end text-paper">
+                <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-beige mb-2">
+                  Master Plan
+                </span>
+                <h3 className="text-3xl font-serif mb-2">Faisal Hills, Taxila</h3>
+                <p className="text-sm text-paper/80 max-w-md mb-4">
+                  Eight blocks, each at a different stage. Explore which one fits how you plan to buy.
+                </p>
+                <span className="flex items-center gap-2 text-xs uppercase tracking-widest font-bold">
+                  Explore the blocks <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                </span>
               </div>
-            </div>
-            <div className="relative h-[400px] group overflow-hidden">
-              <img 
-                src="/assets/locations/faisal-hills.webp" 
-                alt="Faisal Hills master plan, Taxila — where Alammana Developers builds"
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-ink/10 flex items-center justify-center group-hover:bg-ink/30 transition-colors">
-                <div className="text-center text-paper">
-                  <MapPin className="mx-auto mb-4 text-beige" />
-                  <h3 className="text-3xl font-serif uppercase tracking-widest">Faisal Hills</h3>
-                </div>
-              </div>
+            </Link>
+
+            <div className="lg:col-span-2 space-y-3">
+              {societies.filter(s => s.id !== 'faisal-hills').map(s => (
+                <Link
+                  key={s.id}
+                  href={`/societies/${s.id}`}
+                  className="group flex items-center justify-between gap-4 rounded-2xl border border-sand/50 bg-white p-5 hover:border-burgundy/40 hover:shadow-md transition-all"
+                >
+                  <span>
+                    <span className="block font-serif text-lg text-ink group-hover:text-burgundy transition-colors">
+                      {s.name}
+                    </span>
+                    <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold text-ink/40 mt-1">
+                      <MapPin size={11} /> {s.city}
+                    </span>
+                  </span>
+                  <ArrowRight size={16} className="text-burgundy shrink-0 transition-transform group-hover:translate-x-1" />
+                </Link>
+              ))}
+              <Link
+                href="/societies"
+                className="block text-center rounded-2xl bg-ink text-paper p-5 text-xs uppercase tracking-[0.2em] font-bold hover:bg-burgundy transition-colors"
+              >
+                Compare All Societies
+              </Link>
             </div>
           </div>
         </div>

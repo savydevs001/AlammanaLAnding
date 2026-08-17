@@ -26,12 +26,21 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold mb-8 text-sand">Expertise</h3>
+            {/* These used to be cursor:pointer list items that went nowhere.
+                Now they are real links to the pages people are looking for. */}
+            <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold mb-8 text-sand">Explore</h3>
             <ul className="space-y-4 text-beige/70 text-sm font-medium">
-              <li className="hover:text-white transition-colors cursor-pointer">Urban Development</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Luxury Architecture</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Real Estate Marketing</li>
-              <li className="hover:text-white transition-colors cursor-pointer">Portfolio Management</li>
+              {[
+                { label: 'Construction Rates', href: '/payment-plans' },
+                { label: 'Faisal Hills Blocks', href: '/societies/faisal-hills' },
+                { label: 'Homes We Are Building', href: '/constructions' },
+                { label: 'Partner Projects', href: '/portfolio' },
+                { label: 'Guides & Articles', href: '/blog' },
+              ].map(l => (
+                <li key={l.href}>
+                  <Link href={l.href} className="hover:text-white transition-colors">{l.label}</Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -55,7 +64,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-24 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] text-beige/30 tracking-[0.2em] uppercase font-bold">
+        {/* OpenStreetMap data is ODbL-licensed and requires attribution wherever
+            its map imagery is used — several society and project cards are
+            rendered from OSM tiles. */}
+        <p className="mt-16 text-[10px] text-beige/25 leading-relaxed">
+          Location map imagery ©{' '}
+          <a
+            href="https://www.openstreetmap.org/copyright"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-beige/50"
+          >
+            OpenStreetMap contributors
+          </a>
+          . Project renders and progress photographs remain the property of their respective
+          developers.
+        </p>
+
+        <div className="mt-8 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] text-beige/30 tracking-[0.2em] uppercase font-bold">
           <p>© 2026 Alammana Developers. Architecting Legacies.</p>
           <div className="flex space-x-8 mt-6 md:mt-0">
             <Link href="/privacy" className="hover:text-beige transition-colors">Privacy Policy</Link>
