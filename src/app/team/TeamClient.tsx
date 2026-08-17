@@ -9,7 +9,7 @@ export default function TeamClient({ team }: { team: TeamMember[] }) {
     '@type': 'Organization',
     name: 'Alammana Developers',
     url: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
-    logo: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'}/assets/logo.png`,
+    logo: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'}/assets/icon-512.png`,
     description: 'Premium Faisal Hills and Islamabad real estate developer',
     address: {
       '@type': 'PostalAddress',

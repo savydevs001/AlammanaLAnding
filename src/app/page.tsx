@@ -179,7 +179,7 @@ export default function Home() {
               <Link
                 key={s.id}
                 href={`/societies/${s.id}`}
-                className="group relative overflow-hidden rounded-3xl border border-sand/40 aspect-[3/4] shadow-sm hover:shadow-xl transition-shadow"
+                className="group relative overflow-hidden rounded-3xl border border-sand/40 aspect-[4/5] shadow-sm hover:shadow-xl transition-shadow"
               >
                 <img
                   src={s.image}

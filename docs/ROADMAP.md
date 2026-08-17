@@ -76,17 +76,27 @@ phase 2 payment plan", "dha gandhara plots" etc.
 
 ---
 
-## Phase 3 — Images  `[~]` NEXT UP
+## Phase 3 — Images  `[~]` mostly done — 3.2 blocked on client
 
-- [ ] 3.1 Audit aspect ratios/heights across ProjectCard, ConstructionCard,
+- [x] 3.1 Audit aspect ratios/heights across ProjectCard, ConstructionCard,
       society cards and all hero sections; standardise so nothing crops badly
-- [ ] 3.2 Source real project imagery (official renders from Faisal Town Group /
+- [!] 3.2 Source real project imagery (official renders from Faisal Town Group /
       J7 Group — client is a sales partner and can request these)
-- [ ] 3.3 Master-plan / layout images per society, self-hosted & optimised to WebP
-- [ ] 3.4 Re-check every image loads (`naturalWidth > 0`) after changes
+- [x] 3.3 Master-plan / layout images per society, self-hosted & optimised to WebP
+- [x] 3.4 Re-check every image loads (`naturalWidth > 0`) after changes
 
 > Current placeholders: `/assets/projects/{faisal-jewel,j7-emporium,107-plaza}.webp`
-> are branded backdrops, not photos. Replace when the client sends real renders.
+> and `/assets/societies/*.webp` are branded backdrops, not photos. Replace when
+> the client sends real renders.
+>
+> Card ratios are standardised at 4:5 (ProjectCard, ConstructionCard, homepage
+> society cards) and 16:10 on the societies listing. Branded backdrops are
+> generated 1600x1200 with the logo dead-centre at 34% of the shorter side, which
+> crops gracefully to every ratio in use — verified by simulating object-cover.
+>
+> ~12 MB of unreferenced original images were moved out of `public/` into
+> `design-sources/` (not deployed). Deployed assets went 15 MB -> 1.7 MB.
+> Regenerate logo derivatives from `design-sources/logo-master.png`.
 
 ---
 
