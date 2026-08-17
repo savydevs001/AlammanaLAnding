@@ -10,7 +10,16 @@ export const CONTACT = {
   /** wa.me format — country code + number, digits only, no leading +. */
   whatsapp: '923358078262',
   email: 'rabta@alammana.pk',
-  addressLine: 'Allah Hu Chowk, Faisal Hills, Taxila',
+  /** Short form for tight spaces (footer, cards). */
+  addressShort: 'Vertical Four, A Block, Faisal Hills',
+  /** Full postal address — keep this identical everywhere it appears, including
+   *  Google Business Profile, so local-search signals stay consistent. */
+  addressLine:
+    'Office No. C-3, Lower Ground Floor, Vertical Four, Near Arch Monument, Main Boulevard, A Block, Faisal Hills',
+  addressLocality: 'Taxila',
+  addressRegion: 'Rawalpindi, Punjab',
+  mapEmbedUrl:
+    'https://maps.google.com/maps?q=Vertical+Four+Arch+Monument+Faisal+Hills+Taxila&output=embed',
   facebook: 'https://www.facebook.com/alammana.pk',
   instagram: 'https://www.instagram.com/alammanapk/',
 } as const;

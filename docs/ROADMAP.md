@@ -18,6 +18,11 @@ continue from there. Each phase notes the files it touches.
   Town, Taxila & Rawalpindi. Sells partner project inventory; builds houses on
   published block-wise rates.
 - Contact: `+92 335 8078262`, `rabta@alammana.pk`. Single source: `src/lib/contact.ts`.
+- Office (confirmed Aug 2026): Office No. C-3, Lower Ground Floor, Vertical Four,
+  Near Arch Monument, Main Boulevard, A Block, Faisal Hills, Taxila. Use this
+  wording verbatim everywhere including Google Business Profile — the earlier
+  "Allah Hu Chowk" address was wrong and is fully removed.
+- "60+ Projects Completed" is confirmed by the client as defensible.
 - Content data lives in `src/data/*.ts` — each file has a how-to header comment.
 - **Never hotlink images.** Google Maps CDN links expired and broke the live site
   in Aug 2026; two Unsplash photos were deleted. Everything is self-hosted now.
@@ -76,11 +81,11 @@ phase 2 payment plan", "dha gandhara plots" etc.
 
 ---
 
-## Phase 3 — Images  `[~]` mostly done — 3.2 blocked on client
+## Phase 3 — Images  `[~]` mostly done — J7 / 107 Plaza renders pending
 
 - [x] 3.1 Audit aspect ratios/heights across ProjectCard, ConstructionCard,
       society cards and all hero sections; standardise so nothing crops badly
-- [!] 3.2 Source real project imagery (official renders from Faisal Town Group /
+- [~] 3.2 Source real project imagery (Faisal Jewel done; J7 + 107 Plaza pending) (official renders from Faisal Town Group /
       J7 Group — client is a sales partner and can request these)
 - [x] 3.3 Master-plan / layout images per society, self-hosted & optimised to WebP
 - [x] 3.4 Re-check every image loads (`naturalWidth > 0`) after changes
@@ -138,11 +143,18 @@ to `/payment-plans`, `/constructions`, `/societies`):
 
 ## Known gaps awaiting the client
 
-- [!] Official renders for Faisal Jewel, J7 Emporium, 107 Plaza
-- [!] Real photos + descriptions for the 3 homes in `src/data/constructions.ts`
-      (currently template placeholders with stock imagery — biggest credibility gap)
+- [~] Faisal Jewel now shows two real construction-progress photos (cropped to
+      remove the developer's own sales phone number and website). They are only
+      624px originals — ask Faisal Town Group for official high-resolution renders.
+- [!] Official renders still needed for J7 Emporium and 107 Plaza
+- [!] Real photos + true plot/street numbers for the 8 homes in
+      `src/data/constructions.ts`. All eight are REPRESENTATIVE placeholders with
+      realistic Block A/B plot addresses so the team can see the layout and send
+      back real detail. Each entry carries a TODO(team) line listing what is
+      needed. Replace site by site — they do not all have to land at once.
+      Approved-map images are deliberately omitted until real scans arrive,
+      because the page states the map is society-verified.
 - [!] Real photo of Muhammad Bilal Gul (currently the logo)
-- [!] Confirmation that "60+ Projects Completed" is defensible
 - [!] Team members' personal socials → paste into `socials` in `src/data/team.ts`
 - [!] 107 Plaza real details — almost no public information exists
 - [ ] Consider removing `ignoreBuildErrors` / `ignoreDuringBuilds` from

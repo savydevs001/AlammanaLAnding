@@ -114,6 +114,7 @@ export interface ConstructionProject {
   id: string;                       // URL slug, e.g. 'block-a-10-marla-modern'
   title: string;                    // e.g. '10 Marla Modern Home — Block A'
   block: string;                    // e.g. 'Block A, Faisal Hills'
+  plotAddress?: string;             // e.g. 'Plot 5683, Street 129, Block A'
   plotSize: string;                 // e.g. '10 Marla'
   finishType: 'Gray Structure' | 'Fully Finished';
   status: 'Under Construction' | 'Completed' | 'Starting Soon';

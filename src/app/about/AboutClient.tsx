@@ -54,7 +54,7 @@ export default function AboutClient() {
             className="relative"
           >
             <div className="aspect-[4/5] overflow-hidden rounded-3xl shadow-2xl">
-              {/* TODO(team): replace with a real photo of the Allah Hu Chowk office or a site in progress. */}
+              {/* TODO(team): replace with a real photo of the Vertical Four office or a site in progress. */}
               <img
                 src="/assets/projects/prime-block.webp"
                 alt="Faisal Hills Prime Block master plan — the area Alammana Developers builds in"

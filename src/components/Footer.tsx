@@ -49,7 +49,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <MapPin size={16} className="text-sand" />
-                <span className="font-semibold">Islamabad, Pakistan</span>
+                <span className="font-semibold">Vertical Four, A Block, Faisal Hills, Taxila</span>
               </li>
             </ul>
           </div>

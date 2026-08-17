@@ -32,7 +32,10 @@ export default function ConstructionCard({ project }: { project: ConstructionPro
         <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.3em] font-bold text-beige mb-2">
           <MapPin size={12} /> {project.block} — {project.plotSize}
         </span>
-        <h3 className="text-2xl font-serif mb-2">{project.title}</h3>
+        <h3 className="text-2xl font-serif mb-1">{project.title}</h3>
+        {project.plotAddress && (
+          <p className="text-[11px] text-beige/90 font-semibold mb-2">{project.plotAddress}</p>
+        )}
         <p className="text-sm text-paper/80 mb-6 italic line-clamp-2">{project.shortDescription}</p>
 
         <Link

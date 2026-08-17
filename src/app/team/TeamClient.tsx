@@ -13,10 +13,9 @@ export default function TeamClient({ team }: { team: TeamMember[] }) {
     description: 'Premium Faisal Hills and Islamabad real estate developer',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Allah hu chowk',
-      addressLocality: 'Faisal Hills',
-      addressRegion: 'Islamabad',
-      postalCode: '44000',
+      streetAddress: 'Office No. C-3, Lower Ground Floor, Vertical Four, Near Arch Monument, Main Boulevard, A Block',
+      addressLocality: 'Faisal Hills, Taxila',
+      addressRegion: 'Rawalpindi, Punjab',
       addressCountry: 'PK',
     },
     team: team.map(member => ({

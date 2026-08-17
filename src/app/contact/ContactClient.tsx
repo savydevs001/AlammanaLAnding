@@ -43,15 +43,15 @@ export default function ContactClient() {
                 </div>
                 <div>
                   <h3 className="text-[10px] uppercase tracking-widest font-bold text-ink/40 mb-1">Head Office</h3>
-                  <address className="text-xl md:text-2xl font-serif not-italic">{CONTACT.addressLine}, Islamabad, Pakistan</address>
+                  <address className="text-lg md:text-xl font-serif not-italic leading-snug">{CONTACT.addressLine}, {CONTACT.addressLocality}, {CONTACT.addressRegion}</address>
                 </div>
               </div>
             </div>
 
             <div className="rounded-3xl overflow-hidden shadow-xl border border-sand/40">
               <iframe
-                src="https://maps.google.com/maps?q=Allah+Hu+Chowk+Faisal+Hills+Taxila&output=embed"
-                title="Alammana Developers head office — Allah Hu Chowk, Faisal Hills, Taxila"
+                src={CONTACT.mapEmbedUrl}
+                title="Alammana Developers head office — Vertical Four, A Block, Faisal Hills, Taxila"
                 className="w-full h-[300px] border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

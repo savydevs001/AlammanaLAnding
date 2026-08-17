@@ -107,7 +107,7 @@ export default function PrivacyPolicy() {
           <section className="space-y-4">
             <h2 className="text-2xl font-serif text-burgundy">Contact</h2>
             <p>
-              Alammana Developers — {CONTACT.addressLine}, Islamabad, Pakistan.
+              Alammana Developers — {CONTACT.addressLine}, {CONTACT.addressLocality}, {CONTACT.addressRegion}.
               <br />
               Email:{' '}
               <a href={`mailto:${CONTACT.email}`} className="text-burgundy underline underline-offset-2">

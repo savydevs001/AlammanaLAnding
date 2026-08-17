@@ -39,8 +39,15 @@ export const projects: Project[] = [
     fullDescription:
       'Faisal Jewel is a 27-storey multi-purpose landmark rising on roughly 20 kanals in the Executive Block of Faisal Hills, directly alongside the G.T. Road (N-5) and close to the Fateh Jang–Tarnol Interchange on the M1 Motorway. Developed by Zedem Properties and CAM Constructions under the Faisal Town Group led by Ch. Abdul Majeed, it combines a shopping mall, food court, corporate offices, serviced hotel floors and residential apartments in a single vertical community. Alammana Developers is an authorised sales partner for the project and can arrange bookings, floor selection and payment-plan guidance.',
     thumbnail: '/assets/projects/faisal-jewel.webp',
-    // TODO(team): request official renders from Faisal Town Group and add here.
-    images: ['/assets/projects/faisal-jewel.webp'],
+    // Real construction-progress photographs of the tower, published by the
+    // developer's marketing channel and cropped to remove their own sales
+    // phone number and website. TODO(team): ask Faisal Town Group for the
+    // official high-resolution renders — these are only 624px originals.
+    images: [
+      '/assets/projects/faisal-jewel.webp',
+      '/assets/projects/faisal-jewel-progress-1.webp',
+      '/assets/projects/faisal-jewel-progress-2.webp',
+    ],
     features: [
       'Luxury 1, 2 & 3 Bedroom Apartments',
       'Commercial Shops from 153 sq ft',

@@ -66,7 +66,10 @@ export default function ConstructionPageClient({ id }: { id: string }) {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif max-w-4xl leading-tight italic">
             {project.title}
           </h1>
-          <p className="flex items-center gap-2 mt-6 text-beige text-sm uppercase tracking-[0.2em] font-bold">
+          {project.plotAddress && (
+            <p className="mt-4 text-xl md:text-2xl font-serif text-beige">{project.plotAddress}</p>
+          )}
+          <p className="flex items-center gap-2 mt-3 text-beige/80 text-sm uppercase tracking-[0.2em] font-bold">
             <MapPin size={16} /> {project.locationLabel}
           </p>
         </div>
