@@ -73,6 +73,41 @@ export interface Project {
   };
 }
 
+/** One block/sector inside a housing society. */
+export interface SocietyBlock {
+  name: string;                 // e.g. 'Block A', 'Executive Block'
+  status: string;               // e.g. 'Developed — possession handed over'
+  summary: string;              // one or two sentences
+  plotSizes: string[];          // e.g. ['5 Marla', '8 Marla', '1 Kanal']
+  highlights?: string[];        // distinguishing features
+  bestFor?: string;             // e.g. 'First-time buyers'
+}
+
+/** A housing society Alammana deals in. */
+export interface Society {
+  id: string;                   // URL slug
+  name: string;
+  tagline: string;
+  city: string;                 // e.g. 'Taxila, Rawalpindi'
+  developer: string;
+  approval: string;             // honest NOC wording — never overstate
+  approvalStatus: 'Approved' | 'In Process' | 'Pre-Launch';
+  totalArea?: string;           // e.g. '11,823 Kanal'
+  launched?: string;
+  summary: string;              // short, for cards
+  overview: string[];           // paragraphs for the detail page
+  blocks: SocietyBlock[];
+  amenities: string[];
+  connectivity: string[];       // nearby roads/landmarks
+  plotSizes: string[];          // society-wide range
+  paymentNote?: string;         // instalment structure, kept indicative
+  image: string;                // card + hero
+  masterPlanImage?: string;
+  mapEmbedUrl: string;          // https://maps.google.com/maps?q=…&output=embed
+  faqs?: Array<{ q: string; a: string }>;
+  sources?: string[];           // where the facts came from, for future checking
+}
+
 // A home Alammana is constructing (or has constructed) on the published
 // payment-plan rates. Rendered by the standard template at /constructions/[id].
 export interface ConstructionProject {

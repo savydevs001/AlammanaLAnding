@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { projects } from '../data/projects';
 import { constructions } from '../data/constructions';
+import { societies } from '../data/societies';
 import { blogs } from '../data/blogs';
 import { team } from '../data/team';
 
@@ -18,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${siteUrl}/`, lastModified, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${siteUrl}/payment-plans`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${siteUrl}/societies`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${siteUrl}/portfolio`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${siteUrl}/constructions`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${siteUrl}/blog`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
@@ -30,6 +32,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     ...staticPages,
+    ...societies.map(s => ({
+      url: `${siteUrl}/societies/${s.id}`,
+      lastModified,
+      changeFrequency: 'monthly' as const,
+      priority: 0.9,
+    })),
     ...projects.map(p => ({
       url: `${siteUrl}/portfolio/${p.id}`,
       lastModified,

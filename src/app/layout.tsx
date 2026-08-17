@@ -143,38 +143,9 @@ const structuredData = [
   },
 
   // Place Schema for Faisal Hills Location
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Place',
-    '@id': `${siteUrl}#place`,
-    name: 'Faisal Hills',
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: 'Islamabad',
-      addressRegion: 'Islamabad Capital Territory',
-      addressCountry: 'PK'
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 33.7294,
-      longitude: 73.0931
-    },
-    description: 'Premium residential area in Islamabad known for luxury properties and modern development.'
-  },
-
-  // BreadcrumbList Schema
-  {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: siteUrl
-      }
-    ]
-  }
+  // NOTE: the Place schema for Faisal Hills now lives on /societies/faisal-hills,
+  // and each page emits its own BreadcrumbList. Duplicating either one globally
+  // gave Google two conflicting copies on every page, so both were removed here.
 ];
 
 export const metadata: Metadata = {

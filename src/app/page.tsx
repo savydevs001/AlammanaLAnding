@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion } from 'motion/react';
 import { projects } from '../data/projects';
 import { constructions } from '../data/constructions';
+import { societies } from '../data/societies';
 import { team } from '../data/team';
 import ProjectCard from '../components/ProjectCard';
 import ConstructionCard from '../components/ConstructionCard';
@@ -152,6 +153,50 @@ export default function Home() {
             <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mr-4">Connect</span>
             <a href="https://www.facebook.com/alammana.pk" target="_blank" rel="noopener noreferrer" aria-label="Alammana Developers on Facebook" className="w-10 h-10 rounded-full border border-sand flex items-center justify-center text-xs hover:bg-burgundy hover:text-white transition-all">FB</a>
             <a href="https://www.instagram.com/alammanapk/" target="_blank" rel="noopener noreferrer" aria-label="Alammana Developers on Instagram" className="w-10 h-10 rounded-full border border-sand flex items-center justify-center text-xs hover:bg-burgundy hover:text-white transition-all">IG</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Societies */}
+      <section className="py-24 bg-paper" id="societies">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-14">
+            <div className="max-w-2xl">
+              <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">Where We Work</span>
+              <h2 className="text-4xl md:text-5xl font-serif italic tracking-tight mb-4">Societies, Block by Block</h2>
+              <p className="text-ink/60 leading-relaxed">
+                Plot sizes, development status and approvals for every society we deal in — including
+                which ones are still awaiting their NOC.
+              </p>
+            </div>
+            <Link href="/societies" className="text-xs uppercase tracking-[0.2em] font-bold border-b border-burgundy pb-2 hover:opacity-70 transition-opacity whitespace-nowrap">
+              View All Societies
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {societies.map((s) => (
+              <Link
+                key={s.id}
+                href={`/societies/${s.id}`}
+                className="group relative overflow-hidden rounded-3xl border border-sand/40 aspect-[3/4] shadow-sm hover:shadow-xl transition-shadow"
+              >
+                <img
+                  src={s.image}
+                  alt={`${s.name} — ${s.city}`}
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                <div className="absolute inset-0 p-6 flex flex-col justify-end text-paper">
+                  <span className="text-[9px] uppercase tracking-[0.25em] font-bold text-beige mb-2">
+                    {s.approvalStatus} · {s.blocks.length} Blocks
+                  </span>
+                  <h3 className="text-xl font-serif leading-tight mb-1">{s.name}</h3>
+                  <p className="text-[11px] text-paper/70">{s.city}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

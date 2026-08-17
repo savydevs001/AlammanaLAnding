@@ -37,19 +37,19 @@ continue from there. Each phase notes the files it touches.
 
 ---
 
-## Phase 1 — Research: societies & blocks  `[ ]`
+## Phase 1 — Research: societies & blocks  `[x]` DONE
 
 Gather accurate, sourced facts. Record findings inline in `src/data/societies.ts`
 as you go so research is never lost.
 
-- [ ] 1.1 Scrape **alammana.com** (client's other landing page) for Faisal Hills detail
-- [ ] 1.2 **Faisal Hills** — all blocks (A, B, C, D, E, F, Executive, Prime…),
+- [x] 1.1 Scrape **alammana.com** (client's other landing page) for Faisal Hills detail
+- [x] 1.2 **Faisal Hills** — all blocks (A, B, C, D, E, F, Executive, Prime…),
       plot sizes per block, development status, amenities, NOC/RDA status,
       developer (Faisal Town Group / Zedem, Ch. Abdul Majeed)
-- [ ] 1.3 **Faisal Town Phase 1** — blocks, plot sizes, status, amenities
-- [ ] 1.4 **Faisal Town Phase 2** — blocks, plot sizes, status, amenities
-- [ ] 1.5 **DHA Gandhara** — sectors/blocks, plot sizes, status, approvals
-- [ ] 1.6 Map data — Google Maps embed queries or lat/lng per society & block;
+- [x] 1.3 **Faisal Town Phase 1** — blocks, plot sizes, status, amenities
+- [x] 1.4 **Faisal Town Phase 2** — blocks, plot sizes, status, amenities
+- [x] 1.5 **DHA Gandhara** — sectors/blocks, plot sizes, status, approvals
+- [x] 1.6 Map data — Google Maps embed queries or lat/lng per society & block;
       links to official master-plan/layout images
 
 > Sources used so far: j7emporium.org, faisaltownislamabad.org, faisalhills.com,
@@ -58,21 +58,21 @@ as you go so research is never lost.
 
 ---
 
-## Phase 2 — Build the societies section  `[ ]`
+## Phase 2 — Build the societies section  `[~]` mostly done
 
 New top-level section so we can rank for "faisal hills blocks", "faisal town
 phase 2 payment plan", "dha gandhara plots" etc.
 
-- [ ] 2.1 Types: `Society`, `SocietyBlock` in `src/types.ts`
-- [ ] 2.2 `src/data/societies.ts` with how-to header comment
-- [ ] 2.3 `/societies` listing page (`src/app/societies/page.tsx` + client)
-- [ ] 2.4 `/societies/[id]` detail template: hero, at-a-glance facts, block-by-block
+- [x] 2.1 Types: `Society`, `SocietyBlock` in `src/types.ts`
+- [x] 2.2 `src/data/societies.ts` with how-to header comment
+- [x] 2.3 `/societies` listing page (`src/app/societies/page.tsx` + client)
+- [x] 2.4 `/societies/[id]` detail template: hero, at-a-glance facts, block-by-block
       breakdown, amenities, location map, master-plan image, payment/CTA
 - [ ] 2.5 Optional deeper route `/societies/[id]/[block]` if block content is rich
       enough to deserve its own indexable page
-- [ ] 2.6 Wire into Navbar, homepage, footer, `sitemap.ts`, internal links from
+- [x] 2.6 Wire into Navbar, homepage, footer, `sitemap.ts`, internal links from
       `/payment-plans` and `/constructions`
-- [ ] 2.7 Structured data: `Place`/`ResidentialComplex`, `BreadcrumbList`, `FAQPage`
+- [x] 2.7 Structured data: `Place`/`ResidentialComplex`, `BreadcrumbList`, `FAQPage`
 
 ---
 
@@ -90,7 +90,7 @@ phase 2 payment plan", "dha gandhara plots" etc.
 
 ---
 
-## Phase 4 — SEO/AI-friendly blog programme  `[ ]`
+## Phase 4 — SEO/AI-friendly blog programme  `[~]` IN PROGRESS
 
 Target: Pakistani buyers/investors searching in English. Long-form, genuinely
 useful, structured for both Google rich results and AI answer engines.
