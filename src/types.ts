@@ -131,13 +131,22 @@ export interface ConstructionProject {
 }
 
 export interface BlogPost {
-  id: string;
+  id: string;                 // URL slug — becomes /blog/<id>
   title: string;
   excerpt: string;
-  content: string;
-  date: string;
-  author: string;
+  content: string;            // markdown, rendered by react-markdown
+  date: string;               // human readable, e.g. 'August 17, 2026'
+  isoDate: string;            // 'YYYY-MM-DD' — used for datePublished in schema
+  updatedIsoDate?: string;    // set when you materially revise an article
+  author: string;             // must match a name in data/team.ts
   category: string;
   image: string;
   readTime: string;
+  /** Rendered as an accordion and emitted as FAQPage schema — this is what wins
+   *  featured snippets and gets quoted by AI answer engines. */
+  faqs?: Array<{ q: string; a: string }>;
+  tags?: string[];
+  /** Short, factual answer to the article's core question, shown right under the
+   *  title. Written so a search engine or AI assistant can lift it verbatim. */
+  keyTakeaway?: string;
 }

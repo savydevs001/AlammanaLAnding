@@ -1,11 +1,12 @@
 import type { Metadata } from 'next';
 import { blogs } from '../../../data/blogs';
+import { team } from '../../../data/team';
 import BlogPostClient from './BlogPostClient';
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alammana.pk';
+
 export async function generateStaticParams() {
-  return blogs.map((post) => ({
-    id: post.id,
-  }));
+  return blogs.map((post) => ({ id: post.id }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
@@ -13,31 +14,32 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const post = blogs.find(p => p.id === id);
 
   if (!post) {
-    return {
-      title: 'Blog Post Not Found | Alammana Developers',
-    };
+    return { title: 'Article Not Found | Alammana Developers', robots: { index: false, follow: true } };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
-
   return {
-    title: `${post.title} | Faisal Hills Real Estate Blog | Alammana Developers`,
+    title: post.title,
     description: post.excerpt,
     keywords: [
+      ...(post.tags ?? []),
       post.category,
       'Faisal Hills',
       'Islamabad real estate',
+      'construction Pakistan',
       'Alammana Developers',
-      'property blog',
-      'real estate news'
     ],
+    alternates: { canonical: `/blog/${post.id}` },
+    authors: [{ name: post.author }],
     openGraph: {
       title: post.title,
       description: post.excerpt,
+      url: `/blog/${post.id}`,
       type: 'article',
-      publishedTime: post.date,
-      authors: ['Alammana Developers'],
-      images: [post.image],
+      publishedTime: post.isoDate,
+      modifiedTime: post.updatedIsoDate ?? post.isoDate,
+      authors: [post.author],
+      tags: post.tags,
+      images: [{ url: post.image, alt: post.title }],
     },
     twitter: {
       card: 'summary_large_image',
@@ -53,57 +55,70 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
   const post = blogs.find(p => p.id === resolvedParams.id);
 
   if (!post) {
-    return <div>Blog post not found</div>;
+    return <div>Article not found</div>;
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+  const author = team.find(m => m.name === post.author);
+  const absolute = (p: string) => (p.startsWith('http') ? p : `${baseUrl}${p}`);
 
-  // Article Schema for Blog Post
-  const articleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: post.title,
-    description: post.excerpt,
-    image: `${baseUrl}${post.image}`,
-    datePublished: post.date,
-    dateModified: post.date,
-    author: {
-      '@type': 'Organization',
-      name: 'Alammana Developers',
-      url: baseUrl
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Alammana Developers',
-      logo: {
-        '@type': 'ImageObject',
-        url: `${baseUrl}/assets/logo.png`
-      }
-    },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `${baseUrl}/blog/${post.id}`
-    },
-    keywords: post.category,
-    articleSection: 'Real Estate',
-    about: [
-      {
-        '@type': 'Thing',
-        name: 'Faisal Hills Real Estate'
+  const schema: object[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      '@id': `${baseUrl}/blog/${post.id}#article`,
+      headline: post.title,
+      description: post.excerpt,
+      image: absolute(post.image),
+      datePublished: post.isoDate,
+      dateModified: post.updatedIsoDate ?? post.isoDate,
+      // A named human author with a URL is what search engines and AI answer
+      // engines use to assess expertise — an Organization byline is far weaker.
+      author: {
+        '@type': 'Person',
+        name: post.author,
+        ...(author ? { url: `${baseUrl}/team/${author.id}`, jobTitle: author.role } : {}),
+        worksFor: { '@type': 'Organization', name: 'Alammana Developers', url: baseUrl },
       },
-      {
-        '@type': 'Thing',
-        name: 'Islamabad Property Development'
-      }
-    ]
-  };
+      publisher: {
+        '@type': 'Organization',
+        name: 'Alammana Developers',
+        url: baseUrl,
+        logo: { '@type': 'ImageObject', url: `${baseUrl}/assets/icon-512.png` },
+      },
+      mainEntityOfPage: { '@type': 'WebPage', '@id': `${baseUrl}/blog/${post.id}` },
+      articleSection: post.category,
+      ...(post.tags ? { keywords: post.tags.join(', ') } : {}),
+      inLanguage: 'en-PK',
+      isAccessibleForFree: true,
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: baseUrl },
+        { '@type': 'ListItem', position: 2, name: 'Journal', item: `${baseUrl}/blog` },
+        { '@type': 'ListItem', position: 3, name: post.title, item: `${baseUrl}/blog/${post.id}` },
+      ],
+    },
+  ];
+
+  if (post.faqs?.length) {
+    schema.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: post.faqs.map(f => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    });
+  }
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
-      />
+      {schema.map((s, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
       <BlogPostClient params={resolvedParams} />
     </>
   );

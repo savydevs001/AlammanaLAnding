@@ -31,3 +31,47 @@
 .bg-beige { background-color: var(--color-beige); }
 .text-beige { color: var(--color-beige); }
 .border-beige { border-color: var(--color-beige); }
+
+/* ── Long-form article typography ─────────────────────────────────────────
+   Applied to markdown-rendered blog bodies. Upright serif at a comfortable
+   measure; italic is unreadable across a 2,000-word article.            */
+.blog-body {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.125rem;
+  line-height: 1.85;
+}
+.blog-body > * + * { margin-top: 1.35em; }
+.blog-body h2 {
+  font-size: 1.9rem;
+  line-height: 1.25;
+  color: var(--color-burgundy);
+  margin-top: 2.6em;
+  margin-bottom: 0.6em;
+  font-weight: 600;
+}
+.blog-body h3 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+.blog-body ul, .blog-body ol { padding-left: 1.4em; }
+.blog-body ul { list-style: disc; }
+.blog-body ol { list-style: decimal; }
+.blog-body li::marker { color: var(--color-burgundy); }
+.blog-body li + li { margin-top: 0.5em; }
+.blog-body strong { font-weight: 700; color: var(--color-ink); }
+.blog-body a {
+  color: var(--color-burgundy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+.blog-body a:hover { opacity: 0.75; }
+.blog-body blockquote {
+  border-left: 3px solid var(--color-sand);
+  padding-left: 1.25em;
+  font-style: italic;
+  opacity: 0.85;
+}

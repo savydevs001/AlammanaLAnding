@@ -76,7 +76,7 @@ phase 2 payment plan", "dha gandhara plots" etc.
 
 ---
 
-## Phase 3 — Images  `[ ]`
+## Phase 3 — Images  `[~]` NEXT UP
 
 - [ ] 3.1 Audit aspect ratios/heights across ProjectCard, ConstructionCard,
       society cards and all hero sections; standardise so nothing crops badly
@@ -90,28 +90,28 @@ phase 2 payment plan", "dha gandhara plots" etc.
 
 ---
 
-## Phase 4 — SEO/AI-friendly blog programme  `[~]` IN PROGRESS
+## Phase 4 — SEO/AI-friendly blog programme  `[x]` DONE
 
 Target: Pakistani buyers/investors searching in English. Long-form, genuinely
 useful, structured for both Google rich results and AI answer engines.
 
-- [ ] 4.1 Upgrade blog infrastructure: `Article`/`BlogPosting` + `FAQPage` schema,
+- [x] 4.1 Upgrade blog infrastructure: `Article`/`BlogPosting` + `FAQPage` schema,
       author linked to the real team member, table of contents, related posts,
       canonical URLs, `datePublished`/`dateModified`
-- [ ] 4.2 Extend `BlogPost` type: `faqs`, `tags`, `updatedDate`, `authorId`
+- [x] 4.2 Extend `BlogPost` type: `faqs`, `tags`, `updatedDate`, `authorId`
 
 Planned articles (each 1,500+ words, H2/H3 structure, FAQ block, internal links
 to `/payment-plans`, `/constructions`, `/societies`):
 
-- [ ] 4.3 House construction cost in Faisal Hills — full per-marla breakdown
-- [ ] 4.4 Gray structure vs fully finished — what each actually includes
-- [ ] 4.5 Construction materials in Pakistan — brands, grades, what to insist on
-- [ ] 4.6 Construction techniques & stages — foundation to finishing, timelines
-- [ ] 4.7 Buying on instalments — how plans work, what to check before signing
-- [ ] 4.8 Faisal Hills investment outlook — location, connectivity, price drivers
-- [ ] 4.9 Faisal Hills vs Faisal Town vs DHA Gandhara — honest comparison
-- [ ] 4.10 Approved map (naqsha) & society approvals — the compliance guide
-- [ ] 4.11 Refresh the 3 legacy posts (thin, generic, stock imagery)
+- [x] 4.3 House construction cost in Faisal Hills — full per-marla breakdown
+- [x] 4.4 Gray structure vs fully finished — what each actually includes
+- [x] 4.5 Construction materials in Pakistan — brands, grades, what to insist on
+- [x] 4.6 Construction techniques & stages — foundation to finishing, timelines
+- [x] 4.7 Buying on instalments — how plans work, what to check before signing
+- [x] 4.8 Faisal Hills investment outlook — location, connectivity, price drivers
+- [x] 4.9 Faisal Hills vs Faisal Town vs DHA Gandhara — honest comparison
+- [x] 4.10 Approved map (naqsha) & society approvals — the compliance guide
+- [x] 4.11 Replaced the 3 legacy posts (redirects added in public/_redirects) (thin, generic, stock imagery)
 
 > Rules: no invented statistics; cite real sources; every price framed as
 > indicative and dated. Link every article to a relevant service page.

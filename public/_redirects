@@ -14,3 +14,7 @@
 /team/ali-khan                     /team                               301
 /team/sara-ahmed                   /team                               301
 /team/zain-malik                   /team                               301
+
+# Legacy thin blog posts replaced by the Aug 2026 article programme
+/blog/future-of-islamabad-real-estate  /blog/investing-in-faisal-hills   301
+/blog/modern-architectural-trends      /blog                            301
