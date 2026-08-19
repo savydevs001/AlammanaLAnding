@@ -141,6 +141,15 @@ to `/payment-plans`, `/constructions`, `/societies`):
 
 ---
 
+## Content collection
+
+**`docs/CONTENT-CHECKLIST.md`** is the shareable list for the team — every field
+the site needs for partner projects and construction projects, marked required
+vs optional, with photo rules and a priority order. Send that file (or the
+published artifact) rather than re-deriving the list.
+
+---
+
 ## Known gaps awaiting the client
 
 - [~] Faisal Jewel now shows two real construction-progress photos (cropped to

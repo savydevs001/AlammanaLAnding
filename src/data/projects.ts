@@ -43,8 +43,10 @@ export const projects: Project[] = [
     // developer's marketing channel and cropped to remove their own sales
     // phone number and website. TODO(team): ask Faisal Town Group for the
     // official high-resolution renders — these are only 624px originals.
-    images: [
-      '/assets/projects/faisal-jewel.webp',
+    images: ['/assets/projects/faisal-jewel.webp'],
+    // Real photographs of the tower under construction — shown in their own
+    // labelled section so they are never mistaken for renders.
+    progressPhotos: [
       '/assets/projects/faisal-jewel-progress-1.webp',
       '/assets/projects/faisal-jewel-progress-2.webp',
     ],

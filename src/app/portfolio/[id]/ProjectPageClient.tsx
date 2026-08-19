@@ -3,7 +3,7 @@
 import { projects } from '../../../data/projects';
 import Link from 'next/link';
 import { motion } from 'motion/react';
-import { ArrowLeft, MapPin, CheckCircle2, ShieldCheck, Wind, Coffee, Home, Users, Truck, Zap, Building } from 'lucide-react';
+import { ArrowLeft, MapPin, CheckCircle2, ShieldCheck, Wind, Coffee, Home, Users, Truck, Zap, Building, FileText } from 'lucide-react';
 import LeadForm from '../../../components/LeadForm';
 import { whatsappLink } from '../../../lib/contact';
 
@@ -210,18 +210,59 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                 )}
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
-                {project.images.slice(1).map((img, i) => (
-                  <motion.div 
-                    key={i}
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    className="aspect-[4/3] overflow-hidden rounded-sm"
+              {project.images.length > 1 && (
+                <div className="pt-12">
+                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-ink/40 mb-6">Project Renders</h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {project.images.slice(1).map((img, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="aspect-[4/3] overflow-hidden rounded-2xl border border-sand/40"
+                      >
+                        <img src={img} alt={`${project.title} — render ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Real photographs of the building going up. Far more persuasive
+                  than a render, so it gets its own labelled section. */}
+              {project.progressPhotos && project.progressPhotos.length > 0 && (
+                <div className="pt-12">
+                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-2">Construction Progress</h3>
+                  <p className="text-sm text-ink/55 mb-6">Photographs of the site as it stands, not renders.</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {project.progressPhotos.map((img, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        className="aspect-[16/9] overflow-hidden rounded-2xl border border-sand/40"
+                      >
+                        <img src={img} alt={`${project.title} — construction progress ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {project.brochureUrl && (
+                <div className="pt-12">
+                  <a
+                    href={project.brochureUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-3 bg-burgundy text-white px-8 py-4 rounded-full text-xs uppercase tracking-[0.2em] font-bold hover:opacity-90 transition-opacity"
                   >
-                    <img src={img} alt={`Gallery ${i}`} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-                  </motion.div>
-                ))}
-              </div>
+                    <FileText size={16} /> Download the Brochure
+                  </a>
+                </div>
+              )}
 
             </div>
 

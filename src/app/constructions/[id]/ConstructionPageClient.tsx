@@ -99,9 +99,16 @@ export default function ConstructionPageClient({ id }: { id: string }) {
             <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">The Project</span>
             <h2 className="text-4xl md:text-5xl font-serif italic mb-8">Built on Published Rates</h2>
             <p className="text-lg text-ink/70 leading-relaxed font-serif mb-8">{project.fullDescription}</p>
+            {project.brief && (
+              <div className="mt-10 rounded-3xl border-l-4 border-burgundy bg-beige/50 p-8">
+                <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-3">The Brief</h3>
+                <p className="text-lg text-ink/85 leading-relaxed">{project.brief}</p>
+              </div>
+            )}
+
             <Link
               href="/payment-plans"
-              className="inline-flex items-center gap-2 text-burgundy text-xs uppercase tracking-[0.2em] font-bold border-b border-burgundy pb-2 hover:opacity-70 transition-opacity"
+              className="mt-10 inline-flex items-center gap-2 text-burgundy text-xs uppercase tracking-[0.2em] font-bold border-b border-burgundy pb-2 hover:opacity-70 transition-opacity"
             >
               See the rates this home is built on <ArrowRight size={14} />
             </Link>
@@ -118,7 +125,29 @@ export default function ConstructionPageClient({ id }: { id: string }) {
                   <span className="font-serif text-xl text-burgundy">{project.status}</span>
                 </div>
               </div>
-              {project.expectedCompletion && (
+              {project.startedDate && (
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-burgundy shrink-0">
+                    <CalendarClock size={22} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block">Started</span>
+                    <span className="font-serif text-xl text-burgundy">{project.startedDate}</span>
+                  </div>
+                </div>
+              )}
+              {project.completedDate && (
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-burgundy shrink-0">
+                    <CalendarClock size={22} />
+                  </div>
+                  <div>
+                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block">Completed</span>
+                    <span className="font-serif text-xl text-burgundy">{project.completedDate}</span>
+                  </div>
+                </div>
+              )}
+              {project.expectedCompletion && !project.completedDate && (
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-burgundy shrink-0">
                     <CalendarClock size={22} />

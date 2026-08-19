@@ -38,7 +38,15 @@ export interface Project {
   description: string;
   fullDescription: string;
   thumbnail: string;
+  /** Official renders / marketing images from the developer. */
   images: string[];
+  /** Real construction-progress photographs, newest first. Shown in their own
+   *  labelled section so buyers can see the building actually going up — this
+   *  is the most persuasive content on a partner-project page. */
+  progressPhotos?: string[];
+  /** Official brochure or payment-plan PDF. Put the file in
+   *  public/brochures/ and reference as '/brochures/<file>.pdf'. */
+  brochureUrl?: string;
   features: string[];
   status: 'Completed' | 'In Progress' | 'Planned';
   completionDate?: string;
@@ -120,6 +128,10 @@ export interface ConstructionProject {
   status: 'Under Construction' | 'Completed' | 'Starting Soon';
   shortDescription: string;         // one line, shown on cards
   fullDescription: string;          // full paragraph, shown on detail page
+  /** What the client asked us to achieve — the brief / project goals. Renders as
+   *  a distinct "The Brief" panel. Optional, but it is what makes a project page
+   *  read like a case study rather than a listing. */
+  brief?: string;
   elevationImage: string;           // front elevation render/photo (hero image)
   approvedMapImage?: string;        // photo/scan of the approved map (naqsha)
   gallery: string[];                // additional site/interior photos
@@ -128,7 +140,9 @@ export interface ConstructionProject {
                                     // https://maps.google.com/maps?q=<search or lat,lng>&output=embed
   specs?: Array<{ label: string; value: string }>; // e.g. Bedrooms 5, Bathrooms 6, Covered Area 4200 sqft
   amenities?: string[];             // e.g. 'Solar-ready wiring', 'Imported tiles'
-  expectedCompletion?: string;      // e.g. 'Q2 2027'
+  expectedCompletion?: string;      // e.g. 'Q2 2027' — for in-progress work
+  startedDate?: string;             // e.g. 'March 2025' — when we broke ground
+  completedDate?: string;           // e.g. 'January 2026' — for handed-over homes
 }
 
 export interface BlogPost {
