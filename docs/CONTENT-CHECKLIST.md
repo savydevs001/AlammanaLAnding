@@ -1,22 +1,25 @@
-# What We Need From The Team — Content Collection Checklist
+# Website Content — What To Collect
 
-Every item below maps to a real field on the website. If something is marked
-**Optional**, the page simply hides that section when it is missing — so send
-what you have and we can add the rest later. Nothing has to arrive all at once.
+Internal working list. Every item below is a real field on alammana.pk. If an
+item says **Optional**, the page just hides that section when it is missing — so
+send what you have and we add the rest later. It does not all have to arrive at
+once.
 
-**Send everything to:** rabta@alammana.pk or WhatsApp +92 335 8078262
-**One folder or message per project, please** — named after the project.
+**Send everything to me on WhatsApp.** One folder or message per project,
+named after the project. If you are unsure about anything on this list, ask
+before guessing — a wrong detail on the site is worse than a missing one.
 
 ---
 
 ## PHOTO RULES (applies to everything)
 
-- **Landscape/horizontal** photos wherever possible. Portrait phone photos get
-  cropped badly on wide screens.
-- **Minimum 1600px wide.** Straight from the phone camera is perfect. Do NOT
-  send screenshots of photos. In WhatsApp, send as **Document** rather than
-  Photo so it keeps full quality.
-- **No watermarks**, and no other company's phone number or logo in the image.
+- **Landscape/horizontal** wherever possible. Portrait phone photos get cropped
+  badly on wide screens.
+- **Minimum 1600px wide.** Straight from the phone camera is perfect.
+- **Send as Document in WhatsApp, not as Photo.** Sending as Photo compresses
+  the image and we lose the quality. This matters.
+- Do not send screenshots of photos.
+- **No watermarks**, and no other company's phone number or logo in the frame.
 - **Daylight**, camera held level, whole building in frame for elevations.
 - Name files simply: `faisal-jewel-progress-mar-2026-1.jpg`
 
@@ -24,15 +27,15 @@ what you have and we can add the rest later. Nothing has to arrive all at once.
 
 # PART 1 — PARTNER PROJECTS
 
-### (Faisal Jewel, J7 Emporium, 107 Plaza — projects we sell for someone else)
+### Faisal Jewel, J7 Emporium, 107 Plaza — projects we sell for someone else
 
 ### 1A. Images
 
 | # | Item | Required? | Notes |
 |---|---|---|---|
-| 1 | **Main image** — best official render of the finished building | **Required** | This is the card + page hero. One image. |
+| 1 | **Main image** — best official render of the finished building | **Required** | This is the card and page hero. One image. |
 | 2 | **Additional renders** — finished-look images | Optional | Interiors, lobby, aerial views. Any number. |
-| 3 | **Construction progress photos** | **Strongly wanted** | Real photos of the site as it stands. The most persuasive thing on the page — a buyer trusts a photo of a real crane far more than a render. Send fresh ones every few months. |
+| 3 | **Construction progress photos** | **Get these** | Real photos of the site as it stands. The most persuasive thing on the page — a buyer trusts a photo of a real crane far more than a render. Get fresh ones every few months. |
 | 4 | **Floor plan / unit layout images** | Optional | |
 
 ### 1B. Written details
@@ -56,43 +59,43 @@ what you have and we can add the rest later. Nothing has to arrive all at once.
 
 | # | Item | Required? | Notes |
 |---|---|---|---|
-| 17 | **Unit types with sizes and prices** | Optional but valuable | e.g. "Shop, 153 sq ft, PKR 7,240,000". List every unit type you can. |
+| 17 | **Unit types with sizes and prices** | High value | e.g. "Shop, 153 sq ft, PKR 7,240,000". List every unit type you can get. |
 | 18 | **Starting price** | Optional | The lowest entry price, so buyers can self-qualify |
 | 19 | **Payment plan** | Optional | Plan name, duration, down payment, instalment structure, notes |
-| 20 | **Official brochure PDF** | **Wanted** | There is now a "Download the Brochure" button. Send the PDF and it goes live. |
+| 20 | **Official brochure PDF** | **Get these** | There is a "Download the Brochure" button on the site now. Send the PDF and it goes live. |
 | 21 | **Nearby landmarks** | Optional | Roads, interchanges, airport, universities |
 
-> **A note on prices:** send the date they were valid. We publish them as
-> indicative and re-check before quoting. A stale price presented as current is
-> the fastest way to lose a client's trust.
+> **On prices:** always tell me the date they were valid. We publish them as
+> indicative and re-check before quoting anyone. A stale price shown as current
+> is the fastest way to lose a client's trust.
 
 ---
 
-# PART 2 — OUR CONSTRUCTION PROJECTS
+# PART 2 — OUR OWN CONSTRUCTION PROJECTS
 
-### (Houses we build — the 8 currently on the site are placeholders)
+### The houses we build. The 8 currently on the site are placeholders.
 
 ### 2A. Images
 
 | # | Item | Required? | Notes |
 |---|---|---|---|
-| 1 | **Front elevation** — one clean photo of the front of the house | **Required** | The hero and card image. Stand back, whole facade in frame, level camera, daylight. For a gray structure the shell photo is fine. |
-| 2 | **Approved map (naqsha)** — photo or scan of the society-approved drawing | **Required** | We deliberately show **no map at all** until we have the real one, because the page states it is society-verified. A stock drawing there would be a false claim. |
-| 3 | **Site / progress photos** | **Wanted** | 2–6 photos: foundation, structure, brickwork, finishing. |
+| 1 | **Front elevation** — one clean photo of the front of the house | **Required** | The hero and card image. Stand back, whole facade in frame, camera level, daylight. For a gray structure the shell photo is fine. |
+| 2 | **Approved map (naqsha)** — photo or scan of the society-approved drawing | **Required** | The site currently shows **no map at all**, on purpose. The page says the layout is society-verified, so we cannot put a stock drawing there — that would be a false claim. It stays hidden until you send the real one. |
+| 3 | **Site / progress photos** | **Get these** | 2–6 photos: foundation, structure, brickwork, finishing. |
 | 4 | **Interior photos** | Optional | For finished houses — lounge, kitchen, bedroom, bathroom. |
 
 ### 2B. Identity and address
 
 | # | Item | Required? | Example |
 |---|---|---|---|
-| 5 | **House / project name** | **Required** | "10 Marla Contemporary Family Home", or the owner's house name if they want it public |
+| 5 | **House / project name** | **Required** | "10 Marla Contemporary Family Home", or the owner's house name if they are happy for it to be public |
 | 6 | **Exact plot address** | **Required** | "Plot 4127, Street 84, Block A" |
 | 7 | **Block and society** | **Required** | "Block A, Faisal Hills" |
 | 8 | **Plot size** | **Required** | 5 / 8 / 10 / 14 Marla, 1 Kanal, 2 Kanal |
 
-> **Client privacy:** if the owner does not want their exact plot number public,
-> tell us and we will show only the street and block. Please confirm the owner
-> is happy to be featured before sending photos of their home.
+> **Ask the owner first.** Before photographing or publishing anyone's house,
+> confirm they are happy to be featured. If they do not want the plot number
+> public, tell me — we can show only the street and block.
 
 ### 2C. Written details
 
@@ -102,11 +105,11 @@ what you have and we can add the rest later. Nothing has to arrive all at once.
 | 10 | **Status** | **Required** | Starting Soon / Under Construction / Completed |
 | 11 | **One-line description** | **Required** | Shown on the card. About 20 words. |
 | 12 | **Full description** | **Required** | A paragraph on what makes this house what it is |
-| 13 | **The brief / project goals** *(new)* | **Wanted** | What the client asked us to achieve: "maximise morning light into the bedrooms", "build in phases so they could move in early", "a traditional elevation, not a flat modern one". This is what turns a listing into a case study. |
+| 13 | **The brief / project goals** | **Get this** | What the client asked us to achieve: "maximise morning light into the bedrooms", "build in phases so they could move in early", "a traditional elevation, not a flat modern one". Ask the site engineer or whoever dealt with the client. This is what turns a listing into a proper case study. |
 | 14 | **Specs** | **Required** | Covered area (sq ft), bedrooms, bathrooms, storeys |
 | 15 | **Features / amenities** (3–5 bullets) | Optional | "Solar-ready wiring", "Imported sanitary ware", "Basement parking" |
 
-### 2D. Dates *(new)*
+### 2D. Dates
 
 | # | Item | Required? | Example |
 |---|---|---|---|
@@ -116,40 +119,39 @@ what you have and we can add the rest later. Nothing has to arrive all at once.
 
 ---
 
-## PRIORITY — if you can only do a few things
+## START HERE — do these five first
 
 1. **Front elevation photos of 3–4 completed houses** (Part 2, item 1). Every
-   house image on the site today is a stand-in. One real Alammana-built home
-   outperforms all of them.
+   house image on the site right now is a stand-in. One real photo of a house we
+   actually built outperforms all of them. We have 60+ completed projects, so
+   pick the best-looking four.
 2. **Approved map scans** for those same houses (Part 2, item 2).
 3. **Construction progress photos of J7 Emporium** (Part 1, item 3). Faisal
-   Jewel already has these and its page is noticeably stronger for it.
+   Jewel already has these and its page is visibly stronger for it.
 4. **Official brochure PDFs** for Faisal Jewel, J7 and 107 Plaza (Part 1, item 20).
 5. **Real details for 107 Plaza** — there is almost no public information about
-   this project, so everything on its page has to come from us.
+   this project anywhere, so everything on its page has to come from us.
 
 ---
 
-## ALSO OUTSTANDING (not project content)
+## ALSO NEEDED (not project content)
 
-- A real photograph of **Muhammad Bilal Gul** — his team profile currently shows
-  the company logo.
-- **Personal social links** for each team member (phone, WhatsApp, Facebook,
-  Instagram, LinkedIn, TikTok). Filled links appear as buttons on their profile
-  page and help them rank in Google for their own name.
-- Confirm whether individual **@alammana.pk email addresses** exist. Every team
-  profile currently points at `rabta@alammana.pk` so that no enquiry is lost to a
-  mailbox that does not exist.
+- A proper photograph of **Muhammad Bilal Gul** — his team profile currently
+  shows the company logo instead of a face.
+- **Personal links from each team member**: phone, WhatsApp, Facebook,
+  Instagram, LinkedIn, TikTok. Whatever they have. These become buttons on their
+  profile page and help them show up in Google when someone searches their name.
+- Find out whether individual **@alammana.pk email addresses** actually exist and
+  work. Right now every team profile points at the company address so that no
+  enquiry is ever lost to a mailbox that does not exist.
 
 ---
 
-## For whoever enters this on the site
-
-Fields map to:
+## Reference for whoever enters this on the site
 
 - **Part 1** → `Project` interface, `src/data/projects.ts`
 - **Part 2** → `ConstructionProject` interface, `src/data/constructions.ts`
 
-Both data files carry a how-to header comment. Images go in
+Both data files have a how-to comment at the top. Images go in
 `public/assets/projects/` and `public/assets/constructions/`, brochures in
 `public/brochures/`. Convert to WebP and never hotlink — see `docs/ROADMAP.md`.

@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alammana — Website Content Checklist</title>
+<style>
+  /* Print-first stylesheet. Open in Chrome, Ctrl+P, "Save as PDF".
+     Set Margins: Default and tick "Background graphics" for the accent bars. */
+  @page { size: A4; margin: 16mm 14mm; }
+
+  :root {
+    --burgundy: #630D16;
+    --sand: #D4C3A3;
+    --ink: #2D2926;
+    --muted: #6b645e;
+    --line: #e3ded6;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0 auto;
+    max-width: 210mm;
+    padding: 24px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+    color: var(--ink);
+    background: #fff;
+  }
+
+  header.doc {
+    border-bottom: 3px solid var(--burgundy);
+    padding-bottom: 14px;
+    margin-bottom: 22px;
+  }
+  .brand {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--burgundy);
+    font-weight: 700;
+  }
+  h1 { font-size: 21pt; margin: 8px 0 6px; line-height: 1.15; }
+  .sub { color: var(--muted); font-size: 10pt; margin: 0; }
+
+  h2 {
+    font-size: 14pt;
+    color: var(--burgundy);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 5px;
+    margin: 26px 0 12px;
+    page-break-after: avoid;
+  }
+  h3 {
+    font-size: 11.5pt;
+    margin: 18px 0 8px;
+    page-break-after: avoid;
+  }
+  h3 .muted { color: var(--muted); font-weight: normal; font-size: 10pt; }
+
+  p { margin: 0 0 10px; }
+  ul { margin: 0 0 12px; padding-left: 18px; }
+  li { margin-bottom: 5px; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 16px;
+    font-size: 9.5pt;
+    page-break-inside: auto;
+  }
+  thead { display: table-header-group; }      /* repeat header across pages */
+  tr { page-break-inside: avoid; page-break-after: auto; }
+  th {
+    background: var(--burgundy);
+    color: #fff;
+    text-align: left;
+    padding: 7px 9px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  td { padding: 7px 9px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  td:first-child { width: 26px; color: var(--muted); text-align: right; }
+  tbody tr:nth-child(even) td {
+    background: #faf8f5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .req { color: var(--burgundy); font-weight: 700; white-space: nowrap; }
+  .opt { color: var(--muted); white-space: nowrap; }
+
+  .note {
+    border-left: 3px solid var(--burgundy);
+    background: #faf7f3;
+    padding: 10px 14px;
+    margin: 12px 0 18px;
+    font-size: 9.5pt;
+    page-break-inside: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .note strong { color: var(--burgundy); }
+
+  .callout {
+    border: 1.5px solid var(--burgundy);
+    padding: 14px 18px;
+    margin: 18px 0;
+    page-break-inside: avoid;
+  }
+  .callout h2 { border: 0; margin-top: 0; padding: 0; }
+
+  ol.priority { padding-left: 20px; }
+  ol.priority li { margin-bottom: 9px; }
+
+  .pagebreak { page-break-before: always; }
+
+  footer.doc {
+    margin-top: 28px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
+  code {
+    font-family: Consolas, Monaco, monospace;
+    font-size: 9pt;
+    background: #f3efe9;
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
+  @media screen {
+    body { box-shadow: 0 0 24px rgba(0,0,0,.08); margin-top: 24px; margin-bottom: 24px; }
+    .screen-hint {
+      background: #fff8e5; border: 1px solid #e8d9a8; padding: 10px 14px;
+      font-family: Arial, sans-serif; font-size: 9.5pt; margin-bottom: 20px;
+    }
+  }
+  @media print { .screen-hint { display: none; } }
+</style>
+</head>
+<body>
+
+<div class="screen-hint">
+  <strong>To make a PDF:</strong> press <strong>Ctrl+P</strong> (or Cmd+P), choose
+  <em>Save as PDF</em>, keep margins on <em>Default</em>, and tick
+  <em>Background graphics</em> so the table headers print in colour.
+</div>
+
+<header class="doc">
+  <div class="brand">Alammana Developers · Internal</div>
+  <h1>Website Content — What To Collect</h1>
+  <p class="sub">Everything below is a real field on alammana.pk. Items marked
+  Optional are simply hidden on the page when missing, so send what you have and
+  we add the rest later. It does not all have to arrive at once.</p>
+</header>
+
+<div class="note">
+  <strong>Send everything to me on WhatsApp.</strong> One folder or message per
+  project, named after the project. If you are unsure about anything on this
+  list, ask before guessing — a wrong detail on the site is worse than a missing
+  one.
+</div>
+
+<h2>Photo rules — applies to everything</h2>
+<ul>
+  <li><strong>Landscape / horizontal</strong> wherever possible. Portrait phone photos get cropped badly on wide screens.</li>
+  <li><strong>Minimum 1600px wide.</strong> Straight from the phone camera is perfect.</li>
+  <li><strong>Send as “Document” in WhatsApp, not as “Photo”.</strong> Sending as a Photo compresses the image and we lose quality. This one matters.</li>
+  <li>Do not send screenshots of photos.</li>
+  <li><strong>No watermarks</strong>, and no other company’s phone number or logo in the frame.</li>
+  <li><strong>Daylight</strong>, camera held level, whole building in frame for elevations.</li>
+  <li>Name files simply: <code>faisal-jewel-progress-mar-2026-1.jpg</code></li>
+</ul>
+
+<h2>Part 1 — Partner projects</h2>
+<p class="sub">Faisal Jewel, J7 Emporium, 107 Plaza — projects we sell for someone else.</p>
+
+<h3>1A. Images</h3>
+<table>
+  <thead><tr><th>#</th><th>Item</th><th>Required?</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><strong>Main image</strong> — best official render of the finished building</td><td class="req">Required</td><td>The card and page hero. One image.</td></tr>
+    <tr><td>2</td><td><strong>Additional renders</strong> — finished-look images</td><td class="opt">Optional</td><td>Interiors, lobby, aerial views. Any number.</td></tr>
+    <tr><td>3</td><td><strong>Construction progress photos</strong></td><td class="req">Get these</td><td>Real photos of the site as it stands. The most persuasive thing on the page — a buyer trusts a photo of a real crane far more than a render. Get fresh ones every few months.</td></tr>
+    <tr><td>4</td><td><strong>Floor plan / unit layout images</strong></td><td class="opt">Optional</td><td></td></tr>
+  </tbody>
+</table>
+
+<h3>1B. Written details</h3>
+<table>
+  <thead><tr><th>#</th><th>Item</th><th>Required?</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td>5</td><td><strong>Project name</strong></td><td class="req">Required</td><td>“Faisal Jewel”</td></tr>
+    <tr><td>6</td><td><strong>Exact location</strong></td><td class="req">Required</td><td>“Executive Block, Faisal Hills, Taxila”</td></tr>
+    <tr><td>7</td><td><strong>Developer name</strong></td><td class="req">Required</td><td>“Zedem Properties &amp; CAM Constructions” — we must name who is actually building it</td></tr>
+    <tr><td>8</td><td><strong>Our role</strong></td><td class="req">Required</td><td>“Authorised Sales Partner”</td></tr>
+    <tr><td>9</td><td><strong>Approval / NOC status</strong></td><td class="req">Required</td><td>Exact wording. Never round “pending” up to “approved”.</td></tr>
+    <tr><td>10</td><td><strong>One-line description</strong></td><td class="req">Required</td><td>Shown on the card. About 20 words.</td></tr>
+    <tr><td>11</td><td><strong>Full description</strong></td><td class="req">Required</td><td>1–2 paragraphs: what it is, who it suits, why the location matters.</td></tr>
+    <tr><td>12</td><td><strong>Key features</strong> (4–6 bullets)</td><td class="req">Required</td><td>“Radisson Blu hotel suites”, “Three basement parking levels”</td></tr>
+    <tr><td>13</td><td><strong>Amenities list</strong></td><td class="opt">Optional</td><td>Security, pool, gym, food court, backup power — as many as apply</td></tr>
+    <tr><td>14</td><td><strong>Building structure</strong></td><td class="opt">Optional</td><td>“27+ floors: retail on lower levels, offices mid, apartments above”</td></tr>
+    <tr><td>15</td><td><strong>Status</strong></td><td class="req">Required</td><td>Completed / In Progress / Planned</td></tr>
+    <tr><td>16</td><td><strong>Expected completion</strong></td><td class="opt">Optional</td><td>“Q4 2027”</td></tr>
+  </tbody>
+</table>
+
+<h3>1C. Commercial details</h3>
+<table>
+  <thead><tr><th>#</th><th>Item</th><th>Required?</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>17</td><td><strong>Unit types with sizes and prices</strong></td><td class="req">High value</td><td>e.g. “Shop, 153 sq ft, PKR 7,240,000”. List every unit type you can get.</td></tr>
+    <tr><td>18</td><td><strong>Starting price</strong></td><td class="opt">Optional</td><td>The lowest entry price, so buyers can self-qualify</td></tr>
+    <tr><td>19</td><td><strong>Payment plan</strong></td><td class="opt">Optional</td><td>Plan name, duration, down payment, instalment structure, notes</td></tr>
+    <tr><td>20</td><td><strong>Official brochure PDF</strong></td><td class="req">Get these</td><td>There is a “Download the Brochure” button on the site now. Send the PDF and it goes live.</td></tr>
+    <tr><td>21</td><td><strong>Nearby landmarks</strong></td><td class="opt">Optional</td><td>Roads, interchanges, airport, universities</td></tr>
+  </tbody>
+</table>
+
+<div class="note">
+  <strong>On prices:</strong> always tell me the date they were valid. We publish
+  them as indicative and re-check before quoting anyone. A stale price shown as
+  current is the fastest way to lose a client’s trust.
+</div>
+
+<div class="pagebreak"></div>
+
+<h2>Part 2 — Our own construction projects</h2>
+<p class="sub">The houses we build. The 8 currently on the site are placeholders.</p>
+
+<h3>2A. Images</h3>
+<table>
+  <thead><tr><th>#</th><th>Item</th><th>Required?</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td><strong>Front elevation</strong> — one clean photo of the front of the house</td><td class="req">Required</td><td>The hero and card image. Stand back, whole facade in frame, camera level, daylight. For a gray structure the shell photo is fine.</td></tr>
+    <tr><td>2</td><td><strong>Approved map (naqsha)</strong> — photo or scan of the society-approved drawing</td><td class="req">Required</td><td>The site currently shows <strong>no map at all</strong>, on purpose. The page says the layout is society-verified, so we cannot put a stock drawing there — that would be a false claim. It stays hidden until you send the real one.</td></tr>
+    <tr><td>3</td><td><strong>Site / progress photos</strong></td><td class="req">Get these</td><td>2–6 photos: foundation, structure, brickwork, finishing.</td></tr>
+    <tr><td>4</td><td><strong>Interior photos</strong></td><td class="opt">Optional</td><td>For finished houses — lounge, kitchen, bedroom, bathroom.</td></tr>
+  </tbody>
+</table>
+
+<h3>2B. Identity and address</h3>
+<table>
+  <thead><tr><th>#</th><th>Item</th><th>Required?</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td>5</td><td><strong>House / project name</strong></td><td class="req">Required</td><td>“10 Marla Contemporary Family Home”, or the owner’s house name if they are happy for it to be public</td></tr>
+    <tr><td>6</td><td><strong>Exact plot address</strong></td><td class="req">Required</td><td>“Plot 4127, Street 84, Block A”</td></tr>
+    <tr><td>7</td><td><strong>Block and society</strong></td><td class="req">Required</td><td>“Block A, Faisal Hills”</td></tr>
+    <tr><td>8</td><td><strong>Plot size</strong></td><td class="req">Required</td><td>5 / 8 / 10 / 14 Marla, 1 Kanal, 2 Kanal</td></tr>
+  </tbody>
+</table>
+
+<div class="note">
+  <strong>Ask the owner first.</strong> Before photographing or publishing
+  anyone’s house, confirm they are happy to be featured. If they do not want the
+  plot number public, tell me — we can show only the street and block.
+</div>
+
+<h3>2C. Written details</h3>
+<table>
+  <thead><tr><th>#</th><th>Item</th><th>Required?</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td>9</td><td><strong>Finish type</strong></td><td class="req">Required</td><td>Gray Structure <strong>or</strong> Fully Finished</td></tr>
+    <tr><td>10</td><td><strong>Status</strong></td><td class="req">Required</td><td>Starting Soon / Under Construction / Completed</td></tr>
+    <tr><td>11</td><td><strong>One-line description</strong></td><td class="req">Required</td><td>Shown on the card. About 20 words.</td></tr>
+    <tr><td>12</td><td><strong>Full description</strong></td><td class="req">Required</td><td>A paragraph on what makes this house what it is</td></tr>
+    <tr><td>13</td><td><strong>The brief / project goals</strong></td><td class="req">Get this</td><td>What the client asked us to achieve: “maximise morning light into the bedrooms”, “build in phases so they could move in early”, “a traditional elevation, not a flat modern one”. Ask the site engineer or whoever dealt with the client. This is what turns a listing into a proper case study.</td></tr>
+    <tr><td>14</td><td><strong>Specs</strong></td><td class="req">Required</td><td>Covered area (sq ft), bedrooms, bathrooms, storeys</td></tr>
+    <tr><td>15</td><td><strong>Features / amenities</strong> (3–5 bullets)</td><td class="opt">Optional</td><td>“Solar-ready wiring”, “Imported sanitary ware”, “Basement parking”</td></tr>
+  </tbody>
+</table>
+
+<h3>2D. Dates</h3>
+<table>
+  <thead><tr><th>#</th><th>Item</th><th>Required?</th><th>Example</th></tr></thead>
+  <tbody>
+    <tr><td>16</td><td><strong>Start date</strong></td><td class="opt">Optional</td><td>“March 2025” — when we broke ground</td></tr>
+    <tr><td>17</td><td><strong>Completion date</strong></td><td class="req">If completed</td><td>“January 2026”</td></tr>
+    <tr><td>18</td><td><strong>Expected completion</strong></td><td class="req">If ongoing</td><td>“Q2 2027”</td></tr>
+  </tbody>
+</table>
+
+<div class="callout">
+  <h2>Start here — do these five first</h2>
+  <ol class="priority">
+    <li><strong>Front elevation photos of 3–4 completed houses</strong> (Part 2, item 1). Every house image on the site right now is a stand-in. One real photo of a house we actually built outperforms all of them. We have 60+ completed projects, so pick the best-looking four.</li>
+    <li><strong>Approved map scans</strong> for those same houses (Part 2, item 2).</li>
+    <li><strong>Construction progress photos of J7 Emporium</strong> (Part 1, item 3). Faisal Jewel already has these and its page is visibly stronger for it.</li>
+    <li><strong>Official brochure PDFs</strong> for Faisal Jewel, J7 and 107 Plaza (Part 1, item 20).</li>
+    <li><strong>Real details for 107 Plaza</strong> — there is almost no public information about this project anywhere, so everything on its page has to come from us.</li>
+  </ol>
+</div>
+
+<h2>Also needed — not project content</h2>
+<ul>
+  <li>A proper photograph of <strong>Muhammad Bilal Gul</strong> — his team profile currently shows the company logo instead of a face.</li>
+  <li><strong>Personal links from each team member</strong>: phone, WhatsApp, Facebook, Instagram, LinkedIn, TikTok. Whatever they have. These become buttons on their profile page and help them show up in Google when someone searches their name.</li>
+  <li>Find out whether individual <strong>@alammana.pk email addresses</strong> actually exist and work. Right now every team profile points at the company address so that no enquiry is ever lost to a mailbox that does not exist.</li>
+</ul>
+
+<footer class="doc">
+  Alammana Developers — internal content checklist. Fields map to
+  <code>src/data/projects.ts</code> (Part 1) and
+  <code>src/data/constructions.ts</code> (Part 2).
+</footer>
+
+</body>
+</html>
