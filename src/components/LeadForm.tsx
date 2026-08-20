@@ -4,15 +4,22 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Send, Mail, Check } from 'lucide-react';
 import { CONTACT, whatsappLink, mailtoLink } from '../lib/contact';
+import { submitLead } from '../lib/leads';
 
 /**
  * Lead capture form.
  *
- * The site is a static export on Cloudflare Pages, so there is no server to
- * POST to. Instead the form composes the enquiry and hands it to WhatsApp
- * (primary — instant, and how most clients in this market actually talk to us)
- * with an email fallback. Nothing is silently dropped: every submission opens
- * a real message the visitor can send.
+ * Two things happen on submit, in this order of importance:
+ *
+ * 1. WhatsApp opens with the enquiry pre-filled — instant, and how most clients
+ *    in this market actually talk to us. This is the visitor's path and must
+ *    never be blocked or delayed.
+ * 2. The enquiry is also posted to the ERP's public intake endpoint so it lands
+ *    in the CRM as a lead. Previously nothing was stored at all: if the visitor
+ *    closed the WhatsApp tab without pressing send, the enquiry was simply lost.
+ *
+ * The POST is fire-and-forget. If the API is unreachable the visitor sees no
+ * difference — we lose a CRM row, never the enquiry.
  */
 export default function LeadForm({
   interests = ['Construction (Gray Structure)', 'Construction (Fully Finished)', 'Faisal Hills Plots', 'Apartment / Shop Investment', 'Other'],
@@ -27,6 +34,8 @@ export default function LeadForm({
   variant?: 'boxed' | 'plain';
 }) {
   const [form, setForm] = useState({ name: '', phone: '', email: '', interest: interests[0], message: '' });
+  /** Honeypot. Hidden from real users; only bots fill it. */
+  const [company, setCompany] = useState('');
   const [sent, setSent] = useState(false);
 
   const set = (k: string, v: string) => setForm(p => ({ ...p, [k]: v }));
@@ -46,8 +55,24 @@ export default function LeadForm({
 
   function submit(e: React.FormEvent) {
     e.preventDefault();
+
+    // WhatsApp first and synchronously: opening a tab must stay inside the
+    // click handler or the browser's popup blocker will swallow it.
     window.open(whatsappLink(compose()), '_blank', 'noopener,noreferrer');
     setSent(true);
+
+    // Then record it in the CRM. Intentionally not awaited — the visitor's
+    // flow does not wait on our network, and a failure is silent by design.
+    void submitLead({
+      fullName: form.name,
+      phone: form.phone,
+      email: form.email || undefined,
+      interest: form.interest,
+      message: form.message || undefined,
+      formName: subjectPrefix,
+      context,
+      company,
+    });
   }
 
   const inputClass =
@@ -99,6 +124,17 @@ export default function LeadForm({
 
   return (
     <form onSubmit={submit} className="space-y-6">
+      {/* Honeypot: off-screen rather than display:none (some bots skip hidden
+          fields), never focusable, and excluded from autofill and screen
+          readers so no real person can trip it. */}
+      <div className="absolute -left-[9999px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+        <label htmlFor="lead-company">Company (leave blank)</label>
+        <input
+          id="lead-company" name="company" type="text" tabIndex={-1}
+          autoComplete="off" value={company} onChange={e => setCompany(e.target.value)}
+        />
+      </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label htmlFor="lead-name" className={labelClass}>Full Name</label>
