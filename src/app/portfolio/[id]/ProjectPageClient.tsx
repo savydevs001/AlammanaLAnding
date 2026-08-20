@@ -267,6 +267,32 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                 </div>
               )}
 
+              {(project.unitPlans?.length || project.commercialFloors?.length || project.surroundings?.length) ? (
+                <div className="pt-12">
+                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-4">Explore in detail</h3>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    {project.unitPlans?.length ? (
+                      <Link href={`/portfolio/${project.id}/apartments`} className="group rounded-2xl border border-sand/50 bg-white px-6 py-5 hover:border-burgundy/40 hover:shadow-md transition-all">
+                        <span className="block font-serif text-lg group-hover:text-burgundy transition-colors">Apartments & Penthouses</span>
+                        <span className="text-xs text-ink/50">Sizes, floor plans and renders</span>
+                      </Link>
+                    ) : null}
+                    {project.commercialFloors?.length ? (
+                      <Link href={`/portfolio/${project.id}/shops`} className="group rounded-2xl border border-sand/50 bg-white px-6 py-5 hover:border-burgundy/40 hover:shadow-md transition-all">
+                        <span className="block font-serif text-lg group-hover:text-burgundy transition-colors">Shops & Commercial</span>
+                        <span className="text-xs text-ink/50">Unit sizes floor by floor</span>
+                      </Link>
+                    ) : null}
+                    {project.surroundings?.length ? (
+                      <Link href={`/portfolio/${project.id}/location`} className="group rounded-2xl border border-sand/50 bg-white px-6 py-5 hover:border-burgundy/40 hover:shadow-md transition-all">
+                        <span className="block font-serif text-lg group-hover:text-burgundy transition-colors">Location & Connectivity</span>
+                        <span className="text-xs text-ink/50">Map and nearby landmarks</span>
+                      </Link>
+                    ) : null}
+                  </div>
+                </div>
+              ) : null}
+
               {project.unitPlans && project.unitPlans.length > 0 && (
                 <div className="pt-12">
                   <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-2">Unit Types & Floor Plans</h3>

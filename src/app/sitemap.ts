@@ -2,6 +2,14 @@ import type { MetadataRoute } from 'next';
 import { projects } from '../data/projects';
 import { constructions } from '../data/constructions';
 import { societies } from '../data/societies';
+
+/** Deep pages generated per project — see app/portfolio/[id]/[section]/page.tsx.
+ *  A section only exists when the project holds the data for it. */
+const PROJECT_SECTIONS = [
+  { id: 'apartments', has: (p: (typeof projects)[number]) => !!p.unitPlans?.length },
+  { id: 'shops', has: (p: (typeof projects)[number]) => !!p.commercialFloors?.length },
+  { id: 'location', has: (p: (typeof projects)[number]) => !!p.surroundings?.length },
+];
 import { blogs } from '../data/blogs';
 import { team } from '../data/team';
 
@@ -38,6 +46,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     })),
+    ...projects.flatMap(p =>
+      PROJECT_SECTIONS.filter(sec => sec.has(p)).map(sec => ({
+        url: `${siteUrl}/portfolio/${p.id}/${sec.id}`,
+        lastModified,
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+      }))
+    ),
     ...projects.map(p => ({
       url: `${siteUrl}/portfolio/${p.id}`,
       lastModified,
