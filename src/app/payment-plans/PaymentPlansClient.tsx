@@ -48,7 +48,7 @@ export default function PaymentPlansClient() {
     <div className="pt-20">
       {/* Hero */}
       <section className="bg-beige relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_#8B2635_1px,_transparent_1px)] bg-[length:28px_28px]"></div>
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_#3D0A11_1px,_transparent_1px)] bg-[length:28px_28px]"></div>
         <div className="max-w-[1600px] mx-auto px-4 py-20 md:py-28 relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="flex items-center gap-2 mb-6">

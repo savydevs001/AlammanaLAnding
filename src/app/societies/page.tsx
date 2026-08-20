@@ -35,8 +35,8 @@ export const metadata: Metadata = {
 };
 
 const statusStyle: Record<string, { cls: string; icon: React.ReactNode }> = {
-  Approved: { cls: 'bg-green-700 text-white', icon: <CheckCircle2 size={12} /> },
-  'In Process': { cls: 'bg-amber-600 text-white', icon: <Clock size={12} /> },
+  Approved: { cls: 'bg-status-approved text-white', icon: <CheckCircle2 size={12} /> },
+  'In Process': { cls: 'bg-status-pending text-white', icon: <Clock size={12} /> },
   'Pre-Launch': { cls: 'bg-ink text-white', icon: <Sparkles size={12} /> },
 };
 

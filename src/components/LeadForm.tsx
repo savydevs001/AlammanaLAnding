@@ -107,7 +107,7 @@ export default function LeadForm({
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
-        className="rounded-3xl border border-amber-300 bg-amber-50 p-10 text-center"
+        className="rounded-3xl border border-[#E0C89A] bg-[#FBF4E8] p-10 text-center"
       >
         <h3 className="text-2xl font-serif italic mb-3">We could not send that just now</h3>
         <p className="text-sm text-ink/70 leading-relaxed mb-8 max-w-md mx-auto">

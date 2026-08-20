@@ -50,8 +50,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 }
 
 const statusBadge: Record<string, { cls: string; icon: React.ReactNode }> = {
-  Approved: { cls: 'bg-green-700', icon: <CheckCircle2 size={13} /> },
-  'In Process': { cls: 'bg-amber-600', icon: <Clock size={13} /> },
+  Approved: { cls: 'bg-status-approved', icon: <CheckCircle2 size={13} /> },
+  'In Process': { cls: 'bg-status-pending', icon: <Clock size={13} /> },
   'Pre-Launch': { cls: 'bg-white/20', icon: <Sparkles size={13} /> },
 };
 
@@ -165,7 +165,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
           </div>
 
           <aside className="space-y-6">
-            <div className={`rounded-[28px] p-8 border ${s.approvalStatus === 'Approved' ? 'bg-green-50 border-green-200' : 'bg-amber-50 border-amber-300'}`}>
+            <div className={`rounded-[28px] p-8 border ${s.approvalStatus === 'Approved' ? 'bg-[#F0F5F1] border-[#C6D8CC]' : 'bg-[#FBF4E8] border-[#E0C89A]'}`}>
               <h3 className="text-[12px] uppercase tracking-widest font-bold text-ink/50 mb-3">Approval Status</h3>
               <p className="font-serif text-xl text-ink leading-snug mb-3">{s.approvalStatus}</p>
               <p className="text-sm text-ink/70 leading-relaxed">{s.approval}</p>
