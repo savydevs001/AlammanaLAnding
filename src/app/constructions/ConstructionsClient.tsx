@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'motion/react';
 import { constructions } from '../../data/constructions';
 import ConstructionCard from '../../components/ConstructionCard';
+import { Video, ArrowRight } from 'lucide-react';
 
 const filters = ['All', 'Under Construction', 'Completed', 'Starting Soon'] as const;
 
@@ -44,6 +45,29 @@ export default function ConstructionsClient() {
             ))}
           </div>
         </header>
+
+        {/* Local clients land here, and the camera/portal applies to them too. */}
+        <div className="mb-14 rounded-3xl bg-ink text-paper p-8 md:p-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="max-w-2xl">
+            <span className="inline-flex items-center gap-2 text-beige text-[12px] uppercase tracking-[0.2em] font-bold mb-3">
+              <Video size={14} /> On Every Project
+            </span>
+            <h2 className="text-2xl md:text-3xl font-serif italic mb-3">
+              A live camera on your site, and a portal that tracks everything
+            </h2>
+            <p className="text-paper/70 leading-relaxed text-sm">
+              Every Alammana client gets 24/7 camera access to their own plot and a private portal
+              showing stages completed, work in progress, materials used, inventory and documents —
+              whether you live ten minutes away or ten thousand kilometres.
+            </p>
+          </div>
+          <Link
+            href="/overseas"
+            className="shrink-0 inline-flex items-center gap-3 bg-burgundy text-white px-7 py-4 rounded-full text-xs uppercase tracking-[0.2em] font-bold hover:opacity-90 transition-opacity"
+          >
+            How It Works <ArrowRight size={16} />
+          </Link>
+        </div>
 
         <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
           {filtered.map((project) => (

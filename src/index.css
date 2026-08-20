@@ -75,3 +75,53 @@
   font-style: italic;
   opacity: 0.85;
 }
+
+/* ── Right-to-left support (Urdu, Arabic) ─────────────────────────────────
+   The layout uses Tailwind's physical utilities in places (ml-, pl-, text-left).
+   Rather than rewrite every one to a logical property, flip the handful that
+   actually matter when dir="rtl" is set on <html>.                        */
+
+[dir='rtl'] {
+  text-align: right;
+}
+
+/* Tailwind space-x-* uses margin-left, which points the wrong way in RTL. */
+[dir='rtl'] .space-x-2 > :not([hidden]) ~ :not([hidden]),
+[dir='rtl'] .space-x-3 > :not([hidden]) ~ :not([hidden]),
+[dir='rtl'] .space-x-4 > :not([hidden]) ~ :not([hidden]),
+[dir='rtl'] .space-x-6 > :not([hidden]) ~ :not([hidden]) {
+  margin-left: 0;
+  margin-right: var(--tw-space-x-reverse-fallback, 0.5rem);
+}
+
+/* Directional icons (arrows, chevrons) must mirror; brand marks must not. */
+[dir='rtl'] .rtl-flip {
+  transform: scaleX(-1);
+}
+
+/* Latin fragments inside RTL text — phone numbers, sq ft, PKR, URLs — need to
+   stay left-to-right or the digits reorder and become wrong. */
+[dir='rtl'] .ltr-nums,
+[dir='rtl'] a[href^='tel:'],
+[dir='rtl'] a[href^='mailto:'] {
+  direction: ltr;
+  unicode-bidi: embed;
+  display: inline-block;
+}
+
+/* Urdu and Arabic faces. Loaded per-locale so English visitors never download
+   them — the Nastaliq face in particular is very large. */
+.font-urdu {
+  font-family: 'Noto Nastaliq Urdu', 'Jameel Noori Nastaleeq', serif;
+  line-height: 2.1; /* Nastaliq needs far more leading than Latin */
+}
+
+.font-arabic {
+  font-family: 'Noto Kufi Arabic', 'Noto Naskh Arabic', serif;
+  line-height: 1.9;
+}
+
+/* Nastaliq renders small; nudge base size up so Urdu is as readable as English. */
+[lang='ur'] {
+  font-size: 1.08em;
+}

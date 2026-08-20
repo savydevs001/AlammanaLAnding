@@ -242,9 +242,14 @@ export default function OverseasPage() {
             <h2 className="text-3xl md:text-4xl font-serif italic mb-4">
               Everything about your house, in one place
             </h2>
-            <p className="text-paper/70 leading-relaxed">
+            <p className="text-paper/70 leading-relaxed mb-4">
               Not a monthly summary email. A live record of your build that you can open whenever the
               question occurs to you.
+            </p>
+            <p className="text-beige text-sm leading-relaxed">
+              <strong>This is standard on every Alammana project</strong> — not an overseas package.
+              Clients in Taxila use the camera and portal as much as clients in Dubai do. It simply
+              matters most when you cannot drive to the site yourself.
             </p>
           </div>
 

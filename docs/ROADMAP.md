@@ -168,6 +168,69 @@ to `/payment-plans`, `/constructions`, `/societies`):
 
 ---
 
+## Phase 7 — Multilingual: English, Urdu, Arabic  `[~]` IN PROGRESS
+
+**Goal:** three fully indexable languages without weakening the SEO already in
+place. Machine-translating everything client-side would destroy it — the content
+has to exist in the HTML at a real URL per language.
+
+### Architecture decision
+
+Static export rules out Next.js built-in i18n routing (it needs a server), so
+every page moves under a `[lang]` segment and is pre-rendered per locale:
+
+```
+/            → English (default, no prefix — preserves existing indexed URLs)
+/ur/...      → Urdu     (RTL)
+/ar/...      → Arabic   (RTL)
+```
+
+English keeps the bare paths so the 47 already-indexed URLs do not move and no
+redirect chain is introduced.
+
+### SEO requirements — non-negotiable
+
+- [ ] 7.1 `hreflang` on every page: each locale plus `x-default` → English
+- [ ] 7.2 Canonical points at the **same-locale** URL, never cross-locale
+- [ ] 7.3 Sitemap lists all three locales with `xhtml:link` alternates
+- [ ] 7.4 `<html lang>` and `dir="rtl"` set correctly per locale
+- [ ] 7.5 Locale-specific `og:locale` + `og:locale:alternate`
+- [ ] 7.6 Translated titles/descriptions — not English strings under a Urdu URL
+- [ ] 7.7 JSON-LD `inLanguage` per locale
+- [ ] 7.8 `llms.txt` notes available languages
+
+### Build order
+
+- [x] 7.9 Locale config + dictionary structure (`src/lib/i18n.ts`)
+- [ ] 7.10 RTL support: logical CSS properties, mirrored icons, Urdu/Arabic webfonts
+- [ ] 7.11 Language switcher in navbar + footer
+- [ ] 7.12 Translate UI chrome (nav, footer, forms, buttons, labels)
+- [ ] 7.13 Translate high-intent pages: home, payment-plans, contact, overseas, societies
+- [ ] 7.14 Translate project/construction/society data strings
+- [ ] 7.15 Decide on the 8 long-form articles — see below
+
+### ⚠️ The honest constraint on long-form content
+
+The eight articles are ~12,000 words of technical construction and legal
+guidance. Machine translation into Urdu will produce plausible-sounding text with
+wrong terminology, and the approval-status wording in particular ("NOC under
+process" must never become "approved") is exactly the kind of nuance MT gets
+wrong. Publishing bad Urdu is worse than publishing none.
+
+**Recommendation:** ship UI + key pages in all three languages now, keep the
+articles English-only with correct `hreflang` (which is legitimate and Google
+handles it fine), and translate them properly with a human reviewer over time.
+Flag any article translated by machine as needing review before publish.
+
+### Precaching / performance
+
+- [ ] 7.16 `<link rel="preconnect">` for the fonts and the ERP API origin
+- [ ] 7.17 Prefetch the primary nav routes
+- [ ] 7.18 Preload the hero image per locale
+- [ ] 7.19 Subset the Urdu/Arabic fonts — full Noto Nastaliq is very large
+
+---
+
 ## Content collection
 
 **`docs/CONTENT-CHECKLIST.md`** is the shareable list for the team — every field
