@@ -79,7 +79,7 @@ export default function LeadForm({
     variant === 'boxed'
       ? 'w-full bg-paper px-5 py-4 rounded-2xl outline-none focus:ring-2 ring-burgundy/20 transition-all font-serif text-lg'
       : 'w-full bg-transparent border-b border-ink/20 py-3 outline-none focus:border-burgundy transition-colors font-serif text-xl';
-  const labelClass = 'text-[10px] uppercase tracking-[0.2em] font-bold text-ink/40 block mb-2';
+  const labelClass = 'text-[12px] uppercase tracking-[0.2em] font-bold text-ink/40 block mb-2';
 
   if (sent) {
     return (
@@ -191,7 +191,7 @@ export default function LeadForm({
         >
           <Send size={16} /> Send Enquiry on WhatsApp
         </button>
-        <p className="text-center text-[11px] text-ink/45 leading-relaxed">
+        <p className="text-center text-[12px] text-ink/45 leading-relaxed">
           Opens WhatsApp with your details filled in. Prefer email?{' '}
           <a href={`mailto:${CONTACT.email}`} className="text-burgundy underline underline-offset-2 font-semibold">
             {CONTACT.email}

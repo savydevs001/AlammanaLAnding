@@ -15,7 +15,7 @@ export default function ConstructionsClient() {
 
   return (
     <div className="pt-32 pb-24">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1600px] mx-auto px-4">
         <header className="mb-20">
           <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold mb-6 block">Our Constructions</span>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif mb-8">

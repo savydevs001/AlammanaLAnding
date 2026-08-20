@@ -7,7 +7,7 @@ import { CONTACT } from '../../lib/contact';
 export default function ContactClient() {
   return (
     <div className="pt-32 pb-24 bg-beige/20 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1600px] mx-auto px-4">
         <header className="mb-20">
           <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold mb-6 block text-center">Get in Touch</span>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-center italic mb-12">Let&apos;s build your <span className="opacity-30">legacy</span>.</h1>
@@ -22,7 +22,7 @@ export default function ContactClient() {
                   <Mail size={20} className="md:w-6 md:h-6" />
                 </div>
                 <div>
-                  <h3 className="text-[10px] uppercase tracking-widest font-bold text-ink/40 mb-1">Electronic Mail</h3>
+                  <h3 className="text-[12px] uppercase tracking-widest font-bold text-ink/40 mb-1">Electronic Mail</h3>
                   <a href="mailto:rabta@alammana.pk" className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors break-all">rabta@alammana.pk</a>
                 </div>
               </div>
@@ -32,7 +32,7 @@ export default function ContactClient() {
                   <Phone size={20} className="md:w-6 md:h-6" />
                 </div>
                 <div>
-                  <h3 className="text-[10px] uppercase tracking-widest font-bold text-ink/40 mb-1">Direct Line</h3>
+                  <h3 className="text-[12px] uppercase tracking-widest font-bold text-ink/40 mb-1">Direct Line</h3>
                   <a href="tel:+923358078262" className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors">+92 335 8078262</a>
                 </div>
               </div>
@@ -42,7 +42,7 @@ export default function ContactClient() {
                   <MapPin size={20} className="md:w-6 md:h-6" />
                 </div>
                 <div>
-                  <h3 className="text-[10px] uppercase tracking-widest font-bold text-ink/40 mb-1">Head Office</h3>
+                  <h3 className="text-[12px] uppercase tracking-widest font-bold text-ink/40 mb-1">Head Office</h3>
                   <address className="text-lg md:text-xl font-serif not-italic leading-snug">{CONTACT.addressLine}, {CONTACT.addressLocality}, {CONTACT.addressRegion}</address>
                 </div>
               </div>

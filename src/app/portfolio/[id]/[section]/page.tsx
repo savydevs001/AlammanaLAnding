@@ -183,7 +183,7 @@ export default async function ProjectSectionPage({
     <div className="pt-24 pb-24 bg-paper">
       <JsonLd schema={schema} />
 
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1600px] mx-auto px-4">
         {/* Breadcrumb + heading */}
         <Link
           href={base}
@@ -200,7 +200,7 @@ export default async function ProjectSectionPage({
             {cfg.title(project)}
           </h1>
           <p className="text-lg text-ink/65 leading-relaxed">{cfg.description(project)}</p>
-          <p className="flex items-center gap-2 mt-5 text-[10px] uppercase tracking-widest font-bold text-ink/40">
+          <p className="flex items-center gap-2 mt-5 text-[12px] uppercase tracking-widest font-bold text-ink/40">
             <MapPin size={12} /> {project.location}
           </p>
         </header>
@@ -213,7 +213,7 @@ export default async function ProjectSectionPage({
               return (
                 <div className="rounded-3xl border border-burgundy/15 bg-beige/50 p-8 mb-12 flex flex-wrap items-center justify-between gap-6">
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest font-bold text-ink/40 block mb-2">
+                    <span className="text-[12px] uppercase tracking-widest font-bold text-ink/40 block mb-2">
                       {range ? 'Price range' : 'Pricing'}
                     </span>
                     <p className="font-serif text-2xl text-burgundy">
@@ -286,7 +286,7 @@ export default async function ProjectSectionPage({
           <>
             <div className="rounded-3xl border border-burgundy/15 bg-beige/50 p-8 mb-12 flex flex-wrap items-center justify-between gap-6">
               <div className="max-w-xl">
-                <span className="text-[10px] uppercase tracking-widest font-bold text-ink/40 block mb-2">Pricing</span>
+                <span className="text-[12px] uppercase tracking-widest font-bold text-ink/40 block mb-2">Pricing</span>
                 <p className="font-serif text-2xl text-burgundy mb-1">
                   {rate ? `From ${rate} per sq ft` : 'Price on request'}
                 </p>
@@ -310,10 +310,10 @@ export default async function ProjectSectionPage({
                 <caption className="sr-only">Commercial unit sizes by floor at {project.title}</caption>
                 <thead>
                   <tr className="bg-burgundy text-white">
-                    <th scope="col" className="text-left font-bold uppercase tracking-widest text-[10px] px-6 py-4">Floor</th>
-                    <th scope="col" className="text-left font-bold uppercase tracking-widest text-[10px] px-6 py-4">Smallest unit</th>
-                    <th scope="col" className="text-left font-bold uppercase tracking-widest text-[10px] px-6 py-4">Largest unit</th>
-                    <th scope="col" className="text-left font-bold uppercase tracking-widest text-[10px] px-6 py-4">Price</th>
+                    <th scope="col" className="text-left font-bold uppercase tracking-widest text-[12px] px-6 py-4">Floor</th>
+                    <th scope="col" className="text-left font-bold uppercase tracking-widest text-[12px] px-6 py-4">Smallest unit</th>
+                    <th scope="col" className="text-left font-bold uppercase tracking-widest text-[12px] px-6 py-4">Largest unit</th>
+                    <th scope="col" className="text-left font-bold uppercase tracking-widest text-[12px] px-6 py-4">Price</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -348,7 +348,7 @@ export default async function ProjectSectionPage({
                 />
               </div>
               <div className="rounded-3xl border border-burgundy/10 bg-beige/40 p-8">
-                <span className="text-[10px] uppercase tracking-widest font-bold text-ink/40 block mb-2">Address</span>
+                <span className="text-[12px] uppercase tracking-widest font-bold text-ink/40 block mb-2">Address</span>
                 <p className="font-serif text-xl text-burgundy leading-snug mb-6">{project.location}</p>
                 {project.mapLink && (
                   <a

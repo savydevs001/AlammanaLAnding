@@ -22,24 +22,24 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         className="group relative block overflow-hidden bg-white aspect-[4/5] rounded-3xl shadow-lg border border-sand/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-burgundy"
       >
         <img
-          src={project.thumbnail}
+          width={1600} height={1200} loading="lazy" decoding="async" src={project.thumbnail}
           alt={`${project.title} — ${project.location}`}
           className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent opacity-70 group-hover:opacity-85 transition-opacity" />
 
         {project.status && (
-          <span className="absolute top-5 left-5 bg-burgundy text-white px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider">
+          <span className="absolute top-5 left-5 bg-burgundy text-white px-3 py-1.5 rounded-full text-[12px] font-bold uppercase tracking-wider">
             {project.status}
           </span>
         )}
 
         <div className="absolute inset-0 p-8 flex flex-col justify-end text-paper">
-          <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-beige mb-2">
+          <span className="text-[12px] uppercase tracking-[0.3em] font-bold text-beige mb-2">
             {project.category}
           </span>
           <h3 className="text-2xl font-serif mb-1 leading-tight">{project.title}</h3>
-          <p className="flex items-center gap-1.5 text-[11px] text-paper/75 mb-3">
+          <p className="flex items-center gap-1.5 text-[12px] text-paper/75 mb-3">
             <MapPin size={12} /> {project.location}
           </p>
           <p className="text-sm text-paper/80 mb-6 italic line-clamp-2">{project.description}</p>

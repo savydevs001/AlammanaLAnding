@@ -4,7 +4,7 @@ import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
 export default function Footer() {
   return (
     <footer className="bg-ink text-beige py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
@@ -28,7 +28,7 @@ export default function Footer() {
           <div>
             {/* These used to be cursor:pointer list items that went nowhere.
                 Now they are real links to the pages people are looking for. */}
-            <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold mb-8 text-sand">Explore</h3>
+            <h3 className="text-[12px] uppercase tracking-[0.2em] font-bold mb-8 text-sand">Explore</h3>
             <ul className="space-y-4 text-beige/70 text-sm font-medium">
               {[
                 { label: 'Construction Rates', href: '/payment-plans' },
@@ -46,7 +46,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-[10px] uppercase tracking-[0.2em] font-bold mb-8 text-sand">Contact</h3>
+            <h3 className="text-[12px] uppercase tracking-[0.2em] font-bold mb-8 text-sand">Contact</h3>
             <ul className="space-y-6 text-beige/70 text-sm">
               <li className="flex items-center space-x-3">
                 <Mail size={16} className="text-sand" />
@@ -67,7 +67,7 @@ export default function Footer() {
         {/* OpenStreetMap data is ODbL-licensed and requires attribution wherever
             its map imagery is used — several society and project cards are
             rendered from OSM tiles. */}
-        <p className="mt-16 text-[10px] text-beige/25 leading-relaxed">
+        <p className="mt-16 text-[12px] text-beige/25 leading-relaxed">
           Location map imagery ©{' '}
           <a
             href="https://www.openstreetmap.org/copyright"
@@ -81,7 +81,7 @@ export default function Footer() {
           developers.
         </p>
 
-        <div className="mt-8 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] text-beige/30 tracking-[0.2em] uppercase font-bold">
+        <div className="mt-8 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[12px] text-beige/30 tracking-[0.2em] uppercase font-bold">
           <p>© 2026 Alammana Developers. Architecting Legacies.</p>
           <div className="flex space-x-8 mt-6 md:mt-0">
             <Link href="/privacy" className="hover:text-beige transition-colors">Privacy Policy</Link>

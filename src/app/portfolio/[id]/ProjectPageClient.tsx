@@ -76,7 +76,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
 
       {/* Details Grid */}
       <section className="py-24 bg-paper">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1600px] mx-auto px-4">
           {/* Summary Stats */}
           {project.summaryStats && (
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-12">
@@ -95,7 +95,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
             <div className="lg:col-span-3 grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
               <div className="rounded-[32px] border border-burgundy/10 bg-beige/40 p-10 space-y-8">
                 <div>
-                  <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block mb-2">Location</span>
+                  <span className="text-[12px] uppercase tracking-widest font-bold opacity-50 block mb-2">Location</span>
                   <div className="flex items-center space-x-2 text-burgundy">
                     <MapPin size={18} />
                     <span className="font-serif text-xl">{project.location}</span>
@@ -103,7 +103,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                 </div>
 
                 <div>
-                  <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block mb-2">Status</span>
+                  <span className="text-[12px] uppercase tracking-widest font-bold opacity-50 block mb-2">Status</span>
                   <div className="flex items-center space-x-2 text-burgundy">
                     <CheckCircle2 size={18} />
                     <span className="font-serif text-xl">{project.status}</span>
@@ -112,7 +112,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
 
                 {project.developer && (
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block mb-2">Developed By</span>
+                    <span className="text-[12px] uppercase tracking-widest font-bold opacity-50 block mb-2">Developed By</span>
                     <div className="flex items-start space-x-2 text-burgundy">
                       <Building size={18} className="mt-1 shrink-0" />
                       <span className="font-serif text-lg leading-snug">{project.developer}</span>
@@ -122,7 +122,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
 
                 {project.architect && (
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block mb-2">Architect</span>
+                    <span className="text-[12px] uppercase tracking-widest font-bold opacity-50 block mb-2">Architect</span>
                     <div className="flex items-start space-x-2 text-burgundy">
                       <Building size={18} className="mt-1 shrink-0" />
                       <span className="font-serif text-lg leading-snug">{project.architect}</span>
@@ -132,7 +132,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
 
                 {project.role && (
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block mb-2">Our Role</span>
+                    <span className="text-[12px] uppercase tracking-widest font-bold opacity-50 block mb-2">Our Role</span>
                     <div className="flex items-center space-x-2 text-burgundy">
                       <ShieldCheck size={18} />
                       <span className="font-serif text-lg">{project.role}</span>
@@ -142,7 +142,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
 
                 {project.approval && (
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block mb-2">Approval</span>
+                    <span className="text-[12px] uppercase tracking-widest font-bold opacity-50 block mb-2">Approval</span>
                     <div className="flex items-start space-x-2 text-burgundy">
                       <CheckCircle2 size={18} className="mt-1 shrink-0" />
                       <span className="font-serif text-lg leading-snug">{project.approval}</span>
@@ -222,7 +222,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
 
               {project.images.length > 1 && (
                 <div className="pt-12">
-                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-ink/40 mb-6">Project Renders</h3>
+                  <h3 className="text-[12px] uppercase tracking-[0.25em] font-bold text-ink/40 mb-6">Project Renders</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {project.images.slice(1).map((img, i) => (
                       <motion.div
@@ -243,7 +243,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                   than a render, so it gets its own labelled section. */}
               {project.progressPhotos && project.progressPhotos.length > 0 && (
                 <div className="pt-12">
-                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-2">
+                  <h3 className="text-[12px] uppercase tracking-[0.25em] font-bold text-burgundy mb-2">
                     Construction Progress{project.progressDate ? ` — ${project.progressDate}` : ''}
                   </h3>
                   {project.progressNote ? (
@@ -269,7 +269,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
 
               {(project.unitPlans?.length || project.commercialFloors?.length || project.surroundings?.length) ? (
                 <div className="pt-12">
-                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-4">Explore in detail</h3>
+                  <h3 className="text-[12px] uppercase tracking-[0.25em] font-bold text-burgundy mb-4">Explore in detail</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                     {project.unitPlans?.length ? (
                       <Link href={`/portfolio/${project.id}/apartments`} className="group rounded-2xl border border-sand/50 bg-white px-6 py-5 hover:border-burgundy/40 hover:shadow-md transition-all">
@@ -295,7 +295,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
 
               {project.unitPlans && project.unitPlans.length > 0 && (
                 <div className="pt-12">
-                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-2">Unit Types & Floor Plans</h3>
+                  <h3 className="text-[12px] uppercase tracking-[0.25em] font-bold text-burgundy mb-2">Unit Types & Floor Plans</h3>
                   <p className="text-sm text-ink/55 mb-6">Sizes are as published by the developer. Ask us for current availability on each type.</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {project.unitPlans.map(u => (
@@ -315,7 +315,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                         <div className="p-5 flex items-baseline justify-between gap-3">
                           <div>
                             <p className="font-serif text-lg text-ink">{u.name}</p>
-                            {u.notes && <p className="text-[10px] uppercase tracking-widest font-bold text-ink/40 mt-1">{u.notes}</p>}
+                            {u.notes && <p className="text-[12px] uppercase tracking-widest font-bold text-ink/40 mt-1">{u.notes}</p>}
                           </div>
                           <p className="text-burgundy font-semibold text-sm whitespace-nowrap">{u.size}</p>
                         </div>
@@ -327,15 +327,15 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
 
               {project.commercialFloors && project.commercialFloors.length > 0 && (
                 <div className="pt-12">
-                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-2">Commercial Unit Sizes by Floor</h3>
+                  <h3 className="text-[12px] uppercase tracking-[0.25em] font-bold text-burgundy mb-2">Commercial Unit Sizes by Floor</h3>
                   <p className="text-sm text-ink/55 mb-6">Shop sizes available on each level.</p>
                   <div className="overflow-x-auto rounded-2xl border border-sand/50">
                     <table className="w-full text-sm min-w-[420px]">
                       <thead>
                         <tr className="bg-beige/60 text-ink/60">
-                          <th className="text-left font-bold uppercase tracking-widest text-[10px] px-5 py-3">Floor</th>
-                          <th className="text-left font-bold uppercase tracking-widest text-[10px] px-5 py-3">Smallest</th>
-                          <th className="text-left font-bold uppercase tracking-widest text-[10px] px-5 py-3">Largest</th>
+                          <th className="text-left font-bold uppercase tracking-widest text-[12px] px-5 py-3">Floor</th>
+                          <th className="text-left font-bold uppercase tracking-widest text-[12px] px-5 py-3">Smallest</th>
+                          <th className="text-left font-bold uppercase tracking-widest text-[12px] px-5 py-3">Largest</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -639,11 +639,11 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
         <div className="mx-auto max-w-7xl rounded-[32px] border border-burgundy/15 bg-white/95 backdrop-blur-xl shadow-[0_35px_80px_rgba(45,41,38,0.12)] p-6 md:p-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             <div>
-              <div className="text-[10px] uppercase tracking-[0.35em] text-ink/50 mb-2">Location</div>
+              <div className="text-[12px] uppercase tracking-[0.35em] text-ink/50 mb-2">Location</div>
               <div className="font-serif text-sm md:text-lg font-semibold text-ink line-clamp-2">{project.location}</div>
             </div>
             <div>
-              <div className="text-[10px] uppercase tracking-[0.35em] text-ink/50 mb-2">Status</div>
+              <div className="text-[12px] uppercase tracking-[0.35em] text-ink/50 mb-2">Status</div>
               <div className="font-serif text-sm md:text-lg font-semibold text-burgundy">{project.status}</div>
             </div>
             
@@ -651,7 +651,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
               <div key={idx}>
                 <div className="rounded-2xl bg-paper/80 p-3 text-center">
                   <div className="text-base md:text-xl font-semibold text-burgundy"><CountUp target={stat.value} /></div>
-                  <div className="text-[9px] md:text-xs uppercase tracking-[0.2em] text-ink/70 line-clamp-2">{stat.label}</div>
+                  <div className="text-[12px] md:text-xs uppercase tracking-[0.2em] text-ink/70 line-clamp-2">{stat.label}</div>
                 </div>
               </div>
             ))}
@@ -663,7 +663,7 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
               <div key={idx}>
                 <div className="rounded-2xl bg-paper/80 p-3 text-center">
                   <div className="text-base md:text-xl font-semibold text-burgundy"><CountUp target={stat.value} /></div>
-                  <div className="text-[9px] md:text-xs uppercase tracking-[0.2em] text-ink/70 line-clamp-2">{stat.label}</div>
+                  <div className="text-[12px] md:text-xs uppercase tracking-[0.2em] text-ink/70 line-clamp-2">{stat.label}</div>
                 </div>
               </div>
             ))}

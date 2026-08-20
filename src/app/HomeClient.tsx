@@ -10,9 +10,9 @@ import ProjectCard from '../components/ProjectCard';
 import ConstructionCard from '../components/ConstructionCard';
 import TeamCard from '../components/TeamCard';
 import LeadForm from '../components/LeadForm';
-import { ArrowRight, MapPin, Building2, Paintbrush, TrendingUp } from 'lucide-react';
+import { ArrowRight, MapPin, Building2, Paintbrush, TrendingUp, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
-import { CONTACT } from '../lib/contact';
+import { CONTACT, whatsappLink } from '../lib/contact';
 
 const services = [
   {
@@ -35,122 +35,101 @@ const services = [
 export default function HomeClient() {
   return (
     <div className="pt-20">
-      {/* Hero Section */}
-      <section className="relative min-h-[90vh] lg:h-[90vh] grid grid-cols-1 md:grid-cols-12 overflow-hidden bg-beige">
-        {/* Left Content */}
-        <div className="col-span-1 md:col-span-7 flex flex-col justify-center px-6 md:px-12 lg:px-24 py-16 md:py-0">
+      {/* Hero — a real building, not a logo on a maroon panel.
+          The previous hero showed no photograph of anything we build, and on
+          mobile the entire first screen was text. Now the first thing anyone
+          sees on any device is a building, with the headline over it. */}
+      <section className="relative min-h-[85vh] lg:min-h-[calc(100vh-5rem)] flex items-end overflow-hidden">
+        <img
+          src="/assets/projects/faisal-jewel/hero.webp"
+          alt="Faisal Jewel tower in Faisal Hills, Taxila — a project Alammana Developers sells"
+          width={1400}
+          height={816}
+          fetchPriority="high"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        {/* Two stacked gradients: a heavy bottom one so the text is always
+            legible, and a light top one so the fixed navbar keeps contrast. */}
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/10" />
+        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-paper/80 to-transparent" />
+
+        <div className="relative w-full max-w-[1600px] mx-auto px-5 sm:px-8 lg:px-12 pb-12 md:pb-16 pt-32">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex items-center gap-2 mb-6">
-              <div className="h-[1px] w-12 bg-burgundy"></div>
-              <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] font-bold text-burgundy">Faisal Hills, Faisal Town & Islamabad Real Estate</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl lg:text-8xl font-serif text-ink leading-tight mb-8">
-              Faisal Hills Real Estate <span className="italic font-normal text-burgundy">& Luxury Construction</span> <br className="hidden lg:block" /> in Islamabad.
-            </h1>
-            <p className="text-base md:text-lg text-ink/70 max-w-lg mb-10 leading-relaxed">
-              Alammana Developers specializes in premium Faisal Hills and Faisal Town properties, luxury construction, and strategic marketing across Islamabad. 
-              We turn property visions into tangible, high-end real estate landmarks.
-            </p>
-            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <Link href="/portfolio" className="bg-burgundy text-white px-8 py-4 rounded-full text-sm uppercase tracking-widest font-bold hover:opacity-90 transition-opacity text-center shadow-lg shadow-burgundy/20">
-                View Portfolio
-              </Link>
-              <Link href="/contact" className="border border-sand text-ink px-8 py-4 rounded-full text-sm uppercase tracking-widest font-bold hover:bg-white transition-all text-center">
-                Consultation
-              </Link>
-            </div>
-
-            <div className="flex flex-wrap gap-4 md:gap-6 mt-12 md:mt-16">
-              <div className="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-sand/30 w-full sm:w-40 md:w-48">
-                <p className="text-2xl md:text-3xl font-bold text-burgundy mb-1">60+</p>
-                <p className="text-[10px] uppercase font-bold text-ink/40 tracking-wider">Projects Completed</p>
-              </div>
-              <div className="bg-white p-4 md:p-6 rounded-2xl shadow-sm border border-sand/30 w-full sm:w-40 md:w-48">
-                <p className="text-2xl md:text-3xl font-bold text-burgundy mb-1">5</p>
-                <p className="text-[10px] uppercase font-bold text-ink/40 tracking-wider">Faisal Hills Blocks Covered</p>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Right Visual */}
-        <div className="flex md:flex col-span-1 md:col-span-5 bg-burgundy relative flex-col justify-end p-8 md:p-12 overflow-hidden min-h-[500px] md:min-h-0">
-          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_#D4C3A3_1px,_transparent_1px)] bg-[length:24px_24px]"></div>
-          
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.16)_0%,_rgba(0,0,0,0.35)_80%)]"></div>
-          <div className="absolute inset-0 flex items-center justify-center p-12">
-            <Image
-              src="/assets/logo.webp"
-              alt="Alammana Developers logo for Faisal Hills real estate and luxury construction"
-              width={520}
-              height={520}
-              className="relative z-10 max-w-full max-h-full object-contain opacity-90"
-              priority
-            />
-          </div>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="bg-white rounded-3xl p-8 relative z-20 shadow-2xl backdrop-blur-sm bg-white/80"
+            transition={{ duration: 0.7 }}
+            className="max-w-3xl"
           >
-            <div className="flex justify-between items-start mb-6">
-              <span className="bg-beige text-burgundy px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">Featured Project</span>
-              <div className="flex gap-1">
-                <div className="w-2 h-2 rounded-full bg-burgundy"></div>
-                <div className="w-2 h-2 rounded-full bg-gray-200"></div>
-                <div className="w-2 h-2 rounded-full bg-gray-200"></div>
-              </div>
-            </div>
-            <h3 className="text-3xl font-serif mb-2 text-ink italic">Faisal Jewel</h3>
-            <p className="text-ink/60 text-sm mb-6">A premium landmark offering unmatched commercial spaces and luxury amenities.</p>
-            <div className="flex items-center justify-between border-t border-sand/20 pt-6">
-              <div className="flex -space-x-3">
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-300"></div>
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-gray-400"></div>
-                <div className="w-10 h-10 rounded-full border-2 border-white bg-burgundy flex items-center justify-center text-[10px] text-white font-bold">+3</div>
-              </div>
-              <Link href="/portfolio/faisal-jewel" className="text-burgundy font-bold text-sm uppercase tracking-widest hover:underline">
-                View Project
-              </Link>
-            </div>
-          </motion.div>
+            <span className="inline-flex items-center gap-2 bg-burgundy/90 text-white px-4 py-2 rounded-full text-[12px] uppercase tracking-[0.2em] font-bold mb-6">
+              <MapPin size={13} /> Faisal Hills · Faisal Town · Taxila
+            </span>
 
-          <div className="mt-12 text-white/60 text-[10px] font-medium uppercase tracking-[0.2em] flex items-center gap-4">
-            <span>Islamabad</span>
-            <div className="w-1 h-1 rounded-full bg-white/40"></div>
-            <span>Faisal Hills</span>
-            <div className="w-1 h-1 rounded-full bg-white/40"></div>
-            <span>Taxila</span>
-          </div>
+            {/* Was 96px across four lines. Now it fits two, and leads with the
+                thing buyers actually search for. */}
+            <h1 className="text-[2rem] leading-[1.1] sm:text-5xl lg:text-6xl font-serif text-paper mb-5">
+              We build your house on{' '}
+              <span className="italic text-beige">published rates</span>
+            </h1>
+
+            <p className="text-base md:text-lg text-paper/85 max-w-xl mb-8 leading-relaxed">
+              Gray structure or fully finished, in every block of Faisal Hills. Our rates are
+              published and downloadable — so you know the cost before you commit, not after.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3 mb-10">
+              <Link
+                href="/payment-plans"
+                className="bg-burgundy text-white px-8 py-4 rounded-full text-sm uppercase tracking-widest font-bold hover:opacity-90 transition-opacity text-center shadow-lg shadow-black/30"
+              >
+                See Construction Rates
+              </Link>
+              <a
+                href={whatsappLink('Hello Alammana, I would like to know the construction rate for my plot in Faisal Hills.')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white/95 text-ink px-8 py-4 rounded-full text-sm uppercase tracking-widest font-bold hover:bg-white transition-all text-center"
+              >
+                Ask on WhatsApp
+              </a>
+            </div>
+
+            {/* Trust strip. Small, factual, and legible against the image. */}
+            <ul className="flex flex-wrap gap-x-7 gap-y-3 text-paper/90 text-sm">
+              {[
+                '60+ projects completed',
+                'RDA-approved societies',
+                'Fixed, published rates',
+              ].map(t => (
+                <li key={t} className="flex items-center gap-2">
+                  <CheckCircle2 size={16} className="text-beige shrink-0" />
+                  <span>{t}</span>
+                </li>
+              ))}
+            </ul>
+          </motion.div>
         </div>
       </section>
 
       {/* Info Grid (Design Bottom Grid) */}
       <section className="bg-white border-y border-sand/40 grid grid-cols-1 md:grid-cols-4">
         <div className="border-b md:border-b-0 md:border-r border-sand/40 p-8 flex flex-col justify-center">
-          <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mb-1">Headquarters</span>
+          <span className="text-[12px] font-bold text-ink/40 uppercase tracking-widest mb-1">Headquarters</span>
           <p className="text-sm font-semibold">Vertical Four, A Block, Faisal Hills</p>
-          <p className="text-[11px] text-ink/50">Near Arch Monument, Taxila</p>
+          <p className="text-[12px] text-ink/50">Near Arch Monument, Taxila</p>
         </div>
         <div className="border-b md:border-b-0 md:border-r border-sand/40 p-8 flex flex-col justify-center">
-          <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mb-1">Chairman</span>
+          <span className="text-[12px] font-bold text-ink/40 uppercase tracking-widest mb-1">Chairman</span>
           <p className="text-sm font-semibold">Ch. Muhammad Abdullah</p>
-          <p className="text-[11px] text-ink/50 italic">Alammana Developers</p>
+          <p className="text-[12px] text-ink/50 italic">Alammana Developers</p>
         </div>
         <div className="border-b md:border-b-0 md:border-r border-sand/40 p-8 flex flex-col justify-center">
-          <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mb-1">Construction</span>
+          <span className="text-[12px] font-bold text-ink/40 uppercase tracking-widest mb-1">Construction</span>
           <p className="text-sm font-semibold">Mohsin Ali</p>
-          <p className="text-[11px] text-ink/50 italic">Director of Construction</p>
+          <p className="text-[12px] text-ink/50 italic">Director of Construction</p>
         </div>
         <div className="p-8 flex items-center justify-center md:justify-end">
           <div className="flex gap-4">
-            <span className="text-[10px] font-bold text-ink/40 uppercase tracking-widest mr-4">Connect</span>
+            <span className="text-[12px] font-bold text-ink/40 uppercase tracking-widest mr-4">Connect</span>
             <a href="https://www.facebook.com/alammana.pk" target="_blank" rel="noopener noreferrer" aria-label="Alammana Developers on Facebook" className="w-10 h-10 rounded-full border border-sand flex items-center justify-center text-xs hover:bg-burgundy hover:text-white transition-all">FB</a>
             <a href="https://www.instagram.com/alammanapk/" target="_blank" rel="noopener noreferrer" aria-label="Alammana Developers on Instagram" className="w-10 h-10 rounded-full border border-sand flex items-center justify-center text-xs hover:bg-burgundy hover:text-white transition-all">IG</a>
           </div>
@@ -159,7 +138,7 @@ export default function HomeClient() {
 
       {/* Societies */}
       <section className="py-24 bg-paper" id="societies">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1600px] mx-auto px-4">
           <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-6 mb-14">
             <div className="max-w-2xl">
               <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">Where We Work</span>
@@ -184,16 +163,19 @@ export default function HomeClient() {
                 <img
                   src={s.image}
                   alt={`${s.name} — ${s.city}`}
+                  width={1600}
+                  height={1200}
+                  decoding="async"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-end text-paper">
-                  <span className="text-[9px] uppercase tracking-[0.25em] font-bold text-beige mb-2">
+                  <span className="text-[12px] uppercase tracking-[0.25em] font-bold text-beige mb-2">
                     {s.approvalStatus} · {s.blocks.length} Blocks
                   </span>
                   <h3 className="text-xl font-serif leading-tight mb-1">{s.name}</h3>
-                  <p className="text-[11px] text-paper/70">{s.city}</p>
+                  <p className="text-[12px] text-paper/70">{s.city}</p>
                 </div>
               </Link>
             ))}
@@ -203,7 +185,7 @@ export default function HomeClient() {
 
       {/* Portfolio Highlight */}
       <section className="py-24" id="portfolio">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1600px] mx-auto px-4">
           <div className="flex justify-between items-end mb-16">
             <div>
               <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">Portfolio</span>
@@ -223,7 +205,7 @@ export default function HomeClient() {
 
       {/* Construction & Development Focus Section */}
       <section className="py-24 bg-beige/30" id="development-projects">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1600px] mx-auto px-4">
           <div className="flex justify-between items-end mb-16">
             <div>
               <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">Construction & Development</span>
@@ -254,7 +236,7 @@ export default function HomeClient() {
 
       {/* Services Section */}
       <section className="py-24 bg-ink text-paper overflow-hidden relative">
-        <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="max-w-[1600px] mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div>
               <span className="text-beige text-xs uppercase tracking-widest font-bold mb-6 block">Our Expertise</span>
@@ -300,7 +282,7 @@ export default function HomeClient() {
 
       {/* Locations Section */}
       <section className="py-24 bg-paper" id="about-info">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1600px] mx-auto px-4">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">Our Reach</span>
             <h2 className="text-4xl font-serif mb-6 italic">Serving the Heart of Pakistan</h2>
@@ -327,7 +309,7 @@ export default function HomeClient() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/25 to-transparent" />
               <div className="absolute inset-0 p-8 flex flex-col justify-end text-paper">
-                <span className="text-[10px] uppercase tracking-[0.3em] font-bold text-beige mb-2">
+                <span className="text-[12px] uppercase tracking-[0.3em] font-bold text-beige mb-2">
                   Master Plan
                 </span>
                 <h3 className="text-3xl font-serif mb-2">Faisal Hills, Taxila</h3>
@@ -351,7 +333,7 @@ export default function HomeClient() {
                     <span className="block font-serif text-lg text-ink group-hover:text-burgundy transition-colors">
                       {s.name}
                     </span>
-                    <span className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold text-ink/40 mt-1">
+                    <span className="flex items-center gap-1.5 text-[12px] uppercase tracking-widest font-bold text-ink/40 mt-1">
                       <MapPin size={11} /> {s.city}
                     </span>
                   </span>
@@ -371,10 +353,10 @@ export default function HomeClient() {
 
       {/* Team Section */}
       <section className="py-24 bg-beige/10" id="team-info">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1600px] mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-serif italic tracking-tight mb-4">Meet the Visionaries</h2>
-            <p className="text-ink/60 uppercase tracking-widest text-[10px] font-bold">The Experts Behind Alammana Developers</p>
+            <p className="text-ink/60 uppercase tracking-widest text-[12px] font-bold">The Experts Behind Alammana Developers</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
@@ -387,7 +369,7 @@ export default function HomeClient() {
 
       {/* Contact Section */}
       <section className="py-24 border-t border-burgundy/10" id="contact-info">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1600px] mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             <div>
               <h2 className="text-5xl font-serif mb-8 leading-tight italic">Let&apos;s Discuss <br />Your Future Project</h2>
@@ -402,7 +384,7 @@ export default function HomeClient() {
                     <ArrowRight size={20} />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest block font-bold opacity-50">Email Us</span>
+                    <span className="text-[12px] uppercase tracking-widest block font-bold opacity-50">Email Us</span>
                     <span className="text-xl font-serif group-hover:text-burgundy transition-colors">{CONTACT.email}</span>
                   </div>
                 </a>
@@ -411,7 +393,7 @@ export default function HomeClient() {
                     <ArrowRight size={20} />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest block font-bold opacity-50">Call Us</span>
+                    <span className="text-[12px] uppercase tracking-widest block font-bold opacity-50">Call Us</span>
                     <span className="text-xl font-serif group-hover:text-burgundy transition-colors">{CONTACT.phoneDisplay}</span>
                   </div>
                 </a>

@@ -49,11 +49,11 @@ export default function PaymentPlansClient() {
       {/* Hero */}
       <section className="bg-beige relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none bg-[radial-gradient(circle_at_center,_#8B2635_1px,_transparent_1px)] bg-[length:28px_28px]"></div>
-        <div className="max-w-7xl mx-auto px-4 py-20 md:py-28 relative z-10">
+        <div className="max-w-[1600px] mx-auto px-4 py-20 md:py-28 relative z-10">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
             <div className="flex items-center gap-2 mb-6">
               <div className="h-[1px] w-12 bg-burgundy"></div>
-              <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] font-bold text-burgundy">
+              <span className="text-[12px] md:text-xs uppercase tracking-[0.3em] font-bold text-burgundy">
                 Official Rate Lists — Faisal Hills
               </span>
             </div>
@@ -71,10 +71,10 @@ export default function PaymentPlansClient() {
 
       {/* Selector + Viewer */}
       <section className="py-16 md:py-24 bg-paper">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1600px] mx-auto px-4">
           {/* Finish type toggle */}
           <div className="mb-12">
-            <span className="text-[10px] uppercase tracking-widest font-bold text-ink/40 block mb-4">
+            <span className="text-[12px] uppercase tracking-widest font-bold text-ink/40 block mb-4">
               Step 1 — Choose Construction Type
             </span>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
@@ -102,7 +102,7 @@ export default function PaymentPlansClient() {
 
           {/* Block selector */}
           <div className="mb-12">
-            <span className="text-[10px] uppercase tracking-widest font-bold text-ink/40 block mb-4">
+            <span className="text-[12px] uppercase tracking-widest font-bold text-ink/40 block mb-4">
               Step 2 — Select Your Block
             </span>
             <div className="flex flex-wrap gap-3">
@@ -139,7 +139,7 @@ export default function PaymentPlansClient() {
                   </div>
                   <div>
                     <h2 className="font-serif text-xl md:text-2xl text-ink">{planTitle}</h2>
-                    <p className="text-[11px] uppercase tracking-widest font-bold text-ink/40 mt-1">
+                    <p className="text-[12px] uppercase tracking-widest font-bold text-ink/40 mt-1">
                       Faisal Hills, Taxila — Official PDF
                     </p>
                   </div>
@@ -174,7 +174,7 @@ export default function PaymentPlansClient() {
                     loading="lazy"
                   />
                 </a>
-                <p className="text-center text-[10px] uppercase tracking-widest font-bold text-ink/40 mt-4">
+                <p className="text-center text-[12px] uppercase tracking-widest font-bold text-ink/40 mt-4">
                   Tap the plan to open the PDF — or use the download button above
                 </p>
               </div>
@@ -185,7 +185,7 @@ export default function PaymentPlansClient() {
 
       {/* Gray vs Finished explainer — useful for visitors and for SEO copy */}
       <section className="py-24 bg-ink text-paper">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1600px] mx-auto px-4">
           <div className="max-w-3xl mb-16">
             <span className="text-beige text-xs uppercase tracking-widest font-bold mb-6 block">
               Understanding the Rates

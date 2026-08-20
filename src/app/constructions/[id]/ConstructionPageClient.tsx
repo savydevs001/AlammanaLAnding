@@ -53,13 +53,13 @@ export default function ConstructionPageClient({ id }: { id: string }) {
             <span>All Constructions</span>
           </Link>
           <div className="flex flex-wrap gap-3 mb-6">
-            <span className="bg-burgundy px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider">
+            <span className="bg-burgundy px-4 py-2 rounded-full text-[12px] font-bold uppercase tracking-wider">
               {project.status}
             </span>
-            <span className="bg-white/90 text-ink px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider">
+            <span className="bg-white/90 text-ink px-4 py-2 rounded-full text-[12px] font-bold uppercase tracking-wider">
               {project.finishType}
             </span>
-            <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider">
+            <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-[12px] font-bold uppercase tracking-wider">
               {project.plotSize}
             </span>
           </div>
@@ -78,14 +78,14 @@ export default function ConstructionPageClient({ id }: { id: string }) {
       {/* Specs bar */}
       {project.specs && (
         <section className="bg-white border-b border-sand/40">
-          <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4">
+          <div className="max-w-[1600px] mx-auto grid grid-cols-2 md:grid-cols-4">
             {project.specs.map((s, i) => (
               <div
                 key={i}
                 className="p-8 text-center border-b md:border-b-0 border-r border-sand/40 last:border-r-0 [&:nth-child(2)]:border-r-0 md:[&:nth-child(2)]:border-r"
               >
                 <p className="text-2xl md:text-3xl font-serif text-burgundy mb-1">{s.value}</p>
-                <p className="text-[10px] uppercase font-bold text-ink/40 tracking-widest">{s.label}</p>
+                <p className="text-[12px] uppercase font-bold text-ink/40 tracking-widest">{s.label}</p>
               </div>
             ))}
           </div>
@@ -94,14 +94,14 @@ export default function ConstructionPageClient({ id }: { id: string }) {
 
       {/* Story + status */}
       <section className="py-24 bg-paper">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-16">
+        <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-16">
           <div className="lg:col-span-2">
             <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">The Project</span>
             <h2 className="text-4xl md:text-5xl font-serif italic mb-8">Built on Published Rates</h2>
             <p className="text-lg text-ink/70 leading-relaxed font-serif mb-8">{project.fullDescription}</p>
             {project.brief && (
               <div className="mt-10 rounded-3xl border-l-4 border-burgundy bg-beige/50 p-8">
-                <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-3">The Brief</h3>
+                <h3 className="text-[12px] uppercase tracking-[0.25em] font-bold text-burgundy mb-3">The Brief</h3>
                 <p className="text-lg text-ink/85 leading-relaxed">{project.brief}</p>
               </div>
             )}
@@ -121,7 +121,7 @@ export default function ConstructionPageClient({ id }: { id: string }) {
                   <Hammer size={22} />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block">Status</span>
+                  <span className="text-[12px] uppercase tracking-widest font-bold opacity-50 block">Status</span>
                   <span className="font-serif text-xl text-burgundy">{project.status}</span>
                 </div>
               </div>
@@ -131,7 +131,7 @@ export default function ConstructionPageClient({ id }: { id: string }) {
                     <CalendarClock size={22} />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block">Started</span>
+                    <span className="text-[12px] uppercase tracking-widest font-bold opacity-50 block">Started</span>
                     <span className="font-serif text-xl text-burgundy">{project.startedDate}</span>
                   </div>
                 </div>
@@ -142,7 +142,7 @@ export default function ConstructionPageClient({ id }: { id: string }) {
                     <CalendarClock size={22} />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block">Completed</span>
+                    <span className="text-[12px] uppercase tracking-widest font-bold opacity-50 block">Completed</span>
                     <span className="font-serif text-xl text-burgundy">{project.completedDate}</span>
                   </div>
                 </div>
@@ -153,7 +153,7 @@ export default function ConstructionPageClient({ id }: { id: string }) {
                     <CalendarClock size={22} />
                   </div>
                   <div>
-                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block">Expected Completion</span>
+                    <span className="text-[12px] uppercase tracking-widest font-bold opacity-50 block">Expected Completion</span>
                     <span className="font-serif text-xl text-burgundy">{project.expectedCompletion}</span>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ export default function ConstructionPageClient({ id }: { id: string }) {
                   <MapPin size={22} />
                 </div>
                 <div>
-                  <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block">Location</span>
+                  <span className="text-[12px] uppercase tracking-widest font-bold opacity-50 block">Location</span>
                   <span className="font-serif text-xl text-burgundy">{project.block}</span>
                 </div>
               </div>
@@ -189,7 +189,7 @@ export default function ConstructionPageClient({ id }: { id: string }) {
       {/* Approved Map */}
       {project.approvedMapImage && (
         <section className="py-24 bg-beige/30">
-          <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">
                 Transparency First
@@ -230,7 +230,7 @@ export default function ConstructionPageClient({ id }: { id: string }) {
                 href={project.approvedMapImage}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute bottom-6 right-6 flex items-center gap-2 bg-white/95 text-ink px-5 py-3 rounded-full text-[10px] uppercase tracking-widest font-bold shadow-lg hover:bg-burgundy hover:text-white transition-colors"
+                className="absolute bottom-6 right-6 flex items-center gap-2 bg-white/95 text-ink px-5 py-3 rounded-full text-[12px] uppercase tracking-widest font-bold shadow-lg hover:bg-burgundy hover:text-white transition-colors"
               >
                 <ExternalLink size={14} /> View Full Size
               </a>
@@ -242,7 +242,7 @@ export default function ConstructionPageClient({ id }: { id: string }) {
       {/* Gallery */}
       {project.gallery.length > 0 && (
         <section className="py-24 bg-paper">
-          <div className="max-w-7xl mx-auto px-4">
+          <div className="max-w-[1600px] mx-auto px-4">
             <div className="mb-16">
               <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">Site Gallery</span>
               <h2 className="text-4xl md:text-5xl font-serif italic">Progress in Pictures</h2>
@@ -273,7 +273,7 @@ export default function ConstructionPageClient({ id }: { id: string }) {
       {/* Location map */}
       {project.mapEmbedUrl && (
         <section className="py-24 bg-white border-t border-sand/40">
-          <div className="max-w-7xl mx-auto px-4">
+          <div className="max-w-[1600px] mx-auto px-4">
             <div className="mb-12">
               <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">Site Location</span>
               <h2 className="text-4xl md:text-5xl font-serif italic mb-4">Find It on the Map</h2>
@@ -323,7 +323,7 @@ export default function ConstructionPageClient({ id }: { id: string }) {
       {/* More constructions */}
       {others.length > 0 && (
         <section className="py-24 bg-paper">
-          <div className="max-w-7xl mx-auto px-4">
+          <div className="max-w-[1600px] mx-auto px-4">
             <div className="flex justify-between items-end mb-16">
               <h2 className="text-4xl font-serif italic">More Constructions</h2>
               <Link

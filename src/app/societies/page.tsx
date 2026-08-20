@@ -69,7 +69,7 @@ export default function SocietiesPage() {
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
       ))}
 
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1600px] mx-auto px-4">
         <header className="mb-16">
           <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold mb-6 block">Where We Work</span>
           <h1 className="text-5xl md:text-7xl font-serif mb-8">
@@ -95,10 +95,14 @@ export default function SocietiesPage() {
                   <img
                     src={s.image}
                     alt={`${s.name} — ${s.city}`}
+                    width={1600}
+                    height={1000}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <span
-                    className={`absolute top-5 left-5 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${st.cls}`}
+                    className={`absolute top-5 left-5 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[12px] font-bold uppercase tracking-wider ${st.cls}`}
                   >
                     {st.icon} {s.approvalStatus}
                   </span>
@@ -106,17 +110,17 @@ export default function SocietiesPage() {
 
                 <div className="p-8 flex flex-col flex-1">
                   <h2 className="text-3xl font-serif italic mb-2">{s.name}</h2>
-                  <p className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest font-bold text-ink/40 mb-4">
+                  <p className="flex items-center gap-1.5 text-[12px] uppercase tracking-widest font-bold text-ink/40 mb-4">
                     <MapPin size={12} /> {s.city}
                   </p>
                   <p className="text-sm text-ink/70 leading-relaxed mb-6 flex-1">{s.summary}</p>
 
                   <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="bg-beige text-burgundy px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                    <span className="bg-beige text-burgundy px-3 py-1.5 rounded-full text-[12px] font-bold uppercase tracking-wider">
                       {s.blocks.length} {s.blocks.length === 1 ? 'Block' : 'Blocks'}
                     </span>
                     {s.totalArea && (
-                      <span className="bg-beige text-burgundy px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                      <span className="bg-beige text-burgundy px-3 py-1.5 rounded-full text-[12px] font-bold uppercase tracking-wider">
                         {s.totalArea}
                       </span>
                     )}

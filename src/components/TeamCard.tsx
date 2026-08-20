@@ -18,7 +18,7 @@ export default function TeamCard({ member }: TeamCardProps) {
       <Link href={`/team/${member.id}`} className="block">
         <div className="relative aspect-square overflow-hidden mb-6 transition-all duration-500 rounded-3xl">
           <img
-            src={member.image}
+            width={900} height={1200} loading="lazy" decoding="async" src={member.image}
             alt={member.name}
             className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110"
             referrerPolicy="no-referrer"
@@ -28,7 +28,7 @@ export default function TeamCard({ member }: TeamCardProps) {
         
         <div className="text-center">
           <h3 className="text-xl font-serif text-burgundy">{member.name}</h3>
-          <p className="text-[10px] uppercase tracking-widest font-semibold opacity-60 mt-1">{member.role}</p>
+          <p className="text-[12px] uppercase tracking-widest font-semibold opacity-60 mt-1">{member.role}</p>
         </div>
       </Link>
     </motion.div>

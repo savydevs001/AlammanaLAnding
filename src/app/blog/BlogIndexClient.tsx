@@ -8,7 +8,7 @@ import { ArrowRight, Clock, User } from 'lucide-react';
 export default function BlogIndexClient() {
   return (
     <div className="pt-32 pb-24 bg-beige/30 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1600px] mx-auto px-4">
         <header className="mb-20 text-center max-w-3xl mx-auto">
           <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold mb-6 block">The Journal</span>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif italic mb-6">Perspectives on <span className="opacity-40">Development</span></h1>
@@ -36,14 +36,14 @@ export default function BlogIndexClient() {
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-burgundy text-white px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full">
+                  <span className="bg-burgundy text-white px-3 py-1 text-[12px] font-bold uppercase tracking-widest rounded-full">
                     {post.category}
                   </span>
                 </div>
               </Link>
               
               <div className="p-8 flex flex-col flex-grow">
-                <div className="flex items-center space-x-4 text-[10px] uppercase tracking-widest font-bold text-ink/40 mb-4">
+                <div className="flex items-center space-x-4 text-[12px] uppercase tracking-widest font-bold text-ink/40 mb-4">
                   <div className="flex items-center space-x-1">
                     <Clock size={12} />
                     <span>{post.readTime}</span>

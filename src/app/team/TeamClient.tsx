@@ -34,7 +34,7 @@ export default function TeamClient({ team }: { team: TeamMember[] }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(teamStructuredData) }}
       />
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1600px] mx-auto px-4">
         <header className="mb-20 text-center max-w-3xl mx-auto">
           <span className="text-burgundy text-xs uppercase tracking-[0.5em] font-bold mb-6 block">The Visionaries</span>
           <h1 className="text-5xl md:text-7xl font-serif italic mb-6">Executive Team <span className="opacity-40">Leading Faisal Hills</span></h1>

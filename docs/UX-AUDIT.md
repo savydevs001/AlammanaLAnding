@@ -1,5 +1,10 @@
 # UI/UX Audit — Attack Mode
 
+> **Round 1 fixes landed.** Items marked ✅ below are done and verified. The
+> remainder still stand — most of them need photographs or client decisions
+> rather than code.
+
+
 Written deliberately harshly. Everything below is measured from the live build,
 not impressions. Numbers in `code` are actual measurements taken at 1440×900
 desktop and 375×812 mobile.
@@ -13,7 +18,7 @@ is close to image-free.
 
 ## 1. The homepage fails in the first three seconds
 
-### The hero has no picture of anything you build
+### ✅ FIXED — The hero has no picture of anything you build
 
 The left half is a `96px` headline over `18px` body text — a **5.3:1 size ratio**,
 which is why it feels shouty and unbalanced. The right half is your logo on a
@@ -27,7 +32,7 @@ On mobile it is worse: the entire first screen — the only screen most visitors
 ever see — contains **zero images**. You must scroll past a full phone-height of
 text before an image appears, and the first one is the logo again.
 
-### The headline says nothing a buyer wants
+### ✅ FIXED — The headline says nothing a buyer wants
 
 > "Faisal Hills Real Estate & Luxury Construction in Islamabad."
 
@@ -35,13 +40,13 @@ That is a category, not an offer. It wraps to **4 lines** on desktop. It contain
 no price, no proof, no reason to keep reading. Compare with what the buyer is
 actually asking: *what does it cost to build my house, and can I trust you?*
 
-### The "Featured Project" card is unreadable
+### ✅ FIXED — The "Featured Project" card is unreadable
 
 Frosted white-on-maroon with the logo bleeding through behind the text. Then
 three grey circles and a "+3" badge — **placeholder avatars pretending to be
 people**. A layman reads this as broken. Nobody knows what the circles mean.
 
-### The navbar is visibly broken at desktop width
+### ✅ FIXED — The navbar is visibly broken at desktop width
 
 - Logo right edge: `332px`. First nav link left edge: `332px`. **A 0px gap — they
   are touching.**
@@ -57,7 +62,7 @@ This is the first thing a desktop visitor sees. It looks unfinished.
 This is the majority of the walk-in market in Taxila, and the site currently
 excludes them almost completely.
 
-### It is a wall of English text
+### ⚠️ PARTLY FIXED — It is a wall of English text
 
 - **49 separate pieces of text at 10px or smaller** on the homepage alone.
 - The entire site is English-only. No Urdu anywhere. A buyer who speaks Urdu and
@@ -73,7 +78,7 @@ The single most common question — *ghar banane ka kya rate hai?* — is answer
 a PDF behind two dropdown selections. There is no number visible anywhere on the
 homepage. Not one.
 
-### Tap targets are too small
+### ✅ PARTLY FIXED — Tap targets are too small
 
 **18 interactive elements below the 44px minimum**, including:
 
@@ -83,7 +88,7 @@ homepage. Not one.
 - "View Project" on the featured card — `123×20px`
 - Facebook / Instagram icons — `40×40px`
 
-### The WhatsApp button covers content
+### ✅ FIXED — The WhatsApp button covers content
 
 On mobile it sits on top of the stats block and the headquarters address. The one
 element aimed squarely at this audience is obscuring information.
@@ -261,3 +266,35 @@ For blog and finance/process illustration only — never to represent your work:
 - Technical SEO is now solid.
 - The Faisal Jewel page is the best on the site — because it has real photographs.
   **That is the entire lesson.**
+
+
+---
+
+## Round 1 — what was fixed (verified by measurement)
+
+| Problem | Before | After |
+|---|---|---|
+| Navbar logo / nav collision | `0px` gap | `132px` gap |
+| Consultation button cut off | right edge `1455px` in `1440px` viewport | `1393px`, fits |
+| Hero image on mobile first screen | 0 images | building visible immediately |
+| Homepage H1 | `96px`, 4 lines | `32px` mobile / `60px` desktop, 2 lines |
+| Content container | `1280px` (67% of a 1920 screen) | `1600px` |
+| Text at 10px or below | 49 instances | 0 |
+| Phone number placement | footer only, `96×13px` | header, `147×36px` desktop + `44×44` mobile button |
+| Fake avatar circles | present | removed with the old hero |
+| WhatsApp float overlapping content | yes | page reserves bottom space |
+| Images without width/height | all | card and gallery images now sized |
+
+**Hero headline changed** from the category statement to
+*"We build your house on published rates"* — which leads with the differentiator
+a buyer actually cares about, and is the thing no competitor in this market can
+say.
+
+### Still open — needs photographs or a decision from you
+
+- Real photographs of completed Alammana houses (replaces stock on `/constructions`)
+- Testimonials and client names
+- Urdu for rate pages and primary CTAs
+- Overseas-buyer section (remote supervision, paying from abroad)
+- Visible starting price on the homepage
+- Build out `/contact` and `/payment-plans` content

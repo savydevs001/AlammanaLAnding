@@ -119,11 +119,11 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
       {/* Hero */}
       <section className="relative overflow-hidden bg-burgundy text-paper">
         <img src={s.image} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-25" />
-        <div className="relative max-w-7xl mx-auto px-4 py-20 md:py-28">
+        <div className="relative max-w-[1600px] mx-auto px-4 py-20 md:py-28">
           <Link href="/societies" className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.3em] font-bold mb-8 hover:text-beige transition-colors">
             <ArrowLeft size={14} /> All Societies
           </Link>
-          <span className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-wider mb-6 ${badge.cls}`}>
+          <span className={`inline-flex items-center gap-1.5 px-4 py-2 rounded-full text-[12px] font-bold uppercase tracking-wider mb-6 ${badge.cls}`}>
             {badge.icon} {s.approvalStatus}
           </span>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif italic leading-tight mb-5 max-w-4xl">{s.name}</h1>
@@ -136,7 +136,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
 
       {/* At a glance */}
       <section className="bg-white border-b border-sand/40">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4">
+        <div className="max-w-[1600px] mx-auto grid grid-cols-2 lg:grid-cols-4">
           {[
             { icon: <ShieldCheck size={18} />, label: 'Approval', value: s.approvalStatus },
             { icon: <Layers size={18} />, label: 'Blocks', value: String(s.blocks.length) },
@@ -144,7 +144,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
             { icon: <Building2 size={18} />, label: 'Developer', value: s.developer.split('(')[0].trim() },
           ].map((f, i) => (
             <div key={i} className="p-6 md:p-8 border-r border-b lg:border-b-0 border-sand/40 last:border-r-0">
-              <span className="flex items-center gap-2 text-[10px] uppercase tracking-widest font-bold text-ink/40 mb-2">
+              <span className="flex items-center gap-2 text-[12px] uppercase tracking-widest font-bold text-ink/40 mb-2">
                 {f.icon} {f.label}
               </span>
               <p className="font-serif text-lg md:text-xl text-burgundy leading-snug">{f.value}</p>
@@ -155,7 +155,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
 
       {/* Overview + approval note */}
       <section className="py-20 bg-paper">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-14">
+        <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-3 gap-14">
           <div className="lg:col-span-2 space-y-6">
             <span className="text-burgundy text-xs uppercase tracking-widest font-bold block">Overview</span>
             <h2 className="text-4xl md:text-5xl font-serif italic mb-6">About {s.name}</h2>
@@ -166,7 +166,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
 
           <aside className="space-y-6">
             <div className={`rounded-[28px] p-8 border ${s.approvalStatus === 'Approved' ? 'bg-green-50 border-green-200' : 'bg-amber-50 border-amber-300'}`}>
-              <h3 className="text-[10px] uppercase tracking-widest font-bold text-ink/50 mb-3">Approval Status</h3>
+              <h3 className="text-[12px] uppercase tracking-widest font-bold text-ink/50 mb-3">Approval Status</h3>
               <p className="font-serif text-xl text-ink leading-snug mb-3">{s.approvalStatus}</p>
               <p className="text-sm text-ink/70 leading-relaxed">{s.approval}</p>
               {s.approvalStatus !== 'Approved' && (
@@ -178,7 +178,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
             </div>
 
             <div className="rounded-[28px] border border-burgundy/10 bg-beige/40 p-8">
-              <h3 className="text-[10px] uppercase tracking-widest font-bold text-ink/50 mb-4">Plot Sizes</h3>
+              <h3 className="text-[12px] uppercase tracking-widest font-bold text-ink/50 mb-4">Plot Sizes</h3>
               <div className="flex flex-wrap gap-2">
                 {s.plotSizes.map(p => (
                   <span key={p} className="bg-white border border-sand rounded-full px-3 py-1.5 text-xs font-semibold">{p}</span>
@@ -201,7 +201,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
 
       {/* Blocks */}
       <section className="py-20 bg-beige/30" id="blocks">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1600px] mx-auto px-4">
           <div className="mb-14 max-w-3xl">
             <span className="text-burgundy text-xs uppercase tracking-widest font-bold block mb-4">Block by Block</span>
             <h2 className="text-4xl md:text-5xl font-serif italic mb-5">Which Block Should You Buy In?</h2>
@@ -216,7 +216,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
               <div key={b.name} className="rounded-3xl bg-white border border-sand/50 p-8 md:p-10 shadow-sm">
                 <div className="flex flex-wrap items-start justify-between gap-4 mb-5">
                   <h3 className="text-2xl md:text-3xl font-serif italic text-burgundy">{b.name}</h3>
-                  <span className="bg-beige text-ink/70 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider">
+                  <span className="bg-beige text-ink/70 px-3 py-1.5 rounded-full text-[12px] font-bold uppercase tracking-wider">
                     {b.status}
                   </span>
                 </div>
@@ -224,7 +224,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
                 <p className="text-ink/70 leading-relaxed mb-6">{b.summary}</p>
 
                 <div className="mb-6">
-                  <span className="text-[10px] uppercase tracking-widest font-bold text-ink/40 block mb-3">Plot Sizes</span>
+                  <span className="text-[12px] uppercase tracking-widest font-bold text-ink/40 block mb-3">Plot Sizes</span>
                   <div className="flex flex-wrap gap-2">
                     {b.plotSizes.map(p => (
                       <span key={p} className="border border-sand rounded-full px-3 py-1 text-xs font-semibold">{p}</span>
@@ -245,7 +245,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
 
                 {b.bestFor && (
                   <p className="text-sm border-t border-sand/40 pt-5">
-                    <span className="text-[10px] uppercase tracking-widest font-bold text-ink/40 block mb-1">Best For</span>
+                    <span className="text-[12px] uppercase tracking-widest font-bold text-ink/40 block mb-1">Best For</span>
                     <span className="font-serif text-lg text-ink">{b.bestFor}</span>
                   </p>
                 )}
@@ -257,7 +257,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
 
       {/* Amenities + connectivity */}
       <section className="py-20 bg-ink text-paper">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <span className="text-beige text-xs uppercase tracking-widest font-bold block mb-4">Amenities</span>
             <h2 className="text-3xl md:text-4xl font-serif italic mb-8">What&apos;s Inside</h2>
@@ -288,7 +288,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
       {/* Master plan */}
       {s.masterPlanImage && (
         <section className="py-20 bg-paper">
-          <div className="max-w-7xl mx-auto px-4">
+          <div className="max-w-[1600px] mx-auto px-4">
             <div className="mb-10 max-w-2xl">
               <span className="text-burgundy text-xs uppercase tracking-widest font-bold block mb-4">Master Plan</span>
               <h2 className="text-4xl md:text-5xl font-serif italic mb-4">The Layout</h2>
@@ -306,7 +306,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
 
       {/* Map */}
       <section className="py-20 bg-white border-t border-sand/40">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1600px] mx-auto px-4">
           <div className="mb-10">
             <span className="text-burgundy text-xs uppercase tracking-widest font-bold block mb-4">Location</span>
             <h2 className="text-4xl md:text-5xl font-serif italic mb-4">Find {s.name} on the Map</h2>
@@ -348,7 +348,7 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
 
       {/* Enquiry */}
       <section className="py-20 bg-paper">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+        <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
           <div>
             <h2 className="text-4xl md:text-5xl font-serif italic mb-6">Ask About {s.name}</h2>
             <p className="text-ink/65 leading-relaxed mb-8 max-w-md">
@@ -381,13 +381,13 @@ export default async function SocietyPage({ params }: { params: Promise<{ id: st
 
       {/* Other societies */}
       <section className="py-20 bg-white border-t border-sand/40">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-[1600px] mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-serif italic mb-10">Compare With Other Societies</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {others.map(o => (
               <Link key={o.id} href={`/societies/${o.id}`} className="group rounded-2xl border border-sand/50 p-7 hover:border-burgundy/40 hover:shadow-md transition-all">
                 <h3 className="text-xl font-serif italic mb-2 group-hover:text-burgundy transition-colors">{o.name}</h3>
-                <p className="text-[10px] uppercase tracking-widest font-bold text-ink/40 mb-3">{o.city}</p>
+                <p className="text-[12px] uppercase tracking-widest font-bold text-ink/40 mb-3">{o.city}</p>
                 <p className="text-sm text-ink/65 leading-relaxed line-clamp-3">{o.summary}</p>
               </Link>
             ))}

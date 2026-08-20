@@ -30,7 +30,7 @@ export default function BlogPostClient({ params }: { params: { id: string } }) {
   return (
     <div className="pt-32 pb-24 bg-paper">
       <div className="max-w-4xl mx-auto px-4">
-        <Link href="/blog" className="inline-flex items-center space-x-2 text-[10px] uppercase tracking-[0.4em] font-bold mb-12 hover:text-burgundy transition-colors">
+        <Link href="/blog" className="inline-flex items-center space-x-2 text-[12px] uppercase tracking-[0.4em] font-bold mb-12 hover:text-burgundy transition-colors">
           <ArrowLeft size={14} />
           <span>Back to Journal</span>
         </Link>
@@ -67,7 +67,7 @@ export default function BlogPostClient({ params }: { params: { id: string } }) {
                 );
               })()}
               <div>
-                <span className="text-[10px] uppercase tracking-widest font-bold opacity-40 block">Written By</span>
+                <span className="text-[12px] uppercase tracking-widest font-bold opacity-40 block">Written By</span>
                 <span className="text-sm font-semibold">{post.author}</span>
               </div>
             </div>
@@ -91,7 +91,7 @@ export default function BlogPostClient({ params }: { params: { id: string } }) {
             answer engines lift, and it respects the reader's time. */}
         {post.keyTakeaway && (
           <aside className="mb-14 rounded-3xl border-l-4 border-burgundy bg-beige/60 p-8">
-            <h2 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-3">The Short Answer</h2>
+            <h2 className="text-[12px] uppercase tracking-[0.25em] font-bold text-burgundy mb-3">The Short Answer</h2>
             <p className="text-lg text-ink/85 leading-relaxed">{post.keyTakeaway}</p>
           </aside>
         )}
@@ -122,7 +122,7 @@ export default function BlogPostClient({ params }: { params: { id: string } }) {
         {post.tags && post.tags.length > 0 && (
           <div className="mt-12 flex flex-wrap gap-2">
             {post.tags.map(t => (
-              <span key={t} className="bg-beige text-ink/60 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider">
+              <span key={t} className="bg-beige text-ink/60 px-3 py-1.5 rounded-full text-[12px] font-bold uppercase tracking-wider">
                 {t}
               </span>
             ))}
@@ -164,7 +164,7 @@ export default function BlogPostClient({ params }: { params: { id: string } }) {
                     href={`/blog/${r.id}`}
                     className="group rounded-2xl border border-sand/50 p-6 hover:border-burgundy/40 hover:shadow-md transition-all"
                   >
-                    <span className="text-[10px] uppercase tracking-widest font-bold text-burgundy block mb-2">{r.category}</span>
+                    <span className="text-[12px] uppercase tracking-widest font-bold text-burgundy block mb-2">{r.category}</span>
                     <h3 className="font-serif text-lg leading-snug mb-2 group-hover:text-burgundy transition-colors">{r.title}</h3>
                     <p className="text-xs text-ink/55 leading-relaxed line-clamp-2">{r.excerpt}</p>
                   </Link>

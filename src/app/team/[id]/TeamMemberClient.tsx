@@ -36,7 +36,7 @@ export default function TeamMemberClient({ member }: { member?: TeamMember }) {
   // Person schema is emitted server-side in page.tsx (single source of truth).
   return (
     <div className="pt-32 pb-24 min-h-screen bg-paper">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1600px] mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           {/* Image */}
           <motion.div 
@@ -62,7 +62,7 @@ export default function TeamMemberClient({ member }: { member?: TeamMember }) {
             className="space-y-10"
           >
             <div>
-              <Link href="/team" className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.4em] font-bold mb-10 hover:text-burgundy transition-colors">
+              <Link href="/team" className="flex items-center space-x-2 text-[12px] uppercase tracking-[0.4em] font-bold mb-10 hover:text-burgundy transition-colors">
                 <ArrowLeft size={14} />
                 <span>Executive Team</span>
               </Link>
@@ -71,7 +71,7 @@ export default function TeamMemberClient({ member }: { member?: TeamMember }) {
             </div>
 
             <div className="space-y-6">
-              <h2 className="text-[10px] uppercase tracking-widest font-bold text-burgundy/40 underline decoration-burgundy/10 pb-2">Philosophy & Specialization</h2>
+              <h2 className="text-[12px] uppercase tracking-widest font-bold text-burgundy/40 underline decoration-burgundy/10 pb-2">Philosophy & Specialization</h2>
               <div className="text-3xl font-serif leading-tight italic">
                 &quot;{member.specialization}&quot;
               </div>
@@ -82,17 +82,17 @@ export default function TeamMemberClient({ member }: { member?: TeamMember }) {
 
             <div className="grid grid-cols-2 gap-8 pt-10 border-t border-sand/20">
                <div>
-                 <span className="text-[10px] uppercase tracking-widest font-bold opacity-40 block mb-1 text-burgundy">Experience</span>
+                 <span className="text-[12px] uppercase tracking-widest font-bold opacity-40 block mb-1 text-burgundy">Experience</span>
                  <p className="font-serif text-xl italic">{member.experience}</p>
                </div>
                <div>
-                 <span className="text-[10px] uppercase tracking-widest font-bold opacity-40 block mb-1 text-burgundy">Education</span>
+                 <span className="text-[12px] uppercase tracking-widest font-bold opacity-40 block mb-1 text-burgundy">Education</span>
                  <p className="font-serif text-lg leading-tight italic">{member.education}</p>
                </div>
             </div>
 
             <div className="pt-10 space-y-6">
-              <h2 className="text-[10px] uppercase tracking-widest font-bold text-burgundy/40">Connect with {member.name.split(' ')[0]}</h2>
+              <h2 className="text-[12px] uppercase tracking-widest font-bold text-burgundy/40">Connect with {member.name.split(' ')[0]}</h2>
               <div className="flex flex-wrap gap-3">
                 <a href={`mailto:${member.email}`} className="flex items-center gap-2 border border-sand rounded-full px-5 py-2.5 text-xs uppercase tracking-widest font-bold hover:bg-burgundy hover:text-white hover:border-burgundy transition-all">
                   <Mail size={16} /> Email

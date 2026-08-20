@@ -15,7 +15,7 @@ export default function AboutClient() {
 
   return (
     <div className="pt-24 md:pt-32 pb-16 md:pb-24">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
+      <div className="max-w-[1600px] mx-auto px-4 md:px-8">
         {/* Story Section */}
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-24 md:mb-32">
           <motion.div 
@@ -39,11 +39,11 @@ export default function AboutClient() {
             <div className="pt-6 md:pt-10 flex items-center space-x-8 md:space-x-12">
               <div className="flex flex-col">
                 <span className="text-3xl md:text-4xl font-serif text-burgundy">10Y+</span>
-                <span className="text-[10px] uppercase tracking-widest font-bold opacity-40">Experience</span>
+                <span className="text-[12px] uppercase tracking-widest font-bold opacity-40">Experience</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-3xl md:text-4xl font-serif text-burgundy">5</span>
-                <span className="text-[10px] uppercase tracking-widest font-bold opacity-40">Faisal Hills Blocks</span>
+                <span className="text-[12px] uppercase tracking-widest font-bold opacity-40">Faisal Hills Blocks</span>
               </div>
             </div>
           </motion.div>
