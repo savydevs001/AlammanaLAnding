@@ -54,7 +54,10 @@ const structuredData = [
       'Architectural Planning',
       'Property Marketing',
       'Faisal Hills Development',
-      'Faisal Town Properties'
+      'Faisal Town Properties',
+      'Live Construction Monitoring',
+      'Remote Project Management',
+      'Property Documentation'
     ],
     address: {
       '@type': 'PostalAddress',
@@ -112,8 +115,16 @@ const structuredData = [
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Service',
-            name: 'Real Estate Marketing',
-            description: 'Strategic placement and marketing for major developments like Faisal Hills.'
+            name: 'Live Project Tracking',
+            description: '24/7 live site camera access and a client portal tracking construction stages, materials, inventory, responsible staff and legal documents.'
+          }
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Documentation & Power of Attorney Handling',
+            description: 'End-to-end society transfers, approvals and construction documentation, including acting under power of attorney for overseas clients.'
           }
         }
       ]

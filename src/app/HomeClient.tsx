@@ -10,7 +10,7 @@ import ProjectCard from '../components/ProjectCard';
 import ConstructionCard from '../components/ConstructionCard';
 import TeamCard from '../components/TeamCard';
 import LeadForm from '../components/LeadForm';
-import { ArrowRight, MapPin, Building2, Paintbrush, TrendingUp, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, MapPin, Building2, Paintbrush, TrendingUp, CheckCircle2, Video, ListChecks, Package, ScrollText } from 'lucide-react';
 import Link from 'next/link';
 import { CONTACT, whatsappLink } from '../lib/contact';
 
@@ -26,9 +26,9 @@ const services = [
     desc: "Bespoke designs that combine modern luxury with the natural landscape of Islamabad."
   },
   {
-    icon: <TrendingUp className="text-burgundy" size={32} />,
-    title: "Real Estate Marketing",
-    desc: "Strategic placement and marketing for major developments like Faisal Hills."
+    icon: <Video className="text-burgundy" size={32} />,
+    title: "Live Project Tracking",
+    desc: "A 24/7 site camera and a client portal showing every stage, material and document as work happens."
   }
 ];
 
@@ -136,28 +136,44 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Overseas strip — this audience has the most money and the most doubt,
-          and previously had nothing on the site speaking to them. */}
-      <section className="py-14 bg-ink text-paper">
-        <div className="max-w-[1600px] mx-auto px-4 flex flex-col md:flex-row md:items-center justify-between gap-6">
-          <div className="max-w-2xl">
-            <span className="text-beige text-xs uppercase tracking-widest font-bold mb-3 block">
-              Living Abroad?
+      {/* Overseas strip — leads with the live camera, which is the single
+          strongest thing Alammana can say to this audience and is rare in
+          Taxila. Applies to local clients too, not only overseas ones. */}
+      <section className="py-16 md:py-20 bg-ink text-paper">
+        <div className="max-w-[1600px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <span className="inline-flex items-center gap-2 bg-burgundy px-4 py-2 rounded-full text-[12px] uppercase tracking-[0.2em] font-bold mb-5">
+              <Video size={14} /> Built On Technology
             </span>
-            <h2 className="text-2xl md:text-3xl font-serif italic mb-3">
-              You don&apos;t have to be here to build here
+            <h2 className="text-2xl md:text-4xl font-serif italic mb-4 leading-tight">
+              Watch your house being built, live
             </h2>
-            <p className="text-paper/70 leading-relaxed">
-              Dated progress photos, video walkthroughs from your plot, published rates and payments
-              tied to milestones — so distance stops being the risk.
+            <p className="text-paper/75 leading-relaxed mb-6 max-w-lg">
+              A 24/7 camera on your site and a private portal tracking every stage, material and
+              document. Whether you are in Taxila or Toronto, you never have to phone someone to find
+              out what happened today.
             </p>
+            <Link
+              href="/overseas"
+              className="inline-flex items-center gap-3 bg-burgundy text-white px-8 py-4 rounded-full text-sm uppercase tracking-[0.2em] font-bold hover:opacity-90 transition-opacity"
+            >
+              See How It Works <ArrowRight size={17} />
+            </Link>
           </div>
-          <Link
-            href="/overseas"
-            className="shrink-0 inline-flex items-center gap-3 bg-burgundy text-white px-8 py-4 rounded-full text-sm uppercase tracking-[0.2em] font-bold hover:opacity-90 transition-opacity"
-          >
-            How It Works <ArrowRight size={17} />
-          </Link>
+
+          <ul className="grid grid-cols-2 gap-3">
+            {[
+              ['24/7 live site camera', <Video key="v" size={17} />],
+              ['Stage-by-stage tracking', <ListChecks key="l" size={17} />],
+              ['Materials & inventory log', <Package key="p" size={17} />],
+              ['Documents handled for you', <ScrollText key="s" size={17} />],
+            ].map(([label, icon]) => (
+              <li key={label as string} className="flex items-start gap-3 rounded-2xl border border-paper/15 p-5">
+                <span className="text-beige shrink-0 mt-0.5">{icon as React.ReactNode}</span>
+                <span className="text-sm text-paper/85 leading-snug">{label as string}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

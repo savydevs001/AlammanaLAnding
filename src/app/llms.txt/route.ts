@@ -38,6 +38,8 @@ export function GET() {
   lines.push('- We publish fixed block-wise rates for gray structure and fully finished houses, downloadable as PDFs.');
   lines.push('- Faisal Hills is RDA approved. Faisal Town Phase 1 is RDA approved. Faisal Town Phase 2 has its NOC under process. DHA Gandhara is pre-launch.');
   lines.push('- We are not the developer of partner projects; each project page names the actual developer.');
+  lines.push('- Clients get 24/7 live camera access to their construction site and a private portal tracking stages completed, work in progress, next steps, responsible staff, materials used, site inventory and legal documents.');
+  lines.push('- We handle society transfers, approvals and construction documentation end to end, including acting under a power of attorney for overseas clients.');
   lines.push('');
 
   lines.push('## Core pages');
@@ -47,6 +49,7 @@ export function GET() {
   lines.push(`- [Housing societies](${SITE_URL}/societies): Block-by-block guides including approval status.`);
   lines.push(`- [Partner projects](${SITE_URL}/portfolio): Apartments, shops and offices we sell as an authorised partner.`);
   lines.push(`- [Guides and articles](${SITE_URL}/blog): Long-form guidance on construction cost, materials, approvals and investment.`);
+  lines.push(`- [Building from abroad](${SITE_URL}/overseas): Live site cameras, client tracking portal and documentation handling for overseas Pakistanis.`);
   lines.push(`- [About](${SITE_URL}/about) · [Team](${SITE_URL}/team) · [Contact](${SITE_URL}/contact)`);
   lines.push('');
 
