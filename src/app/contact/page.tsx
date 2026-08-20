@@ -1,23 +1,26 @@
 import type { Metadata } from 'next';
+import JsonLd from '../../components/JsonLd';
 import ContactClient from './ContactClient';
+import { pageMeta, webPage, breadcrumb } from '../../lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Contact Alammana Developers | Faisal Hills Real Estate Consultation',
-  description: 'Get in touch with Alammana Developers for Faisal Hills real estate inquiries, property consultations, and investment opportunities in Islamabad.',
+export const metadata: Metadata = pageMeta({
+  title: 'Contact Us — Faisal Hills Office',
+  description:
+    'Talk to Alammana Developers about construction rates, plots or partner projects. Office at Vertical Four, A Block, Faisal Hills, Taxila. Reply usually same day.',
+  path: '/contact',
   keywords: [
-    'contact Alammana',
-    'real estate consultation',
-    'Faisal Hills properties',
-    'Islamabad real estate inquiry',
-    'property investment'
+    'contact Alammana Developers',
+    'Faisal Hills construction enquiry',
+    'property consultation Taxila',
+    'builders near me Faisal Hills',
   ],
-  openGraph: {
-    title: 'Contact Alammana Developers',
-    description: 'Reach out to our team for Faisal Hills and Islamabad real estate services',
-    type: 'website',
-  },
-};
+});
 
 export default function Contact() {
-  return <ContactClient />;
+  return (
+    <>
+      <JsonLd schema={[webPage('ContactPage', { name: 'Contact Alammana Developers', description: 'Talk to us about construction rates, plots or partner projects.', path: '/contact' }), breadcrumb([['Contact', '/contact']])]} />
+      <ContactClient />
+    </>
+  );
 }

@@ -32,7 +32,7 @@ export const blogs: BlogPost[] = [
     id: 'house-construction-cost-faisal-hills',
     title: 'What Does It Actually Cost to Build a House in Faisal Hills?',
     excerpt:
-      'A straight answer on construction cost in Faisal Hills — how it is really calculated, what gray structure covers, what finishing adds, and the costs people forget to budget for.',
+      'A straight answer on construction cost in Faisal Hills — how it is really calculated, what gray structure covers, and what finishing adds.',
     keyTakeaway:
       'House construction in Faisal Hills is priced per square foot of covered area, not per marla of plot, and is split into gray structure (the complete shell) and finishing (everything that makes it liveable). Finishing typically costs as much as the gray structure or more, because it depends almost entirely on your material choices. Alammana publishes fixed block-wise rates for both, so the figure is knowable before you commit.',
     date: 'August 17, 2026',

@@ -1,25 +1,26 @@
 import type { Metadata } from 'next';
+import JsonLd from '../../components/JsonLd';
 import { team } from '../../data/team';
 import TeamClient from './TeamClient';
+import { pageMeta, breadcrumb } from '../../lib/seo';
 
-export const metadata: Metadata = {
-  title: 'Executive Team | Alammana Developers - Faisal Hills Leadership',
-  description: 'Meet the leadership team at Alammana Developers. Expert executives in Faisal Hills real estate, construction, architecture, finance, and sales driving premium Islamabad property development.',
+export const metadata: Metadata = pageMeta({
+  title: 'Our Leadership Team',
+  description:
+    'The people behind Alammana Developers — construction, sales, finance, media and technology leads working across Faisal Hills, Faisal Town and Taxila.',
+  path: '/team',
   keywords: [
-    'Alammana leadership',
-    'Faisal Hills team',
-    'real estate executives',
-    'construction management',
-    'Islamabad developers',
-    'architecture team'
+    'Alammana Developers team',
+    'Faisal Hills builders',
+    'construction company leadership Taxila',
   ],
-  openGraph: {
-    title: 'Executive Team | Alammana Developers',
-    description: 'Leadership experts in Faisal Hills real estate, luxury construction, and Islamabad property development.',
-    type: 'website',
-  },
-};
+});
 
 export default function Team() {
-  return <TeamClient team={team} />;
+  return (
+    <>
+      <JsonLd schema={[breadcrumb([['Team', '/team']])]} />
+      <TeamClient team={team} />
+    </>
+  );
 }

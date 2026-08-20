@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { clampDescription } from '../../../lib/seo';
 import { projects } from '../../../data/projects';
 import ProjectPageClient from './ProjectPageClient';
 
@@ -22,8 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   }
 
   return {
-    title: `${project.title} — ${project.location} | Payment Plan & Availability`,
-    description: `${project.description} Alammana Developers${project.role ? ` is an ${project.role.toLowerCase()}` : ''} for ${project.title} in ${project.location}. Enquire for current pricing and payment plans.`,
+    title: { absolute: `${project.title} — ${project.location}` },
+    description: clampDescription(`${project.description} Enquire for current pricing and payment plans.`),
     keywords: [
       project.title,
       project.location,
@@ -38,11 +39,17 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       canonical: `/portfolio/${project.id}`,
     },
     openGraph: {
-      title: `${project.title} — ${project.location}`,
+      title: { absolute: `${project.title} — ${project.location}` },
       description: project.description,
       url: `/portfolio/${project.id}`,
       type: 'article',
       images: [{ url: project.thumbnail, alt: `${project.title}, ${project.location}` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} — ${project.location}`,
+      description: clampDescription(project.description),
+      images: [project.thumbnail],
     },
   };
 }

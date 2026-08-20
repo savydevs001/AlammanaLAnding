@@ -6,9 +6,9 @@ import { MapPin, ArrowRight, CheckCircle2, Clock, Sparkles } from 'lucide-react'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alammana.pk';
 
 export const metadata: Metadata = {
-  title: 'Housing Societies — Faisal Hills, Faisal Town & DHA Gandhara',
+  title: 'Housing Societies We Work In',
   description:
-    'Block-by-block guides to Faisal Hills, Faisal Town Phase 1 & 2 and DHA Gandhara — plot sizes, development status, approvals and amenities, explained honestly by Alammana Developers.',
+    'Block-by-block guides to Faisal Hills, Faisal Town Phase 1 & 2 and DHA Gandhara — plot sizes, development status and approval status for each.',
   keywords: [
     'Faisal Hills blocks',
     'Faisal Town Phase 2',
@@ -26,6 +26,11 @@ export const metadata: Metadata = {
       'Block-by-block guides to Faisal Hills, Faisal Town Phase 1 & 2 and DHA Gandhara.',
     url: '/societies',
     type: 'website',
+    images: [{ url: '/assets/societies/faisal-hills.webp', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/assets/societies/faisal-hills.webp'],
   },
 };
 

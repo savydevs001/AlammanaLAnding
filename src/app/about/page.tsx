@@ -1,23 +1,26 @@
 import type { Metadata } from 'next';
+import JsonLd from '../../components/JsonLd';
 import AboutClient from './AboutClient';
+import { pageMeta, webPage, breadcrumb } from '../../lib/seo';
 
-export const metadata: Metadata = {
-  title: 'About Alammana Developers | Faisal Hills Real Estate Excellence',
-  description: 'Learn about Alammana Developers, a leading luxury real estate and construction company in Faisal Hills and Islamabad. Our vision, mission, and commitment to excellence.',
+export const metadata: Metadata = pageMeta({
+  title: 'About Us — Faisal Hills Builders',
+  description:
+    'Alammana Developers has built and sold in Faisal Hills and Faisal Town since 2015, publishing block-wise construction rates instead of quoting case by case.',
+  path: '/about',
   keywords: [
     'Alammana Developers',
-    'Faisal Hills developer',
-    'real estate company',
-    'luxury construction',
-    'Islamabad development company'
+    'Faisal Hills builder',
+    'construction company Taxila',
+    'real estate company Rawalpindi',
   ],
-  openGraph: {
-    title: 'About Alammana Developers',
-    description: 'Premier luxury real estate and construction company specializing in Faisal Hills and Islamabad properties.',
-    type: 'website',
-  },
-};
+});
 
 export default function About() {
-  return <AboutClient />;
+  return (
+    <>
+      <JsonLd schema={[webPage('AboutPage', { name: 'About Alammana Developers', description: 'Who we are and how we work in Faisal Hills and Faisal Town.', path: '/about' }), breadcrumb([['About', '/about']])]} />
+      <AboutClient />
+    </>
+  );
 }

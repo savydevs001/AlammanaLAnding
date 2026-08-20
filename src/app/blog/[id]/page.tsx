@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   }
 
   return {
-    title: post.title,
+    title: { absolute: post.title },
     description: post.excerpt,
     keywords: [
       ...(post.tags ?? []),
@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     alternates: { canonical: `/blog/${post.id}` },
     authors: [{ name: post.author }],
     openGraph: {
-      title: post.title,
+      title: { absolute: post.title },
       description: post.excerpt,
       url: `/blog/${post.id}`,
       type: 'article',
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
+      title: { absolute: post.title },
       description: post.excerpt,
       images: [post.image],
     },

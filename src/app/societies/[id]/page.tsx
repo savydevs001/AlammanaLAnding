@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { clampDescription } from '../../../lib/seo';
 import Link from 'next/link';
 import { societies } from '../../../data/societies';
 import LeadForm from '../../../components/LeadForm';
@@ -20,8 +21,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   if (!s) return { title: 'Society Not Found | Alammana Developers', robots: { index: false, follow: true } };
 
   return {
-    title: `${s.name} — Blocks, Plot Sizes, Location & Approval`,
-    description: `${s.summary} Block-by-block guide from Alammana Developers.`,
+    title: { absolute: `${s.name} — Blocks & Plot Sizes | Alammana` },
+    description: clampDescription(`${s.summary} Block-by-block guide from Alammana Developers.`),
     keywords: [
       s.name,
       `${s.name} blocks`,
@@ -38,6 +39,12 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       url: `/societies/${s.id}`,
       type: 'article',
       images: [{ url: s.image, alt: `${s.name}, ${s.city}` }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${s.name} — Blocks & Plot Sizes`,
+      description: clampDescription(s.summary),
+      images: [s.image],
     },
   };
 }

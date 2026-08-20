@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import JsonLd from '../../components/JsonLd';
+import { breadcrumb } from '../../lib/seo';
 import Link from 'next/link';
 import { CONTACT } from '../../lib/contact';
 
@@ -15,6 +17,7 @@ const updated = 'August 2026';
 export default function TermsOfService() {
   return (
     <div className="pt-32 pb-24 bg-paper">
+      <JsonLd schema={[breadcrumb([['Terms of Service', '/terms']])]} />
       <div className="max-w-3xl mx-auto px-4">
         <span className="text-burgundy text-xs uppercase tracking-[0.4em] font-bold mb-6 block">Legal</span>
         <h1 className="text-5xl md:text-6xl font-serif italic mb-4">Terms of Service</h1>

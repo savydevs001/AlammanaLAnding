@@ -4,9 +4,9 @@ import PaymentPlansClient from './PaymentPlansClient';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alammana.pk';
 
 export const metadata: Metadata = {
-  title: 'Faisal Hills Payment Plans & Construction Rates | Gray Structure & Finished House Prices',
+  title: 'Faisal Hills Construction Rates',
   description:
-    'View and download the latest Alammana Developers payment plans for Faisal Hills. Gray structure construction rates and fully finished house prices for Block A, B, C, D and Executive Block — with easy installment options.',
+    'Download our Faisal Hills construction rates — gray structure and fully finished house prices for Block A, B, C, D and the Executive Block.',
   keywords: [
     'Faisal Hills payment plan',
     'Faisal Hills installments',
@@ -30,6 +30,11 @@ export const metadata: Metadata = {
       'Official gray structure and finished house payment plans for every block of Faisal Hills. Preview online or download the PDF rate lists.',
     url: '/payment-plans',
     type: 'website',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/assets/og-image.jpg'],
   },
 };
 

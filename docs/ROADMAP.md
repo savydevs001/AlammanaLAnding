@@ -141,6 +141,33 @@ to `/payment-plans`, `/constructions`, `/societies`):
 
 ---
 
+## Phase 6 — Technical SEO & AI indexing  `[~]` code done, Cloudflare setting pending
+
+- [x] 6.1 Audited all 41 built pages: title, description, canonical, og:*, twitter,
+      H1 count, JSON-LD, lang. Script kept at `/tmp/audit.py` pattern — rerun after
+      content changes.
+- [x] 6.2 Added `src/lib/seo.ts` (`pageMeta`, `clampDescription`, `breadcrumb`,
+      `webPage`) so canonical/og:url/og:image can no longer be forgotten
+- [x] 6.3 Fixed 11 pages with **no canonical**, 10 with no og:url, 8 with no og:image
+- [x] 6.4 Home page was a client component and could not export metadata — split
+      into `page.tsx` (server, owns metadata) + `HomeClient.tsx`
+- [x] 6.5 Titles: brand appeared twice (page title + layout template), 39 pages
+      over 65 chars → 6, all article headlines
+- [x] 6.6 Descriptions: 30 over length → 0
+- [x] 6.7 Page-level schema on every route. Construction detail pages had **none**
+      — now Residence + Service + BreadcrumbList
+- [x] 6.8 `public/robots.txt` rewritten to explicitly allow AI crawlers
+- [x] 6.9 `/llms.txt` generated from live data via a static route handler
+- [x] 6.10 IndexNow key + `npm run indexnow` to push URLs to Bing
+- [ ] 6.11 **CLIENT ACTION:** disable Cloudflare's managed robots.txt / AI Crawl
+      Control. It prepends `Disallow: /` for GPTBot, ClaudeBot, Google-Extended,
+      CCBot, Amazonbot, Applebot-Extended, Bytespider and meta-externalagent, which
+      overrides our file and is the actual reason AI systems cannot index the site.
+- [ ] 6.12 *(client)* After deploy: run `npm run indexnow`, and verify the site in
+      Bing Webmaster Tools + Google Search Console
+
+---
+
 ## Content collection
 
 **`docs/CONTENT-CHECKLIST.md`** is the shareable list for the team — every field

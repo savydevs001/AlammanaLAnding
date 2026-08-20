@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { team } from '../../../data/team';
 import TeamMemberClient from './TeamMemberClient';
+import { pageMeta, breadcrumb } from '../../../lib/seo';
 
 export async function generateStaticParams() {
   return team.map((member) => ({
@@ -18,26 +19,22 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     };
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
-
-  return {
-    title: `${member.name} - ${member.role} | Alammana Developers`,
-    description: `${member.name} is the ${member.role} at Alammana Developers, specializing in ${member.specialization}. Leading Faisal Hills and Islamabad real estate excellence.`,
+  return pageMeta({
+    title: `${member.name} — ${member.role}`,
+    description: `${member.name} is ${member.role} at Alammana Developers, working across Faisal Hills and Faisal Town. ${member.experience} in ${member.specialization}.`,
+    path: `/team/${member.id}`,
+    type: 'profile',
+    image: member.image,
+    authors: [member.name],
     keywords: [
       member.name,
+      `${member.name} Alammana`,
       member.role,
       'Alammana Developers',
       'Faisal Hills',
-      'Islamabad real estate',
       member.specialization,
     ],
-    openGraph: {
-      title: `${member.name} - ${member.role} | Alammana Developers`,
-      description: `${member.name}, ${member.role} at Alammana Developers. Experience: ${member.experience}`,
-      type: 'profile',
-      images: [member.image],
-    },
-  };
+  });
 }
 
 export default async function Page({ params }: { params: Promise<{ id: string }> }) {
@@ -94,10 +91,13 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
+      {[personSchema, breadcrumb([['Team', '/team'], [member.name, `/team/${member.id}`]])].map((sc, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(sc) }}
+        />
+      ))}
       <TeamMemberClient member={member} />
     </>
   );

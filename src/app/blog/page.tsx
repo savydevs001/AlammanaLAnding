@@ -5,9 +5,9 @@ import BlogIndexClient from './BlogIndexClient';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alammana.pk';
 
 export const metadata: Metadata = {
-  title: 'Construction & Property Guides for Faisal Hills and Islamabad',
+  title: 'Construction & Property Guides',
   description:
-    'Practical guides on house construction costs, building materials, construction stages, approved maps, instalment plans and property investment in Faisal Hills, Faisal Town and Islamabad.',
+    'Practical guides on construction costs, building materials, approved maps and instalment plans in Faisal Hills, Faisal Town and Islamabad.',
   keywords: [
     'house construction cost Pakistan',
     'construction materials Pakistan',
@@ -24,6 +24,11 @@ export const metadata: Metadata = {
       'Practical, honest guides on building and buying property in Faisal Hills, Faisal Town and Islamabad.',
     url: '/blog',
     type: 'website',
+    images: [{ url: '/assets/og-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/assets/og-image.jpg'],
   },
 };
 
