@@ -44,9 +44,28 @@ export interface Project {
    *  labelled section so buyers can see the building actually going up — this
    *  is the most persuasive content on a partner-project page. */
   progressPhotos?: string[];
-  /** Official brochure or payment-plan PDF. Put the file in
-   *  public/brochures/ and reference as '/brochures/<file>.pdf'. */
+  /** Official brochure. A local PDF in public/brochures/ is preferred so it
+   *  keeps working; an external viewer link is accepted as a fallback. */
   brochureUrl?: string;
+  /** Design architect, where different from the developer. */
+  architect?: string;
+  /** Dated one-line construction status, e.g. 'Middle tower at 8th floor'.
+   *  Shown beside the progress photos — a dated status is far more credible
+   *  than an undated render. */
+  progressNote?: string;
+  progressDate?: string;
+  /** Unit types with their floor plan and interior render. */
+  unitPlans?: Array<{
+    name: string;
+    size: string;
+    /** Floor plan drawing. */
+    plan?: string;
+    /** Interior render of the same unit. */
+    render?: string;
+    notes?: string;
+  }>;
+  /** Floor-by-floor commercial unit sizes, for buyers comparing shop levels. */
+  commercialFloors?: Array<{ floor: string; minArea: string; maxArea: string }>;
   features: string[];
   status: 'Completed' | 'In Progress' | 'Planned';
   completionDate?: string;

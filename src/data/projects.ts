@@ -25,81 +25,106 @@ import { Project } from '../types';
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
+/** Asset folder for the Faisal Jewel project pack. */
+const FJ = '/assets/projects/faisal-jewel';
+
 export const projects: Project[] = [
   {
     id: 'faisal-jewel',
     title: 'Faisal Jewel',
     category: 'Commercial',
     location: 'Executive Block, Faisal Hills, Taxila',
-    developer: 'Zedem Properties & CAM Constructions (Faisal Town Group)',
+    developer: 'Zedem International / Faisal Town Group with CAM Construction',
+    architect: 'Jamshid Khan Associates',
     role: 'Authorised Sales Partner',
-    approval: 'Built inside RDA-approved Faisal Hills',
+    approval: 'Built inside RDA-approved Faisal Hills — NOC approved by the Rawalpindi Development Authority',
     description:
-      'A 27-storey landmark in Faisal Hills Executive Block offering luxury apartments, shops and offices.',
+      'A 27-storey landmark in Faisal Hills Executive Block with luxury apartments, a commercial tower and hotel component.',
     fullDescription:
-      'Faisal Jewel is a 27-storey multi-purpose landmark rising on roughly 20 kanals in the Executive Block of Faisal Hills, directly alongside the G.T. Road (N-5) and close to the Fateh Jang–Tarnol Interchange on the M1 Motorway. Developed by Zedem Properties and CAM Constructions under the Faisal Town Group led by Ch. Abdul Majeed, it combines a shopping mall, food court, corporate offices, serviced hotel floors and residential apartments in a single vertical community. Alammana Developers is an authorised sales partner for the project and can arrange bookings, floor selection and payment-plan guidance.',
-    thumbnail: '/assets/projects/faisal-jewel.webp',
-    // Real construction-progress photographs of the tower, published by the
-    // developer's marketing channel and cropped to remove their own sales
-    // phone number and website. TODO(team): ask Faisal Town Group for the
-    // official high-resolution renders — these are only 624px originals.
-    images: ['/assets/projects/faisal-jewel.webp'],
-    // Real photographs of the tower under construction — shown in their own
-    // labelled section so they are never mistaken for renders.
-    progressPhotos: [
-      '/assets/projects/faisal-jewel-progress-1.webp',
-      '/assets/projects/faisal-jewel-progress-2.webp',
+      'Faisal Jewel is a 27-storey landmark in the Executive Block of Faisal Hills, positioned where Margalla Avenue, the G.T. Road and the M-1 Motorway meet, with the Margalla Hills National Park behind it. It is developed by Zedem International under the Faisal Town Group founded by Ch. Abdul Majeed, with CAM Construction as co-developer and contractor, and designed by Jamshid Khan Associates. The scheme pairs a residential tower of 27-plus storeys — one, two and three-bedroom apartments and penthouses — with a separate 14-storey commercial tower holding retail floors, a food court and a four-to-five-star hotel component, over three basement parking levels. Alammana Developers is an authorised sales partner and can arrange floor selection, availability and booking.',
+    thumbnail: `${FJ}/hero.webp`,
+    images: [
+      `${FJ}/hero.webp`,
+      `${FJ}/night.webp`,
+      `${FJ}/tower-portrait.webp`,
+      `${FJ}/lobby.webp`,
+      `${FJ}/amenity-pool.webp`,
+      `${FJ}/plan-site.webp`,
+      `${FJ}/location-map.webp`,
     ],
+    progressPhotos: [`${FJ}/progress-2026-07.webp`],
+    progressNote: 'Middle tower has reached the 8th floor. Vertical columns under construction — steel, shuttering and concrete in progress.',
+    progressDate: 'July 2026',
+    // Official brochure is currently an online flipbook rather than a PDF.
+    // TODO(team): ask Zedem for the source PDF so it can be self-hosted in
+    // public/brochures/ and keep working if the viewer link ever moves.
+    brochureUrl: 'https://online.fliphtml5.com/lutjp/djgh/',
     features: [
       'Luxury 1, 2 & 3 Bedroom Apartments',
-      'Commercial Shops from 153 sq ft',
-      'Corporate Offices & Food Court',
+      'Penthouses from 3,547 sq ft',
+      'Retail, Food Court & Hotel Component',
       'Three Basement Parking Levels',
     ],
     status: 'In Progress',
     amenities: [
-      '24/7 Security',
-      'High-speed Elevators',
-      'Food Court & Cafés',
-      'Basement & Surface Parking',
-      'Backup Power & Emergency Systems',
-      'Fitness & Leisure Facilities',
+      'Swimming Pool',
+      'Fitness Centre',
+      'Rooftop Lounge',
+      'Café',
+      'Gaming Room',
+      'Retail Floors',
+      '24/7 Security & Surveillance',
+      'Three-Level Basement Parking',
     ],
     structure:
-      '27+ floors on a 20-kanal site: lower levels for retail shops and a food court, mid-levels for corporate offices, and upper floors for residential apartments and penthouses. Three basement parking levels serve the whole development.',
-    mapLink: 'https://maps.google.com/?q=Faisal+Hills+Executive+Block+Taxila',
-    pricing: {
-      units: [
-        { type: 'Commercial Shop (from)', size: '153 sq ft', price: 'PKR 7,240,000' },
-        { type: 'Apartment — 1 Bedroom', size: '1,295 sq ft', price: 'PKR 7,650,000' },
-        { type: 'Apartment — 2 Bedroom', size: '1,930 sq ft', price: 'On request' },
-        { type: 'Apartment — 3 Bedroom', size: '2,435 sq ft', price: 'On request' },
-      ],
-    },
-    paymentPlans: [
-      {
-        name: 'Standard Instalment Plan',
-        duration: '5 years',
-        downPayment: 'On booking',
-        notes: 'Balance payable in 20 quarterly instalments. Contact us for the current schedule.',
-      },
+      'Two towers over a shared podium. The residential tower rises 27-plus storeys with one, two and three-bedroom apartments and penthouses on the 14th floor. A separate 14-storey commercial tower holds retail levels, a fourth-floor food court and a four-to-five-star hotel component. Three basement levels are given over to parking.',
+    unitPlans: [
+      { name: 'Studio Apartment', size: 'Enquire for availability', render: `${FJ}/unit-studio.webp` },
+      { name: 'One Bedroom Apartment', size: '1,295 sq ft', plan: `${FJ}/plan-1bed.webp`, render: `${FJ}/unit-1bed.webp` },
+      { name: 'Two Bedroom Apartment', size: '1,930 sq ft', plan: `${FJ}/plan-2bed.webp`, render: `${FJ}/unit-2bed.webp` },
+      { name: 'Three Bedroom Apartment', size: '2,435 sq ft', plan: `${FJ}/plan-3bed.webp`, render: `${FJ}/unit-3bed.webp` },
+      { name: 'Penthouse Type A', size: '3,547 sq ft', plan: `${FJ}/plan-penthouse-a.webp`, notes: '14th floor' },
+      { name: 'Penthouse Type B', size: '5,624 sq ft', plan: `${FJ}/plan-penthouse-b.webp`, notes: '14th floor' },
+      { name: 'Penthouse Type C', size: '7,320 sq ft', plan: `${FJ}/plan-penthouse-c.webp`, notes: '14th floor' },
     ],
-    startingPrice: 'PKR 7,240,000',
+    commercialFloors: [
+      { floor: 'Lower Ground — Shops', minArea: '153 sq ft', maxArea: '2,683 sq ft' },
+      { floor: 'Ground Floor — Shops', minArea: '169 sq ft', maxArea: '765 sq ft' },
+      { floor: 'First Floor — Shops', minArea: '169 sq ft', maxArea: '842 sq ft' },
+      { floor: 'Second Floor — Shops', minArea: '169 sq ft', maxArea: '1,990 sq ft' },
+      { floor: 'Third Floor — Shops', minArea: '169 sq ft', maxArea: '1,279 sq ft' },
+      { floor: 'Fourth Floor — Food Court', minArea: '210 sq ft', maxArea: '1,899 sq ft' },
+    ],
+    mapLink: 'https://maps.google.com/?q=Faisal+Jewel+Faisal+Hills+Taxila',
+    // TODO(team): no prices or payment plan were supplied with the project pack.
+    // Ask Zedem for the current official price list and instalment schedule —
+    // this is the single most-searched thing about the project.
     completionDate: 'Q4 2027',
     summaryStats: [
-      { label: 'Floors', value: '27+' },
-      { label: 'Land Area (Kanal)', value: '20' },
+      { label: 'Storeys', value: '27+' },
+      { label: 'Commercial Tower', value: '14' },
       { label: 'Basement Parking', value: '3' },
     ],
     surroundings: [
-      'G.T. Road (N-5)',
-      'Fateh Jang–Tarnol Interchange',
-      'M1 Motorway',
+      'G.T. Road, Taxila',
+      'M-1 Motorway',
+      'M-2 Motorway',
+      'N-80 Road',
       'Margalla Avenue',
-      'Taxila City',
+      'Margalla Hills National Park',
       'Wah Cantt',
-      'HITEC University',
-      'Islamabad Int. Airport',
+      'Taxila City',
+      'Rawalpindi',
+      'Islamabad',
+      'UET Taxila',
+      'HITEC University Taxila',
+      'COMSATS University Taxila',
+      'Pakistan Ordnance Factories (POF)',
+      'B-17 Multi Gardens',
+      'CDA Sector C-15 & C-16',
+      'Jaulian & Sirkap, Taxila',
+      'Giri Fort, Taxila',
+      'New Islamabad International Airport',
     ],
     unitBreakdown: [
       { label: '1 Bedroom', size: '1,295 sqft' },

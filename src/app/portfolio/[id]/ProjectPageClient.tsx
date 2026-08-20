@@ -120,6 +120,16 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                   </div>
                 )}
 
+                {project.architect && (
+                  <div>
+                    <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block mb-2">Architect</span>
+                    <div className="flex items-start space-x-2 text-burgundy">
+                      <Building size={18} className="mt-1 shrink-0" />
+                      <span className="font-serif text-lg leading-snug">{project.architect}</span>
+                    </div>
+                  </div>
+                )}
+
                 {project.role && (
                   <div>
                     <span className="text-[10px] uppercase tracking-widest font-bold opacity-50 block mb-2">Our Role</span>
@@ -233,8 +243,14 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                   than a render, so it gets its own labelled section. */}
               {project.progressPhotos && project.progressPhotos.length > 0 && (
                 <div className="pt-12">
-                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-2">Construction Progress</h3>
-                  <p className="text-sm text-ink/55 mb-6">Photographs of the site as it stands, not renders.</p>
+                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-2">
+                    Construction Progress{project.progressDate ? ` — ${project.progressDate}` : ''}
+                  </h3>
+                  {project.progressNote ? (
+                    <p className="text-sm text-ink/70 mb-6 max-w-2xl leading-relaxed">{project.progressNote}</p>
+                  ) : (
+                    <p className="text-sm text-ink/55 mb-6">Photographs of the site as it stands, not renders.</p>
+                  )}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {project.progressPhotos.map((img, i) => (
                       <motion.div
@@ -247,6 +263,65 @@ export default function ProjectPageClient({ params }: { params: { id: string } }
                         <img src={img} alt={`${project.title} — construction progress ${i + 1}`} className="w-full h-full object-cover" loading="lazy" />
                       </motion.div>
                     ))}
+                  </div>
+                </div>
+              )}
+
+              {project.unitPlans && project.unitPlans.length > 0 && (
+                <div className="pt-12">
+                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-2">Unit Types & Floor Plans</h3>
+                  <p className="text-sm text-ink/55 mb-6">Sizes are as published by the developer. Ask us for current availability on each type.</p>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {project.unitPlans.map(u => (
+                      <div key={u.name} className="rounded-2xl border border-sand/50 bg-white overflow-hidden">
+                        <div className="grid grid-cols-2 gap-px bg-sand/30">
+                          {u.render && (
+                            <div className="aspect-[4/3] bg-white">
+                              <img src={u.render} alt={`${u.name} interior render — ${project.title}`} className="w-full h-full object-cover" loading="lazy" />
+                            </div>
+                          )}
+                          {u.plan && (
+                            <div className={`aspect-[4/3] bg-white ${u.render ? '' : 'col-span-2'}`}>
+                              <img src={u.plan} alt={`${u.name} floor plan — ${project.title}`} className="w-full h-full object-contain p-2" loading="lazy" />
+                            </div>
+                          )}
+                        </div>
+                        <div className="p-5 flex items-baseline justify-between gap-3">
+                          <div>
+                            <p className="font-serif text-lg text-ink">{u.name}</p>
+                            {u.notes && <p className="text-[10px] uppercase tracking-widest font-bold text-ink/40 mt-1">{u.notes}</p>}
+                          </div>
+                          <p className="text-burgundy font-semibold text-sm whitespace-nowrap">{u.size}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {project.commercialFloors && project.commercialFloors.length > 0 && (
+                <div className="pt-12">
+                  <h3 className="text-[10px] uppercase tracking-[0.25em] font-bold text-burgundy mb-2">Commercial Unit Sizes by Floor</h3>
+                  <p className="text-sm text-ink/55 mb-6">Shop sizes available on each level.</p>
+                  <div className="overflow-x-auto rounded-2xl border border-sand/50">
+                    <table className="w-full text-sm min-w-[420px]">
+                      <thead>
+                        <tr className="bg-beige/60 text-ink/60">
+                          <th className="text-left font-bold uppercase tracking-widest text-[10px] px-5 py-3">Floor</th>
+                          <th className="text-left font-bold uppercase tracking-widest text-[10px] px-5 py-3">Smallest</th>
+                          <th className="text-left font-bold uppercase tracking-widest text-[10px] px-5 py-3">Largest</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {project.commercialFloors.map(f => (
+                          <tr key={f.floor} className="border-t border-sand/40">
+                            <td className="px-5 py-3 font-serif text-ink">{f.floor}</td>
+                            <td className="px-5 py-3 text-ink/70">{f.minArea}</td>
+                            <td className="px-5 py-3 text-ink/70">{f.maxArea}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
                   </div>
                 </div>
               )}

@@ -155,3 +155,75 @@ before guessing — a wrong detail on the site is worse than a missing one.
 Both data files have a how-to comment at the top. Images go in
 `public/assets/projects/` and `public/assets/constructions/`, brochures in
 `public/brochures/`. Convert to WebP and never hotlink — see `docs/ROADMAP.md`.
+
+
+---
+
+# THE PROJECT FOLDER STANDARD
+
+The **Faisal Jewel FH** pack is the benchmark. Copy its structure for every other
+project. One folder per project, named after the project, containing:
+
+### Two documents
+
+**`<Project> Written Details.docx`** — with these exact headings:
+
+- Developers (all parties, and who did what)
+- Architect
+- Exact Location
+- Alammana's Role
+- NOC / approval status *(exact wording — never round "pending" up to "approved")*
+- One-Line Description
+- Full Description
+- Key Features
+- Amenities
+- Building Structure *(be explicit about how many towers and what is in each)*
+- Status
+- Expected Completion
+- Nearby Landmarks & Places *(the long list — roads, universities, heritage
+  sites, airports. This is what makes the page findable by people searching
+  from Taxila and Islamabad, so do not trim it)*
+
+**`<Project> Commercial.docx`** — unit sizes and, critically, **prices**:
+
+- Shop sizes floor by floor (min and max area per level)
+- Apartment types with exact sq ft
+- Penthouse types with floor and sq ft
+- **Current price list per unit type, with the date it was valid**
+- **Payment plan** — down payment, instalment count and frequency, any discounts
+- Brochure — **the PDF file itself**, not a flipbook link
+
+### Images
+
+| File | What | Minimum width |
+|---|---|---|
+| Main render, day | The hero shot | **1600px** |
+| Additional renders | Night, aerial, alternate angles | 1600px |
+| Lobby / interior renders | | 1200px |
+| Amenity renders | Pool, gym, lounge | 1200px |
+| Unit interior renders | One per unit type | 1200px |
+| Floor plan per unit type | Room labels must be **readable** | **1600px** |
+| Site / layout plan | | 1600px |
+| Location map | | 1200px |
+| **Dated progress photo** | Named `<project>-<month>-<year>` with a caption stating what stage the build is at | 1600px |
+
+Send fresh progress photos every 2–3 months. A dated photo saying "middle tower
+reached the 8th floor" is worth more than any render.
+
+### What Faisal Jewel got right — repeat this
+
+- Every heading in the written details filled in properly
+- Floor-by-floor commercial areas, not just a vague "shops available"
+- All unit types covered: studio, 1/2/3-bed and all three penthouse types
+- A dated progress photo with the build stage annotated on it
+- Clean renders with no other company's phone number on them
+
+### What was missing — do not repeat this
+
+1. **No prices and no payment plan anywhere in the pack.** This is the single
+   most-searched thing about any project and the page cannot show it.
+2. **Brochure was a flipbook link, not a PDF.** External viewers move or die; we
+   need the file so it can be hosted on our own site.
+3. **Floor plans were 624px.** Too small to read the room labels. Need 1600px.
+4. **"Middle Tower" vs the written structure.** The progress photo labels a
+   "Middle Tower" but the document describes two towers. How many are there?
