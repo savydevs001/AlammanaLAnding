@@ -1,8 +1,8 @@
 'use client';
 
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import LeadForm from '../../components/LeadForm';
-import { CONTACT } from '../../lib/contact';
+import { CONTACT, whatsappLink } from '../../lib/contact';
 
 export default function ContactClient() {
   return (
@@ -47,6 +47,53 @@ export default function ContactClient() {
                 </div>
               </div>
             </div>
+
+            {/* Removes the biggest hesitation before contacting a builder:
+                not knowing what happens next or how long it takes. */}
+            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-sand/20">
+              <h2 className="text-[12px] uppercase tracking-widest font-bold text-burgundy mb-6">
+                What happens after you contact us
+              </h2>
+              <ol className="space-y-5">
+                {[
+                  ['We reply on WhatsApp', 'Usually within a few hours on a working day.'],
+                  ['We ask three things', 'Your block, your plot size, and whether you want gray structure or fully finished.'],
+                  ['You get the rate', 'The published rate for your block, and what it covers — in writing.'],
+                  ['Site visit, if you want one', 'We can walk your plot with you before anything is agreed.'],
+                ].map(([t, d], i) => (
+                  <li key={t} className="flex gap-4">
+                    <span className="flex items-center justify-center w-8 h-8 rounded-full bg-beige text-burgundy font-bold text-sm shrink-0">
+                      {i + 1}
+                    </span>
+                    <span>
+                      <span className="block font-serif text-lg text-ink leading-snug">{t}</span>
+                      <span className="block text-sm text-ink/60 mt-0.5 leading-relaxed">{d}</span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-7 pt-6 border-t border-sand/40 text-sm text-ink/60 leading-relaxed">
+                No obligation and no pressure. If the honest answer is that now is not your moment,
+                we will tell you that.
+              </p>
+            </div>
+
+            {/* Many buyers here will never fill in a form. Give them a one-tap
+                route that does not require typing anything. */}
+            <a
+              href={whatsappLink('Assalam-o-Alaikum, mujhe Faisal Hills mein ghar banane ka rate maloom karna hai.')}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between gap-4 rounded-3xl bg-[#25D366] text-white p-7 shadow-sm hover:opacity-95 transition-opacity"
+            >
+              <span>
+                <span className="block font-serif text-xl leading-snug">Prefer to just message?</span>
+                <span className="block text-sm text-white/85 mt-1">
+                  Tap here — you can send a voice note instead of typing.
+                </span>
+              </span>
+              <ArrowRight size={22} className="shrink-0" />
+            </a>
 
             <div className="rounded-3xl overflow-hidden shadow-xl border border-sand/40">
               <iframe

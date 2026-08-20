@@ -32,6 +32,7 @@ export default function Footer() {
             <ul className="space-y-4 text-beige/70 text-sm font-medium">
               {[
                 { label: 'Construction Rates', href: '/payment-plans' },
+                { label: 'Building From Abroad', href: '/overseas' },
                 { label: 'Faisal Hills Blocks', href: '/societies/faisal-hills' },
                 { label: 'Homes We Are Building', href: '/constructions' },
                 { label: 'Partner Projects', href: '/portfolio' },

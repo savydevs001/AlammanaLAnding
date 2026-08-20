@@ -15,6 +15,7 @@ export default function Navbar() {
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Constructions', path: '/constructions' },
     { name: 'Rates', path: '/payment-plans' },
+    { name: 'Overseas', path: '/overseas' },
     { name: 'About', path: '/about' },
     { name: 'Team', path: '/team' },
     { name: 'Journal', path: '/blog' },

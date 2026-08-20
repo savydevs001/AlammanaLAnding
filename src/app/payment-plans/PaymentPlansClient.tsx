@@ -195,7 +195,16 @@ export default function PaymentPlansClient() {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="border border-paper/10 p-8 md:p-10">
+            <div className="border border-paper/10 overflow-hidden">
+              <div className="aspect-[16/10] overflow-hidden bg-ink">
+                <img
+                  src="/assets/constructions/facade-dark-glass.webp"
+                  alt="A gray structure shell — walls, slabs and plaster complete, no finishing"
+                  width={1500} height={1000} loading="lazy" decoding="async"
+                  className="w-full h-full object-cover opacity-80"
+                />
+              </div>
+              <div className="p-8 md:p-10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="bg-paper p-4 aspect-square flex items-center justify-center">
                   <Building className="text-burgundy" size={28} />
@@ -213,8 +222,21 @@ export default function PaymentPlansClient() {
                 <li>— Rough plumbing &amp; conduits</li>
                 <li>— Boundary wall &amp; main gate structure</li>
               </ul>
+              <p className="mt-6 pt-6 border-t border-paper/10 text-[12px] uppercase tracking-widest font-bold text-beige/70">
+                You still need: flooring, paint, doors, kitchen, bathrooms, wiring
+              </p>
+              </div>
             </div>
-            <div className="border border-paper/10 p-8 md:p-10">
+            <div className="border border-paper/10 overflow-hidden">
+              <div className="aspect-[16/10] overflow-hidden bg-ink">
+                <img
+                  src="/assets/constructions/facade-white-poolside.webp"
+                  alt="A fully finished home — complete and ready to move into"
+                  width={1500} height={1000} loading="lazy" decoding="async"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-8 md:p-10">
               <div className="flex items-center gap-4 mb-6">
                 <div className="bg-paper p-4 aspect-square flex items-center justify-center">
                   <Home className="text-burgundy" size={28} />
@@ -232,8 +254,52 @@ export default function PaymentPlansClient() {
                 <li>— Complete bathrooms &amp; sanitary fittings</li>
                 <li>— Electrical fittings, switches &amp; fixtures</li>
               </ul>
+              <p className="mt-6 pt-6 border-t border-paper/10 text-[12px] uppercase tracking-widest font-bold text-beige/70">
+                Nothing left to do — you get the keys
+              </p>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* When you pay — milestone strip. The PDFs contain this but nobody reads a
+          PDF to answer 'when does the money leave my account'. */}
+      <section className="py-20 md:py-24 bg-beige/40">
+        <div className="max-w-[1600px] mx-auto px-4">
+          <div className="max-w-2xl mb-12">
+            <span className="text-burgundy text-xs uppercase tracking-widest font-bold mb-4 block">
+              How Payment Works
+            </span>
+            <h2 className="text-3xl md:text-4xl font-serif italic mb-4">You pay as it gets built</h2>
+            <p className="text-ink/65 leading-relaxed">
+              Payments follow construction milestones, not the calendar. You are always paying for
+              work that already exists on your plot — never months ahead of it.
+            </p>
+          </div>
+
+          <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+            {[
+              { n: '1', t: 'On signing', d: 'Mobilisation, site set-out and material staging.' },
+              { n: '2', t: 'Foundation', d: 'Excavation, footings and plinth complete.' },
+              { n: '3', t: 'Each slab', d: 'A payment per floor as the frame goes up.' },
+              { n: '4', t: 'Brickwork & plaster', d: 'Walls up, internal and external plaster done.' },
+              { n: '5', t: 'On handover', d: 'Final balance after snagging is cleared.' },
+            ].map(step => (
+              <li key={step.n} className="rounded-2xl bg-white border border-sand/50 p-6">
+                <span className="flex items-center justify-center w-9 h-9 rounded-full bg-burgundy text-white font-bold text-sm mb-4">
+                  {step.n}
+                </span>
+                <h3 className="font-serif text-lg text-ink mb-2 leading-snug">{step.t}</h3>
+                <p className="text-sm text-ink/60 leading-relaxed">{step.d}</p>
+              </li>
+            ))}
+          </ol>
+
+          <p className="text-sm text-ink/55 mt-8 max-w-2xl leading-relaxed">
+            Exact amounts per milestone are set out in the rate list for your block. Gray structure
+            contracts end at plaster; finished contracts continue through finishing in stages.
+          </p>
         </div>
       </section>
 

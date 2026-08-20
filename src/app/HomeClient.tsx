@@ -136,6 +136,31 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* Overseas strip — this audience has the most money and the most doubt,
+          and previously had nothing on the site speaking to them. */}
+      <section className="py-14 bg-ink text-paper">
+        <div className="max-w-[1600px] mx-auto px-4 flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div className="max-w-2xl">
+            <span className="text-beige text-xs uppercase tracking-widest font-bold mb-3 block">
+              Living Abroad?
+            </span>
+            <h2 className="text-2xl md:text-3xl font-serif italic mb-3">
+              You don&apos;t have to be here to build here
+            </h2>
+            <p className="text-paper/70 leading-relaxed">
+              Dated progress photos, video walkthroughs from your plot, published rates and payments
+              tied to milestones — so distance stops being the risk.
+            </p>
+          </div>
+          <Link
+            href="/overseas"
+            className="shrink-0 inline-flex items-center gap-3 bg-burgundy text-white px-8 py-4 rounded-full text-sm uppercase tracking-[0.2em] font-bold hover:opacity-90 transition-opacity"
+          >
+            How It Works <ArrowRight size={17} />
+          </Link>
+        </div>
+      </section>
+
       {/* Societies */}
       <section className="py-24 bg-paper" id="societies">
         <div className="max-w-[1600px] mx-auto px-4">
