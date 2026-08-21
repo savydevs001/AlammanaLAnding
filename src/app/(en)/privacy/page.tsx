@@ -1,16 +1,22 @@
 import type { Metadata } from 'next';
 import JsonLd from '../../../components/JsonLd';
-import { breadcrumb } from '../../../lib/seo';
+import { breadcrumb, pageMeta } from '../../../lib/seo';
 import Link from 'next/link';
 import { CONTACT } from '../../../lib/contact';
 
-export const metadata: Metadata = {
+/**
+ * Routed through `pageMeta` like every other page rather than hand-rolled.
+ * The hand-written version was missing og:url, og:image and the hreflang
+ * self-reference — the exact omissions `pageMeta` was written to make
+ * impossible. English only: this is legal text and is not machine-translated,
+ * so `alternatesFor` correctly lists it as x-default and nothing else.
+ */
+export const metadata: Metadata = pageMeta({
   title: 'Privacy Policy',
   description:
     'How Alammana Developers handles the personal information you share with us through this website, WhatsApp, email or phone.',
-  alternates: { canonical: '/privacy' },
-  robots: { index: true, follow: true },
-};
+  path: '/privacy',
+});
 
 const updated = 'August 2026';
 

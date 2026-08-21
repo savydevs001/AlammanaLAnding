@@ -141,7 +141,7 @@ to `/payment-plans`, `/constructions`, `/societies`):
 
 ---
 
-## Phase 6 — Technical SEO & AI indexing  `[~]` code done, Cloudflare setting pending
+## Phase 6 — Technical SEO & AI indexing  `[x]` DONE
 
 - [x] 6.1 Audited all 41 built pages: title, description, canonical, og:*, twitter,
       H1 count, JSON-LD, lang. Script kept at `/tmp/audit.py` pattern — rerun after
@@ -159,12 +159,19 @@ to `/payment-plans`, `/constructions`, `/societies`):
 - [x] 6.8 `public/robots.txt` rewritten to explicitly allow AI crawlers
 - [x] 6.9 `/llms.txt` generated from live data via a static route handler
 - [x] 6.10 IndexNow key + `npm run indexnow` to push URLs to Bing
-- [ ] 6.11 **CLIENT ACTION:** disable Cloudflare's managed robots.txt / AI Crawl
-      Control. It prepends `Disallow: /` for GPTBot, ClaudeBot, Google-Extended,
-      CCBot, Amazonbot, Applebot-Extended, Bytespider and meta-externalagent, which
-      overrides our file and is the actual reason AI systems cannot index the site.
-- [ ] 6.12 *(client)* After deploy: run `npm run indexnow`, and verify the site in
-      Bing Webmaster Tools + Google Search Console
+- [x] 6.11 Cloudflare's managed robots.txt / AI Crawl Control turned off by the
+      client (Aug 2026). Verified live: `alammana.pk/robots.txt` now serves our
+      own file, with no injected `Disallow: /` anywhere, and GPTBot,
+      ClaudeBot, Google-Extended, CCBot and the rest explicitly allowed.
+      **If AI crawlers ever look blocked again, check this setting first** —
+      it overrides the file in the repo and nothing in the codebase can fix it.
+- [x] 6.12 IndexNow submitted after the multilingual deploy — 57 URLs,
+      `202 Accepted`, including the 10 new `/ur` and `/ar` pages.
+- [ ] 6.13 *(client, ongoing)* Verify the property in Bing Webmaster Tools and
+      Google Search Console, and submit `https://alammana.pk/sitemap.xml` in
+      both. IndexNow gets Bing crawling; Search Console is the only way to see
+      what Google actually did with it. Re-run `npm run indexnow` after any
+      deploy that adds or changes URLs.
 
 ---
 
@@ -299,5 +306,10 @@ published artifact) rather than re-deriving the list.
 - [!] Real photo of Muhammad Bilal Gul (currently the logo)
 - [!] Team members' personal socials → paste into `socials` in `src/data/team.ts`
 - [!] 107 Plaza real details — almost no public information exists
-- [ ] Consider removing `ignoreBuildErrors` / `ignoreDuringBuilds` from
-      `next.config.ts` — they hid two real bugs
+- [x] `ignoreBuildErrors` / `ignoreDuringBuilds` removed from `next.config.ts`.
+      The build now fails on a type or lint error instead of shipping it — a
+      build that cannot fail is not a check. `@next/next/no-img-element` is
+      switched off in `.eslintrc.json` because `output: 'export'` makes
+      `next/image` optimisation impossible; 38 warnings for a rule that cannot
+      apply were burying the ones that matter. Every `<img>` carries explicit
+      width and height, which is what actually protects CLS.
