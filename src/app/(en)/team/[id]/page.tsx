@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { team } from '../../../../data/team';
 import TeamMemberClient from './TeamMemberClient';
-import { pageMeta, breadcrumb } from '../../../../lib/seo';
+import { pageMeta, breadcrumb, SITE_URL } from '../../../../lib/seo';
 
 export async function generateStaticParams() {
   return team.map((member) => ({
@@ -45,7 +45,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
     return <div>Team member not found</div>;
   }
 
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+  const baseUrl = SITE_URL;
 
   // Links Google uses to connect this person to their profiles (sameAs)
   const sameAs = [

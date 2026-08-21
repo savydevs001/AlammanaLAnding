@@ -5,11 +5,24 @@ import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import WhatsAppFloat from '../../components/WhatsAppFloat';
 import { organizationSchema } from '../../lib/schema';
+import { SITE_URL } from '../../lib/seo';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-sans', display: 'swap' });
 const cormorant = Cormorant_Garamond({ subsets: ['latin'], variable: '--font-serif', weight: ['300', '400', '500', '600', '700'], style: ['italic', 'normal'], display: 'swap' });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000';
+/**
+ * Single source for the site origin — `lib/seo.ts`, which falls back to the
+ * live domain rather than localhost.
+ *
+ * This line used to read `process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'`.
+ * Cloudflare Pages does not set that variable, so every English page shipped a
+ * `<link rel="canonical" href="http://localhost:3000/...">` to production —
+ * telling Google and Bing that the canonical version of each page was an
+ * address they cannot reach. The `/ur` and `/ar` pages were unaffected because
+ * they already resolved through `SITE_URL`, which is what made the discrepancy
+ * visible. A localhost fallback in code that ships is not a safe default.
+ */
+const siteUrl = SITE_URL;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -52,7 +65,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Alammana Developers — Faisal Hills Real Estate & Luxury Construction',
     description: 'Premium Faisal Hills and Faisal Town real estate development, architecture, and luxury construction in Islamabad.',
-    url: new URL('/', process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'),
+    url: new URL('/', siteUrl),
     siteName: 'Alammana Developers',
     type: 'website',
     images: [

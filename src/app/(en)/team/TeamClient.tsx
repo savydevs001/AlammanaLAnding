@@ -2,14 +2,15 @@
 
 import { TeamMember } from '../../../types';
 import TeamCard from '../../../components/TeamCard';
+import { SITE_URL } from '../../../lib/seo';
 
 export default function TeamClient({ team }: { team: TeamMember[] }) {
   const teamStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Alammana Developers',
-    url: process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
-    logo: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'}/assets/icon-512.png`,
+    url: SITE_URL,
+    logo: `${SITE_URL}/assets/icon-512.png`,
     description: 'Premium Faisal Hills and Islamabad real estate developer',
     address: {
       '@type': 'PostalAddress',
