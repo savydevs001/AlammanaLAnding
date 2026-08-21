@@ -167,7 +167,18 @@ to `/payment-plans`, `/constructions`, `/societies`):
       it overrides the file in the repo and nothing in the codebase can fix it.
 - [x] 6.12 IndexNow submitted after the multilingual deploy — 57 URLs,
       `202 Accepted`, including the 10 new `/ur` and `/ar` pages.
-- [ ] 6.13 *(client, ongoing)* Verify the property in Bing Webmaster Tools and
+- [x] 6.13 **Live canonical bug, fixed Aug 2026.** Every English page on
+      alammana.pk was serving `<link rel="canonical" href="http://localhost:3000/...">`.
+      `(en)/layout.tsx` had its own `siteUrl` falling back to localhost, and
+      Cloudflare Pages does not set `NEXT_PUBLIC_SITE_URL`. All five localhost
+      fallbacks now resolve through `SITE_URL` in `lib/seo.ts`, which falls back
+      to the live domain. **Never reintroduce a localhost fallback in shipped
+      code** — verify by building with the env var unset and grepping `out/`
+      for "localhost"; it must return nothing.
+- [ ] 6.14 *(client, optional)* Set `NEXT_PUBLIC_SITE_URL=https://alammana.pk`
+      in the Cloudflare Pages build environment. No longer required — the
+      fallback is correct now — but it makes the intent explicit.
+- [ ] 6.15 *(client, ongoing)* Verify the property in Bing Webmaster Tools and
       Google Search Console, and submit `https://alammana.pk/sitemap.xml` in
       both. IndexNow gets Bing crawling; Search Console is the only way to see
       what Google actually did with it. Re-run `npm run indexnow` after any
