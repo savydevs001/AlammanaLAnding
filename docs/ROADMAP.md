@@ -168,66 +168,109 @@ to `/payment-plans`, `/constructions`, `/societies`):
 
 ---
 
-## Phase 7 — Multilingual: English, Urdu, Arabic  `[~]` IN PROGRESS
+## Phase 7 — Multilingual: English, Urdu, Arabic  `[x]` DONE
 
 **Goal:** three fully indexable languages without weakening the SEO already in
 place. Machine-translating everything client-side would destroy it — the content
 has to exist in the HTML at a real URL per language.
 
-### Architecture decision
+### Architecture as built
 
-Static export rules out Next.js built-in i18n routing (it needs a server), so
-every page moves under a `[lang]` segment and is pre-rendered per locale:
+Static export rules out Next.js built-in i18n routing (it needs a server), and a
+nested layout cannot change `<html lang>`. The site therefore uses **two root
+layouts via route groups**:
 
 ```
-/            → English (default, no prefix — preserves existing indexed URLs)
-/ur/...      → Urdu     (RTL)
-/ar/...      → Arabic   (RTL)
+src/app/(en)/layout.tsx        → <html lang="en-PK" dir="ltr">, bare paths
+src/app/(intl)/[lang]/layout.tsx → <html lang="ur-PK|ar" dir="rtl">, /ur and /ar
 ```
 
-English keeps the bare paths so the 47 already-indexed URLs do not move and no
-redirect chain is introduced.
+Route-group folders do not appear in the URL, so English still lives at `/`,
+`/payment-plans`, etc. and the 47 already-indexed URLs did not move.
 
-### SEO requirements — non-negotiable
+**English is the default, unconditionally.** There is no middleware, no
+`navigator.language` check, nothing in localStorage. Someone who types
+alammana.pk gets English regardless of browser, country or previous visit. The
+only route to Urdu or Arabic is a `/ur` or `/ar` link or the language switcher.
+`src/lib/i18n.ts` carries the reasoning — **do not add locale detection.**
 
-- [ ] 7.1 `hreflang` on every page: each locale plus `x-default` → English
-- [ ] 7.2 Canonical points at the **same-locale** URL, never cross-locale
-- [ ] 7.3 Sitemap lists all three locales with `xhtml:link` alternates
-- [ ] 7.4 `<html lang>` and `dir="rtl"` set correctly per locale
-- [ ] 7.5 Locale-specific `og:locale` + `og:locale:alternate`
-- [ ] 7.6 Translated titles/descriptions — not English strings under a Urdu URL
-- [ ] 7.7 JSON-LD `inLanguage` per locale
-- [ ] 7.8 `llms.txt` notes available languages
+### What is translated, and what is not
+
+Translated (5 routes × 2 locales = 10 pages), listed in `TRANSLATED_ROUTES`:
+`/`, `/payment-plans`, `/societies`, `/overseas`, `/contact`.
+
+English only, by decision: the 8 long-form articles, all project / construction /
+society **detail** pages, `/privacy`, `/terms`, `/about`, `/team`, `/portfolio`,
+`/constructions`, `/blog`. Machine-translated construction and legal text reads
+fluently and says the wrong thing, and "NOC under process" must never drift to
+"approved". `localeHref()` sends readers to the English original for these
+rather than a prefixed URL that would 404, and `alternatesFor()` omits them from
+the hreflang cluster instead of advertising a translation that does not exist.
+
+### SEO — all verified in the built HTML
+
+- [x] 7.1 `hreflang` per locale plus `x-default` → English, on every page
+- [x] 7.2 Canonical is same-locale (`/ur` canonicals to `/ur`, never to `/`)
+- [x] 7.3 Sitemap emits `xhtml:link` alternates — 57 URLs, 74 alternate links
+- [x] 7.4 `<html lang>` + `dir="rtl"` correct per locale
+- [x] 7.5 `og:locale` + `og:locale:alternate` per locale
+- [x] 7.6 Translated titles and descriptions, not English under an Urdu URL
+- [x] 7.7 JSON-LD `inLanguage` per locale (`src/lib/schema.ts`, one shared
+      definition so the two root layouts cannot emit conflicting `@id`s)
+- [x] 7.8 `llms.txt` documents which languages exist and which pages are
+      English-only, so AI systems do not present a machine translation as ours
 
 ### Build order
 
-- [x] 7.9 Locale config + dictionary structure (`src/lib/i18n.ts`)
-- [ ] 7.10 RTL support: logical CSS properties, mirrored icons, Urdu/Arabic webfonts
-- [ ] 7.11 Language switcher in navbar + footer
-- [ ] 7.12 Translate UI chrome (nav, footer, forms, buttons, labels)
-- [ ] 7.13 Translate high-intent pages: home, payment-plans, contact, overseas, societies
-- [ ] 7.14 Translate project/construction/society data strings
-- [ ] 7.15 Decide on the 8 long-form articles — see below
+- [x] 7.9 Locale config + dictionaries (`src/lib/i18n.ts`,
+      `dictionaries.ts` for chrome, `dictionaries.pages.ts` for page copy)
+- [x] 7.10 RTL: logical spacing overrides, `.rtl-flip` icons, `.ltr-nums` for
+      phone numbers and digits, per-script webfonts
+- [x] 7.11 Language switcher in navbar (desktop + mobile menu)
+- [x] 7.12 UI chrome translated — Navbar, Footer and LeadForm read their locale
+      off the URL, so one implementation serves both root layouts
+- [x] 7.13 High-intent pages translated: home, payment-plans, societies,
+      overseas, contact
+- [x] 7.14 Data strings deliberately NOT translated — society and block names
+      are registered proper nouns that buyers search for in English, and the
+      address is byte-identical to the Google Business Profile in every language
+      so local-search signals do not split
+- [x] 7.15 Articles stay English-only (see above)
 
-### ⚠️ The honest constraint on long-form content
+### Two RTL bugs found and fixed during verification
 
-The eight articles are ~12,000 words of technical construction and legal
-guidance. Machine translation into Urdu will produce plausible-sounding text with
-wrong terminology, and the approval-status wording in particular ("NOC under
-process" must never become "approved") is exactly the kind of nuance MT gets
-wrong. Publishing bad Urdu is worse than publishing none.
+1. **`[lang='ur']` matched nothing.** The html lang is `ur-PK`, and an exact
+   attribute selector does not match a subtag. Everything under those selectors
+   — the Urdu size bump, the script fonts — was silently dead. Now `[lang|='ur']`.
+2. **11,000px horizontal scrollbar on every RTL page.** The lead-form honeypot
+   was hidden with `-left-[9999px]`; in an RTL document that offset is *inside*
+   the scrollable area. Replaced with a clip-based hide that works both ways.
 
-**Recommendation:** ship UI + key pages in all three languages now, keep the
-articles English-only with correct `hreflang` (which is legitimate and Google
-handles it fine), and translate them properly with a human reviewer over time.
-Flag any article translated by machine as needing review before publish.
+Headings also fall back correctly now: Cormorant Garamond has no Urdu or Arabic
+glyphs, so `[lang|='ur'] h1…h4` switch to the script face with its own leading
+rather than per-glyph fallback on Cormorant's tight line-height.
 
 ### Precaching / performance
 
-- [ ] 7.16 `<link rel="preconnect">` for the fonts and the ERP API origin
-- [ ] 7.17 Prefetch the primary nav routes
-- [ ] 7.18 Preload the hero image per locale
-- [ ] 7.19 Subset the Urdu/Arabic fonts — full Noto Nastaliq is very large
+- [x] 7.16 `preconnect` to the ERP API origin in both root layouts
+- [x] 7.18 `display: 'swap'` on all four font families; each locale loads only
+      its own script, so an English visitor downloads neither Arabic face and an
+      Arabic reader never downloads Nastaliq
+- [ ] 7.17 Prefetch primary nav routes — not done; Next already prefetches
+      `<Link>`s in the viewport, so measure before adding more
+- [ ] 7.19 Subset the Urdu/Arabic fonts further if field data shows slow loads
+
+### If you add a translated page later
+
+1. Add the route to `TRANSLATED_ROUTES` in `src/lib/i18n.ts`.
+2. Add its copy to `PageDictionary` in `src/lib/dictionaries.pages.ts` (the
+   interface will fail the typecheck until all three locales are filled in —
+   that is deliberate).
+3. Create `src/app/(intl)/[lang]/<route>/page.tsx` with `generateStaticParams`
+   returning `PREFIXED_LOCALES` and `pageMeta({ ..., locale })`.
+
+The sitemap, hreflang and llms.txt all read from `TRANSLATED_ROUTES`, so step 1
+is what makes the rest follow automatically.
 
 ---
 

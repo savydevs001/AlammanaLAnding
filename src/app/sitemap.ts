@@ -12,6 +12,7 @@ const PROJECT_SECTIONS = [
 ];
 import { blogs } from '../data/blogs';
 import { team } from '../data/team';
+import { TRANSLATED_ROUTES, PREFIXED_LOCALES, localePath, alternatesFor } from '../lib/i18n';
 
 // Auto-generated sitemap served at /sitemap.xml.
 // It reads the data files directly, so adding a project/blog/team member
@@ -24,8 +25,37 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alammana.pk';
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
 
+  /**
+   * Every entry carries `alternates.languages`, which Next.js emits as
+   * `xhtml:link` elements. Google reads hreflang from the sitemap as readily as
+   * from the <head>, and having it in both places is the cheapest insurance
+   * against one of them being wrong.
+   *
+   * `alternatesFor` only lists locales a page genuinely exists in, so the
+   * English-only articles advertise themselves as x-default and nothing else.
+   */
+  const withAlternates = (path: string, rest: Omit<MetadataRoute.Sitemap[number], 'url'>) => ({
+    // No trailing slash on the homepage: it must match the canonical the page
+    // itself emits, or Google reads the sitemap entry as a non-canonical
+    // duplicate of the page it is meant to be announcing.
+    url: path === '/' ? siteUrl : `${siteUrl}${path}`,
+    alternates: { languages: alternatesFor(path, siteUrl) },
+    ...rest,
+  });
+
+  /** The prefixed-locale copies of the five translated routes. */
+  const localePages: MetadataRoute.Sitemap = PREFIXED_LOCALES.flatMap(l =>
+    TRANSLATED_ROUTES.map(path => ({
+      url: `${siteUrl}${localePath(path, l)}`,
+      lastModified,
+      changeFrequency: 'weekly' as const,
+      priority: path === '/' ? 0.9 : 0.8,
+      alternates: { languages: alternatesFor(path, siteUrl) },
+    }))
+  );
+
   const staticPages: MetadataRoute.Sitemap = [
-    { url: `${siteUrl}/`, lastModified, changeFrequency: 'weekly', priority: 1.0 },
+    { url: siteUrl, lastModified, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${siteUrl}/payment-plans`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${siteUrl}/societies`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${siteUrl}/portfolio`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
@@ -40,7 +70,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return [
-    ...staticPages,
+    ...staticPages.map(p =>
+      withAlternates(p.url.replace(siteUrl, '').replace(/^$/, '/'), {
+        lastModified: p.lastModified,
+        changeFrequency: p.changeFrequency,
+        priority: p.priority,
+      })
+    ),
+    ...localePages,
     ...societies.map(s => ({
       url: `${siteUrl}/societies/${s.id}`,
       lastModified,

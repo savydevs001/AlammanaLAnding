@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Locale, LOCALE_META, localePath, alternatesFor, PREFIXED_LOCALES, isTranslated } from './i18n';
 
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alammana.pk';
 export const SITE_NAME = 'Alammana Developers';
@@ -44,6 +45,7 @@ export function pageMeta({
   modifiedTime,
   authors,
   noIndex = false,
+  locale = 'en',
 }: {
   title: string;
   description: string;
@@ -57,8 +59,16 @@ export function pageMeta({
   modifiedTime?: string;
   authors?: string[];
   noIndex?: boolean;
+  /**
+   * The language this page is written in. Drives the canonical (which must be
+   * same-locale — a cross-locale canonical tells Google the translation is a
+   * duplicate and it will be dropped), the hreflang cluster, and og:locale.
+   */
+  locale?: Locale;
 }): Metadata {
-  const url = path === '/' ? SITE_URL : `${SITE_URL}${path}`;
+  const localisedPath = localePath(path, locale);
+  const url = localisedPath === '/' ? SITE_URL : `${SITE_URL}${localisedPath}`;
+  const lm = LOCALE_META[locale];
   const img = image ?? DEFAULT_OG_IMAGE;
   const desc = clampDescription(description);
 
@@ -67,7 +77,10 @@ export function pageMeta({
     description: desc,
     ...(keywords?.length ? { keywords } : {}),
     ...(authors?.length ? { authors: authors.map(name => ({ name })) } : {}),
-    alternates: { canonical: path },
+    alternates: {
+      canonical: localisedPath,
+      languages: alternatesFor(path, SITE_URL),
+    },
     robots: noIndex
       ? { index: false, follow: true }
       : {
@@ -86,7 +99,16 @@ export function pageMeta({
       description,
       url,
       siteName: SITE_NAME,
-      locale: 'en_PK',
+      locale: lm.ogLocale,
+      // Only advertise alternates that exist. Listing a locale that 404s makes
+      // the whole cluster untrustworthy rather than just that one link.
+      ...(isTranslated(path)
+        ? {
+            alternateLocale: [LOCALE_META.en, ...PREFIXED_LOCALES.map(l => LOCALE_META[l])]
+              .filter(m => m.code !== locale)
+              .map(m => m.ogLocale),
+          }
+        : {}),
       type,
       images: [{ url: img, width: 1200, height: 630, alt: title }],
       ...(publishedTime ? { publishedTime } : {}),

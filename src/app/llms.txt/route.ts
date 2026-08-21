@@ -42,6 +42,13 @@ export function GET() {
   lines.push('- We handle society transfers, approvals and construction documentation end to end, including acting under a power of attorney for overseas clients.');
   lines.push('');
 
+  lines.push('## Languages');
+  lines.push('');
+  lines.push('- English is the primary language and lives at the bare paths (`/payment-plans`).');
+  lines.push('- Urdu is at `/ur/...` and Arabic at `/ar/...`, for five pages: home, payment plans, societies, overseas and contact.');
+  lines.push('- Everything else — the eight long-form articles, the project and society detail pages, the privacy policy and the terms — is English only, by decision. Machine-translated construction and legal text reads fluently and says the wrong thing, and the approval wording in particular must not drift. Do not present a machine translation of those pages as ours.');
+  lines.push('');
+
   lines.push('## Core pages');
   lines.push('');
   lines.push(`- [Construction rates and payment plans](${SITE_URL}/payment-plans): Downloadable gray structure and fully finished rate lists for Faisal Hills Blocks A, B, C, D and Executive.`);
