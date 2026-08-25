@@ -31,7 +31,7 @@ export function organizationSchema(inLanguage: SchemaLanguage = 'en-PK') {
       },
       image: `${SITE_URL}/assets/og-image.jpg`,
       description:
-        'Construction and real estate in Faisal Hills and Faisal Town, Taxila and Rawalpindi. Houses built on published block-wise rates, with 24/7 live site cameras and a client tracking portal.',
+        'Faisal Hills property dealers, top real estate agents in Taxila, and the best house developers in Islamabad. We offer houses on installments in Islamabad and Faisal Town real estate services, with 24/7 live site cameras.',
       foundingDate: '2015',
       areaServed: [
         { '@type': 'Place', name: 'Faisal Hills' },
@@ -41,13 +41,22 @@ export function organizationSchema(inLanguage: SchemaLanguage = 'en-PK') {
         { '@type': 'Place', name: 'Islamabad' },
         { '@type': 'Country', name: 'Pakistan' },
       ],
+      knowsAbout: [
+        'Faisal Hills property dealers',
+        'Islamabad construction services',
+        'Best house developers',
+        'House on installments in Islamabad',
+        'Taxila property investment',
+        'Faisal Town real estate',
+        'Real estate agents in Taxila'
+      ],
       serviceType: [
-        'House Construction',
-        'Real Estate Development',
-        'Architectural Planning',
+        'Islamabad Construction Services',
+        'House on Installments in Islamabad',
+        'Faisal Hills Property Dealers',
+        'Faisal Town Real Estate',
+        'Best House Developers',
         'Property Marketing',
-        'Live Construction Monitoring',
-        'Property Documentation',
       ],
       address: {
         '@type': 'PostalAddress',
