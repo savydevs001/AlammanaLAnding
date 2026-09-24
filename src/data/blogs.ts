@@ -1760,4 +1760,101 @@ Always check the dimensions on the allotment letter or possession documents rath
       { q: 'How many square yards is 1 marla?', a: '25 square yards with the 225 sq ft marla, or 30.25 square yards with the revenue marla.' },
     ],
   },
+  {
+    id: 'property-transfer-taxes-pakistan-236k-236c',
+    title: 'Property Transfer Taxes in Pakistan Explained: 236K, 236C, Stamp Duty, CVT and Society Fees',
+    excerpt:
+      'Every tax and fee paid when a plot or house changes hands in Islamabad and Punjab — who pays what, how filer status changes it, what value tax is charged on, and how to budget before you sign.',
+    keyTakeaway:
+      'When property is transferred, the buyer typically pays FBR advance tax under section 236K, provincial stamp duty and, where it applies, capital value tax (CVT), plus the housing society’s transfer fee; the seller pays FBR advance tax under section 236C and may owe capital gains tax. Rates depend on the property’s value band and on whether each party is on the FBR Active Taxpayers List, and they change with each budget — so confirm the current rates before the transfer date.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Ashhal Ch',
+    category: 'Buying Guides',
+    tags: ['property transfer tax pakistan', '236k tax', '236c tax', 'stamp duty punjab', 'capital value tax', 'society transfer fee', 'filer non filer property tax'],
+    image: '/assets/stock/architectural-plans.webp',
+    readTime: '11 min read',
+    content: `
+The agreed price is never the full cost of a property deal. Between federal withholding taxes, provincial duties and the society’s own fee, both buyer and seller pay a noticeable amount on top — and the amount can change sharply depending on filer status. This guide explains each charge, who normally pays it and how to budget for it.
+
+We deliberately do not quote fixed percentages here: federal rates are revised in each Finance Act and provincial rates change too, so any number printed today can be wrong by the time you transfer. Our [Transfer Taxes & Fees calculator](/tools/transfer-costs) shows the structure with editable rates — enter the current ones for an exact estimate.
+
+## Taxes and fees paid by the buyer
+
+### Advance tax on purchase — section 236K
+
+Collected by FBR at the time of registration or transfer, on the purchase of immovable property. The rate depends on the value of the property and on whether the buyer appears on the **Active Taxpayers List (ATL)**. Non-filers are charged substantially more. It is an *advance* tax — a filer can adjust it against their final tax liability when filing a return.
+
+### Stamp duty
+
+A provincial levy on the transfer or sale deed, charged as a percentage of the property’s value. It is paid to the provincial government, not FBR, and the applicable rate depends on the province and the kind of area.
+
+### Capital value tax (CVT)
+
+A provincial tax on the value of certain property transactions. Whether it applies, and at what rate, depends on the province and the type and location of property.
+
+### Society transfer fee
+
+Every housing society charges its own fee to record a change of ownership, and may also require clearance of dues, a no-demand certificate and verification of both parties in person. Ask the society office for its current schedule.
+
+### Registration and incidental costs
+
+Registration charges, documentation, and the cost of the deed and attestation are usually small but should be budgeted.
+
+## Taxes paid by the seller
+
+### Advance tax on sale — section 236C
+
+Collected by FBR on the sale or transfer of immovable property, again at a rate depending on value, holding period in some cases, and filer status.
+
+### Capital gains tax
+
+Gains on disposal of immovable property may be taxed depending on how long the property was held and the law in force at the time. Seller advance tax under 236C is typically adjustable against it for filers.
+
+## Which value is tax charged on?
+
+Taxes are usually calculated on the higher of the **declared price** and the **official valuation** — the FBR valuation table for the area, or the provincial (DC) rate. Under-declaring the price does not reduce the tax below the official valuation, and it creates problems for the buyer later when they sell.
+
+## Why filer status matters so much
+
+For both 236K and 236C, the rate for people who are not on the Active Taxpayers List is considerably higher than for filers. Before a transaction:
+
+1. Check your status on FBR’s Active Taxpayers List.
+2. If you are not on it, consider filing before the transfer — the saving can be significant on a large purchase.
+3. Make sure the name and CNIC on the tax payment match the transfer documents exactly.
+
+## Agent commission
+
+Commission is not a tax, but it is part of the cost. In the Twin Cities it is commonly negotiated as a percentage from each side. Agree the amount and who pays it in writing before you start viewing — our guide to [buying safely through property dealers](/blog/faisal-hills-property-dealers-guide) covers this.
+
+## A worked approach to budgeting
+
+1. **Find the tax value** — the higher of the agreed price and the official valuation.
+2. **Get today’s rates** for 236K, 236C, stamp duty and CVT from FBR, the provincial revenue department or a tax adviser, for your filer status.
+3. **Add the society transfer fee** from the society office.
+4. **Add commission** as agreed.
+5. **Enter them in the [calculator](/tools/transfer-costs)** to see the buyer’s and seller’s totals side by side.
+
+Plan the budget before you pay a token amount. Buyers should then check what they can comfortably afford with the [Affordability calculator](/tools/affordability), which assumes the transfer costs come on top of the price.
+
+## Common mistakes
+
+- **Assuming the seller pays everything.** By default each side pays its own taxes; anything else must be agreed in writing.
+- **Paying tax in a different name.** The payer’s CNIC must match the transfer documents, or the payment may not be accepted.
+- **Forgetting society dues.** Unpaid maintenance or development charges usually have to be cleared before the society records the transfer.
+- **Relying on last year’s rates.** Check after every budget.
+
+## Buying in Faisal Hills or through Alammana
+
+We handle society transfers, verification and documentation end to end for our clients, including for overseas buyers through a power of attorney. See our [overseas buyers page](/overseas) and our complete [buyer’s guide to real estate in Islamabad](/blog/real-estate-islamabad-buyers-guide).
+`,
+    faqs: [
+      { q: 'What is 236K tax on property?', a: 'It is the FBR advance tax collected from the buyer on the purchase of immovable property. The rate depends on the property’s value and whether the buyer is on the Active Taxpayers List; filers can adjust it against their final tax.' },
+      { q: 'What is 236C tax?', a: 'The FBR advance tax collected from the seller on the sale or transfer of immovable property, at a rate that depends on value and filer status.' },
+      { q: 'Who pays stamp duty on property in Punjab?', a: 'Normally the buyer, as part of registering the transfer or sale deed. It is a provincial levy.' },
+      { q: 'Do non-filers pay more property tax in Pakistan?', a: 'Yes. Withholding rates under sections 236K and 236C are considerably higher for people who are not on the FBR Active Taxpayers List.' },
+      { q: 'Is property tax calculated on the price or on the FBR value?', a: 'Generally on the higher of the declared price and the official valuation (FBR valuation table or provincial DC rate).' },
+      { q: 'How much are total transfer costs on a property?', a: 'It depends on value, location and both parties’ filer status. Enter the current rates in the Transfer Taxes & Fees calculator to see the buyer’s and seller’s totals.' },
+    ],
+  },
 ];
