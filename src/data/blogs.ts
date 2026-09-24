@@ -1857,4 +1857,102 @@ We handle society transfers, verification and documentation end to end for our c
       { q: 'How much are total transfer costs on a property?', a: 'It depends on value, location and both parties’ filer status. Enter the current rates in the Transfer Taxes & Fees calculator to see the buyer’s and seller’s totals.' },
     ],
   },
+  {
+    id: 'home-loan-pakistan-emi-guide',
+    title: 'Home Loans in Pakistan: How EMI Works, What Banks Check, and How to Compare Offers',
+    excerpt:
+      'A plain-language guide to housing finance in Pakistan — how the monthly instalment is calculated, fixed versus KIBOR-linked rates, what banks ask for, government schemes versus bank loans versus developer plans, and when to prepay.',
+    keyTakeaway:
+      'A home loan’s monthly instalment (EMI) is fixed by three things: the amount borrowed, the interest rate and the tenure — EMI = P × r × (1+r)^n ÷ ((1+r)^n − 1). For example, PKR 1.2 crore over 20 years at 6% is about PKR 85,972 a month. To compare offers fairly, look beyond the EMI at the total interest, the fees, whether the rate is fixed or floats with KIBOR, and the present worth of all payments.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Ashhal Ch',
+    category: 'Finance',
+    tags: ['home loan pakistan', 'house loan emi calculator', 'mortgage pakistan', 'kibor home finance', 'house finance islamabad', 'government housing scheme loan'],
+    image: '/assets/stock/modern-house-1.webp',
+    readTime: '13 min read',
+    content: `
+For most families, a house is bought with some mix of savings, a developer’s instalment plan and bank finance. Bank finance is the least understood of the three: the monthly instalment looks affordable, but the true cost depends on details that are easy to skip — how the rate is set, what fees are charged, and how long you pay.
+
+This guide explains how housing finance works in Pakistan and how to compare offers. The [Home Finance Decision Engine](/tools/home-finance) runs all the numbers below for up to three offers at once.
+
+## How the monthly instalment is calculated
+
+Home loans are **reducing-balance** loans: each month you pay interest on what you still owe, and the rest of the instalment reduces the balance. The equal monthly instalment (EMI) is:
+
+**EMI = P × r × (1 + r)^n ÷ ((1 + r)^n − 1)**
+
+- **P** — the amount borrowed (price minus down payment)
+- **r** — the monthly interest rate (annual rate ÷ 12)
+- **n** — the number of months
+
+Worked example: borrowing PKR 1.2 crore for 20 years (240 months) at 6% a year gives an EMI of about **PKR 85,972**. At a higher rate the same loan costs much more each month — which is why the rate matters more than almost anything else.
+
+In the early years most of each instalment is interest; by the final years it is mostly principal. That is also why prepaying early saves far more interest than prepaying late.
+
+## Fixed, floating and KIBOR-linked rates
+
+Commercial bank home finance in Pakistan is commonly priced as **KIBOR plus a spread**, and the rate is reset periodically when KIBOR changes. When the State Bank’s policy rate rises, your instalment can rise with it; when it falls, so can your instalment. Some products fix the rate for an initial period. Islamic products use diminishing musharakah or similar structures with rental payments, but the budgeting logic is the same: understand how and when the payment can change.
+
+Government-supported housing schemes, when available, offer subsidised rates for eligible buyers and property types. Their terms and eligibility change from time to time, so check the current terms with participating banks.
+
+## What banks check
+
+Expect to provide:
+
+- **Income proof** — salary slips and bank statements, or business records and tax returns for the self-employed.
+- **Your existing obligations** — other loans and credit cards, which reduce how much you can borrow.
+- **Age and tenure** — many banks require the loan to end before a certain age.
+- **Property documents** — clear title, approved map (for construction), and the society’s or authority’s approval. Banks generally only finance properties with a clean legal position.
+- **Down payment** — commonly a meaningful share of the price comes from you.
+
+Our guide to [approved maps and NOCs](/blog/approved-map-noc-guide) explains the property-side documents.
+
+## How much can you borrow?
+
+Lenders cap the share of income that can go to instalments. Staying well under the cap leaves room for emergencies. Work backwards from a comfortable EMI to a loan amount with the [Affordability calculator](/tools/affordability) — it also adds your savings and keeps a reserve.
+
+## Comparing offers properly
+
+The lowest EMI is not always the cheapest loan. Compare:
+
+1. **Total interest** over the life of the loan.
+2. **Up-front costs** — processing fees, valuation, legal and insurance charges.
+3. **Rate type** — fixed, floating, or KIBOR-linked, and how often it resets.
+4. **Prepayment terms** — penalties and penalty-free windows.
+5. **Present worth** — every payment discounted to today at the return your money could earn elsewhere. This single number lets you compare a long cheap loan with a short expensive one. **Annual worth** does the same when tenures differ.
+
+The [Home Finance Decision Engine](/tools/home-finance) calculates all five and highlights the cheapest overall.
+
+## Bank loan, government scheme or developer plan?
+
+- **Developer instalment plans** are usually interest-free on paper but shorter (often a few years) and may carry a higher price than paying cash. Good when you can afford larger instalments over a short period. See our guide to [buying a house on instalments in Islamabad](/blog/house-on-installments-islamabad).
+- **Government-supported schemes** offer the lowest rates when you qualify, with limits on eligibility and property type.
+- **Commercial bank finance** is the most widely available and runs up to long tenures, at market rates.
+
+Many buyers combine them: pay a developer’s plan during construction, then refinance the balance with a bank at possession.
+
+## Prepay or invest?
+
+If you receive a bonus, inheritance or sale proceeds during the loan, prepaying earns you exactly the loan’s interest rate, with no risk. Investing only makes sense if you can reliably earn more than that rate **after tax**. Check prepayment penalties first. The decision engine’s windfall section shows the interest saved and months cut against the gain if invested.
+
+## A checklist before you sign
+
+- The property has clear title and the approvals the bank needs.
+- You know exactly how and when the rate can change.
+- You have seen the full schedule of fees.
+- The EMI fits comfortably with room to spare.
+- You understand the prepayment and late-payment terms.
+
+For the wider picture — which areas, which property type, and which checks — read our [complete buyer’s guide to real estate in Islamabad](/blog/real-estate-islamabad-buyers-guide).
+`,
+    faqs: [
+      { q: 'How is home loan EMI calculated in Pakistan?', a: 'EMI = P × r × (1 + r)^n ÷ ((1 + r)^n − 1), where P is the loan amount, r the monthly rate and n the number of months. PKR 1.2 crore over 20 years at 6% is about PKR 85,972 a month.' },
+      { q: 'What is KIBOR-linked home finance?', a: 'A loan priced at KIBOR plus a fixed spread, reset periodically. When KIBOR rises your instalment can rise, and when it falls your instalment can fall.' },
+      { q: 'What documents do banks need for a home loan?', a: 'Proof of income, bank statements, details of existing loans, your CNIC, and the property’s title documents and approvals.' },
+      { q: 'Is a developer instalment plan better than a bank loan?', a: 'It is usually interest-free on paper but shorter, and the instalment price can be higher than the cash price. Compare the total cost of each, including fees, not just the monthly amount.' },
+      { q: 'Should I prepay my home loan?', a: 'Prepaying earns the loan’s interest rate risk-free. It is worthwhile unless you can reliably earn more than that rate after tax, and after checking any prepayment penalty.' },
+      { q: 'How much home loan can I get on my salary?', a: 'Banks cap total instalments at a share of income. Work backwards from an EMI you can comfortably pay to a loan amount using the Affordability calculator.' },
+    ],
+  },
 ];
