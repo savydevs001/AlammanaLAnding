@@ -1955,4 +1955,94 @@ For the wider picture — which areas, which property type, and which checks —
       { q: 'How much home loan can I get on my salary?', a: 'Banks cap total instalments at a share of income. Work backwards from an EMI you can comfortably pay to a loan amount using the Affordability calculator.' },
     ],
   },
+  {
+    id: 'rooftop-solar-system-home-islamabad',
+    title: 'Rooftop Solar for Homes in Islamabad and Rawalpindi: What Size You Need, Roof Space, and Payback',
+    excerpt:
+      'How to size a home solar system from your electricity bill, how much roof it needs, why direction and tilt matter at 33°N, on-grid versus hybrid, and how to judge payback — plus what to plan for when you are still building.',
+    keyTakeaway:
+      'Size a home solar system from your yearly electricity use: in the Islamabad–Rawalpindi region a well-installed, south-facing system tilted around 30° produces roughly 1,300–1,400 units per kW per year, so a home using 900 units a month needs about 8 kW — around 14 panels of 585 W needing roughly 36 m² of roof. East or west-facing panels produce roughly a tenth less.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Mohsin Ali',
+    category: 'Construction',
+    tags: ['solar system for home islamabad', 'solar panel size calculator', 'rooftop solar pakistan', 'net metering islamabad', 'how many solar panels do i need'],
+    image: '/assets/stock/modern-house-2.webp',
+    readTime: '11 min read',
+    content: `
+Solar has become one of the most common additions to houses in the Twin Cities, but many systems are sized by guesswork: “get 10 kW”. A properly sized system starts from what you actually use, fits your roof, faces the right way and is mounted to survive a storm. This guide explains each step. Our [Rooftop Solar Planner](/tools/rooftop-solar) does the arithmetic for you.
+
+## Step 1: start from your units, not your bill
+
+Your electricity bill shows the units (kWh) you used each month. Take a full year if you can — summer air-conditioning months use far more than winter months — and add them up.
+
+## Step 2: convert units into system size
+
+Each kW of panels produces a fairly predictable amount of energy per year in a given place. For Islamabad and Rawalpindi (about 33°N), a well-installed system facing south at around 30° tilt produces roughly **1,300–1,400 units per kW per year**.
+
+**System size (kW) ≈ yearly units ÷ yearly units per kW**
+
+Example: 900 units a month is 10,800 units a year. Divided by about 1,360 gives roughly **8 kW** — about 14 panels of 585 W.
+
+## Step 3: check your roof
+
+A modern panel of around 585 W takes roughly 2.6 m² including spacing. Leave space for water tanks, the stair tower, access paths and cleaning. A 5 marla house’s roof often has room for a modest system; larger roofs can take more. If the roof is too small for all your use, the planner tells you what share it can cover.
+
+Also consider **shading**: a neighbour’s building, a water tank or a tree that shades part of the array in winter afternoons can cut output more than you expect.
+
+## Step 4: direction and tilt
+
+In Pakistan the sun moves across the southern sky, so **south-facing panels tilted about 30°** collect the most over a year. East or west-facing arrays lose roughly a tenth of output; north-facing panels lose much more. Flat or very low tilts also reduce yearly output and collect more dust. Our [Plot Orientation Guide](/tools/plot-orientation) explains how your plot’s facing affects both the house and the roof.
+
+## Step 5: on-grid, hybrid or off-grid
+
+- **On-grid** — connected to the grid, no batteries. Cheapest per kW, but stops during a grid outage for safety. Where net metering is available, surplus units can be exported under the utility’s current rules.
+- **Hybrid** — grid plus batteries, so essential loads run during outages. Batteries add significant cost and need replacement over the system’s life.
+- **Off-grid** — batteries only; rarely needed in the city.
+
+Net-metering rules and buy-back arrangements are set by the regulator and distribution company and have changed over time, so check the current rules with your distribution company before you size for export.
+
+## Step 6: payback
+
+**Yearly saving ≈ units generated that you would otherwise buy × your tariff.**
+
+**Payback ≈ system cost ÷ yearly saving.**
+
+Payback is fastest when you use most of the solar output yourself during the day, and when your tariff is high. The planner lets you enter your own tariff and cost per kW.
+
+## Step 7: the mounting structure matters
+
+Rooftop frames face strong wind uplift during storms. Poorly designed or badly anchored frames can lift and fail, damaging the roof and the panels. Insist on a structure designed for high wind, galvanised steel of adequate section, proper anchoring into the slab, and drainage that is not blocked by the frame.
+
+## Building a new house? Plan for solar now
+
+If you are still at the design or grey-structure stage, it costs very little to:
+
+- Keep the south side of the roof clear of tanks and the stair tower.
+- Provide conduit from the roof to the distribution board.
+- Allow for a battery and inverter space with ventilation.
+- Design the roof slab and parapet for the mounting loads.
+
+Our [construction cost guide for Islamabad](/blog/house-construction-cost-islamabad-per-sq-ft) and [construction stages article](/blog/construction-stages-timeline-pakistan) show where these decisions fall in the build.
+
+## Quick sizing guide
+
+Using about 1,360 units per kW per year:
+
+- 300 units a month — about 2.6 kW
+- 600 units a month — about 5.3 kW
+- 900 units a month — about 7.9 kW
+- 1,200 units a month — about 10.6 kW
+
+Round up to whole panels, and check the roof can take them.
+`,
+    faqs: [
+      { q: 'What size solar system do I need for my house in Islamabad?', a: 'Divide your yearly units by about 1,360. A house using 900 units a month (10,800 a year) needs roughly 8 kW, or about 14 panels of 585 W.' },
+      { q: 'How many units does a 10 kW solar system produce in Islamabad?', a: 'Roughly 13,000–14,000 units a year when facing south at a good tilt, or about 1,100 units a month on average — more in summer, less in winter.' },
+      { q: 'How much roof space do I need for solar panels?', a: 'Allow roughly 2.6 m² per 585 W panel including spacing — about 36 m² for an 8 kW system — plus room for access and tanks.' },
+      { q: 'Which direction should solar panels face in Pakistan?', a: 'South, tilted about 30°. East or west-facing panels produce roughly a tenth less over a year.' },
+      { q: 'Is a hybrid solar system worth it?', a: 'If you need power during outages, yes, but batteries add substantial cost and need replacing during the system’s life. On-grid systems are cheapest per unit produced.' },
+      { q: 'How long does solar take to pay back?', a: 'Divide the system cost by the yearly saving (units you would otherwise buy × tariff). It pays back fastest when you use most of the output during the day.' },
+    ],
+  },
 ];
