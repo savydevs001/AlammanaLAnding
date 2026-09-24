@@ -2228,4 +2228,96 @@ Alammana builds on published block-wise rates in Faisal Hills, with live site ca
       { q: 'Who pays tax in a construction partnership?', a: 'Tax on the sale and any gain is paid according to how the title and proceeds are held and the agreement between the parties. Get tax advice before signing.' },
     ],
   },
+  {
+    id: 'plot-vs-house-investment-islamabad',
+    title: 'Plot or House: Which Is the Better Property Investment in Islamabad and Rawalpindi?',
+    excerpt:
+      'How plots and houses make money differently — capital growth versus rent — how to measure each properly after inflation, holding costs and vacancy, and how to decide which suits your money and timeline.',
+    keyTakeaway:
+      'Plots make money almost entirely through capital growth and cost little to hold; houses make money through rent plus growth but cost more to maintain and depreciate as buildings. Judge either by its real return — growth plus net rent, minus holding costs, compared with inflation. For example, PKR 50 lac growing 15% a year for 3 years becomes about PKR 76 lac, but with 11% inflation that is only about PKR 55.6 lac in today’s money.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Ashhal Ch',
+    category: 'Investment',
+    tags: ['property investment islamabad', 'plot vs house investment', 'rental yield islamabad', 'real estate investment pakistan', 'best investment in property'],
+    image: '/assets/stock/modern-house-1.webp',
+    readTime: '11 min read',
+    content: `
+Ask investors in the Twin Cities whether to buy a plot or a house and you will hear strong opinions both ways. Both can work. They simply earn money in different ways, carry different risks and suit different people. This guide explains how to compare them honestly — with the effect of inflation included, which is where most back-of-envelope calculations go wrong.
+
+## How a plot makes money
+
+A plot earns almost nothing while you hold it. Its return is **capital growth**: the difference between what you pay and what you sell for. Growth in a society tends to come in steps as it moves through approval, development, possession, and new roads or amenities nearby — and it can stall for long periods between those steps.
+
+**Advantages:** low holding costs, no maintenance, no tenants, easy to hold for years, and often available on instalments.
+
+**Risks:** no income, the society’s approvals and development, liquidity when the market is slow, and — for files — uncertainty about which plot you receive and when.
+
+## How a house makes money
+
+A house earns **rent** from day one, plus whatever the land beneath it appreciates. The building itself ages, so a house needs regular spending to keep its value and its tenants.
+
+**Advantages:** monthly income, easier to finance with a bank, and in-demand areas let quickly.
+
+**Risks:** vacancy between tenants, repairs and upkeep, tenant problems, and a higher entry price.
+
+## Measure the real return, not the headline
+
+Three corrections turn a headline into a real number:
+
+### 1. Inflation
+
+**Real value = future value ÷ (1 + inflation)^years.**
+
+A property bought for PKR 50 lac that grows 15% a year is worth about PKR 76 lac after three years. With 11% inflation over the same period, that is about **PKR 55.6 lac in today’s money** — a real gain, but far smaller than the headline PKR 26 lac. If growth is below inflation, you are losing purchasing power even while the price rises. The [Investment ROI calculator](/tools/investment) shows both figures under conservative, base and optimistic scenarios.
+
+### 2. Holding costs
+
+Plots carry development charges, society maintenance and property tax. Houses add repairs, repainting and replacement of fittings. Subtract them every year.
+
+### 3. Vacancy and upkeep for rent
+
+**Net rental yield = (rent × months actually let − yearly costs) ÷ price.**
+
+A house that sits empty for a month or two a year, and needs regular repairs, earns noticeably less than its advertised rent suggests. The [Rental Yield calculator](/tools/rent-yield) works out gross yield, net yield and payback.
+
+## Comparing the two side by side
+
+For each option, estimate:
+
+1. **Entry cost** — price plus transfer taxes and fees (see our [transfer taxes guide](/blog/property-transfer-taxes-pakistan-236k-236c)).
+2. **Yearly income** — net rent for a house, none for a plot.
+3. **Yearly costs** — holding costs for both.
+4. **Expected growth** — be conservative.
+5. **Holding period** — and how easily you could sell at the end.
+
+Then compare the yearly return with your **target return**: what the same money would earn safely elsewhere. The [Portfolio Ranker](/tools/portfolio) does this for several plots at once and labels each as buy more, hold or sell.
+
+## Which suits you?
+
+**Choose a plot if:**
+- You don’t need income from the investment.
+- You can hold for several years.
+- You want low maintenance and no tenants.
+- You may build on it later — our [buy vs build calculator](/tools/buy-vs-build) compares that path.
+
+**Choose a house if:**
+- You want monthly income now.
+- You can manage tenants and upkeep, or pay someone to.
+- You want an asset a bank will finance.
+
+**Or combine them:** buy a plot in a developing society, then build and let a house on it once the area has matured — capturing growth first and rent later.
+
+## What drives value in the Twin Cities
+
+Approval status, visible development, possession, and road links matter far more than advertising. Our honest look at [Faisal Hills as an investment](/blog/investing-in-faisal-hills) and our [ranking of growth areas](/blog/real-estate-boom-faisal-hills-faisal-town-b17-ranked) explain the drivers, and the [buyer’s guide to real estate in Islamabad](/blog/real-estate-islamabad-buyers-guide) lists the checks before you buy anything.
+`,
+    faqs: [
+      { q: 'Is it better to invest in a plot or a house in Islamabad?', a: 'A plot suits investors who want low holding costs and capital growth and can wait; a house suits those who want monthly rent and can handle tenants and upkeep. Compare both on real return after inflation and costs.' },
+      { q: 'How do I calculate real return on property?', a: 'Divide the future value by (1 + inflation)^years to get today’s money, add net rent received, subtract holding costs, and compare the yearly rate with what your money earns elsewhere.' },
+      { q: 'What is a good rental yield in Islamabad?', a: 'It depends on area and property type. Compare net yield — after vacancy and costs — with bank deposit rates and with expected capital growth.' },
+      { q: 'Do plots appreciate faster than houses?', a: 'In developing societies plots often grow faster in percentage terms because land drives the value and there is no ageing building, but growth comes in steps and can stall.' },
+      { q: 'When should I sell an investment plot?', a: 'When its expected future growth after holding costs falls below what the money could earn elsewhere, regardless of past gains.' },
+    ],
+  },
 ];
