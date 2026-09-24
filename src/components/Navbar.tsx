@@ -31,6 +31,7 @@ export default function Navbar() {
     { name: t.nav.portfolio, path: '/portfolio' },
     { name: t.nav.constructions, path: '/constructions' },
     { name: t.nav.rates, path: '/payment-plans' },
+    { name: t.nav.tools, path: '/tools' },
     { name: t.nav.overseas, path: '/overseas' },
     { name: t.nav.about, path: '/about' },
     { name: t.nav.team, path: '/team' },

@@ -11,6 +11,7 @@ const PROJECT_SECTIONS = [
   { id: 'location', has: (p: (typeof projects)[number]) => !!p.surroundings?.length },
 ];
 import { blogs } from '../data/blogs';
+import { TOOLS } from '../lib/tools';
 import { team } from '../data/team';
 import { TRANSLATED_ROUTES, PREFIXED_LOCALES, localePath, alternatesFor } from '../lib/i18n';
 
@@ -65,6 +66,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/contact`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${siteUrl}/team`, lastModified, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${siteUrl}/overseas`, lastModified, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${siteUrl}/tools`, lastModified, changeFrequency: 'monthly', priority: 0.8 },
+    ...TOOLS.map((t) => ({ url: `${siteUrl}/tools/${t.slug}`, lastModified, changeFrequency: 'monthly' as const, priority: 0.7 })),
     { url: `${siteUrl}/privacy`, lastModified, changeFrequency: 'yearly', priority: 0.2 },
     { url: `${siteUrl}/terms`, lastModified, changeFrequency: 'yearly', priority: 0.2 },
   ];
