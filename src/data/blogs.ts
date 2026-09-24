@@ -1423,4 +1423,128 @@ Sources: [Faisal Hills master plan](https://faisalhills.com/master-plan/) · [Mu
       },
     ],
   },
+  {
+    id: 'real-estate-islamabad-buyers-guide',
+    title: 'Real Estate in Islamabad: The Complete Buyer’s Guide for 2026',
+    excerpt:
+      'How the Islamabad–Rawalpindi property market actually works — CDA sectors versus private societies, plots versus houses versus apartments, what to verify, what it costs to transfer, and how to decide where to buy.',
+    keyTakeaway:
+      'Buying property in Islamabad safely comes down to three checks and one decision. The checks: the society or sector is approved by the relevant authority (CDA in Islamabad, RDA in Rawalpindi district), the specific plot or file is genuine and transferable, and the seller is the recorded owner. The decision is what you are buying for — living, rent or capital growth — because that alone decides whether a CDA sector, a developed private society or a newer society is the better fit.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Haseeb Bhatti',
+    category: 'Buying Guides',
+    tags: ['real estate islamabad', 'property in islamabad', 'islamabad housing societies', 'buy plot islamabad', 'rawalpindi property'],
+    image: '/assets/stock/aerial-housing.webp',
+    readTime: '14 min read',
+    content: `
+Islamabad’s property market looks simple from the outside — a capital city, planned sectors, steady demand. From the inside it is a patchwork: government-planned sectors run by the Capital Development Authority, dozens of private housing societies across Islamabad and the Rawalpindi district, and a large trade in plot *files* that are not yet plots at all.
+
+This guide explains how the market is organised, what each kind of property is good for, what you must verify before paying anything, and what a purchase costs beyond the price. It is written for first-time buyers and for overseas Pakistanis buying from abroad.
+
+## How the Islamabad property market is organised
+
+### CDA sectors
+
+Islamabad’s original master plan divides the city into lettered sectors (E, F, G, H, I and beyond), developed and regulated by the **Capital Development Authority (CDA)**. Sector properties generally come with the most settled title and infrastructure, and command the highest prices per marla. Supply in established sectors is limited, so most buyers meet them only through resale.
+
+### Private housing societies
+
+Most new supply comes from **private housing societies** — in Islamabad’s zones and along the corridors into Rawalpindi district, including the GT Road and Motorway belt towards Taxila where Faisal Hills sits. Societies are approved by the relevant authority: CDA inside the capital territory and the **Rawalpindi Development Authority (RDA)** for much of the Rawalpindi district. Approval status is the single most important fact about any society, and it can be checked.
+
+### Plots, files, houses and apartments
+
+- **A plot** has a specific plot number on a demarcated, developed block. You can build on it once possession is given and your map is approved.
+- **A file** is a booking right in a society that has not yet assigned a specific plot, or has not developed that block. Files are cheaper and trade actively, but carry more risk: the plot you eventually receive, and when, depends on the society.
+- **A house** is a built property — ready to live in or rent out, but you inherit whatever was built into the walls.
+- **An apartment or commercial unit** is usually bought in a vertical project, often on an instalment plan during construction.
+
+## Decide what you are buying for
+
+Everything else follows from this.
+
+**To live in soon.** Prioritise possession, completed infrastructure (roads, water, electricity, gas), schools and hospitals within reach, and commute time. A developed block in an approved society, or an established sector, matters more than a bargain file.
+
+**For rent.** Rent follows demand from families and professionals, which follows jobs, schools and connectivity. Houses and apartments in developed areas let more easily than those in newer blocks. Use the [Rental Yield calculator](/tools/rent-yield) to compare the net yield after vacancy and upkeep with what the money would earn elsewhere.
+
+**For capital growth.** Growth tends to come in steps as a society moves through approval, development, possession and new road links. Newer, approved societies with visible development offer more room to grow — and more risk. Our [ranking of growth areas](/blog/real-estate-boom-faisal-hills-faisal-town-b17-ranked) explains the drivers, and the [Investment ROI calculator](/tools/investment) shows what growth above or below inflation means for your real wealth.
+
+## The checks you must do before paying anything
+
+### 1. Is the society or sector approved?
+
+Ask for the society’s approval letter and check it against the authority’s own published list. CDA and RDA both publish lists of approved and illegal schemes. A society that is “under process” can still be a sensible purchase, but you are taking on the risk that approval is delayed or conditioned, and the price should reflect that. Our [approved maps and NOC guide](/blog/approved-map-noc-guide) explains what the different approvals mean.
+
+### 2. Is this plot or file genuine?
+
+Verify the plot or file number directly with the society office, not only through the seller or dealer. Confirm that it is not already sold, mortgaged or under dispute, that the size on paper matches the size on the ground, and that all dues are clear.
+
+### 3. Is the seller the recorded owner?
+
+The name on the society’s record (or the land record for non-society land) must match the seller’s CNIC. If someone is selling on another person’s behalf, ask for a registered power of attorney and verify it.
+
+### 4. Is the dealer accountable?
+
+Most transactions pass through a dealer. Work with one whose office you can visit, who is registered with the society where that applies, and who gives receipts. Our guide to [buying safely through property dealers](/blog/faisal-hills-property-dealers-guide) lists the warning signs.
+
+## What a purchase really costs
+
+The price is not the total. Budget for:
+
+- **FBR advance tax on purchase (section 236K)** — depends on value and whether you are on the Active Taxpayers List.
+- **Provincial stamp duty and, where applicable, capital value tax.**
+- **The society’s transfer fee.**
+- **Dealer commission**, agreed in writing before you start.
+- **If you are building later:** map approval, boundary wall, and utility connections.
+
+The [Transfer Taxes & Fees calculator](/tools/transfer-costs) lays these out with editable rates — always confirm the current percentages, because federal withholding rates change with each budget.
+
+## Paying for it
+
+### Cash
+
+Simplest and usually the best negotiating position. Pay through banking channels so every payment is traceable, and against receipts.
+
+### Developer instalment plans
+
+Many societies and developers sell on instalments: a down payment, monthly or quarterly instalments, and sometimes an amount on possession. Compare the instalment price with the cash price — the difference is what the credit is costing you. The [Instalment Plan calculator](/tools/installments) shows the schedule, and our guide to [buying a house on instalments in Islamabad](/blog/house-on-installments-islamabad) covers the fine print.
+
+### Bank and government housing finance
+
+Banks and government schemes offer mortgages on eligible properties with clear title. Compare options by total cost, not just monthly EMI — the [Home Finance Decision Engine](/tools/home-finance) does this, and the [Affordability calculator](/tools/affordability) tells you what price range to look in.
+
+## Buying a plot versus buying a house
+
+**A plot** costs less up front, carries fewer maintenance costs, and lets you build exactly what you want — but earns nothing until you build, and building takes around a year and needs supervision.
+
+**A house** can be lived in or rented immediately, but you cannot see the steel, cement and wiring inside the walls, and older houses need repairs.
+
+The [Buy vs Build calculator](/tools/buy-vs-build) compares the two with your own numbers, including the rent you pay while building. If you build, the [Construction Cost calculator](/tools/construction-cost) and our article on [what it costs to build in Faisal Hills](/blog/house-construction-cost-faisal-hills) explain per-square-foot pricing.
+
+## Buying from abroad
+
+Overseas Pakistanis can buy through a trusted representative holding a registered power of attorney, pay through banking channels, and verify documents with the society directly. Insist on written receipts and copies of every document, and prefer societies and builders who give you visibility of your property. Our [overseas buyers page](/overseas) explains how we handle this, including live site cameras for clients who build with us.
+
+## A simple decision checklist
+
+1. Write down what you are buying for: living, rent or growth.
+2. Set your budget including taxes and fees, not just the price.
+3. Shortlist approved societies or sectors that fit the purpose.
+4. Verify the specific plot or file and the seller with the society office.
+5. Agree price, commission and the payment schedule in writing.
+6. Pay through banks, against receipts, and complete the transfer at the society office.
+
+## Where Alammana fits
+
+We build houses in Faisal Hills on published block-wise rates, and we sell plots and inventory in partner projects as an authorised sales partner. If you want to compare societies, our [housing society guides](/societies) set out approval status, blocks and plot sizes, and our [construction rates](/payment-plans) show what building costs before you commit.
+`,
+    faqs: [
+      { q: 'Is it safe to buy property in Islamabad?', a: 'Yes, if you verify three things: the society or sector is approved by the relevant authority (CDA or RDA), the specific plot or file is genuine and free of disputes according to the society office, and the seller is the recorded owner. Pay through banks, against receipts.' },
+      { q: 'What is the difference between a plot and a file?', a: 'A plot has a specific number on a demarcated, developed block. A file is a booking right that has not yet been converted into a specific developed plot. Files are cheaper but carry more risk about which plot you get and when.' },
+      { q: 'How do I check if a housing society is approved?', a: 'Ask for the approval letter and check it against the list published by the relevant authority — CDA for the Islamabad Capital Territory and RDA for much of Rawalpindi district.' },
+      { q: 'What taxes do I pay when buying property in Islamabad?', a: 'Typically FBR advance tax under section 236K, provincial stamp duty and, where applicable, capital value tax, plus the society’s transfer fee. Rates depend on value and filer status and change with each budget.' },
+      { q: 'Should I buy a plot or a house in Islamabad?', a: 'Buy a house if you need to live in it or rent it out soon. Buy a plot if you want lower up-front cost, fewer maintenance costs and the freedom to build what you want — and can wait for construction.' },
+      { q: 'Can overseas Pakistanis buy property in Islamabad?', a: 'Yes. They can buy through a representative holding a registered power of attorney, pay through banking channels, and verify documents directly with the society.' },
+    ],
+  },
 ];
