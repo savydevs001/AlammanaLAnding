@@ -1547,4 +1547,121 @@ We build houses in Faisal Hills on published block-wise rates, and we sell plots
       { q: 'Can overseas Pakistanis buy property in Islamabad?', a: 'Yes. They can buy through a representative holding a registered power of attorney, pay through banking channels, and verify documents directly with the society.' },
     ],
   },
+  {
+    id: 'house-construction-cost-islamabad-per-sq-ft',
+    title: 'House Construction Cost in Islamabad and Rawalpindi per Square Foot (2026): 5 Marla, 10 Marla and 1 Kanal Worked Out',
+    excerpt:
+      'Worked examples of what it costs to build a 5 marla, 7 marla, 10 marla and 1 kanal house in Islamabad and Rawalpindi — covered area, grey structure, finishing, and the costs people forget.',
+    keyTakeaway:
+      'Construction cost in Islamabad and Rawalpindi = covered area × (grey structure rate + finishing rate). At indicative September 2026 rates of about PKR 2,100 per sq ft for grey structure and PKR 3,200 for standard finishing, a double-storey 5 marla house (about 1,912 sq ft covered) comes to roughly PKR 1 crore, a 10 marla house (about 3,600 sq ft) to roughly PKR 1.9 crore, and a 1 kanal house (about 6,300 sq ft) to roughly PKR 3.3 crore — excluding land, approvals and connections.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Mohsin Ali',
+    category: 'Construction Costs',
+    tags: ['house construction cost islamabad', 'construction cost per sq ft pakistan', '5 marla house cost', '10 marla house construction cost', '1 kanal house cost', 'grey structure rate'],
+    image: '/assets/stock/architectural-plans.webp',
+    readTime: '12 min read',
+    content: `
+“How much does it cost to build a house?” has a precise answer once you know two numbers: **how many square feet you will build**, and **the rate per square foot** for grey structure and for finishing. This article works through the common plot sizes in Islamabad and Rawalpindi so you can see where the money goes, then lists the costs that are usually left out of a quote.
+
+All figures below use the indicative rates in our [Construction Cost calculator](/tools/construction-cost) as of September 2026. Material prices move often, so treat them as a budget, then get a written quote. For Faisal Hills specifically, our [published construction rates](/payment-plans) are fixed per block.
+
+## The formula every quote should follow
+
+**Covered area = plot area × share of the plot built on × number of floors**
+
+**Construction cost = covered area × (grey structure rate + finishing rate)**
+
+Two things trip people up:
+
+- **Plot area is not covered area.** A 10 marla plot is 2,250 sq ft of land (with the 225 sq ft marla used by Twin Cities societies), but a double-storey house on it is around 3,600 sq ft of floor space.
+- **A quote without the covered area cannot be checked.** If a contractor gives a lump sum, ask how many square feet it assumes and at what rate.
+
+## What grey structure and finishing include
+
+**Grey structure** is the complete shell: excavation, foundation, RCC columns, beams and slabs, brickwork, plaster, damp-proofing, and the concealed conduits and pipes for electricity and plumbing.
+
+**Finishing** is everything that makes it liveable: floor tiles or marble, doors and windows, woodwork and wardrobes, kitchen, bathrooms and sanitary fittings, electrical switches and fixtures, paint, false ceilings and exterior finishes.
+
+Grey structure cost varies relatively little between builders who build properly, because it is driven by engineering. Finishing varies enormously, because it is driven by taste — which is why it often costs as much as the grey structure, or more. Our comparison of [grey structure versus fully finished](/blog/gray-structure-vs-fully-finished) explains the trade-offs.
+
+## Worked example: 5 marla house
+
+A 5 marla plot is 1,125 sq ft (25 × 45 ft is common). Building 85% of it on two floors:
+
+- Covered area: 1,125 × 85% × 2 = about **1,912 sq ft**
+- Grey structure at PKR 2,100: about **PKR 40 lac**
+- Standard finishing at PKR 3,200: about **PKR 61 lac**
+- **Total: about PKR 1.01 crore**
+
+## Worked example: 7 marla house
+
+A 7 marla plot is 1,575 sq ft. At 80% coverage on two floors:
+
+- Covered area: about **2,520 sq ft**
+- Grey structure: about **PKR 53 lac**
+- Standard finishing: about **PKR 81 lac**
+- **Total: about PKR 1.34 crore**
+
+## Worked example: 10 marla house
+
+A 10 marla plot is 2,250 sq ft (35 × 65 ft is common). At 80% coverage on two floors:
+
+- Covered area: about **3,600 sq ft**
+- Grey structure: about **PKR 76 lac**
+- Standard finishing: about **PKR 1.15 crore**
+- **Total: about PKR 1.91 crore**
+
+The same house at economy finishing (about PKR 4,100 per sq ft all-in) comes to roughly PKR 1.48 crore, and at luxury finishing (about PKR 7,700 all-in) to roughly PKR 2.77 crore. The grey structure barely changes between them — the finishing does.
+
+## Worked example: 1 kanal house
+
+A 1 kanal plot is 4,500 sq ft. Larger plots usually build a smaller share of the land because of bigger setbacks and lawns; at 70% coverage on two floors:
+
+- Covered area: about **6,300 sq ft**
+- Grey structure: about **PKR 1.32 crore**
+- Standard finishing: about **PKR 2.02 crore**
+- **Total: about PKR 3.34 crore**
+
+Your society’s byelaws decide how much you may actually cover — the [Buildable Area calculator](/tools/buildable-area) works it out from the setbacks.
+
+## Costs that are not in the per-square-foot rate
+
+Budget these separately:
+
+- **Map approval and society NOC fees** — see our [approvals guide](/blog/approved-map-noc-guide).
+- **Boundary wall and gate.**
+- **Utility connections** — electricity, gas and water demand notices and meters.
+- **Basement** — adds excavation, retaining walls and waterproofing, and is charged on its own area.
+- **Solar system** — the [Rooftop Solar Planner](/tools/rooftop-solar) sizes one from your bills.
+- **Contingency** — keep a few percent aside for design changes and price movement.
+
+## Why two quotes for the same house can differ so much
+
+- **Different covered areas assumed.** Always compare rate per sq ft on the same area.
+- **Different specifications.** Steel grade, cement brand, brick class and concrete ratios all change cost and quality. Our guide to [construction materials in Pakistan](/blog/construction-materials-pakistan) lists what to insist on.
+- **What is excluded.** One quote may include the boundary wall and approvals; another may not.
+- **Who carries price risk.** A fixed-rate contract protects you from material price rises; a labour-only contract leaves you buying materials at whatever the market charges.
+
+## How long it takes and how you pay
+
+A double-storey house typically takes roughly 10 to 18 months from excavation to handover, depending on size, finishing and approvals. Payments are usually tied to stages — foundation, each slab, brickwork, plaster, finishing — which our article on [construction stages and timelines](/blog/construction-stages-timeline-pakistan) walks through. If you need to spread the cost, see [buying a house on instalments in Islamabad](/blog/house-on-installments-islamabad).
+
+## Estimate your own house
+
+1. Find your plot area — the [Area Converter](/tools/area) helps if your documents use a different marla.
+2. Check your buildable footprint in the [Buildable Area calculator](/tools/buildable-area).
+3. Put the plot size, coverage and floors into the [Construction Cost calculator](/tools/construction-cost).
+4. Estimate the grey-structure materials with the [Material calculator](/tools/materials).
+5. Compare building with buying ready using [Buy vs Build](/tools/buy-vs-build).
+`,
+    faqs: [
+      { q: 'What is the construction cost per square foot in Islamabad in 2026?', a: 'As an indicative September 2026 figure, grey structure is around PKR 2,100 per sq ft and standard finishing around PKR 3,200 per sq ft, so about PKR 5,300 per sq ft for a standard finished house. Economy and luxury finishing move the total down or up substantially. Always get a written quote.' },
+      { q: 'How much does it cost to build a 5 marla house in Islamabad?', a: 'A double-storey 5 marla house has about 1,912 sq ft of covered area. At indicative September 2026 standard rates that is roughly PKR 1 crore for grey structure and finishing, excluding land, approvals and connections.' },
+      { q: 'How much does a 10 marla house cost to build?', a: 'About 3,600 sq ft of covered area on two floors. At indicative standard rates, roughly PKR 1.9 crore; economy finishing brings it nearer PKR 1.5 crore and luxury finishing towards PKR 2.8 crore.' },
+      { q: 'What is the grey structure cost of a 10 marla house?', a: 'At about PKR 2,100 per sq ft on 3,600 sq ft of covered area, roughly PKR 76 lac (indicative, September 2026).' },
+      { q: 'Is construction cost calculated on plot size or covered area?', a: 'On covered area — the total floor space across all storeys — not on plot size.' },
+      { q: 'What is not included in the construction rate?', a: 'Land, map approval and NOC fees, boundary wall, utility connections, basements (priced on their own area), solar and a contingency are normally budgeted separately.' },
+    ],
+  },
 ];
