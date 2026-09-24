@@ -2494,4 +2494,113 @@ We build houses in Faisal Hills on published block-wise rates and handle society
       { q: 'What kind of power of attorney is best for buying property?', a: 'A specific power of attorney naming the property and the acts permitted, executed and registered as required, rather than a general one covering all your affairs.' },
     ],
   },
+  {
+    id: 'house-construction-contract-checklist-pakistan',
+    title: 'House Construction Contract Checklist for Pakistan: 15 Things to Put in Writing Before You Build',
+    excerpt:
+      'Most construction disputes start with a vague contract. A clause-by-clause checklist for grey structure, finishing and turnkey contracts in Islamabad and Rawalpindi — scope, specifications, rates, stage payments, delays, variations, quality checks and handover.',
+    keyTakeaway:
+      'A safe house construction contract in Pakistan fixes the covered area and the rate per square foot, lists the exact specifications (steel grade, cement, bricks, concrete mix, finishing items), ties every payment to a completed and checked stage, sets a completion date with a remedy for delay, prices variations in advance, and lists what is excluded. If it is not written down, assume it is not included.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Mohsin Ali',
+    category: 'Construction',
+    tags: ['construction contract pakistan', 'grey structure contract', 'turnkey construction contract', 'contractor agreement islamabad', 'house construction agreement'],
+    image: '/assets/stock/architectural-plans.webp',
+    readTime: '11 min read',
+    content: `
+A contractor’s verbal promise is only as good as your memory of it — and theirs. Almost every construction dispute we hear about in the Twin Cities comes down to something that was “understood” but never written: the grade of steel, whether the boundary wall was included, what happens when prices rise, or when the house was supposed to be finished.
+
+Use this checklist whether you are signing a **grey structure**, **finishing** or **turnkey** contract. If you are unsure which suits you, read [grey structure versus fully finished](/blog/gray-structure-vs-fully-finished) first.
+
+## 1. Parties and property
+
+Full names, CNICs and addresses of both parties, and the exact property: society, block, plot number and size. If the contractor is a company, its registered details and who signs for it.
+
+## 2. Type of contract
+
+- **Labour only** — you buy materials; the contractor supplies labour. Cheaper on paper, but you carry all price and quality risk for materials.
+- **Grey structure with materials** — contractor supplies materials and labour for the shell.
+- **Turnkey** — everything to a finished, liveable house.
+
+State which one, clearly.
+
+## 3. Covered area and rate
+
+Write the **covered area in square feet**, floor by floor, and the **rate per square foot**. A lump sum without the area behind it cannot be checked. Our [construction cost guide](/blog/house-construction-cost-islamabad-per-sq-ft) and [Construction Cost calculator](/tools/construction-cost) help you judge whether the rate is reasonable.
+
+## 4. Drawings
+
+Attach the approved architectural drawings and the structural drawings, signed by both parties. The contractor builds to these, not to memory.
+
+## 5. Material specifications
+
+This is the clause that protects quality. Specify:
+
+- **Steel** — grade and approved brands.
+- **Cement** — type and approved brands.
+- **Bricks** — class, and rejection of under-burnt bricks.
+- **Concrete** — mix ratio or strength for foundations, columns and slabs, and curing period.
+- **Sand and crush** — source and cleanliness.
+- **Waterproofing and damp-proofing** method.
+
+Our guide to [construction materials in Pakistan](/blog/construction-materials-pakistan) lists what to insist on.
+
+## 6. Finishing schedule (for finishing or turnkey)
+
+List every finishing item with a brand, range or price allowance: floor tiles and marble, bathroom fittings, kitchen, doors and frames, windows, wardrobes, electrical wiring and switches, paint, ceilings and exterior finish. “Standard quality” means whatever the contractor wants it to mean.
+
+## 7. What is included and excluded
+
+State explicitly whether the contract covers: excavation and backfill, boundary wall and gate, water tanks, septic or sewerage connection, electrical and gas meters, map approval fees, water and electricity during construction, site security, and debris removal.
+
+## 8. Stage payments
+
+Tie each payment to a completed, checked stage — never to dates alone. A typical sequence: mobilisation advance (keep it modest), foundation, ground-floor slab, first-floor slab, brickwork, plaster, and then finishing milestones. See [construction stages and timelines](/blog/construction-stages-timeline-pakistan) for what each stage involves.
+
+## 9. Retention
+
+Hold back a small percentage of each payment until handover and the defects period ends. It is the most effective incentive to fix defects.
+
+## 10. Timeline and delay
+
+A start date, a completion date, and what happens if the work is late — for example a fixed deduction per week of delay beyond a grace period — together with legitimate reasons for extension (approvals held up, owner-requested changes).
+
+## 11. Price changes
+
+Who carries the risk if steel or cement prices rise during the job? A fixed-rate contract puts it on the contractor; a price-variation clause shares it by an agreed formula. Decide and write it down.
+
+## 12. Variations
+
+Any change you ask for — an extra room, better tiles — must be priced in writing and signed **before** the work is done. Otherwise the final bill becomes a negotiation.
+
+## 13. Quality checks and supervision
+
+Your right to inspect at any time, to have steel checked before concrete is poured, to require concrete cube tests where specified, and to reject work that does not meet the specification. If you are abroad, specify photo and video updates — our [guide for overseas Pakistanis](/blog/overseas-pakistanis-buy-property-islamabad) covers remote supervision.
+
+## 14. Handover and defects
+
+The handover inspection, the list of documents handed over (completion drawings, warranties, invoices), and a **defects liability period** during which the contractor fixes faults at their own cost.
+
+## 15. Disputes and termination
+
+How disputes are resolved (for example, mediation then arbitration), when either party can terminate, and how work done so far is valued if they do.
+
+## Before you sign
+
+- Compare at least two quotes on the **same area and specification**.
+- Visit a house the contractor has finished and speak to that owner.
+- Check that approvals are in place — our [approved map and NOC guide](/blog/approved-map-noc-guide) explains which.
+- Budget the costs outside the contract, such as approvals and connections.
+
+Alammana builds in Faisal Hills on [published fixed rates](/payment-plans) with written specifications, stage-linked payments and live site cameras for every client.
+`,
+    faqs: [
+      { q: 'What should a house construction contract include in Pakistan?', a: 'Parties and property, contract type, covered area and rate per square foot, drawings, material specifications, finishing schedule, inclusions and exclusions, stage payments, retention, timeline and delay remedies, price-change terms, variations, quality checks, handover and defects, and dispute terms.' },
+      { q: 'What is a turnkey construction contract?', a: 'A contract where the builder delivers a finished, liveable house for an agreed rate, covering both grey structure and finishing.' },
+      { q: 'How should construction payments be scheduled?', a: 'Against completed and checked stages — foundation, each slab, brickwork, plaster and finishing milestones — with a modest advance and a small retention held until the defects period ends.' },
+      { q: 'Who pays if material prices rise during construction?', a: 'Whoever the contract says. A fixed-rate contract puts the risk on the contractor; a price-variation clause shares it. Agree it in writing before starting.' },
+      { q: 'What is a defects liability period?', a: 'A period after handover during which the contractor must fix construction defects at their own cost, usually backed by a retention amount.' },
+    ],
+  },
 ];
