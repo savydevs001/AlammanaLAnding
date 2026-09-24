@@ -66,7 +66,7 @@ A calculator gives you a defensible budget; a real quote also needs the approved
       { q: 'Does the cost include the boundary wall and approvals?', a: 'No. Boundary wall, map approval and NOC fees, and utility connections are separate. Keep a contingency of a few percent for them.' },
     ],
     relatedTools: ['materials', 'buildable-area', 'buy-vs-build', 'area'],
-    relatedBlogs: ['house-construction-cost-faisal-hills', 'gray-structure-vs-fully-finished', 'construction-stages-timeline-pakistan'],
+    relatedBlogs: ['house-construction-cost-islamabad-per-sq-ft', 'house-construction-cost-faisal-hills', 'gray-structure-vs-fully-finished', 'construction-stages-timeline-pakistan'],
   },
 
   materials: {
@@ -105,7 +105,7 @@ Quantity is only half the story; quality matters more. Our guide to [constructio
       { q: 'Are the material prices current?', a: 'They are sample rates dated on the page. Steel and cement prices change often, so enter the rate your supplier quotes today.' },
     ],
     relatedTools: ['construction-cost', 'buildable-area'],
-    relatedBlogs: ['construction-materials-pakistan', 'house-construction-cost-faisal-hills'],
+    relatedBlogs: ['house-construction-cost-islamabad-per-sq-ft', 'construction-materials-pakistan', 'house-construction-cost-faisal-hills'],
   },
 
   'buildable-area': {
@@ -142,7 +142,7 @@ Societies in Islamabad and Rawalpindi generally use a 225 sq ft marla, while lan
       { q: 'Is the mumty (stair tower) counted in covered area?', a: 'It is usually treated separately and limited in size by byelaws. This calculator does not include it.' },
     ],
     relatedTools: ['construction-cost', 'area', 'materials'],
-    relatedBlogs: ['approved-map-noc-guide', 'house-construction-cost-faisal-hills'],
+    relatedBlogs: ['5-marla-vs-10-marla-house', 'approved-map-noc-guide', 'house-construction-cost-faisal-hills'],
   },
 
   area: {
@@ -180,7 +180,7 @@ Use the result with the [Construction Cost](/tools/construction-cost) or [Builda
       { q: 'How many square metres is 5 marla?', a: 'About 104.5 square metres with a 225 sq ft marla.' },
     ],
     relatedTools: ['buildable-area', 'construction-cost'],
-    relatedBlogs: ['buying-plot-on-installments-pakistan', 'investing-in-faisal-hills'],
+    relatedBlogs: ['marla-kanal-square-feet-explained', 'buying-plot-on-installments-pakistan', 'investing-in-faisal-hills'],
   },
 
   installments: {
@@ -217,7 +217,7 @@ For houses, Alammana offers milestone-based construction payment plans in Faisal
       { q: 'Monthly or quarterly instalments — which is better?', a: 'The total is the same. Monthly suits salaried buyers; quarterly suits business income. Choose the one you can pay on time.' },
     ],
     relatedTools: ['affordability', 'home-finance', 'transfer-costs'],
-    relatedBlogs: ['house-on-installments-islamabad', 'buying-plot-on-installments-pakistan'],
+    relatedBlogs: ['real-estate-islamabad-buyers-guide', 'house-on-installments-islamabad', 'buying-plot-on-installments-pakistan'],
   },
 
   'home-finance': {
@@ -257,7 +257,7 @@ Banks check your income, existing loans and the property’s legal status. Our g
       { q: 'What is present worth and why does it matter?', a: 'It converts every future payment into today’s money at your MARR, so options with different rates, fees and tenures can be compared on one number.' },
     ],
     relatedTools: ['affordability', 'installments', 'transfer-costs'],
-    relatedBlogs: ['house-on-installments-islamabad'],
+    relatedBlogs: ['home-loan-pakistan-emi-guide', 'house-on-installments-islamabad'],
   },
 
   affordability: {
@@ -292,7 +292,7 @@ The “cash only” figure shows what you can buy outright today. An [instalment
       { q: 'Should I keep savings in reserve?', a: 'Yes — keeping a few months of expenses aside protects you from missing instalments if income is interrupted.' },
     ],
     relatedTools: ['home-finance', 'installments', 'transfer-costs'],
-    relatedBlogs: ['house-on-installments-islamabad', 'buying-plot-on-installments-pakistan'],
+    relatedBlogs: ['home-loan-pakistan-emi-guide', 'house-on-installments-islamabad', 'buying-plot-on-installments-pakistan'],
   },
 
   'transfer-costs': {
@@ -333,7 +333,7 @@ Non-filers usually pay substantially higher withholding tax. If you are buying o
       { q: 'Who pays the society transfer fee?', a: 'Usually the buyer, but it can be negotiated. Agree it in writing before the transfer.' },
     ],
     relatedTools: ['affordability', 'installments', 'investment'],
-    relatedBlogs: ['faisal-hills-property-dealers-guide', 'buying-plot-on-installments-pakistan'],
+    relatedBlogs: ['property-transfer-taxes-pakistan-236k-236c', 'faisal-hills-property-dealers-guide', 'buying-plot-on-installments-pakistan'],
   },
 
   'buy-vs-build': {
@@ -368,7 +368,7 @@ See our comparison of [grey structure and fully finished construction](/blog/gra
       { q: 'What is a turnkey rate?', a: 'A single per-square-foot rate covering both grey structure and finishing, so the house is handed over ready to live in.' },
     ],
     relatedTools: ['construction-cost', 'affordability', 'investment'],
-    relatedBlogs: ['gray-structure-vs-fully-finished', 'construction-stages-timeline-pakistan'],
+    relatedBlogs: ['5-marla-vs-10-marla-house', 'gray-structure-vs-fully-finished', 'construction-stages-timeline-pakistan'],
   },
 
   investment: {
@@ -400,7 +400,7 @@ Development progress, approvals, road access and possession matter more than hea
       { q: 'What is a real return?', a: 'The return after inflation. If a plot grows 12% a year while inflation is 11%, your real gain is only about 1% a year.' },
     ],
     relatedTools: ['rent-yield', 'portfolio', 'partnership'],
-    relatedBlogs: ['investing-in-faisal-hills', 'real-estate-boom-faisal-hills-faisal-town-b17-ranked'],
+    relatedBlogs: ['plot-vs-house-investment-islamabad', 'investing-in-faisal-hills', 'real-estate-boom-faisal-hills-faisal-town-b17-ranked'],
   },
 
   'rent-yield': {
@@ -430,7 +430,7 @@ Residential rent in Pakistan usually returns less per year than capital growth i
       { q: 'How is rental yield calculated?', a: 'Yearly rent divided by the property price, times 100. Net yield first subtracts vacancy and running costs.' },
     ],
     relatedTools: ['investment', 'portfolio', 'buy-vs-build'],
-    relatedBlogs: ['investing-in-faisal-hills'],
+    relatedBlogs: ['plot-vs-house-investment-islamabad', 'investing-in-faisal-hills'],
   },
 
   partnership: {
@@ -465,7 +465,7 @@ Put the contribution, timeline, cost overruns, sale authority and exit terms in 
       { q: 'Is capital gains tax charged on selling a plot?', a: 'Capital gains tax may apply to the gain on disposal depending on the holding period and current law. Check the rate that applies to you.' },
     ],
     relatedTools: ['investment', 'construction-cost', 'transfer-costs'],
-    relatedBlogs: ['investing-in-faisal-hills', 'find-best-house-developers-islamabad'],
+    relatedBlogs: ['landowner-builder-partnership-pakistan', 'investing-in-faisal-hills', 'find-best-house-developers-islamabad'],
   },
 
   portfolio: {
@@ -494,7 +494,7 @@ Possession, development work, approvals and new road links tend to move prices i
       { q: 'What holding costs does a plot have?', a: 'Instalments or development charges, society maintenance, property tax and the opportunity cost of the money tied up.' },
     ],
     relatedTools: ['investment', 'rent-yield'],
-    relatedBlogs: ['real-estate-boom-faisal-hills-faisal-town-b17-ranked', 'investing-in-faisal-hills'],
+    relatedBlogs: ['plot-vs-house-investment-islamabad', 'real-estate-boom-faisal-hills-faisal-town-b17-ranked', 'investing-in-faisal-hills'],
   },
 
   'rooftop-solar': {
@@ -531,7 +531,7 @@ Rooftop frames must be designed for strong gusts. Poorly anchored locally made f
       { q: 'How long does solar take to pay back?', a: 'It depends on the system price, your tariff and how much of the output you use. The calculator estimates it from your figures.' },
     ],
     relatedTools: ['plot-orientation', 'construction-cost'],
-    relatedBlogs: ['house-construction-cost-faisal-hills'],
+    relatedBlogs: ['rooftop-solar-system-home-islamabad', 'house-construction-cost-faisal-hills'],
   },
 
   'plot-orientation': {
@@ -561,6 +561,6 @@ Neighbouring buildings, trees and street width change the picture, so treat this
       { q: 'Where should the lawn be in a north-facing house?', a: 'At the rear (south side), where it gets winter sun.' },
     ],
     relatedTools: ['rooftop-solar', 'buildable-area'],
-    relatedBlogs: ['house-construction-cost-faisal-hills', 'approved-map-noc-guide'],
+    relatedBlogs: ['rooftop-solar-system-home-islamabad', 'house-construction-cost-faisal-hills', 'approved-map-noc-guide'],
   },
 };

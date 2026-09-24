@@ -2320,4 +2320,95 @@ Approval status, visible development, possession, and road links matter far more
       { q: 'When should I sell an investment plot?', a: 'When its expected future growth after holding costs falls below what the money could earn elsewhere, regardless of past gains.' },
     ],
   },
+  {
+    id: 'check-housing-society-legal-cda-rda',
+    title: 'How to Check if a Housing Society Is Legal in Islamabad and Rawalpindi (CDA and RDA)',
+    excerpt:
+      'A step-by-step way to verify a housing society before you pay a token — which authority approves it, how to read approval status, what “NOC under process” really means, the red flags, and how to verify the specific plot and seller.',
+    keyTakeaway:
+      'To check if a housing society is legal, find out which authority it falls under — the Capital Development Authority (CDA) inside Islamabad Capital Territory, or the Rawalpindi Development Authority (RDA) for much of Rawalpindi district — and confirm the society’s name and status on that authority’s own published list of approved and illegal schemes, not just on the developer’s brochure. Then verify the specific plot or file and the seller directly with the society office.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Haseeb Bhatti',
+    category: 'Buying Guides',
+    tags: ['how to check housing society is legal', 'cda approved housing societies', 'rda approved societies', 'illegal housing societies islamabad', 'society noc check'],
+    image: '/assets/stock/aerial-housing.webp',
+    readTime: '10 min read',
+    content: `
+The most expensive mistake in Pakistani real estate is buying into a society that turns out not to be approved. Plots can be sold for years before problems surface — when possession never comes, maps are not approved, or utilities cannot be connected. The checks take a few days and cost almost nothing. This guide explains them.
+
+## Step 1: work out which authority is responsible
+
+Housing schemes are approved by the development authority for the area:
+
+- **Islamabad Capital Territory** — the **Capital Development Authority (CDA)**.
+- **Rawalpindi district**, including much of the GT Road and Motorway corridor towards Taxila — the **Rawalpindi Development Authority (RDA)** for the areas under its control; other parts of the district fall under the district council or other authorities.
+
+A society’s address alone can be misleading: many societies market themselves as “Islamabad” while being located in Rawalpindi district. Find where the land actually is.
+
+## Step 2: check the authority’s own list
+
+Both CDA and RDA publish lists of approved schemes and of illegal or unapproved schemes on their official websites and in public notices. Look for:
+
+- The society’s **exact registered name** — similarly named schemes are common.
+- **Which phase or blocks** are approved. Approval is often granted phase by phase; one approved phase does not mean every phase is.
+- The **status**: approved, NOC issued, under process, or declared illegal.
+
+If you cannot find it, visit or write to the authority. Do not rely on a screenshot or a copy of an approval letter supplied by the seller alone.
+
+## Step 3: understand what the status means
+
+- **Approved / NOC issued** — the layout plan has been approved for the stated area. This is the status you want for a plot you intend to build on.
+- **NOC under process** — the scheme has applied but is not yet approved. Buying is not automatically wrong, but you are carrying the risk that approval is delayed, conditioned on changes, or refused. The price should reflect that risk.
+- **Illegal / unapproved** — do not buy. Maps will not be approved and utilities may never be connected.
+
+Our [approved maps and NOC guide](/blog/approved-map-noc-guide) explains how society approval connects to your own building map approval later.
+
+## Step 4: check the land and development on the ground
+
+Visit the society, not just the sales office:
+
+- Are the roads, sewerage, water supply and electricity actually built in the block you are buying in?
+- Is there possession in that block — are people building?
+- Does the plot you are shown match the plot number and size on paper?
+
+Progress on the ground is the best evidence that a society can deliver what it sells.
+
+## Step 5: verify the specific plot or file
+
+At the society office:
+
+- Confirm the **plot or file number exists** and is registered to the seller.
+- Confirm there is **no dispute, lien or duplicate** on it.
+- Confirm **dues are clear** and what the transfer requires.
+- Confirm the **size and location** — especially for corner, park-facing or extra-land plots that carry a premium.
+
+## Step 6: verify the seller
+
+The seller’s CNIC must match the society’s record. If a representative is selling, ask for the original registered power of attorney and verify it. Pay through banking channels, against receipts, and complete the transfer at the society office. Our guide to [buying safely through property dealers](/blog/faisal-hills-property-dealers-guide) lists more warning signs.
+
+## Red flags
+
+- Prices far below comparable approved societies nearby.
+- Pressure to pay a token immediately “before prices rise”.
+- A society that cannot show its approval letter or whose name differs from the authority’s list.
+- Files sold with no clear plan for when plots will be allocated.
+- Payments requested in cash, or into a personal account.
+- No visible development despite years of sales.
+
+## After you have verified
+
+Budget the full cost including [transfer taxes and fees](/blog/property-transfer-taxes-pakistan-236k-236c), decide how you will pay (see our [home loan guide](/blog/home-loan-pakistan-emi-guide) and [instalment plan calculator](/tools/installments)), and read the complete [buyer’s guide to real estate in Islamabad](/blog/real-estate-islamabad-buyers-guide).
+
+Our [housing society guides](/societies) set out the approval status, blocks and plot sizes of the societies we work in, including Faisal Hills (RDA approved).
+`,
+    faqs: [
+      { q: 'How can I check if a housing society is approved by CDA?', a: 'Check the society’s exact name and phase on the Capital Development Authority’s published list of approved and illegal schemes, or confirm directly with CDA. Do not rely only on documents from the seller.' },
+      { q: 'How do I check if a society is approved by RDA?', a: 'Check the Rawalpindi Development Authority’s published lists of approved and illegal schemes for the society’s exact name and the phase you are buying in, or confirm with RDA directly.' },
+      { q: 'What does NOC under process mean?', a: 'The society has applied for approval but has not received it. You carry the risk that approval is delayed, changed or refused, so the price and your plans should reflect that.' },
+      { q: 'Can I build a house in an unapproved society?', a: 'Building maps are generally approved only in approved schemes, and utility connections can be refused, so building in an unapproved or illegal society carries serious legal and practical risk.' },
+      { q: 'How do I verify a plot file is genuine?', a: 'Confirm the file or plot number, owner name and dues directly at the society office, and check that there is no dispute, lien or duplicate on it before paying.' },
+      { q: 'Is Faisal Hills approved?', a: 'Faisal Hills is RDA approved. As with any society, confirm the specific block and plot with the society office before buying.' },
+    ],
+  },
 ];
