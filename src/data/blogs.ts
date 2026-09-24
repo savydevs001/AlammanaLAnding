@@ -2763,4 +2763,96 @@ When you are ready to look, our [buyer’s guide to real estate in Islamabad](/b
       { q: 'What costs come on top of the house price?', a: 'FBR advance tax, stamp duty, society transfer fee and commission; and if building, approvals, boundary wall, utility connections and a contingency.' },
     ],
   },
+  {
+    id: 'north-facing-vs-south-facing-house-pakistan',
+    title: 'North-Facing vs South-Facing House in Pakistan: Which Plot Facing Is Best and How to Design for It',
+    excerpt:
+      'Why plot facing matters at Islamabad’s latitude, how sunlight and heat fall on north, south, east and west-facing houses, where to put the lawn, bedrooms, kitchen and solar panels, and how design fixes a “bad” facing.',
+    keyTakeaway:
+      'In Pakistan the sun moves across the southern sky, so north and north-east facing plots are generally the most comfortable: the front stays out of the harsh sun and the rear lawn and living areas get winter sunlight. West and south-west facing fronts take the hottest afternoon sun and need shading. Any facing can work with the right layout — and the south side of the roof is where solar panels perform best.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Mohsin Ali',
+    category: 'Construction',
+    tags: ['north facing house pakistan', 'south facing house', 'best plot facing direction', 'house orientation islamabad', 'west facing house heat'],
+    image: '/assets/stock/villa-front.webp',
+    readTime: '9 min read',
+    content: `
+Two identical houses on the same street can feel completely different inside because of which way they face. At Islamabad and Rawalpindi’s latitude, around 33°N, the sun’s path is predictable — and designing around it makes a house cooler in summer, warmer in winter, and cheaper to run. Try your own plot in the [Plot Orientation Guide](/tools/plot-orientation).
+
+## How the sun moves over the Twin Cities
+
+- The sun rises in the east and sets in the west, but it travels across the **southern** part of the sky.
+- In **winter** it stays low in the south, so south-facing walls and windows receive warm, welcome sunlight.
+- In **summer** it climbs high, and the **west** side of a house takes the strongest, hottest late-afternoon sun.
+
+So: south is the “sunny side”, west is the “hot side”, north is the “cool side”, east gets gentle morning light.
+
+## “Facing” means the road side
+
+When people say a plot is north-facing, they mean the **front** — the road side — faces north. The back of the house then faces south.
+
+## North-facing and north-east facing plots
+
+The front stays cooler and free of glare; the rear (south) gets the sun.
+
+- Put the **lawn, courtyard and main living room at the rear** to catch winter sun.
+- Larger front windows are comfortable because they face away from the sun.
+- The rear roof faces south — ideal for **solar panels**.
+
+These are often the most sought-after facings for comfort.
+
+## East-facing plots
+
+Gentle morning sun at the front; the rear faces west and takes the afternoon heat.
+
+- **Bedrooms at the front** wake up to soft light.
+- **Shade the rear windows** — deep reveals, verandas or trees.
+
+## South and south-east facing plots
+
+The front gets sun most of the day — lovely in winter, hot in summer.
+
+- A **front lawn** stays sunny and dry.
+- Keep **bedrooms at the rear** (north) for cooler nights.
+- Shade the front with a **porch, deep sills or jaali**.
+
+## West and south-west facing plots
+
+The front takes the harshest afternoon sun in summer. They are perfectly buildable, but need more care:
+
+- **Minimise large west-facing glass**, or use shading and double glazing.
+- Put **stairs, stores, bathrooms and the kitchen** on the west side as a heat buffer.
+- **Insulate the roof and west wall**, and plant trees in the front setback.
+
+## Room placement at a glance
+
+- **Living room** — the side that gets winter sun, usually the south side.
+- **Bedrooms** — north or east for cooler nights and gentle morning light.
+- **Kitchen** — where cross-ventilation is good; avoid the hottest west wall for long cooking hours in summer if possible.
+- **Stairs and services** — on the west to shield living spaces.
+- **Lawn** — on the south side for winter sun.
+
+## Ventilation
+
+Cross-ventilation — openings on opposite sides of a room — does more for summer comfort than almost anything else. A central stair or light well can pull hot air up and out.
+
+## Solar panels and orientation
+
+Panels produce the most over a year facing **south at about 30°** tilt; east or west-facing arrays lose roughly a tenth. Plan the south side of the roof clear of water tanks and the stair tower. See our [rooftop solar guide](/blog/rooftop-solar-system-home-islamabad) and the [Rooftop Solar Planner](/tools/rooftop-solar).
+
+## Setbacks and neighbours matter too
+
+A tall neighbour to the south can shade your lawn and roof all winter; a wide road in front can open a hot facing to more sun. Check the setbacks your society allows with the [Buildable Area calculator](/tools/buildable-area), and before you buy, visit the plot at different times of day.
+
+Building in Faisal Hills? Our architects plan layouts around each plot’s facing — see our [construction rates](/payment-plans) and [what building there costs](/blog/house-construction-cost-islamabad-per-sq-ft).
+`,
+    faqs: [
+      { q: 'Which facing house is best in Pakistan?', a: 'North and north-east facing houses are generally the most comfortable at Pakistan’s latitude, because the front avoids harsh sun and the rear gets winter sunlight. Any facing can be comfortable with good design.' },
+      { q: 'Is a west-facing house hot?', a: 'The front of a west-facing house takes the hottest late-afternoon sun in summer, so it needs shading, insulation and service rooms on the west side.' },
+      { q: 'Where should the lawn be in a north-facing house?', a: 'At the rear, on the south side, where it gets winter sun.' },
+      { q: 'Which side of the roof is best for solar panels in Pakistan?', a: 'The south side, tilted at about 30°. East or west-facing panels produce roughly a tenth less over a year.' },
+      { q: 'What does a north-facing plot mean?', a: 'That the front of the plot — the road side — faces north, so the back of the house faces south.' },
+    ],
+  },
 ];

@@ -561,6 +561,6 @@ Neighbouring buildings, trees and street width change the picture, so treat this
       { q: 'Where should the lawn be in a north-facing house?', a: 'At the rear (south side), where it gets winter sun.' },
     ],
     relatedTools: ['rooftop-solar', 'buildable-area'],
-    relatedBlogs: ['rooftop-solar-system-home-islamabad', 'house-construction-cost-faisal-hills', 'approved-map-noc-guide'],
+    relatedBlogs: ['north-facing-vs-south-facing-house-pakistan', 'rooftop-solar-system-home-islamabad', 'house-construction-cost-faisal-hills', 'approved-map-noc-guide'],
   },
 };
