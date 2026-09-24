@@ -2135,4 +2135,97 @@ Whatever you choose, check the society’s approval and possession status first 
       { q: 'Can a 10 marla house be divided into portions?', a: 'Yes — double-storey 10 marla houses are often designed with a self-contained unit on each floor, which suits joint families and letting one floor.' },
     ],
   },
+  {
+    id: 'landowner-builder-partnership-pakistan',
+    title: 'Landowner and Builder Partnerships in Pakistan: How the Profit Split Works and When It Beats Selling Your Plot',
+    excerpt:
+      'You own a plot; someone else has the money or the construction capability. How joint-venture construction deals are structured, how profit is split fairly, the taxes involved, and a worked example comparing building in partnership with simply selling the plot.',
+    keyTakeaway:
+      'In a landowner–builder partnership, the plot is counted as the landowner’s capital at its current value, the partner funds construction, and after the house is sold the profit (sale price minus total capital, less tax) is split in proportion to capital or at an agreed ratio. In a worked example — a PKR 2 crore plot, PKR 1.5 crore construction, PKR 4.8 crore sale over 18 months with 20% tax on profit — the landowner ends with about PKR 2.59 crore versus PKR 1.91 crore from selling today after capital gains tax, still about PKR 27.9 lac better off after discounting to today’s money.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Ch. Muhammad Abdullah',
+    category: 'Investment',
+    tags: ['landowner builder partnership', 'joint venture construction pakistan', 'profit sharing construction', 'sell plot or build', 'construction partnership agreement'],
+    image: '/assets/stock/villa-exterior.webp',
+    readTime: '12 min read',
+    content: `
+Many plot owners in the Twin Cities face the same choice: sell the plot now, or build on it and sell a finished house for much more — without having the cash to build. A partnership with an investor or a builder bridges that gap. Done well, both sides earn more than they would alone. Done badly, it ends in disputes about money, delays and who decides when to sell.
+
+This article explains how these deals are structured, how to split profit fairly, and how to check whether building actually beats selling. The [Partnership Profit Analyzer](/tools/partnership) runs every number below with your own figures.
+
+## How a typical partnership is structured
+
+- **The landowner** contributes the plot — and sometimes some cash.
+- **The cash partner or builder** funds and manages construction.
+- **The house is sold** when finished (or at an agreed point), and the proceeds repay capital and then split the profit.
+
+Variations include the builder taking a share of the finished units instead of cash, or the landowner keeping one floor and the builder selling the other. The arithmetic below applies to all of them once you express each side’s contribution in money.
+
+## Valuing each side’s contribution
+
+**The plot at its current market value**, not what the landowner paid years ago. If the landowner sold today, that is what they would receive (before tax), so it is the fair measure of what they are putting at risk.
+
+**Construction at its real cost**, including approvals, utility connections and a contingency. Our [construction cost guide](/blog/house-construction-cost-islamabad-per-sq-ft) and the [Construction Cost calculator](/tools/construction-cost) help set a realistic budget. Underestimating construction is the most common source of partnership disputes.
+
+## Splitting the profit
+
+**Gross profit = sale price − total capital.**
+**After-tax profit = gross profit − tax on the project profit.**
+
+The profit is then split either:
+
+- **By capital contributed** — the simplest and easiest to defend. If the plot is worth PKR 2 crore and construction costs PKR 1.5 crore, the landowner has 57.1% of the capital and receives 57.1% of the profit.
+- **At an agreed ratio** — for example, when the builder also contributes expertise and carries the construction risk. Any split that differs from the capital shares should be justified and written down.
+
+## A worked example
+
+Consider a plot worth **PKR 2 crore** today, bought years ago for PKR 1.4 crore. A partner will fund **PKR 1.5 crore** of construction. The finished house is expected to sell for **PKR 4.8 crore** in **18 months**. Assume 20% tax on the project profit, 15% capital gains tax if the plot is sold now, and a 12% yearly discount and inflation rate.
+
+**If the landowner sells the plot today:** the gain is PKR 60 lac; capital gains tax of about PKR 9 lac leaves about **PKR 1.91 crore**.
+
+**If they build in partnership:**
+- Total capital: PKR 3.5 crore. Gross profit: PKR 1.3 crore. Tax: PKR 26 lac. After-tax profit: PKR 1.04 crore.
+- Split by capital (57.1% / 42.9%): the landowner’s profit is about PKR 59.4 lac, so they receive about **PKR 2.59 crore** in total.
+- Discounted to today’s money over 18 months, that is about **PKR 2.19 crore** — still about **PKR 27.9 lac more** than selling today.
+- The cash partner earns about PKR 44.6 lac on PKR 1.5 crore — about 29.7% in total, or roughly 18.9% a year.
+
+These figures are illustrative. Change the sale price, timeline or taxes and the answer can flip — which is exactly why it is worth running the numbers before agreeing.
+
+## When selling today is better
+
+- The expected sale price is uncertain or the local market is slow.
+- Construction is likely to overrun in cost or time.
+- The landowner needs the money now.
+- The partner is not experienced in building to a standard buyers will pay for.
+
+## What the agreement must cover
+
+Put everything in a written agreement reviewed by a lawyer:
+
+1. **Contributions and their agreed values.**
+2. **The construction specification** — materials, finishes and who approves changes. Our guide to [construction materials](/blog/construction-materials-pakistan) is a good checklist.
+3. **Budget, timeline and who pays overruns.**
+4. **Who holds the title** during construction and on what terms, including any power of attorney.
+5. **Sale authority** — the minimum price, who can accept an offer, and the deadline to sell.
+6. **The profit split and the order of payments** (capital first, then profit).
+7. **Exit and dispute terms** — what happens if one party wants out or construction stops.
+8. **Record-keeping** — every payment through banks, with receipts, and access to the site.
+
+## Taxes to plan for
+
+Selling a completed house attracts FBR withholding on the sale and potentially capital gains tax; the buyer pays their own taxes. Our [property transfer taxes guide](/blog/property-transfer-taxes-pakistan-236k-236c) explains 236C, 236K and the provincial duties. The analyzer’s tax inputs are simplified — confirm your actual position with a tax adviser.
+
+## How we work with plot owners
+
+Alammana builds on published block-wise rates in Faisal Hills, with live site cameras and a client portal that tracks stages, materials and documents — which removes much of the trust problem in any partnership. See our [construction rates](/payment-plans) and our guide to [choosing a house developer in Islamabad](/blog/find-best-house-developers-islamabad).
+`,
+    faqs: [
+      { q: 'How is profit shared between a landowner and a builder?', a: 'Most simply in proportion to capital contributed, counting the plot at its current market value. Any other ratio should be agreed and justified in writing.' },
+      { q: 'Should I sell my plot or build in partnership?', a: 'Compare what you would receive from selling today after tax with your share of the finished project discounted to today’s money. If the sale price, timeline or construction cost is uncertain, selling can be the safer choice.' },
+      { q: 'How should the plot be valued in a partnership?', a: 'At its current market value — what the landowner would receive by selling now — not the original purchase price.' },
+      { q: 'What should a construction partnership agreement include?', a: 'Contributions and values, specifications, budget and overrun responsibility, title arrangements, sale authority and minimum price, the profit split and payment order, exit terms and record-keeping.' },
+      { q: 'Who pays tax in a construction partnership?', a: 'Tax on the sale and any gain is paid according to how the title and proceeds are held and the agreement between the parties. Get tax advice before signing.' },
+    ],
+  },
 ];
