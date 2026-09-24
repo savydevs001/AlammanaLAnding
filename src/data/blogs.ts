@@ -2045,4 +2045,94 @@ Round up to whole panels, and check the roof can take them.
       { q: 'How long does solar take to pay back?', a: 'Divide the system cost by the yearly saving (units you would otherwise buy × tariff). It pays back fastest when you use most of the output during the day.' },
     ],
   },
+  {
+    id: '5-marla-vs-10-marla-house',
+    title: '5 Marla vs 10 Marla House: Space, Construction Cost, Rooms and Resale Compared',
+    excerpt:
+      'Should you build or buy a 5 marla or a 10 marla house in Islamabad and Rawalpindi? A side-by-side look at covered area, typical room layouts, construction cost, running costs and resale — and a way to decide.',
+    keyTakeaway:
+      'A 10 marla house gives roughly twice the land (2,250 vs 1,125 sq ft) and nearly twice the covered area of a 5 marla house — about 3,600 vs 1,912 sq ft on two floors — so it costs roughly twice as much to build (about PKR 1.9 crore vs PKR 1 crore at indicative September 2026 standard rates, excluding land). A 5 marla house suits a family of four to five on a tighter budget and lets and resells to a wider market; a 10 marla house suits larger or joint families who need separate floors and parking for two cars.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Mohsin Ali',
+    category: 'Construction Costs',
+    tags: ['5 marla vs 10 marla', '5 marla house design', '10 marla house', 'which house size to build', '5 marla house cost'],
+    image: '/assets/stock/villa-front.webp',
+    readTime: '10 min read',
+    content: `
+Five and ten marla are the two most common plot sizes in the housing societies around Islamabad and Rawalpindi. Choosing between them is mostly a trade-off between budget and space, but a few less obvious factors — parking, separate floors, running costs and who will buy it from you later — often decide it. Figures below use the 225 sq ft marla used by Twin Cities societies; see our [marla and kanal guide](/blog/marla-kanal-square-feet-explained) if your documents use a different one.
+
+## Land and covered area
+
+- **5 marla** — 1,125 sq ft of land, commonly 25 × 45 ft. On two floors at about 85% coverage, roughly **1,912 sq ft** of covered area.
+- **10 marla** — 2,250 sq ft of land, commonly around 35 × 65 ft. On two floors at about 80% coverage, roughly **3,600 sq ft** of covered area.
+
+A 10 marla house usually leaves more open space — a real lawn and a wider car porch — because larger plots have larger setbacks. Check the exact footprint with the [Buildable Area calculator](/tools/buildable-area).
+
+## What fits inside
+
+Layouts vary with the architect, but typical double-storey arrangements are:
+
+**5 marla**
+- 3 to 4 bedrooms with attached baths
+- A drawing room and a lounge, sometimes combined on the ground floor
+- One kitchen
+- Parking for one car
+- A small lawn or none
+
+**10 marla**
+- 5 to 6 bedrooms, often split so each floor works as a self-contained unit
+- Separate drawing and dining, plus a lounge on each floor
+- A kitchen on each floor if the family wants separate portions
+- Parking for two cars
+- A proper lawn
+
+The ability to run the upper and lower floors as separate portions is often the deciding factor for joint families — and for rental income.
+
+## Construction cost
+
+Construction is priced per square foot of covered area. At the indicative September 2026 standard rates in our [Construction Cost calculator](/tools/construction-cost) (about PKR 2,100 per sq ft grey structure and PKR 3,200 finishing):
+
+- **5 marla:** about PKR 40 lac grey structure + PKR 61 lac finishing = **about PKR 1 crore**
+- **10 marla:** about PKR 76 lac grey structure + PKR 1.15 crore finishing = **about PKR 1.9 crore**
+
+Finishing choices move these a lot in both directions. Our detailed [construction cost breakdown for Islamabad](/blog/house-construction-cost-islamabad-per-sq-ft) works through economy and luxury finishing too.
+
+## Running costs
+
+A larger house costs more to keep: more rooms to cool and heat, larger electricity bills, more to paint and repair, and often higher society maintenance charges. Solar can offset a lot of the electricity cost — the [Rooftop Solar Planner](/tools/rooftop-solar) sizes a system for either house, and a 10 marla roof fits considerably more panels.
+
+## Rent and resale
+
+- **5 marla houses** sit in the most affordable price bracket for families, so the pool of buyers and tenants is wider, and they tend to sell and let faster.
+- **10 marla houses** attract fewer but better-funded buyers and tenants. Upper and lower portions can be let separately, which can improve the rental income per square foot.
+
+Compare the numbers for a specific property with the [Rental Yield calculator](/tools/rent-yield).
+
+## How to decide
+
+Choose **5 marla** if:
+- Your family is four to five people.
+- Budget is the main constraint, or you want to build without finance.
+- You value easy resale and letting.
+
+Choose **10 marla** if:
+- You have a larger or joint family who need separate floors.
+- You need parking for two cars or a real lawn.
+- You plan to let one portion and live in the other.
+
+## A middle path
+
+Seven and eight marla plots sit between the two and are available in many societies. So is building a 5 marla house on three floors where byelaws allow — though stairs and structure take a bigger share of the space.
+
+Whatever you choose, check the society’s approval and possession status first — our [buyer’s guide to real estate in Islamabad](/blog/real-estate-islamabad-buyers-guide) lists the checks — and see our [Faisal Hills construction rates](/payment-plans) for fixed block-wise prices.
+`,
+    faqs: [
+      { q: 'How much bigger is a 10 marla house than a 5 marla house?', a: 'It has twice the land (2,250 vs 1,125 sq ft) and, on two floors, roughly 3,600 vs 1,912 sq ft of covered area.' },
+      { q: 'How many rooms can be built on 5 marla?', a: 'A typical double-storey 5 marla house has 3 to 4 bedrooms with attached baths, a drawing room, a lounge and a kitchen, with parking for one car.' },
+      { q: 'How much does it cost to build a 10 marla house compared to 5 marla?', a: 'Roughly twice as much, because cost is per square foot of covered area: about PKR 1.9 crore versus PKR 1 crore at indicative September 2026 standard rates, excluding land.' },
+      { q: 'Is a 5 marla house good for investment?', a: 'It sits in the most affordable bracket, so it usually has the widest pool of buyers and tenants and lets and sells faster.' },
+      { q: 'Can a 10 marla house be divided into portions?', a: 'Yes — double-storey 10 marla houses are often designed with a self-contained unit on each floor, which suits joint families and letting one floor.' },
+    ],
+  },
 ];
