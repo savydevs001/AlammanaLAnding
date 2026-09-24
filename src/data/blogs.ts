@@ -2411,4 +2411,87 @@ Our [housing society guides](/societies) set out the approval status, blocks and
       { q: 'Is Faisal Hills approved?', a: 'Faisal Hills is RDA approved. As with any society, confirm the specific block and plot with the society office before buying.' },
     ],
   },
+  {
+    id: 'overseas-pakistanis-buy-property-islamabad',
+    title: 'Overseas Pakistanis Buying Property or Building a House in Islamabad: A Step-by-Step Guide',
+    excerpt:
+      'How to buy a plot or house, or build one, in Islamabad and Rawalpindi while living abroad — power of attorney, verifying from a distance, sending money through banks, taxes and filer status, and how to keep control of construction you cannot visit.',
+    keyTakeaway:
+      'Overseas Pakistanis can buy and build in Islamabad without travelling for every step: appoint a trusted representative through a registered power of attorney, verify the society, plot and seller directly with the society office, send money only through formal banking channels into the seller’s or builder’s verified account against written receipts, and choose a builder who gives you real visibility — live site cameras, stage-by-stage updates and copies of every document.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Ch. Muhammad Abdullah',
+    category: 'Buying Guides',
+    tags: ['overseas pakistanis property islamabad', 'buy plot from abroad pakistan', 'build house in pakistan from abroad', 'power of attorney property pakistan', 'nicop property purchase'],
+    image: '/assets/stock/villa-exterior.webp',
+    readTime: '12 min read',
+    content: `
+For Pakistanis working in the Gulf, the UK, Europe or North America, a house or plot back home is often the biggest financial decision they make — and the one they can least supervise in person. Most horror stories come from the same few gaps: an unverified seller, money sent through informal channels, or construction that nobody independent was watching.
+
+This guide sets out a process that closes those gaps, whether you are buying a plot, buying a house or building one.
+
+## Step 1: decide what you are buying for
+
+Investment, a family home for parents, or a house to return to — the answer changes where you should buy and what matters. A home for family soon needs possession, completed infrastructure and nearby schools and hospitals. An investment can sit in a developing, approved society. Our [plot versus house investment guide](/blog/plot-vs-house-investment-islamabad) and [buyer’s guide to real estate in Islamabad](/blog/real-estate-islamabad-buyers-guide) explain the trade-offs.
+
+## Step 2: appoint a representative you can hold accountable
+
+You will need someone on the ground to visit the society, sign documents and attend the transfer. This is done through a **power of attorney (POA)**:
+
+- Execute it before a Pakistani embassy or consulate (or as otherwise legally required where you live), and register it in Pakistan as required.
+- Make it **specific** — name the property and the acts the attorney may perform (buy, sign the transfer, pay dues) — rather than a general POA over all your affairs.
+- Choose someone whose interests are aligned with yours, and keep copies of everything they sign.
+
+Many families use a relative. Others prefer a professional firm that handles transfers and documentation and is accountable under a written agreement.
+
+## Step 3: verify from a distance
+
+The same checks apply as for a local buyer — they just need to be done by someone you trust, with evidence sent to you:
+
+1. **Society approval** — confirm the society and phase on the CDA or RDA list. Our guide to [checking whether a housing society is legal](/blog/check-housing-society-legal-cda-rda) explains how.
+2. **The plot or file** — confirm at the society office that it exists, is registered to the seller, and has no dispute or dues.
+3. **The seller** — the CNIC must match the society record.
+4. **Photos and video** of the plot, with the plot number visible, and of development in the block.
+
+Ask for copies of the society’s verification letters, not verbal assurances.
+
+## Step 4: send money only through banks
+
+- Send funds through formal banking channels from your own account, including Roshan Digital Accounts or remittance into a Pakistani account in your name.
+- Pay the seller or builder into an **account in their verified name** — never cash, never a third party’s account.
+- Get a **written receipt** for every payment that names the property and the purpose.
+
+Formal remittance also creates the paper trail you will need for tax and for any future sale.
+
+## Step 5: understand taxes and filer status
+
+FBR advance tax on purchase (section 236K) and on sale (236C) depends on your status on the Active Taxpayers List, and non-filers pay substantially more. Overseas Pakistanis can file returns in Pakistan; check your status before the transaction. Our [transfer taxes guide](/blog/property-transfer-taxes-pakistan-236k-236c) and [Transfer Taxes & Fees calculator](/tools/transfer-costs) explain each charge.
+
+## Step 6: if you are building, insist on visibility
+
+Construction you cannot visit is where most overseas clients lose money: substituted materials, stages billed before they are done, and budgets that drift. Before you sign with a builder, ask:
+
+- **Is the rate fixed per square foot, in writing?** Check it with the [Construction Cost calculator](/tools/construction-cost) and our [construction cost guide](/blog/house-construction-cost-islamabad-per-sq-ft).
+- **Are payments tied to completed stages** — foundation, each slab, brickwork, plaster, finishing? See [construction stages and timelines](/blog/construction-stages-timeline-pakistan).
+- **Can you see the site?** Live cameras and dated photo updates let you check progress yourself.
+- **Will you get the documents?** Approved map, NOCs, receipts, material invoices and test reports.
+- **Who is responsible for each stage**, and how do you reach them?
+
+## Step 7: complete the transfer properly
+
+Your attorney attends the society office with the seller, pays the transfer fee and taxes in the correct names, and collects the transfer letter or allotment in your name. Ask for scanned copies the same day and the originals by courier or on your next visit.
+
+## How Alammana works with overseas clients
+
+We build houses in Faisal Hills on published block-wise rates and handle society transfers, approvals and construction documentation end to end, including acting under a power of attorney. Clients get 24/7 live camera access to their site and a private portal showing stages completed, work in progress, materials used and legal documents. See our [overseas page](/overseas) and [construction rates](/payment-plans).
+`,
+    faqs: [
+      { q: 'Can overseas Pakistanis buy property in Islamabad?', a: 'Yes. They can buy and build through a representative holding a registered, specific power of attorney, verify documents with the society, and pay through formal banking channels.' },
+      { q: 'Do I need to travel to Pakistan to buy a plot?', a: 'Not necessarily. A representative with a registered power of attorney can complete verification and the transfer on your behalf.' },
+      { q: 'How should I send money for a property purchase in Pakistan?', a: 'Only through formal banking channels from your own account, into an account in the verified name of the seller or builder, against written receipts.' },
+      { q: 'Do overseas Pakistanis pay more property tax?', a: 'Rates depend on whether you are on the FBR Active Taxpayers List. Non-filers pay substantially higher withholding tax, so check your status before buying or selling.' },
+      { q: 'How can I monitor house construction from abroad?', a: 'Choose a builder with a fixed written rate, stage-linked payments, live site cameras, dated photo updates and copies of all approvals, receipts and invoices.' },
+      { q: 'What kind of power of attorney is best for buying property?', a: 'A specific power of attorney naming the property and the acts permitted, executed and registered as required, rather than a general one covering all your affairs.' },
+    ],
+  },
 ];
