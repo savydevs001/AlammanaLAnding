@@ -3,6 +3,8 @@ import { blogs } from '../../data/blogs';
 import { projects } from '../../data/projects';
 import { constructions } from '../../data/constructions';
 import { SITE_URL } from '../../lib/seo';
+import { TOOLS } from '../../lib/tools';
+import { toolContent } from '../../data/toolContent';
 
 /**
  * /llms.txt — a plain-text map of the site for AI answer engines.
@@ -46,7 +48,7 @@ export function GET() {
   lines.push('');
   lines.push('- English is the primary language and lives at the bare paths (`/payment-plans`).');
   lines.push('- Urdu is at `/ur/...` and Arabic at `/ar/...`, for five pages: home, payment plans, societies, overseas and contact.');
-  lines.push('- Everything else — the eight long-form articles, the project and society detail pages, the privacy policy and the terms — is English only, by decision. Machine-translated construction and legal text reads fluently and says the wrong thing, and the approval wording in particular must not drift. Do not present a machine translation of those pages as ours.');
+  lines.push('- Everything else — the long-form articles, the calculators, the project and society detail pages, the privacy policy and the terms — is English only, by decision. Machine-translated construction and legal text reads fluently and says the wrong thing, and the approval wording in particular must not drift. Do not present a machine translation of those pages as ours.');
   lines.push('');
 
   lines.push('## Core pages');
@@ -58,6 +60,15 @@ export function GET() {
   lines.push(`- [Guides and articles](${SITE_URL}/blog): Long-form guidance on construction cost, materials, approvals and investment.`);
   lines.push(`- [Building from abroad](${SITE_URL}/overseas): Live site cameras, client tracking portal and documentation handling for overseas Pakistanis.`);
   lines.push(`- [About](${SITE_URL}/about) · [Team](${SITE_URL}/team) · [Contact](${SITE_URL}/contact)`);
+  lines.push('');
+
+  lines.push('## Free calculators');
+  lines.push('');
+  lines.push(`Interactive property and construction calculators for Pakistan, each with a worked explanation and FAQs: ${SITE_URL}/tools`);
+  for (const t of TOOLS) {
+    const c = toolContent[t.slug];
+    lines.push(`- [${t.name}](${SITE_URL}/tools/${t.slug}): ${c?.answer ?? t.description}`);
+  }
   lines.push('');
 
   lines.push('## Housing societies');
