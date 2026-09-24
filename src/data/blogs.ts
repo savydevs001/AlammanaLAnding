@@ -2603,4 +2603,88 @@ Alammana builds in Faisal Hills on [published fixed rates](/payment-plans) with 
       { q: 'What is a defects liability period?', a: 'A period after handover during which the contractor must fix construction defects at their own cost, usually backed by a retention amount.' },
     ],
   },
+  {
+    id: 'rent-out-house-islamabad-landlord-guide',
+    title: 'Renting Out a House in Islamabad and Rawalpindi: The Landlord’s Guide to Rent, Tenants and Agreements',
+    excerpt:
+      'How to set the right rent, screen tenants, register them with the police, write a tenancy agreement that protects you, handle the security deposit and increases, and work out what the house really earns after costs.',
+    keyTakeaway:
+      'To rent out a house safely in Islamabad or Rawalpindi: set rent from comparable houses nearby, verify the tenant’s identity and references, register the tenant with the local police as required, sign a written tenancy agreement on stamp paper covering rent, deposit, yearly increase, notice period and maintenance, and take the deposit and rent through a bank. Judge the house by its net yield — rent after empty months and upkeep — not the advertised rent.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Haseeb Bhatti',
+    category: 'Investment',
+    tags: ['rent out house islamabad', 'tenancy agreement pakistan', 'tenant registration islamabad police', 'house rent rawalpindi', 'landlord guide pakistan', 'rental agreement format'],
+    image: '/assets/stock/modern-house-2.webp',
+    readTime: '10 min read',
+    content: `
+A house that earns rent every month is one of the most dependable investments in the Twin Cities — when it is let to the right tenant on the right terms. When it is not, it can mean months of unpaid rent, damage, and a difficult eviction. Most of that risk is removed by a few habits at the start of every tenancy.
+
+## Setting the rent
+
+Rent follows three things: **location** (commute, schools, markets), **condition** (how recently the house was built or refurbished) and **what else is available** nearby. Look at houses of the same size in the same society or sector, and adjust for:
+
+- Separate upper and lower portions — often let separately, which can raise total rent.
+- Parking, a lawn, gas availability and backup power or solar.
+- Furnishing, if any.
+
+Pricing slightly below comparable houses usually lets faster, and an empty month costs more than a small discount.
+
+## What the house really earns
+
+**Net yield = (rent × months actually let − yearly costs) ÷ house value.**
+
+Costs include repairs and repainting between tenants, society maintenance charges, property tax and any agent’s fee. Use the [Rental Yield calculator](/tools/rent-yield) to compare the net return with other uses of the money, and our [plot versus house investment guide](/blog/plot-vs-house-investment-islamabad) for the bigger picture.
+
+## Screening tenants
+
+- **Identity** — copy of the CNIC (or passport and visa for foreign nationals), and verify it.
+- **Employment or business** — employer letter, or business details.
+- **References** — the previous landlord, if possible.
+- **Family size and use** — residential use only unless you agree otherwise.
+
+Meet the tenant yourself, even if an agent found them.
+
+## Register the tenant with the police
+
+In Islamabad and in Punjab, landlords are required to register tenants with the local police, usually through a tenant registration form with copies of the tenant’s and owner’s identity documents — many areas now allow this online or at a police facilitation centre. Registration protects you and is often requested by the society as well. Do it before handing over the keys.
+
+## The tenancy agreement
+
+Write it on stamp paper of the appropriate value and have it signed and witnessed. Include:
+
+1. **Parties** — names, CNICs, addresses.
+2. **Property** — address, portion (upper, lower or whole) and fixtures included.
+3. **Rent** — amount, due date, and payment method (bank transfer).
+4. **Security deposit** — amount, and when and how it is returned, with deductions only for unpaid dues and damage beyond normal wear.
+5. **Advance rent**, if any.
+6. **Term** — commonly eleven months or one year.
+7. **Yearly increase** — a fixed percentage on renewal, agreed now.
+8. **Utilities** — who pays electricity, gas, water and society charges, and that bills must be cleared before leaving.
+9. **Maintenance** — who pays for minor repairs, and that major repairs are the landlord’s.
+10. **Use** — residential only; no subletting without written permission.
+11. **Notice period** — for either side to end the tenancy.
+12. **Inspection** — the landlord’s right to inspect with notice.
+13. **Handover condition** — attach dated photos of the house at move-in.
+
+## Money through the bank
+
+Take the deposit and rent by bank transfer, and give a receipt for any other payment. It creates a record for both sides and for tax.
+
+## Keeping a good tenant
+
+Repair things promptly, keep increases to what was agreed, and give notice before inspections. A tenant who stays for years is worth more than a slightly higher rent from someone new.
+
+## Building to rent
+
+If you are building a house to let, designing the upper and lower floors as self-contained portions — each with its own entrance, kitchen and meters where possible — usually earns more than letting it as one house. Our [5 marla versus 10 marla guide](/blog/5-marla-vs-10-marla-house) and [construction cost guide](/blog/house-construction-cost-islamabad-per-sq-ft) help you plan it, and our [Faisal Hills construction rates](/payment-plans) are published by block.
+`,
+    faqs: [
+      { q: 'Is tenant registration with the police required in Islamabad?', a: 'Yes. Landlords in Islamabad and Punjab are required to register tenants with the local police, usually with copies of both parties’ identity documents; many areas allow this online or at a police facilitation centre.' },
+      { q: 'What should a tenancy agreement include in Pakistan?', a: 'Parties, property, rent and due date, security deposit and refund terms, term, yearly increase, utilities, maintenance, permitted use, notice period, inspection rights and the handover condition.' },
+      { q: 'How much security deposit is normal for a house in Islamabad?', a: 'It is agreed between landlord and tenant and is commonly a few months’ rent. Write the amount and the refund conditions in the agreement.' },
+      { q: 'How much can rent be increased each year?', a: 'Whatever the agreement says. Agree a fixed yearly increase at the start so renewals are straightforward.' },
+      { q: 'How do I calculate the return on a rented house?', a: 'Net yield = (rent × months let − yearly costs) ÷ house value. The Rental Yield calculator does it for you.' },
+    ],
+  },
 ];
