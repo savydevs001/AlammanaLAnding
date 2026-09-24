@@ -2687,4 +2687,80 @@ If you are building a house to let, designing the upper and lower floors as self
       { q: 'How do I calculate the return on a rented house?', a: 'Net yield = (rent × months let − yearly costs) ÷ house value. The Rental Yield calculator does it for you.' },
     ],
   },
+  {
+    id: 'how-much-house-can-i-afford-pakistan-salary',
+    title: 'How Much House Can I Afford on My Salary in Pakistan? A Simple Way to Set Your Budget',
+    excerpt:
+      'Turn your monthly income, savings and existing loans into a realistic property budget for Islamabad and Rawalpindi — with bank finance, a developer instalment plan, or cash — and remember the costs that come on top of the price.',
+    keyTakeaway:
+      'Your property budget = the loan your safe monthly instalment can repay + the savings you can put down, minus a reserve. Start from an instalment you can pay comfortably — many families keep it to around 30–40% of household income after other loans — convert it into a loan amount at your expected rate and tenure, add usable savings, then set aside money for transfer taxes, fees and (if building) approvals and connections.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Ashhal Ch',
+    category: 'Finance',
+    tags: ['how much house can i afford', 'property budget pakistan', 'salary home loan pakistan', 'affordable house islamabad', 'down payment house pakistan'],
+    image: '/assets/stock/villa-front.webp',
+    readTime: '9 min read',
+    content: `
+Most people start house-hunting with a price in mind that came from an advert, not from their own finances. It is far safer to work the other way round: start from what you can pay every month without strain, turn that into a budget, and only then look at areas and sizes. The [Affordability calculator](/tools/affordability) does this in one step; this article explains the reasoning.
+
+## Step 1: find a comfortable monthly payment
+
+Take your **household income after tax** — yours plus any other earner who will reliably contribute — and decide what share can go to the house every month. Banks cap total loan instalments at a share of income; many families prefer to stay well below that, around 30–40%, so that a missed bonus or a medical bill does not become a missed instalment.
+
+Subtract any **existing EMIs** — car loans, personal loans, credit card instalments.
+
+**Comfortable instalment = income × your chosen share − existing EMIs.**
+
+## Step 2: turn the instalment into a loan amount
+
+The loan an instalment can repay depends on the interest rate and tenure. Longer tenures let the same instalment carry a bigger loan, but you pay far more interest in total. The formula works backwards from the standard reducing-balance EMI — our [home loan guide](/blog/home-loan-pakistan-emi-guide) explains it — and the calculator does it for you.
+
+## Step 3: add the savings you can safely use
+
+Keep a **reserve** — a few months of household expenses — out of the budget. The rest of your savings becomes your down payment.
+
+**Budget with finance = loan amount + usable savings.**
+
+**Budget in cash = usable savings.**
+
+## Step 4: set aside the costs on top of the price
+
+- **Transfer taxes and fees** — FBR advance tax, stamp duty, the society’s transfer fee and commission. See our [transfer taxes guide](/blog/property-transfer-taxes-pakistan-236k-236c).
+- **If building** — map approval, boundary wall, utility connections and a contingency. See our [construction cost guide](/blog/house-construction-cost-islamabad-per-sq-ft).
+- **Moving in** — furniture, appliances, and any repairs on an older house.
+
+Take these out of the budget before you look at listings.
+
+## Step 5: choose how to pay
+
+- **Bank or government-supported finance** — longest tenures, suits salaried buyers with clear documents. Compare offers with the [Home Finance Decision Engine](/tools/home-finance).
+- **Developer instalment plans** — no bank involved, shorter terms and larger instalments. The [Instalment Plan calculator](/tools/installments) shows the schedule; our guide to [buying a house on instalments in Islamabad](/blog/house-on-installments-islamabad) covers the fine print.
+- **Build in stages** — buy a plot now, build when savings allow. Compare paths with [Buy vs Build](/tools/buy-vs-build).
+
+## Step 6: match the budget to a property
+
+With a budget in hand, decide the trade-off between **location**, **size** and **readiness**:
+
+- A smaller house in a developed area, or a larger one in a developing society.
+- A ready house now, or a plot and construction later.
+- A 5 marla or a 10 marla house — our [comparison](/blog/5-marla-vs-10-marla-house) sets out the difference in cost and space.
+
+## Common mistakes
+
+- Budgeting from the maximum the bank will lend rather than what you can comfortably pay.
+- Forgetting transfer costs and moving costs.
+- Spending the emergency reserve on the down payment.
+- Stretching the tenure so far that total interest is very large.
+
+When you are ready to look, our [buyer’s guide to real estate in Islamabad](/blog/real-estate-islamabad-buyers-guide) lists the checks to make before paying anything.
+`,
+    faqs: [
+      { q: 'How much house can I afford on a PKR 2 lac salary?', a: 'Decide a comfortable share for the instalment (for example 30–40%, so PKR 60,000–80,000 a month if you have no other loans), convert it into a loan at your bank’s rate and tenure, and add the savings you can put down while keeping a reserve. The Affordability calculator gives the exact figure.' },
+      { q: 'What percentage of salary should go to a home loan?', a: 'Banks cap total instalments at a share of income; many families prefer to keep housing payments around 30–40% of income after other loans to stay comfortable.' },
+      { q: 'How much down payment do I need for a house in Pakistan?', a: 'Lenders and developers commonly require a meaningful share of the price upfront. Keep extra cash for transfer taxes and fees, which come on top.' },
+      { q: 'Should I buy a house or build one on my budget?', a: 'Compare the total cost of each, including rent paid while building, using the Buy vs Build calculator. Building usually costs less for the same space but takes longer.' },
+      { q: 'What costs come on top of the house price?', a: 'FBR advance tax, stamp duty, society transfer fee and commission; and if building, approvals, boundary wall, utility connections and a contingency.' },
+    ],
+  },
 ];

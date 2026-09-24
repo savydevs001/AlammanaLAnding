@@ -66,7 +66,7 @@ A calculator gives you a defensible budget; a real quote also needs the approved
       { q: 'Does the cost include the boundary wall and approvals?', a: 'No. Boundary wall, map approval and NOC fees, and utility connections are separate. Keep a contingency of a few percent for them.' },
     ],
     relatedTools: ['materials', 'buildable-area', 'buy-vs-build', 'area'],
-    relatedBlogs: ['house-construction-cost-islamabad-per-sq-ft', 'house-construction-cost-faisal-hills', 'gray-structure-vs-fully-finished', 'construction-stages-timeline-pakistan'],
+    relatedBlogs: ['house-construction-contract-checklist-pakistan', 'house-construction-cost-islamabad-per-sq-ft', 'house-construction-cost-faisal-hills', 'gray-structure-vs-fully-finished', 'construction-stages-timeline-pakistan'],
   },
 
   materials: {
@@ -292,7 +292,7 @@ The “cash only” figure shows what you can buy outright today. An [instalment
       { q: 'Should I keep savings in reserve?', a: 'Yes — keeping a few months of expenses aside protects you from missing instalments if income is interrupted.' },
     ],
     relatedTools: ['home-finance', 'installments', 'transfer-costs'],
-    relatedBlogs: ['home-loan-pakistan-emi-guide', 'house-on-installments-islamabad', 'buying-plot-on-installments-pakistan'],
+    relatedBlogs: ['how-much-house-can-i-afford-pakistan-salary', 'home-loan-pakistan-emi-guide', 'house-on-installments-islamabad', 'buying-plot-on-installments-pakistan'],
   },
 
   'transfer-costs': {
@@ -430,7 +430,7 @@ Residential rent in Pakistan usually returns less per year than capital growth i
       { q: 'How is rental yield calculated?', a: 'Yearly rent divided by the property price, times 100. Net yield first subtracts vacancy and running costs.' },
     ],
     relatedTools: ['investment', 'portfolio', 'buy-vs-build'],
-    relatedBlogs: ['plot-vs-house-investment-islamabad', 'investing-in-faisal-hills'],
+    relatedBlogs: ['rent-out-house-islamabad-landlord-guide', 'plot-vs-house-investment-islamabad', 'investing-in-faisal-hills'],
   },
 
   partnership: {
