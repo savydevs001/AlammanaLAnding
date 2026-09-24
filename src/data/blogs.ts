@@ -1664,4 +1664,100 @@ A double-storey house typically takes roughly 10 to 18 months from excavation to
       { q: 'What is not included in the construction rate?', a: 'Land, map approval and NOC fees, boundary wall, utility connections, basements (priced on their own area), solar and a contingency are normally budgeted separately.' },
     ],
   },
+  {
+    id: 'marla-kanal-square-feet-explained',
+    title: 'Marla, Kanal and Square Feet Explained: How Big Is a 5 Marla or 1 Kanal Plot Really?',
+    excerpt:
+      'Why one marla can mean 225 or 272.25 square feet, how to convert marla, kanal, square feet, square yards and acres, and the common plot dimensions in Islamabad and Rawalpindi societies.',
+    keyTakeaway:
+      'In Islamabad and Rawalpindi housing societies one marla is normally 225 sq ft, so a 5 marla plot is 1,125 sq ft, a 10 marla plot is 2,250 sq ft and 1 kanal (20 marla) is 4,500 sq ft. Older land revenue records use a 272.25 sq ft marla, which makes 1 kanal 5,445 sq ft. Always check which marla your documents use before comparing prices per marla.',
+    date: 'September 24, 2026',
+    isoDate: '2026-09-24',
+    author: 'Haseeb Bhatti',
+    category: 'Buying Guides',
+    tags: ['marla to sq ft', 'kanal to marla', '1 kanal in square feet', '5 marla size', '10 marla plot size', 'marla calculator'],
+    image: '/assets/stock/aerial-housing.webp',
+    readTime: '8 min read',
+    content: `
+Two plots advertised as “10 marla” can differ by more than 470 square feet. That is not a trick — it is because Pakistan uses two different marlas, and property adverts rarely say which. This guide explains both, shows the conversions, and lists the plot dimensions you will commonly see in Islamabad and Rawalpindi.
+
+If you just need a number, use our [Area Converter](/tools/area), which converts between marla, kanal, square feet, square metres, square yards and acres with either marla.
+
+## The two marlas
+
+### The 225 sq ft marla (societies)
+
+Most private housing societies in Islamabad and Rawalpindi, including Faisal Hills, measure plots with a **225 sq ft marla**. This makes plot sizes neat round numbers:
+
+- 5 marla = 1,125 sq ft
+- 7 marla = 1,575 sq ft
+- 8 marla = 1,800 sq ft
+- 10 marla = 2,250 sq ft
+- 1 kanal (20 marla) = 4,500 sq ft
+- 2 kanal = 9,000 sq ft
+
+### The 272.25 sq ft marla (revenue records)
+
+The traditional revenue marla is **30.25 square yards, or 272.25 sq ft**. It appears in land records and in some older areas:
+
+- 5 marla = 1,361.25 sq ft
+- 10 marla = 2,722.5 sq ft
+- 1 kanal = 5,445 sq ft
+- 8 kanal = 43,560 sq ft = 1 acre
+
+That is why an acre is said to be eight kanal — it is exactly true only with the revenue marla.
+
+## Conversions you will need
+
+- 1 kanal = 20 marla
+- 1 square yard = 9 sq ft
+- 1 square metre = 10.7639 sq ft
+- 1 acre = 43,560 sq ft = 4,840 square yards
+- 225 sq ft marla = 25 square yards ≈ 20.9 square metres
+- 272.25 sq ft marla = 30.25 square yards ≈ 25.3 square metres
+
+## Common plot dimensions
+
+Societies use standard dimensions for each size. Typical ones in the Twin Cities are:
+
+- **3.5 marla** — around 20 × 40 ft
+- **5 marla** — 25 × 45 ft (1,125 sq ft)
+- **7 marla** — 30 × 52.5 ft or similar
+- **8 marla** — 30 × 60 ft (1,800 sq ft)
+- **10 marla** — 35 × 65 ft (2,275 sq ft) is common; the exact size varies by society
+- **1 kanal** — 50 × 90 ft (4,500 sq ft)
+
+Always check the dimensions on the allotment letter or possession documents rather than assuming.
+
+## Why this matters when you buy
+
+**Price per marla comparisons.** If one society quotes per 225 sq ft marla and a village plot is measured with the 272.25 sq ft marla, the per-marla prices are not comparable. Convert both to price per square foot.
+
+**Construction cost.** Builders price per square foot of covered area, not per marla. Convert your plot to square feet, then use the [Buildable Area](/tools/buildable-area) and [Construction Cost](/tools/construction-cost) calculators. Our article on [construction cost per square foot in Islamabad](/blog/house-construction-cost-islamabad-per-sq-ft) works through each plot size.
+
+**Corner and extra land.** Corner plots and plots with extra land are often measured in the same marla but priced at a premium. Confirm the exact area that is being sold.
+
+## Frequently confused units
+
+- **Sarsai** — a smaller revenue unit (1 marla = 9 sarsai in the revenue system).
+- **Covered area vs plot area** — plot area is the land; covered area is the floor space built on it across all storeys.
+- **Gaz** — the local word for a yard; “square gaz” means square yards.
+
+## Quick answers
+
+- 5 marla in square feet: **1,125** (society) or **1,361.25** (revenue)
+- 10 marla in square feet: **2,250** (society) or **2,722.5** (revenue)
+- 1 kanal in square feet: **4,500** (society) or **5,445** (revenue)
+- 1 kanal in marla: **20**
+- 1 acre in kanal: **8** (revenue marla)
+`,
+    faqs: [
+      { q: 'How many square feet is 1 marla in Islamabad?', a: 'In housing societies in Islamabad and Rawalpindi, 225 sq ft. In older land revenue records, 272.25 sq ft.' },
+      { q: 'How many square feet is 1 kanal?', a: '4,500 sq ft with the 225 sq ft society marla, or 5,445 sq ft with the 272.25 sq ft revenue marla.' },
+      { q: 'How many marla are in a kanal?', a: 'Twenty marla make one kanal.' },
+      { q: 'What is the size of a 5 marla plot?', a: '1,125 sq ft with the society marla, usually 25 × 45 ft. With the revenue marla it is 1,361.25 sq ft.' },
+      { q: 'How many kanal are in an acre?', a: 'Eight kanal, using the 272.25 sq ft revenue marla (8 × 5,445 = 43,560 sq ft).' },
+      { q: 'How many square yards is 1 marla?', a: '25 square yards with the 225 sq ft marla, or 30.25 square yards with the revenue marla.' },
+    ],
+  },
 ];
