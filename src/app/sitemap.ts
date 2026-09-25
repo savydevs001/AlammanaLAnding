@@ -102,7 +102,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     })),
-    ...constructions.map(c => ({
+    ...constructions.filter((c) => !c.isExample).map(c => ({
       url: `${siteUrl}/constructions/${c.id}`,
       lastModified: c.updatedAt ? new Date(c.updatedAt) : lastModified,
       changeFrequency: 'monthly' as const,

@@ -164,6 +164,10 @@ export interface ConstructionProject {
   expectedCompletion?: string;      // e.g. 'Q2 2027' — for in-progress work
   startedDate?: string;             // e.g. 'March 2025' — when we broke ground
   completedDate?: string;           // e.g. 'January 2026' — for handed-over homes
+  /** A representative design, not a real client site. Shown only on the
+   *  Constructions page with a clear label, never on the home page, never
+   *  indexed, and never with a plot address. */
+  isExample?: boolean;
   /** Rendered as an accordion + FAQPage schema (set in the ERP). */
   faqs?: Array<{ q: string; a: string }>;
 }

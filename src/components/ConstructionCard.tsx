@@ -24,7 +24,7 @@ export default function ConstructionCard({ project }: { project: ConstructionPro
 
         <div className="absolute top-5 left-5 flex flex-wrap gap-2 pr-5">
           <span className="bg-burgundy text-white px-3 py-1.5 rounded-full text-[12px] font-bold uppercase tracking-wider">
-            {project.status}
+            {project.isExample ? 'Design example' : project.status}
           </span>
           <span className="bg-white/90 text-ink px-3 py-1.5 rounded-full text-[12px] font-bold uppercase tracking-wider">
             {project.finishType}

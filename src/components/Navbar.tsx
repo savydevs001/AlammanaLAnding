@@ -37,6 +37,11 @@ export default function Navbar() {
     { name: t.nav.team, path: '/team' },
     { name: t.nav.journal, path: '/blog' },
   ];
+  // The desktop bar holds 8 links plus language, phone and Enquire. Home (the
+  // logo already goes there) and Team (linked from About) live in the mobile
+  // menu only — ten links overlapped the language switcher and phone number
+  // at every desktop width (audit 2026-09-26).
+  const desktopLinks = navLinks.filter((l) => l.path !== '/' && l.path !== '/team');
 
   return (
     <nav className="fixed w-full z-50 bg-paper/85 backdrop-blur-md border-b border-sand/40">
@@ -61,12 +66,12 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-4 xl:gap-6 min-w-0">
-            {navLinks.map(link => (
+          <div className="hidden xl:flex items-center gap-4 2xl:gap-6 min-w-0">
+            {desktopLinks.map(link => (
               <Link
                 key={link.name}
                 href={localeHref(link.path, locale)}
-                className="text-[12px] xl:text-xs uppercase tracking-wider font-semibold hover:text-burgundy transition-colors whitespace-nowrap"
+                className="text-xs uppercase tracking-wider font-semibold hover:text-burgundy transition-colors whitespace-nowrap"
               >
                 {link.name}
               </Link>
@@ -76,14 +81,15 @@ export default function Navbar() {
           {/* Phone is the primary action for walk-in buyers and was previously
               only in the footer at 13px. It now sits in the header at a
               readable size and a full tap height. */}
-          <div className="hidden lg:flex items-center gap-3 shrink-0">
+          <div className="hidden xl:flex items-center gap-3 shrink-0">
             <LanguageSwitcher compact />
             <a
               href={`tel:${CONTACT.phoneHref}`}
               className="flex items-center gap-2 text-sm font-bold text-burgundy hover:opacity-70 transition-opacity whitespace-nowrap py-2"
             >
               <Phone size={16} />
-              {CONTACT.phoneDisplay}
+              <span className="hidden 2xl:inline">{CONTACT.phoneDisplay}</span>
+              <span className="sr-only 2xl:hidden">{CONTACT.phoneDisplay}</span>
             </a>
             <Link
               href={localeHref('/contact', locale)}
@@ -95,7 +101,7 @@ export default function Navbar() {
 
           {/* Mobile: call button stays visible next to the menu toggle, so the
               most important action is never more than one tap away. */}
-          <div className="flex items-center gap-1 lg:hidden">
+          <div className="flex items-center gap-1 xl:hidden">
             <a
               href={`tel:${CONTACT.phoneHref}`}
               aria-label={`${t.nav.call} — ${CONTACT.phoneDisplay}`}
@@ -120,7 +126,7 @@ export default function Navbar() {
         <motion.div
           initial={{ opacity: 0, y: -12 }}
           animate={{ opacity: 1, y: 0 }}
-          className="lg:hidden bg-paper border-b border-burgundy/10 px-4 py-6 max-h-[80vh] overflow-y-auto"
+          className="xl:hidden bg-paper border-b border-burgundy/10 px-4 py-6 max-h-[80vh] overflow-y-auto"
         >
           <div className="flex flex-col">
             {navLinks.map(link => (

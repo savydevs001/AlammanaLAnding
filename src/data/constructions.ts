@@ -250,4 +250,10 @@ const staticConstructions: ConstructionProject[] = [
   },
 ];
 
-export const constructions = fromCms('CONSTRUCTION', staticConstructions);
+// The hard-coded homes are representative designs (see the warning at the
+// top of this file). Flag them so the site never presents them as real
+// client homes: no plot address, labelled, not indexed. Homes published from
+// the ERP replace this list entirely and are real.
+export const constructions = fromCms('CONSTRUCTION', staticConstructions.map((c) => ({ ...c, isExample: true, plotAddress: undefined })));
+/** Real client homes only — what the home page and sitemap may show. */
+export const realConstructions = constructions.filter((c) => !c.isExample);

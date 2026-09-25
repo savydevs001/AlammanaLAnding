@@ -30,6 +30,12 @@ export default function ConstructionsClient() {
             </Link>
             {' '}— approved maps, premium materials, and honest milestones in Faisal Hills and Faisal Town.
           </p>
+          {constructions.some((c) => c.isExample) && (
+            <p className="mb-12 max-w-2xl rounded-2xl border border-burgundy/20 bg-beige/40 px-5 py-4 text-sm text-ink/80">
+              <strong>Design examples.</strong> The homes below show the kind of houses and finishes we build on these rates.
+              Our current client sites will be listed here, with their real photos and progress, as each owner agrees to share them.
+            </p>
+          )}
 
           <div className="flex flex-wrap gap-8 items-center border-b border-burgundy/10 pb-8">
             {filters.map((f) => (

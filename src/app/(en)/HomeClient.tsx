@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'motion/react';
 import { projects } from '../../data/projects';
-import { constructions } from '../../data/constructions';
+import { realConstructions } from '../../data/constructions';
 import { societies } from '../../data/societies';
 import { team } from '../../data/team';
 import ProjectCard from '../../components/ProjectCard';
@@ -244,7 +244,9 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* Construction & Development Focus Section */}
+      {/* Construction & Development Focus Section — real client homes only;
+          hidden until the ERP publishes at least one. */}
+      {realConstructions.length > 0 && (
       <section className="py-24 bg-beige/30" id="development-projects">
         <div className="max-w-[1600px] mx-auto px-4">
           <div className="flex justify-between items-end mb-16">
@@ -263,7 +265,7 @@ export default function HomeClient() {
             View Construction Rates
           </Link>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {constructions.slice(0, 3).map((project) => (
+            {realConstructions.slice(0, 3).map((project) => (
               <ConstructionCard key={project.id} project={project} />
             ))}
           </div>
@@ -274,6 +276,7 @@ export default function HomeClient() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Services Section */}
       <section className="py-24 bg-ink text-paper overflow-hidden relative">

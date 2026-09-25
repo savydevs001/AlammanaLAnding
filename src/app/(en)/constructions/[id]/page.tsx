@@ -17,6 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   }
 
   return {
+    // Representative designs stay out of search results.
+    ...(project.isExample ? { robots: { index: false, follow: true } } : {}),
     title: { absolute: project.seoTitle || `${project.title} — ${project.block}` },
     description: clampDescription(project.seoDescription || `${project.shortDescription} ${project.finishType} construction in ${project.locationLabel}.`),
     alternates: {

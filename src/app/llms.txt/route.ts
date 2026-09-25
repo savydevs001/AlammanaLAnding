@@ -94,7 +94,7 @@ export function GET() {
 
   lines.push('## Construction projects');
   lines.push('');
-  for (const c of constructions) {
+  for (const c of constructions.filter((x) => !x.isExample)) {
     lines.push(
       `- [${c.title}](${SITE_URL}/constructions/${c.id}): ${c.block}, ${c.plotSize}, ` +
         `${c.finishType}. Status: ${c.status}.`
