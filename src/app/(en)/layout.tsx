@@ -3,6 +3,7 @@ import { Inter, Cormorant_Garamond } from 'next/font/google';
 import '../../index.css';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import AttributionCapture from '../../components/AttributionCapture';
 import WhatsAppFloat from '../../components/WhatsAppFloat';
 import { organizationSchema } from '../../lib/schema';
 import { SITE_URL } from '../../lib/seo';
@@ -107,6 +108,7 @@ export default function RootLayout({
         <main className="pb-20 md:pb-0">{children}</main>
         <Footer />
         <WhatsAppFloat />
+        <AttributionCapture />
       </body>
     </html>
   );

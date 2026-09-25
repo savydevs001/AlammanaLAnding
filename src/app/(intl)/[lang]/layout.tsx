@@ -3,6 +3,7 @@ import { Inter, Cormorant_Garamond, Noto_Nastaliq_Urdu, Noto_Kufi_Arabic } from 
 import '../../../index.css';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
+import AttributionCapture from '../../../components/AttributionCapture';
 import WhatsAppFloat from '../../../components/WhatsAppFloat';
 import { PREFIXED_LOCALES, LOCALE_META, isLocale, Locale } from '../../../lib/i18n';
 import { SITE_URL } from '../../../lib/seo';
@@ -102,6 +103,7 @@ export default async function IntlRootLayout({
         <main className="pb-20 md:pb-0">{children}</main>
         <Footer />
         <WhatsAppFloat />
+        <AttributionCapture />
       </body>
     </html>
   );

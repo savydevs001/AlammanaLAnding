@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'motion/react';
 import { constructions } from '../../../../data/constructions';
 import ConstructionCard from '../../../../components/ConstructionCard';
+import LeadForm from '../../../../components/LeadForm';
 import {
   ArrowLeft,
   ArrowRight,
@@ -294,6 +295,27 @@ export default function ConstructionPageClient({ id }: { id: string }) {
           </div>
         </section>
       )}
+
+      {/* Enquiry — recorded in the ERP with this page as its source */}
+      <section className="py-20 bg-beige/30">
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-serif italic text-burgundy mb-3 text-center">Ask About This Home</h2>
+          <p className="text-ink/70 text-center mb-8">Want the same design, finish or rate on your plot? Leave your number and our construction team will call you.</p>
+          <div className="bg-white rounded-3xl border border-sand/40 p-8 md:p-10 shadow-sm">
+            <LeadForm
+              subjectPrefix="Construction Enquiry"
+              context={project.title}
+              interests={[
+                `A home like "${project.title}"`,
+                `${project.plotSize} construction quote`,
+                'Gray structure only',
+                'Fully finished home',
+                'Other',
+              ]}
+            />
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-24 bg-burgundy text-white">

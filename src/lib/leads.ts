@@ -12,6 +12,8 @@
  * never the enquiry itself.
  */
 
+import { getAttribution } from './attribution';
+
 const API_BASE = process.env.NEXT_PUBLIC_ERP_API_URL ?? 'https://api.alammana.pk';
 
 export interface LeadSubmission {
@@ -44,6 +46,9 @@ export async function submitLead(input: LeadSubmission): Promise<boolean> {
         // request, so the page a visitor was actually reading has to travel
         // with the submission.
         pageUrl: typeof window !== 'undefined' ? window.location.href : undefined,
+        // First page of the visit + campaign/referrer, for the ERP's
+        // "which pages and campaigns bring leads" report.
+        ...(typeof window !== 'undefined' ? getAttribution() : {}),
       }),
       // No cookies — this endpoint is anonymous and must stay that way.
       credentials: 'omit',

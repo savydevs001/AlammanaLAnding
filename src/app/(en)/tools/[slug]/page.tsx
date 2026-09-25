@@ -6,6 +6,7 @@ import { TOOLS, toolBySlug } from '../../../../lib/tools';
 import { toolContent } from '../../../../data/toolContent';
 import { blogs } from '../../../../data/blogs';
 import ToolClient from '../../../../components/tools/ToolsClient';
+import LeadForm from '../../../../components/LeadForm';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alammana.pk';
 
@@ -143,6 +144,16 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                   <ul className="space-y-3">{relatedBlogs.map((b) => <li key={b.id}><Link href={`/blog/${b.id}`} className="text-ink hover:text-burgundy hover:underline">{b.title}</Link></li>)}</ul>
                 </div>
               )}
+              <div className="rounded-2xl border border-sand/60 bg-white p-5">
+                <h2 className="mb-1 text-xs font-bold uppercase tracking-[0.2em] text-burgundy">Get it checked by our team</h2>
+                <p className="mb-4 text-sm text-ink/70">Send us your numbers and a real engineer or advisor will call you back.</p>
+                <LeadForm
+                  variant="plain"
+                  subjectPrefix="Tool Enquiry"
+                  context={t.name}
+                  interests={[`${t.name} — check my figures`, 'House construction quote', 'Buying a plot or house', 'Other']}
+                />
+              </div>
               <div className="rounded-2xl border border-sand/60 bg-paper p-5 text-sm text-ink/70">
                 <p className="font-semibold text-ink">Building or buying in Faisal Hills?</p>
                 <p className="mt-1">See our published <Link href="/payment-plans" className="text-burgundy underline">construction rates</Link> and <Link href="/societies" className="text-burgundy underline">society guides</Link>.</p>
