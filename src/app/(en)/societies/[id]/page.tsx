@@ -21,8 +21,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   if (!s) return { title: 'Society Not Found | Alammana Developers', robots: { index: false, follow: true } };
 
   return {
-    title: { absolute: `${s.name} — Blocks & Plot Sizes | Alammana` },
-    description: clampDescription(`${s.summary} Block-by-block guide from Alammana Developers.`),
+    title: { absolute: s.seoTitle || `${s.name} — Blocks & Plot Sizes | Alammana` },
+    description: clampDescription(s.seoDescription || `${s.summary} Block-by-block guide from Alammana Developers.`),
     keywords: [
       s.name,
       `${s.name} blocks`,

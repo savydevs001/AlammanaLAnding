@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { clampDescription, SITE_URL } from '../../../../lib/seo';
 import { constructions } from '../../../../data/constructions';
 import ConstructionPageClient from './ConstructionPageClient';
+import ListingFaqs from '../../../../components/ListingFaqs';
 
 export function generateStaticParams() {
   return constructions.map(c => ({ id: c.id }));
@@ -16,8 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   }
 
   return {
-    title: { absolute: `${project.title} — ${project.block}` },
-    description: clampDescription(`${project.shortDescription} ${project.finishType} construction in ${project.locationLabel}.`),
+    title: { absolute: project.seoTitle || `${project.title} — ${project.block}` },
+    description: clampDescription(project.seoDescription || `${project.shortDescription} ${project.finishType} construction in ${project.locationLabel}.`),
     alternates: {
       canonical: `/constructions/${project.id}`,
     },
@@ -112,6 +113,7 @@ export default async function ConstructionPage({ params }: { params: Promise<{ i
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sc) }} />
       ))}
       <ConstructionPageClient id={id} />
+      <ListingFaqs title={project.title} faqs={project.faqs} />
     </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { clampDescription } from '../../../../lib/seo';
 import { projects } from '../../../../data/projects';
 import ProjectPageClient from './ProjectPageClient';
+import ListingFaqs from '../../../../components/ListingFaqs';
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://alammana.pk';
 
@@ -23,8 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   }
 
   return {
-    title: { absolute: `${project.title} — ${project.location}` },
-    description: clampDescription(`${project.description} Enquire for current pricing and payment plans.`),
+    title: { absolute: project.seoTitle || `${project.title} — ${project.location}` },
+    description: clampDescription(project.seoDescription || `${project.description} Enquire for current pricing and payment plans.`),
     keywords: [
       project.title,
       project.location,
@@ -134,6 +135,7 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         />
       ))}
       <ProjectPageClient params={resolvedParams} />
+      <ListingFaqs title={project.title} faqs={project.faqs} />
     </>
   );
 }

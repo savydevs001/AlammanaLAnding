@@ -98,6 +98,8 @@ export interface Project {
     email?: string;
     address?: string;
   };
+  /** Rendered as an accordion + FAQPage schema (set in the ERP). */
+  faqs?: Array<{ q: string; a: string }>;
 }
 
 /** One block/sector inside a housing society. */
@@ -162,6 +164,8 @@ export interface ConstructionProject {
   expectedCompletion?: string;      // e.g. 'Q2 2027' — for in-progress work
   startedDate?: string;             // e.g. 'March 2025' — when we broke ground
   completedDate?: string;           // e.g. 'January 2026' — for handed-over homes
+  /** Rendered as an accordion + FAQPage schema (set in the ERP). */
+  faqs?: Array<{ q: string; a: string }>;
 }
 
 export interface BlogPost {

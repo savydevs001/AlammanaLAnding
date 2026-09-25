@@ -1,4 +1,5 @@
 import { Society } from '../types';
+import { fromCms } from './cms';
 
 /**
  * ─── HOUSING SOCIETIES ───────────────────────────────────────────────────────
@@ -25,7 +26,9 @@ import { Society } from '../types';
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
-export const societies: Society[] = [
+/** Hard-coded fallback — used only until the ERP publishes a listing of this
+ *  kind (see ./cms.ts). New listings should be added in the ERP, not here. */
+const staticSocieties: Society[] = [
   {
     id: 'faisal-hills',
     name: 'Faisal Hills',
@@ -448,3 +451,5 @@ export const societies: Society[] = [
     ],
   },
 ];
+
+export const societies = fromCms('SOCIETY', staticSocieties);

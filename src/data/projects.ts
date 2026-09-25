@@ -1,4 +1,5 @@
 import { Project } from '../types';
+import { fromCms } from './cms';
 
 /**
  * ─── PARTNER PROJECTS (PORTFOLIO) ────────────────────────────────────────────
@@ -28,7 +29,9 @@ import { Project } from '../types';
 /** Asset folder for the Faisal Jewel project pack. */
 const FJ = '/assets/projects/faisal-jewel';
 
-export const projects: Project[] = [
+/** Hard-coded fallback — used only until the ERP publishes a listing of this
+ *  kind (see ./cms.ts). New listings should be added in the ERP, not here. */
+const staticProjects: Project[] = [
   {
     id: 'faisal-jewel',
     title: 'Faisal Jewel',
@@ -132,6 +135,15 @@ export const projects: Project[] = [
       { label: '3 Bedroom', size: '2,435 sqft' },
       { label: 'Penthouse (from)', size: '3,547 sqft' },
     ],
+    faqs: [
+      { q: 'Where is Faisal Jewel located?', a: 'In the Executive Block of Faisal Hills, Taxila, where Margalla Avenue, the G.T. Road and the M-1 Motorway meet, with the Margalla Hills National Park behind it.' },
+      { q: 'Who is the developer of Faisal Jewel?', a: 'Zedem International under the Faisal Town Group, with CAM Construction as co-developer and contractor. The architect is Jamshid Khan Associates. Alammana Developers is an authorised sales partner.' },
+      { q: 'How many floors does Faisal Jewel have?', a: 'The residential tower rises 27-plus storeys, alongside a separate 14-storey commercial tower, over three basement parking levels.' },
+      { q: 'What apartment sizes are available in Faisal Jewel?', a: 'One-bedroom apartments of 1,295 sq ft, two-bedroom of 1,930 sq ft, three-bedroom of 2,435 sq ft, and penthouses on the 14th floor from 3,547 sq ft to 7,320 sq ft. Studios are available on enquiry.' },
+      { q: 'Are there shops in Faisal Jewel?', a: 'Yes. The commercial tower has shops from the lower ground to the third floor, from about 153 sq ft upwards, and a food court on the fourth floor.' },
+      { q: 'Is Faisal Jewel approved?', a: 'It is built inside RDA-approved Faisal Hills, with an NOC from the Rawalpindi Development Authority.' },
+      { q: 'What is the construction status of Faisal Jewel?', a: 'As of July 2026 the middle tower had reached the 8th floor, with columns under construction. Expected completion is Q4 2027.' },
+    ],
     contact: {
       phone: '+92 335 8078262',
       email: 'rabta@alammana.pk',
@@ -184,6 +196,12 @@ export const projects: Project[] = [
       'New Islamabad Airport',
       'Faisal Hills, Taxila',
     ],
+    faqs: [
+      { q: 'Where is J7 Emporium?', a: 'At Plot #01, MR-09, Block C, Multi Gardens, Sector B-17, Islamabad, near the M-1 Motorway, G.T. Road and Margalla Avenue.' },
+      { q: 'How tall is J7 Emporium?', a: 'It is a 30-storey mixed-use tower on roughly 46 kanals.' },
+      { q: 'What does J7 Emporium include?', a: 'A shopping mall, studio to four-bedroom apartments, corporate offices, food-court floors and hotel suites operated under the Radisson Blu brand, plus the J7 Club with pool, gym and spa.' },
+      { q: 'Who is the developer of J7 Emporium?', a: 'J7 Group. Alammana Developers is an authorised sales partner and can arrange unit selection and booking.' },
+    ],
     contact: {
       phone: '+92 335 8078262',
       email: 'rabta@alammana.pk',
@@ -206,6 +224,11 @@ export const projects: Project[] = [
     images: ['/assets/projects/107-plaza.webp'],
     features: ['Ground-Floor Retail Shops', 'Upper-Floor Offices', 'Inside RDA-Approved Faisal Hills'],
     status: 'In Progress',
+    faqs: [
+      { q: 'Where is 107 Plaza?', a: 'Inside Faisal Hills, an RDA-approved housing society on the Main G.T. Road in Taxila.' },
+      { q: 'What units are available in 107 Plaza?', a: 'Ground-floor retail shops and upper-floor office units, suited to both end-users and investors looking for rental income.' },
+      { q: 'How do I get the price list for 107 Plaza?', a: 'Contact Alammana Developers for the current availability and rate sheet — we handle bookings for the plaza.' },
+    ],
     contact: {
       phone: '+92 335 8078262',
       email: 'rabta@alammana.pk',
@@ -242,6 +265,12 @@ export const projects: Project[] = [
       'HITEC University',
       'Margalla Avenue',
     ],
+    faqs: [
+      { q: 'What is Faisal Hills Prime Block?', a: 'A newly launched block of Faisal Hills offering residential and commercial plots on instalments.' },
+      { q: 'Is Faisal Hills approved?', a: 'Yes. Faisal Hills is approved by the Rawalpindi Development Authority (RDA).' },
+      { q: 'Where is Faisal Hills?', a: 'On the Main G.T. Road in Taxila, adjacent to Multi Gardens B-17 and minutes from the M-1 Motorway, spread over roughly 11,823 kanals.' },
+      { q: 'Can I buy a plot in Prime Block on instalments?', a: 'Yes, Prime Block plots are offered on instalment plans. Alammana Developers handles bookings, transfers and resale in Faisal Hills and can share the current plan.' },
+    ],
     contact: {
       phone: '+92 335 8078262',
       email: 'rabta@alammana.pk',
@@ -249,3 +278,5 @@ export const projects: Project[] = [
     },
   },
 ];
+
+export const projects = fromCms('PARTNER_PROJECT', staticProjects);

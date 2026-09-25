@@ -1,4 +1,5 @@
 import { ConstructionProject } from '../types';
+import { fromCms } from './cms';
 
 /**
  * ─── HOMES WE ARE CONSTRUCTING ───────────────────────────────────────────────
@@ -32,7 +33,9 @@ import { ConstructionProject } from '../types';
 
 const A = '/assets/constructions';
 
-export const constructions: ConstructionProject[] = [
+/** Hard-coded fallback — used only until the ERP publishes a listing of this
+ *  kind (see ./cms.ts). New listings should be added in the ERP, not here. */
+const staticConstructions: ConstructionProject[] = [
   {
     id: 'block-a-1-kanal-modern-minimalist',
     title: '1 Kanal Modern Minimalist Residence',
@@ -246,3 +249,5 @@ export const constructions: ConstructionProject[] = [
     expectedCompletion: 'Q4 2027',
   },
 ];
+
+export const constructions = fromCms('CONSTRUCTION', staticConstructions);

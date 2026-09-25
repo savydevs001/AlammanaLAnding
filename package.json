@@ -8,7 +8,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "indexnow": "node scripts/indexnow.mjs"
+    "indexnow": "node scripts/indexnow.mjs",
+    "prebuild": "node scripts/fetch-cms.mjs",
+    "cms": "node scripts/fetch-cms.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",

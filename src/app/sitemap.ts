@@ -83,7 +83,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...localePages,
     ...societies.map(s => ({
       url: `${siteUrl}/societies/${s.id}`,
-      lastModified,
+      // ERP-managed listings carry their real publish date (data/cms.ts).
+      lastModified: s.updatedAt ? new Date(s.updatedAt) : lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.9,
     })),
@@ -97,13 +98,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ),
     ...projects.map(p => ({
       url: `${siteUrl}/portfolio/${p.id}`,
-      lastModified,
+      lastModified: p.updatedAt ? new Date(p.updatedAt) : lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     })),
     ...constructions.map(c => ({
       url: `${siteUrl}/constructions/${c.id}`,
-      lastModified,
+      lastModified: c.updatedAt ? new Date(c.updatedAt) : lastModified,
       changeFrequency: 'monthly' as const,
       priority: 0.8,
     })),
