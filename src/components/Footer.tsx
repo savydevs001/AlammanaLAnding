@@ -26,6 +26,7 @@ export default function Footer() {
     { label: t.links.overseas, href: '/overseas' },
     { label: t.links.blocks, href: '/societies/faisal-hills' },
     { label: t.links.constructions, href: '/constructions' },
+    { label: t.links.properties, href: '/properties' },
     { label: t.links.portfolio, href: '/portfolio' },
     { label: t.links.guides, href: '/blog' },
   ];

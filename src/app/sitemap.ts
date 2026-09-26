@@ -61,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${siteUrl}/societies`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${siteUrl}/portfolio`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${siteUrl}/constructions`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${siteUrl}/properties`, lastModified, changeFrequency: 'daily', priority: 0.8 },
     { url: `${siteUrl}/blog`, lastModified, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${siteUrl}/about`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${siteUrl}/contact`, lastModified, changeFrequency: 'monthly', priority: 0.7 },

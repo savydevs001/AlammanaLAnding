@@ -55,6 +55,7 @@ export function GET() {
   lines.push('');
   lines.push(`- [Construction rates and payment plans](${SITE_URL}/payment-plans): Downloadable gray structure and fully finished rate lists for Faisal Hills Blocks A, B, C, D and Executive.`);
   lines.push(`- [Homes we are building](${SITE_URL}/constructions): Current and completed house construction projects with specifications.`);
+  lines.push(`- [Plots and houses for sale](${SITE_URL}/properties): Plots, houses and files for sale or rent that the team has checked, with the owner's demand and key details.`);
   lines.push(`- [Housing societies](${SITE_URL}/societies): Block-by-block guides including approval status.`);
   lines.push(`- [Partner projects](${SITE_URL}/portfolio): Apartments, shops and offices we sell as an authorised partner.`);
   lines.push(`- [Guides and articles](${SITE_URL}/blog): Long-form guidance on construction cost, materials, approvals and investment.`);

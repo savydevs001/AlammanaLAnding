@@ -37,6 +37,7 @@ export interface PageDictionary {
       overseas: string;
       blocks: string;
       constructions: string;
+      properties: string;
       portfolio: string;
       guides: string;
     };
@@ -119,6 +120,7 @@ const en: PageDictionary = {
       overseas: 'Building From Abroad',
       blocks: 'Faisal Hills Blocks',
       constructions: 'Homes We Are Building',
+      properties: 'Plots & Houses for Sale',
       portfolio: 'Partner Projects',
       guides: 'Guides & Articles',
     },
@@ -258,6 +260,7 @@ const ur: PageDictionary = {
       overseas: 'بیرونِ ملک سے تعمیر',
       blocks: 'فیصل ہلز کے بلاکس',
       constructions: 'زیرِ تعمیر گھر',
+      properties: 'برائے فروخت پلاٹ اور گھر',
       portfolio: 'پارٹنر پروجیکٹس',
       guides: 'رہنما مضامین',
     },
@@ -397,6 +400,7 @@ const ar: PageDictionary = {
       overseas: 'البناء من الخارج',
       blocks: 'بلوكات فيصل هيلز',
       constructions: 'المنازل قيد الإنشاء',
+      properties: 'قطع أراضٍ ومنازل للبيع',
       portfolio: 'مشاريع الشركاء',
       guides: 'أدلة ومقالات',
     },
