@@ -20,6 +20,7 @@ export interface Dictionary {
     societies: string;
     portfolio: string;
     constructions: string;
+    properties: string;
     rates: string;
     overseas: string;
     about: string;
@@ -95,7 +96,7 @@ export interface Dictionary {
 const en: Dictionary = {
   nav: {
     home: 'Home', societies: 'Societies', portfolio: 'Portfolio',
-    constructions: 'Constructions', rates: 'Rates', overseas: 'Overseas',
+    constructions: 'Constructions', properties: 'Properties', rates: 'Rates', overseas: 'Overseas',
     about: 'About', team: 'Team', journal: 'Journal', tools: 'Tools', contact: 'Contact',
     enquire: 'Enquire', menu: 'Open menu', close: 'Close menu', call: 'Call us',
     freeConsultation: 'Free Consultation',
@@ -147,7 +148,7 @@ const en: Dictionary = {
 const ur: Dictionary = {
   nav: {
     home: 'صفحۂ اول', societies: 'سوسائٹیز', portfolio: 'پورٹ فولیو',
-    constructions: 'تعمیرات', rates: 'ریٹس', overseas: 'بیرونِ ملک',
+    constructions: 'تعمیرات', properties: 'پراپرٹیز', rates: 'ریٹس', overseas: 'بیرونِ ملک',
     about: 'ہمارے بارے میں', team: 'ٹیم', journal: 'مضامین', tools: 'کیلکولیٹرز', contact: 'رابطہ',
     enquire: 'رابطہ کریں', menu: 'مینو کھولیں', close: 'مینو بند کریں', call: 'ہمیں کال کریں',
     freeConsultation: 'مفت مشورہ',
@@ -199,7 +200,7 @@ const ur: Dictionary = {
 const ar: Dictionary = {
   nav: {
     home: 'الرئيسية', societies: 'المجمعات السكنية', portfolio: 'المشاريع',
-    constructions: 'أعمال البناء', rates: 'الأسعار', overseas: 'من الخارج',
+    constructions: 'أعمال البناء', properties: 'العقارات', rates: 'الأسعار', overseas: 'من الخارج',
     about: 'من نحن', team: 'الفريق', journal: 'المقالات', tools: 'الحاسبات', contact: 'اتصل بنا',
     enquire: 'استفسار', menu: 'فتح القائمة', close: 'إغلاق القائمة', call: 'اتصل بنا',
     freeConsultation: 'استشارة مجانية',

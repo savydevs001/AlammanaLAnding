@@ -30,6 +30,7 @@ export default function Navbar() {
     { name: t.nav.societies, path: '/societies' },
     { name: t.nav.portfolio, path: '/portfolio' },
     { name: t.nav.constructions, path: '/constructions' },
+    { name: t.nav.properties, path: '/properties' },
     { name: t.nav.rates, path: '/payment-plans' },
     { name: t.nav.tools, path: '/tools' },
     { name: t.nav.overseas, path: '/overseas' },
@@ -41,6 +42,8 @@ export default function Navbar() {
   // logo already goes there) and Team (linked from About) live in the mobile
   // menu only — ten links overlapped the language switcher and phone number
   // at every desktop width (audit 2026-09-26).
+  // Properties is reached from the footer, the home page and the mobile menu
+  // on smaller desktops; it joins the bar only at 2xl where there is room.
   const desktopLinks = navLinks.filter((l) => l.path !== '/' && l.path !== '/team');
 
   return (
@@ -71,7 +74,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={localeHref(link.path, locale)}
-                className="text-xs uppercase tracking-wider font-semibold hover:text-burgundy transition-colors whitespace-nowrap"
+                className={`text-xs uppercase tracking-wider font-semibold hover:text-burgundy transition-colors whitespace-nowrap ${link.path === '/properties' ? 'hidden 2xl:inline' : ''}`}
               >
                 {link.name}
               </Link>
