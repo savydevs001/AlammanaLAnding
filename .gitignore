@@ -11,6 +11,3 @@ out/
 
 # TypeScript incremental build cache — regenerated on every build
 tsconfig.tsbuildinfo
-branch_structure.json
-temp_auto_push.bat
-temp_interactive_push.bat
