@@ -324,3 +324,7 @@ published artifact) rather than re-deriving the list.
       `next/image` optimisation impossible; 38 warnings for a rule that cannot
       apply were burying the ones that matter. Every `<img>` carries explicit
       width and height, which is what actually protects CLS.
+
+## 28 October 2026 — Security maintenance completed
+
+Upgraded Next.js and eslint-config-next to 16.4.3, patched compatible dependencies and typography parser, migrated ESLint to flat config, added Node 24 runtime configuration. Final npm audit zero advisories; installed registry signatures/provenance verified. Production static export passed using the existing CMS snapshot; desktop/phone smoke checks passed for home/constructions/calculator/team/Urdu/Arabic. No remote publish or CMS writes. Full cross-repository security report: ../../alammana-erp-web/docs/SECURITY_REVIEW_2026-10-28.md (relative to this docs folder).
