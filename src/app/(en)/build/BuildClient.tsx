@@ -42,7 +42,7 @@ const steps = [
 
 export default function BuildClient() {
   return (
-    <div className="pt-28 pb-24 bg-paper min-h-screen">
+    <div className="pt-32 md:pt-36 pb-24 bg-paper min-h-screen">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb */}

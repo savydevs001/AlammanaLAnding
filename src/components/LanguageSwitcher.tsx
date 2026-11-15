@@ -26,13 +26,20 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
 
   return (
     <div
-      className={compact ? 'flex items-center gap-1' : 'flex items-center gap-2'}
+      className={compact ? 'inline-flex items-center rounded-full border border-sand/70 bg-white/80 p-0.5' : 'flex items-center gap-2'}
       role="group"
       aria-label="Select language"
     >
       {!compact && <Globe size={15} className="text-ink/40 shrink-0" aria-hidden="true" />}
       {LOCALES.map((l: Locale) => {
         const active = l === current;
+        const label = compact
+          ? l === 'en'
+            ? 'EN'
+            : l === 'ur'
+            ? 'اردو'
+            : 'عربي'
+          : LOCALE_META[l].label;
         return (
           <Link
             key={l}
@@ -42,14 +49,16 @@ export default function LanguageSwitcher({ compact = false }: { compact?: boolea
             lang={LOCALE_META[l].htmlLang}
             aria-current={active ? 'true' : undefined}
             className={[
-              'px-2.5 py-1.5 rounded-full text-xs font-semibold transition-colors whitespace-nowrap',
+              compact
+                ? 'px-2 py-0.5 rounded-full text-[11px] font-semibold transition-colors whitespace-nowrap'
+                : 'px-2.5 py-1.5 rounded-full text-xs font-semibold transition-colors whitespace-nowrap',
               LOCALE_META[l].fontClass ?? '',
               active
-                ? 'bg-burgundy text-white'
-                : 'text-ink/60 hover:text-burgundy hover:bg-beige',
+                ? 'bg-burgundy text-white shadow-xs'
+                : 'text-ink/60 hover:text-burgundy hover:bg-beige/60',
             ].join(' ')}
           >
-            {LOCALE_META[l].label}
+            {label}
           </Link>
         );
       })}

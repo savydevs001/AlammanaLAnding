@@ -120,7 +120,7 @@ const packages = [
 
 export default function PackagesClient() {
   return (
-    <div className="pt-28 pb-24 bg-paper min-h-screen">
+    <div className="pt-32 md:pt-36 pb-24 bg-paper min-h-screen">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header Breadcrumb */}
@@ -238,7 +238,9 @@ export default function PackagesClient() {
                 <div className="w-6 h-6 rounded-full bg-burgundy flex items-center justify-center text-white shrink-0 mt-0.5 text-xs font-bold">1</div>
                 <div>
                   <strong className="text-white block">Fixed Block-Wise Price</strong>
-                  <span className="text-paper/60 text-xs">Priced strictly per sq ft of covered area. No hidden escalation or surprise labor charges.</span>
+                  {/* per sq ft rate commented out per user instruction:
+                  <span className="text-paper/60 text-xs">Priced strictly per sq ft of covered area.</span> */}
+                  <span className="text-paper/60 text-xs">Priced on clear milestone schedules and published rate cards. No hidden escalation or surprise labor charges.</span>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -266,7 +268,10 @@ export default function PackagesClient() {
             {[
               {
                 q: 'What is the starting price for a 5 Marla house construction package in Faisal Hills?',
+                /* per sqft rate commented out per user instruction:
                 a: 'A standard double-storey 5 Marla grey structure package in Faisal Hills starts from approximately PKR 1.35 Crore (around Rs. 2,850/sq ft for ~2,000 sq ft covered area). A full turnkey package with luxury Spanish or modern finishing ranges from PKR 2.45 Crore upwards.',
+                */
+                a: 'A standard double-storey 5 Marla grey structure package in Faisal Hills starts from approximately PKR 1.355 Crore on our official rate sheet for 2,300 sq ft covered area (G+1+Mumty). A full turnkey package with luxury Spanish or modern finishing ranges from PKR 1.815 Crore upwards on a 2-year milestone installment schedule.',
               },
               {
                 q: 'Can I customize the architectural style of my package?',

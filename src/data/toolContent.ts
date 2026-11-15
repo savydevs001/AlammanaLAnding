@@ -565,7 +565,7 @@ Neighbouring buildings, trees and street width change the picture, so treat this
   },
   'prime-plot': {
     answer:
-      'A prime plot feasibility study in Faisal Hills or B-17 evaluates four key variables before buying or breaking ground: legal RDA setback compliance (mandatory 5–10 ft open spaces), maximum permissible covered area across storeys, sun-path solar exposure, and estimated construction budget (grey structure from Rs. 2,850/sq ft vs turnkey from Rs. 5,600/sq ft). Verifying these upfront prevents costly architectural revisions and ensures optimal living comfort.',
+      'A prime plot feasibility study in Faisal Hills or B-17 evaluates four key variables before buying or breaking ground: legal RDA setback compliance (mandatory 5–10 ft open spaces), maximum permissible covered area across storeys, sun-path solar exposure, and estimated construction budget (grey structure packages from PKR 1.355 Cr vs turnkey from PKR 1.815 Cr). Verifying these upfront prevents costly architectural revisions and ensures optimal living comfort.',
     body: `
 ## Why run a plot feasibility study before purchasing?
 

@@ -39,22 +39,21 @@ export default function Navbar() {
     { name: t.nav.team, path: '/team' },
     { name: t.nav.journal, path: '/blog' },
   ];
-  // The desktop bar holds 8 links plus language, phone and Enquire. Home (the
-  // logo already goes there) and Team (linked from About) live in the mobile
-  // menu only — ten links overlapped the language switcher and phone number
-  // at every desktop width (audit 2026-09-26).
-  // Properties is reached from the footer, the home page and the mobile menu
-  // on smaller desktops; it joins the bar only at 2xl where there is room.
-  const desktopLinks = navLinks.filter((l) => l.path !== '/' && l.path !== '/team');
+  // The desktop bar holds the 8 core conversion links plus compact language switcher,
+  // phone and Enquire button. Home (the logo goes there), Team, and Blog live in the
+  // mobile menu and footer — keeping the desktop bar strictly under 900px so it never
+  // collides or wraps on laptop screens (1280px–1440px).
+  // Properties joins the desktop bar at 2xl where there is extra width.
+  const desktopLinks = navLinks.filter(
+    (l) => l.path !== '/' && l.path !== '/team' && l.path !== '/blog'
+  );
 
   return (
-    <nav className="fixed w-full z-50 bg-paper/85 backdrop-blur-md border-b border-sand/40">
-      {/* Content is capped at 1280px elsewhere, which leaves a 1920px screen
-          two-thirds used and makes the whole site feel like a stretched tablet
-          layout. The bar and page containers now run to 1600px. */}
+    <nav className="fixed w-full z-50 bg-paper/90 backdrop-blur-md border-b border-sand/40">
+      {/* Content is capped at 1600px */}
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-4 h-16 md:h-20">
-          <Link href={localeHref('/', locale)} className="flex items-center gap-2.5 md:gap-3 shrink-0 mr-4">
+        <div className="flex items-center justify-between gap-3 h-16 md:h-20">
+          <Link href={localeHref('/', locale)} className="flex items-center gap-2 md:gap-3 shrink-0 mr-2 lg:mr-4">
             <span className="w-9 h-9 md:w-11 md:h-11 rounded-lg overflow-hidden bg-white border border-sand shrink-0">
               <img
                 src="/assets/logo.webp"
@@ -70,34 +69,32 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden xl:flex items-center gap-4 2xl:gap-6 min-w-0">
+          <div className="hidden xl:flex items-center gap-3 2xl:gap-5 min-w-0">
             {desktopLinks.map(link => (
               <Link
                 key={link.name}
                 href={localeHref(link.path, locale)}
-                className={`text-xs uppercase tracking-wider font-semibold hover:text-burgundy transition-colors whitespace-nowrap ${link.path === '/properties' ? 'hidden 2xl:inline' : ''}`}
+                className={`text-[11px] 2xl:text-xs uppercase tracking-wider font-semibold hover:text-burgundy transition-colors whitespace-nowrap ${link.path === '/properties' ? 'hidden 2xl:inline' : ''}`}
               >
                 {link.name}
               </Link>
             ))}
           </div>
 
-          {/* Phone is the primary action for walk-in buyers and was previously
-              only in the footer at 13px. It now sits in the header at a
-              readable size and a full tap height. */}
-          <div className="hidden xl:flex items-center gap-3 shrink-0">
+          {/* Desktop Right actions */}
+          <div className="hidden xl:flex items-center gap-2.5 2xl:gap-3.5 shrink-0">
             <LanguageSwitcher compact />
             <a
               href={`tel:${CONTACT.phoneHref}`}
-              className="flex items-center gap-2 text-sm font-bold text-burgundy hover:opacity-70 transition-opacity whitespace-nowrap py-2"
+              className="flex items-center gap-1.5 text-xs 2xl:text-sm font-bold text-burgundy hover:opacity-70 transition-opacity whitespace-nowrap py-2"
+              title={CONTACT.phoneDisplay}
             >
-              <Phone size={16} />
+              <Phone size={15} />
               <span className="hidden 2xl:inline">{CONTACT.phoneDisplay}</span>
-              <span className="sr-only 2xl:hidden">{CONTACT.phoneDisplay}</span>
             </a>
             <Link
               href={localeHref('/contact', locale)}
-              className="bg-burgundy text-white px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap"
+              className="bg-burgundy text-white px-4 py-2 2xl:px-5 2xl:py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap shadow-xs"
             >
               {t.nav.enquire}
             </Link>
