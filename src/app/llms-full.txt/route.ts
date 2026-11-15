@@ -57,6 +57,18 @@ export function GET() {
     lines.push('');
   }
 
+  lines.push('## Official Construction Payment Plans & Rate Lists (Faisal Hills)');
+  lines.push('');
+  lines.push('- Payment terms: Gray Structure (1.5 Years duration, 30% Down Payment); Fully Finished Turnkey (2 Years duration, 20% Down Payment).');
+  lines.push('- Official Bank Account: Title: MUHAMMAD ABDULLAH | IBAN: PK 12MEZN 0003260114221513 | Bank: Meezan Bank Ltd, B-17, Islamabad, Pakistan.');
+  lines.push('- 5 Marla (25×50 · 2,300 sq ft, G+1+Mumty): Gray Structure from PKR 13,550,000 (1.355 Cr, 30% down = PKR 4,065,000) up to PKR 18,050,000. Finished Home Executive from PKR 18,150,000 (1.815 Cr, 20% down = PKR 3,630,000), Premium from PKR 20,950,000, Luxury from PKR 26,700,000 up to PKR 31,700,000.');
+  lines.push('- 8 Marla (30×60 · 3,200 sq ft, G+1+Mumty): Gray Structure from PKR 19,000,000 (1.90 Cr, 30% down = PKR 5,700,000) up to PKR 25,200,000. Finished Home Executive from PKR 25,400,000 (2.54 Cr, 20% down = PKR 5,080,000), Premium from PKR 29,100,000, Luxury from PKR 37,100,000 up to PKR 43,800,000.');
+  lines.push('- 10 Marla (35×70 · 4,200 sq ft, G+1+Mumty): Gray Structure from PKR 23,700,000 (2.37 Cr, 30% down = PKR 7,110,000) up to PKR 29,200,000. Finished Home Executive from PKR 32,100,000 (3.21 Cr, 20% down = PKR 6,420,000), Premium from PKR 36,800,000, Luxury from PKR 47,300,000 up to PKR 53,300,000.');
+  lines.push('- 14 Marla (40×80 · 5,400 sq ft, G+1+Mumty): Gray Structure from PKR 29,800,000 to PKR 34,500,000; Finished Home Executive from PKR 41,100,000, Premium from PKR 46,600,000, Luxury from PKR 60,100,000 to PKR 64,600,000.');
+  lines.push('- 1 Kanal (50×90 · 6,500 sq ft, G+1+Mumty): Gray Structure from PKR 37,150,000 (3.715 Cr, 30% down = PKR 11,145,000) up to PKR 42,750,000. Finished Home Executive from PKR 50,650,000 (5.065 Cr, 20% down = PKR 10,130,000), Premium from PKR 57,250,000, Luxury from PKR 73,500,000 up to PKR 79,500,000.');
+  lines.push('- Special Category Plots (Corner, Main Double Road, Park Facing): +10% charge applies.');
+  lines.push('');
+
   lines.push('## Housing Societies Overview');
   lines.push('');
   for (const s of societies) {

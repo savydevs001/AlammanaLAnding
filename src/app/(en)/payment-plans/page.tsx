@@ -63,32 +63,76 @@ const structuredData = [
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Faisal Hills Construction Packages & Payment Schedules',
+      name: 'Faisal Hills Official Construction Packages & Payment Schedules',
       itemListElement: [
         {
           '@type': 'Offer',
-          name: 'Gray Structure Construction Package',
+          name: '5 Marla Gray Structure Package (Faisal Hills)',
           description:
-            'Excavation, foundation earthwork, seismic-resistant RCC frame, solid brickwork/block masonry, plumbing & electrical conduit piping, cement plastering, and bituminous roof waterproofing.',
+            '2,300 sq ft covered area (G+1+Mumty). 30% down payment (from PKR 40.65 Lacs), 1.5 years installment duration.',
+          price: '13550000',
+          priceCurrency: 'PKR',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
             priceCurrency: 'PKR',
-            unitText: 'per sq ft',
-            minPrice: '2100',
-            maxPrice: '2500',
+            minPrice: '13550000',
+            maxPrice: '18050000',
           },
         },
         {
           '@type': 'Offer',
-          name: 'Fully Finished Turnkey House Package',
+          name: '5 Marla Fully Finished Turnkey Home (Faisal Hills)',
           description:
-            'Turnkey custom villa delivery including A+ porcelain tile flooring, ash/oak woodwork, designer modular kitchen with imported acrylic cabinets, Grohe/Porta sanitary ware, false ceilings, and weather-shield paint.',
+            '2,300 sq ft covered area (G+1+Mumty). 20% down payment (from PKR 36.30 Lacs), 2 years installment duration across Executive, Premium, and Luxury tiers.',
+          price: '18150000',
+          priceCurrency: 'PKR',
           priceSpecification: {
             '@type': 'UnitPriceSpecification',
             priceCurrency: 'PKR',
-            unitText: 'per sq ft',
-            minPrice: '5300',
-            maxPrice: '7700',
+            minPrice: '18150000',
+            maxPrice: '31200000',
+          },
+        },
+        {
+          '@type': 'Offer',
+          name: '8 Marla Construction Package (Faisal Hills)',
+          description:
+            '3,200 sq ft covered area (G+1+Mumty). Gray structure from PKR 1.90 Cr; Turnkey finished villa from PKR 2.54 Cr.',
+          price: '19000000',
+          priceCurrency: 'PKR',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            priceCurrency: 'PKR',
+            minPrice: '19000000',
+            maxPrice: '43800000',
+          },
+        },
+        {
+          '@type': 'Offer',
+          name: '10 Marla Executive Villa Package (Faisal Hills)',
+          description:
+            '4,200 sq ft covered area (G+1+Mumty · 35×70). Gray structure from PKR 2.37 Cr; Turnkey finished villa from PKR 3.21 Cr.',
+          price: '23700000',
+          priceCurrency: 'PKR',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            priceCurrency: 'PKR',
+            minPrice: '23700000',
+            maxPrice: '53300000',
+          },
+        },
+        {
+          '@type': 'Offer',
+          name: '1 Kanal Signature Estate Package (Faisal Hills)',
+          description:
+            '6,500 sq ft covered area (G+1+Mumty · 50×90). Gray structure from PKR 3.715 Cr; Turnkey finished estate from PKR 5.065 Cr.',
+          price: '37150000',
+          priceCurrency: 'PKR',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            priceCurrency: 'PKR',
+            minPrice: '37150000',
+            maxPrice: '79500000',
           },
         },
       ],

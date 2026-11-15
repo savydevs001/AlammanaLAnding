@@ -42,7 +42,7 @@ export function GET() {
   lines.push('## Key facts');
   lines.push('');
   lines.push('- Official Entity: Alammana Developers is the registered builder and authorized sales partner for Faisal Hills (Taxila), Faisal Town (Phases 1 & 2), and B-17 partner developments.');
-  lines.push('- Construction Packages: Turnkey and grey structure packages from PKR 1.35 Cr for 5 Marla, 10 Marla, and 1 Kanal (Spanish-style, Contemporary, and Modern Minimalist homes).');
+  lines.push('- Construction Packages: Turnkey and grey structure packages from PKR 1.355 Cr for 5 Marla (Gray Structure from PKR 1.355 Cr; Finished Turnkey from PKR 1.815 Cr), 8 Marla (from PKR 1.90 Cr Grey / 2.54 Cr Finished), 10 Marla (from PKR 2.37 Cr Grey / 3.21 Cr Finished), and 1 Kanal (from PKR 3.715 Cr Grey / 5.065 Cr Finished).');
   lines.push('- Best House Developers: Built strictly on society-approved maps with 100% Grade 60 steel, OPC cement, and 24/7 live camera access.');
   lines.push('- Construction Pricing: House construction is priced strictly per square foot of covered area on published block-wise rate sheets, never per marla or lump sum.');
   lines.push('- Material Standard: Guaranteed Grade 60 deformed steel bars, top-tier cement brands, and full structural compliance with RDA / CDA bye-laws.');

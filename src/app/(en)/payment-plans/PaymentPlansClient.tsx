@@ -3,7 +3,17 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
-import { Download, ExternalLink, FileText, Home, Building, ArrowRight } from 'lucide-react';
+import { Download, ExternalLink, FileText, Home, Building, ArrowRight, MessageCircle, ShieldCheck, CheckCircle2, CreditCard } from 'lucide-react';
+import {
+  GRAY_STRUCTURE_PLANS,
+  FINISHED_HOUSE_PLANS,
+  BANK_DETAILS,
+  TERMS_AND_CONDITIONS,
+  type GrayPlanRow,
+  type FinishedPlanRow,
+} from '../../../data/paymentPlansData';
+import { formatPKR } from '../../../lib/pricing';
+import { CONTACT, whatsappLink } from '../../../lib/contact';
 
 type FinishType = 'gray' | 'finished';
 
@@ -177,6 +187,174 @@ export default function PaymentPlansClient() {
                 <p className="text-center text-[12px] uppercase tracking-widest font-bold text-ink/40 mt-4">
                   Tap the plan to open the PDF — or use the download button above
                 </p>
+              </div>
+
+              {/* Exact Verified Rate Table (Transcribed from official PDF & images) */}
+              <div className="p-6 md:p-8 border-t border-sand/40">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+                  <div>
+                    <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-burgundy">Verified On-Ground Rates</span>
+                    <h3 className="text-xl md:text-2xl font-serif text-ink">{planTitle} Data Sheet</h3>
+                  </div>
+                  <span className="text-xs text-ink/60 bg-beige px-3 py-1.5 rounded-full self-start sm:self-auto">
+                    {finish === 'gray' ? '30% Down Payment · 1.5 Years Plan' : '20% Down Payment · 2.0 Years Plan'}
+                  </span>
+                </div>
+
+                <div className="overflow-x-auto rounded-xl border border-sand/60">
+                  {finish === 'gray' ? (
+                    <table className="w-full text-left text-sm text-ink">
+                      <thead className="bg-beige text-[11px] font-bold uppercase tracking-wider text-burgundy border-b border-sand">
+                        <tr>
+                          <th className="px-4 py-3">Sr.</th>
+                          <th className="px-4 py-3">Plot Series</th>
+                          <th className="px-4 py-3">Plot Size</th>
+                          <th className="px-4 py-3">Covered Area</th>
+                          <th className="px-4 py-3">Storey</th>
+                          <th className="px-4 py-3">Total Price</th>
+                          <th className="px-4 py-3">30% Down</th>
+                          <th className="px-4 py-3">Duration</th>
+                          <th className="px-4 py-3 text-right">Enquire</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-sand/40 bg-white text-xs md:text-sm">
+                        {(GRAY_STRUCTURE_PLANS[block.id] ?? []).map((row) => {
+                          const wa = whatsappLink(
+                            `Assalam o Alaikum, I am inquiring about Faisal Hills ${block.label} Gray Structure: Plot Series ${row.plotSeries} (${row.size}, ${row.marla}). Total Price: ${formatPKR(row.totalPriceLuxury)}. Please confirm plot availability.`
+                          );
+                          return (
+                            <tr key={row.srNo} className="hover:bg-sand/15 transition-colors">
+                              <td className="px-4 py-3 font-semibold text-ink/60">{row.srNo}</td>
+                              <td className="px-4 py-3 font-medium text-ink">{row.plotSeries}</td>
+                              <td className="px-4 py-3 whitespace-nowrap">
+                                <span className="font-semibold">{row.marla}</span>
+                                <span className="block text-[11px] text-ink/60">{row.size} ({row.measuringSqYds} sq yd)</span>
+                              </td>
+                              <td className="px-4 py-3 font-mono">{row.coveredAreaSqFt.toLocaleString()} sq ft</td>
+                              <td className="px-4 py-3 text-ink/75">{row.storey}</td>
+                              <td className="px-4 py-3 font-bold text-burgundy whitespace-nowrap">{formatPKR(row.totalPriceLuxury)}</td>
+                              <td className="px-4 py-3 font-medium text-ink whitespace-nowrap">{formatPKR(row.downPayment30)}</td>
+                              <td className="px-4 py-3 text-ink/70">{row.duration}</td>
+                              <td className="px-4 py-3 text-right">
+                                <a
+                                  href={wa}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1.5 rounded-full bg-burgundy/10 px-3 py-1.5 text-xs font-semibold text-burgundy hover:bg-burgundy hover:text-white transition-colors"
+                                >
+                                  <MessageCircle size={13} /> Details
+                                </a>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  ) : (
+                    <table className="w-full text-left text-sm text-ink">
+                      <thead className="bg-beige text-[11px] font-bold uppercase tracking-wider text-burgundy border-b border-sand">
+                        <tr>
+                          <th className="px-4 py-3">Sr.</th>
+                          <th className="px-4 py-3">Plot Series</th>
+                          <th className="px-4 py-3">Plot Size</th>
+                          <th className="px-4 py-3">Covered Area</th>
+                          <th className="px-4 py-3">Executive (20% Down)</th>
+                          <th className="px-4 py-3">Premium (20% Down)</th>
+                          <th className="px-4 py-3">Luxury (20% Down)</th>
+                          <th className="px-4 py-3 text-right">Enquire</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-sand/40 bg-white text-xs md:text-sm">
+                        {(FINISHED_HOUSE_PLANS[block.id] ?? []).map((row) => {
+                          const wa = whatsappLink(
+                            `Assalam o Alaikum, I am inquiring about Faisal Hills ${block.label} Finished House: Plot Series ${row.plotSeries} (${row.size}, ${row.marla}). Executive: ${formatPKR(row.priceExecutive)}, Premium: ${formatPKR(row.pricePremium)}, Luxury: ${formatPKR(row.priceLuxury)}. Please confirm availability.`
+                          );
+                          return (
+                            <tr key={row.srNo} className="hover:bg-sand/15 transition-colors">
+                              <td className="px-4 py-3 font-semibold text-ink/60">{row.srNo}</td>
+                              <td className="px-4 py-3 font-medium text-ink">{row.plotSeries}</td>
+                              <td className="px-4 py-3 whitespace-nowrap">
+                                <span className="font-semibold">{row.marla}</span>
+                                <span className="block text-[11px] text-ink/60">{row.size} ({row.measuringSqYds} sq yd)</span>
+                              </td>
+                              <td className="px-4 py-3 font-mono">{row.coveredAreaSqFt.toLocaleString()} sq ft</td>
+                              <td className="px-4 py-3 whitespace-nowrap">
+                                <span className="font-bold text-burgundy">{formatPKR(row.priceExecutive)}</span>
+                                <span className="block text-[11px] text-ink/60">Down: {formatPKR(row.downPaymentExecutive20)}</span>
+                              </td>
+                              <td className="px-4 py-3 whitespace-nowrap">
+                                <span className="font-bold text-burgundy">{formatPKR(row.pricePremium)}</span>
+                                <span className="block text-[11px] text-ink/60">Down: {formatPKR(row.downPaymentPremium20)}</span>
+                              </td>
+                              <td className="px-4 py-3 whitespace-nowrap">
+                                <span className="font-bold text-burgundy">{formatPKR(row.priceLuxury)}</span>
+                                <span className="block text-[11px] text-ink/60">Down: {formatPKR(row.downPaymentLuxury20)}</span>
+                              </td>
+                              <td className="px-4 py-3 text-right">
+                                <a
+                                  href={wa}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex items-center gap-1.5 rounded-full bg-burgundy/10 px-3 py-1.5 text-xs font-semibold text-burgundy hover:bg-burgundy hover:text-white transition-colors"
+                                >
+                                  <MessageCircle size={13} /> Details
+                                </a>
+                              </td>
+                            </tr>
+                          );
+                        })}
+                      </tbody>
+                    </table>
+                  )}
+                </div>
+
+                {/* Terms and Bank details directly from the sheet */}
+                <div className="mt-8 grid gap-6 md:grid-cols-2">
+                  <div className="rounded-2xl border border-sand bg-paper/60 p-5">
+                    <div className="flex items-center gap-2 text-burgundy font-serif font-semibold text-base mb-3">
+                      <ShieldCheck size={18} /> Official Terms &amp; Conditions
+                    </div>
+                    <ul className="text-xs text-ink/75 space-y-1.5">
+                      {TERMS_AND_CONDITIONS.map((tc, idx) => (
+                        <li key={idx} className="flex items-start gap-1.5">
+                          <span className="text-burgundy font-bold">•</span>
+                          <span>{tc}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="rounded-2xl border border-sand bg-white p-5 flex flex-col justify-between">
+                    <div>
+                      <div className="flex items-center gap-2 text-burgundy font-serif font-semibold text-base mb-3">
+                        <CreditCard size={18} /> Official Online Payment Account
+                      </div>
+                      <div className="space-y-2 text-xs text-ink/80">
+                        <div className="flex justify-between border-b border-sand/40 pb-1">
+                          <span className="text-ink/60">Account Title:</span>
+                          <span className="font-bold text-ink">{BANK_DETAILS.accountTitle}</span>
+                        </div>
+                        <div className="flex justify-between border-b border-sand/40 pb-1">
+                          <span className="text-ink/60">IBAN:</span>
+                          <span className="font-mono font-bold text-burgundy">{BANK_DETAILS.iban}</span>
+                        </div>
+                        <div className="flex justify-between border-b border-sand/40 pb-1">
+                          <span className="text-ink/60">Bank Name:</span>
+                          <span className="font-semibold text-ink">{BANK_DETAILS.bankName}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-ink/60">Branch Address:</span>
+                          <span className="text-ink">{BANK_DETAILS.branch}</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-4 pt-3 border-t border-sand/40">
+                      <p className="text-[11px] text-ink/60">
+                        For verified booking receipts, wire transfer slips, or custom installment durations (3 months to 2 years), contact our accounts office directly.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </AnimatePresence>
