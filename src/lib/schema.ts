@@ -21,7 +21,14 @@ export function organizationSchema(inLanguage: SchemaLanguage = 'en-PK') {
       '@type': ['Organization', 'LocalBusiness', 'RealEstateAgent', 'GeneralContractor'],
       '@id': `${SITE_URL}#organization`,
       name: 'Alammana Developers',
-      alternateName: ['Al Ammana Developers', 'الامانہ ڈویلپرز', 'الأمانة ديفلوبرز'],
+      alternateName: [
+        'Al Ammana Developers',
+        'Alammana Developers',
+        'Al Ammana',
+        'Alammana.pk',
+        'الامانہ ڈویلپرز',
+        'الأمانة ديفلوبرز',
+      ],
       url: SITE_URL,
       logo: {
         '@type': 'ImageObject',
@@ -31,13 +38,14 @@ export function organizationSchema(inLanguage: SchemaLanguage = 'en-PK') {
       },
       image: `${SITE_URL}/assets/og-image.jpg`,
       description:
-        'Authorized Faisal Hills property dealers, top real estate agents in Taxila, and the best house developers in Islamabad. We offer houses on installments in Islamabad and Faisal Town real estate services with transparent per-sq-ft rates and 24/7 live site cameras.',
+        'Alammana Developers is the official real estate, architectural planning, and construction company based in the Islamabad-Rawalpindi region, focusing on societies like Faisal Hills, B-17 Multi Gardens, and Faisal Town. We offer turnkey residential construction packages from PKR 1.35 Cr (including Spanish-style homes), verified per-block plot rates, 24/7 live site camera monitoring, and client portal tracking.',
       foundingDate: '2015',
       telephone: ['+92-337-7503111', '+92-308-7750009'],
       email: 'rabta@alammana.pk',
       areaServed: [
         { '@type': 'Place', name: 'Faisal Hills' },
         { '@type': 'Place', name: 'Faisal Town' },
+        { '@type': 'Place', name: 'B-17 Multi Gardens, Islamabad' },
         { '@type': 'Place', name: 'Taxila' },
         { '@type': 'Place', name: 'Rawalpindi' },
         { '@type': 'Place', name: 'Islamabad' },
@@ -110,7 +118,11 @@ export function organizationSchema(inLanguage: SchemaLanguage = 'en-PK') {
       ],
       currenciesAccepted: 'PKR',
       paymentAccepted: 'Cash, Bank Transfer, Cheque, Pay Order, Installment Plans',
-      sameAs: ['https://www.facebook.com/alammana.pk', 'https://www.instagram.com/alammanapk/'],
+      sameAs: [
+        'https://alammana.com',
+        'https://www.facebook.com/alammana.pk',
+        'https://www.instagram.com/alammanapk/',
+      ],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Construction and Real Estate Services',
@@ -119,9 +131,20 @@ export function organizationSchema(inLanguage: SchemaLanguage = 'en-PK') {
             '@type': 'Offer',
             itemOffered: {
               '@type': 'Service',
-              name: 'House Construction',
+              name: 'Faisal Hills House Construction Packages',
+              description:
+                '5 Marla, 10 Marla and 1 Kanal turnkey and grey structure construction packages from PKR 1.35 Cr, with Spanish-style, contemporary, and modern minimalist architectural options.',
+              url: `${SITE_URL}/packages`,
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'House Construction & Build Services',
               description:
                 'Gray structure or fully finished houses, priced per square foot of covered area on published block-wise rates.',
+              url: `${SITE_URL}/build`,
             },
           },
           {

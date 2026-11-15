@@ -22,6 +22,8 @@ export default function Footer() {
   const t = getPageDictionary(locale).footer;
 
   const exploreLinks = [
+    { label: 'Construction Packages', href: '/packages' },
+    { label: 'Build With Us', href: '/build' },
     { label: t.links.rates, href: '/payment-plans' },
     { label: t.links.overseas, href: '/overseas' },
     { label: t.links.blocks, href: '/societies/faisal-hills' },

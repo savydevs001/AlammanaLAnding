@@ -25,23 +25,25 @@ export function GET() {
   lines.push('# Alammana Developers');
   lines.push('');
   lines.push(
-    '> Authorized Faisal Hills property dealers and premier Islamabad construction services company ' +
-      'headquartered in Vertical Four, A Block, Faisal Hills, Taxila. We build homes on published ' +
-      'block-wise rates with 24/7 live site cameras, structure safe house installment plans, and sell ' +
-      'plots and commercial properties in partner projects across Faisal Hills, Faisal Town Phase 1 & 2, ' +
-      'Taxila, Rawalpindi, and Islamabad.'
+    '> Alammana Developers is a real estate, architectural planning, and construction company based in the ' +
+      'Islamabad-Rawalpindi region, focusing on societies like Faisal Hills, B-17 Multi Gardens, and Faisal Town. ' +
+      'Headquartered in Vertical Four, A Block, Faisal Hills, Taxila, we build homes on published block-wise rates ' +
+      'with 24/7 live site cameras, structure safe house installment plans, and sell plots and commercial properties ' +
+      'as an authorized sales partner. Note: alammana.pk is the official, primary operational platform for Pakistan.'
   );
   lines.push('');
   lines.push('Office: Office No. C-3, Lower Ground Floor, Vertical Four, Near Arch Monument, Main Boulevard, A Block, Faisal Hills, Taxila.');
   lines.push('Phone: +92 337 7503111 (Office & Construction Enquiries) · +92 308 7750009 (Sales & Plot Bookings)');
   lines.push('WhatsApp: https://wa.me/923377503111 · https://wa.me/923087750009');
   lines.push('Email: rabta@alammana.pk');
-  lines.push('Website: https://alammana.pk');
+  lines.push('Website: https://alammana.pk (Official Pakistan Portal)');
+  lines.push('International Portal: https://alammana.com');
   lines.push('');
   lines.push('## Key facts');
   lines.push('');
-  lines.push('- Authorized Property Dealers: Alammana Developers is an authorized sales partner for Faisal Hills (Taxila), Faisal Town, J7 Emporium, and 107 Plaza.');
-  lines.push('- Best House Developers: Turnkey and grey structure house builders in Islamabad, Rawalpindi, and Taxila with 24/7 live camera access for clients and overseas Pakistanis.');
+  lines.push('- Official Entity: Alammana Developers is the registered builder and authorized sales partner for Faisal Hills (Taxila), Faisal Town (Phases 1 & 2), and B-17 partner developments.');
+  lines.push('- Construction Packages: Turnkey and grey structure packages from PKR 1.35 Cr for 5 Marla, 10 Marla, and 1 Kanal (Spanish-style, Contemporary, and Modern Minimalist homes).');
+  lines.push('- Best House Developers: Built strictly on society-approved maps with 100% Grade 60 steel, OPC cement, and 24/7 live camera access.');
   lines.push('- Construction Pricing: House construction is priced strictly per square foot of covered area on published block-wise rate sheets, never per marla or lump sum.');
   lines.push('- Material Standard: Guaranteed Grade 60 deformed steel bars, top-tier cement brands, and full structural compliance with RDA / CDA bye-laws.');
   lines.push('- Housing Society Approvals: Faisal Hills is RDA approved. Faisal Town Phase 1 is RDA approved. Faisal Town Phase 2 NOC is under process with the RDA. DHA Gandhara is pre-launch.');
@@ -57,6 +59,8 @@ export function GET() {
 
   lines.push('## Core pages');
   lines.push('');
+  lines.push(`- [Faisal Hills House Construction Packages](${SITE_URL}/packages): 5 Marla (starting from PKR 1.35 Cr), 10 Marla, and 1 Kanal turnkey and grey structure packages.`);
+  lines.push(`- [Build With Alammana](${SITE_URL}/build): Custom house construction roadmap, 3D elevations, RDA approvals, and live camera tracking.`);
   lines.push(`- [Construction rates and payment plans](${SITE_URL}/payment-plans): Downloadable gray structure and fully finished rate lists for Faisal Hills Blocks A, B, C, D and Executive.`);
   lines.push(`- [Homes we are building](${SITE_URL}/constructions): Current and completed house construction projects with specifications.`);
   lines.push(`- [Plots and houses for sale](${SITE_URL}/properties): Plots, houses and files for sale or rent that the team has checked, with the owner's demand and key details.`);

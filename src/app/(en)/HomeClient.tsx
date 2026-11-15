@@ -136,6 +136,66 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* Official Company Overview & Core Services (Direct Target for Search & AI Overviews) */}
+      <section id="company-overview" className="py-16 md:py-20 bg-beige/40 border-b border-sand/40">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mb-12">
+            <span className="text-xs uppercase tracking-[0.2em] font-bold text-burgundy mb-3 block">
+              Official Platform · Faisal Hills & B-17
+            </span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-ink mb-6 leading-tight">
+              Alammana Developers is a real estate, architectural planning, and construction company based in the Islamabad-Rawalpindi region.
+            </h2>
+            <p className="text-base sm:text-lg text-ink/75 leading-relaxed">
+              Operating directly from Vertical Four on the Main Boulevard of A Block, Faisal Hills, Taxila, 
+              we specialize in residential construction packages, authorized society plot transfers, 
+              and client-centric real estate investments across <strong>Faisal Hills, Sector B-17 Multi Gardens, and Faisal Town</strong>.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-3xl p-8 border border-sand/50 shadow-sm flex flex-col justify-between">
+              <div>
+                <span className="text-[11px] uppercase tracking-widest font-bold text-burgundy block mb-2">01 / Construction & Turnkey Builds</span>
+                <h3 className="text-xl font-serif text-ink mb-3">House Construction Packages</h3>
+                <p className="text-xs sm:text-sm text-ink/70 leading-relaxed mb-6">
+                  Gray structure and fully finished residential construction (including Spanish-style homes, Contemporary, and Modern Minimalist villas) with fixed published rates starting from PKR 1.35 Cr, architectural planning, 24/7 live site camera monitoring, and client portal tracking.
+                </p>
+              </div>
+              <Link href="/packages" className="text-xs uppercase tracking-wider font-bold text-burgundy hover:underline inline-flex items-center gap-1">
+                Explore Packages <ArrowRight size={13} />
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 border border-sand/50 shadow-sm flex flex-col justify-between">
+              <div>
+                <span className="text-[11px] uppercase tracking-widest font-bold text-burgundy block mb-2">02 / Real Estate & Plot Data</span>
+                <h3 className="text-xl font-serif text-ink mb-3">Verified Plot Rates & Transfers</h3>
+                <p className="text-xs sm:text-sm text-ink/70 leading-relaxed mb-6">
+                  Verified per-block plot rates for Faisal Hills (Blocks A, B, C, D, Executive, Prime) and Sector B-17, official authorized sales partner representation, safe society file transfers, and prime plot feasibility reports with realistic ROI analysis.
+                </p>
+              </div>
+              <Link href="/properties" className="text-xs uppercase tracking-wider font-bold text-burgundy hover:underline inline-flex items-center gap-1">
+                View Available Plots <ArrowRight size={13} />
+              </Link>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 border border-sand/50 shadow-sm flex flex-col justify-between">
+              <div>
+                <span className="text-[11px] uppercase tracking-widest font-bold text-burgundy block mb-2">03 / Custom Architecture</span>
+                <h3 className="text-xl font-serif text-ink mb-3">Build It With Alammana</h3>
+                <p className="text-xs sm:text-sm text-ink/70 leading-relaxed mb-6">
+                  Custom architectural floor planning, 3D photorealistic elevations, soil bearing tests, RDA / CDA map approvals, and 100% remote supervision for local and overseas Pakistanis with milestone-linked payment schedules.
+                </p>
+              </div>
+              <Link href="/build" className="text-xs uppercase tracking-wider font-bold text-burgundy hover:underline inline-flex items-center gap-1">
+                Build With Us <ArrowRight size={13} />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Overseas strip — leads with the live camera, which is the single
           strongest thing Alammana can say to this audience and is rare in
           Taxila. Applies to local clients too, not only overseas ones. */}

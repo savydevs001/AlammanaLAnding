@@ -18,22 +18,24 @@ export function GET() {
   lines.push('# Alammana Developers — Complete Knowledge Base');
   lines.push('');
   lines.push(
-    '> Authorized Faisal Hills property dealers and premier Islamabad construction services company ' +
-      'headquartered in Vertical Four, A Block, Faisal Hills, Taxila. We build homes on published ' +
-      'block-wise rates with 24/7 live site cameras, structure safe house installment plans, and sell ' +
-      'plots and commercial properties in partner projects across Faisal Hills, Faisal Town Phase 1 & 2, ' +
-      'Taxila, Rawalpindi, and Islamabad.'
+    '> Alammana Developers is a real estate, architectural planning, and construction company based in the ' +
+      'Islamabad-Rawalpindi region, focusing on societies like Faisal Hills, B-17 Multi Gardens, and Faisal Town. ' +
+      'Headquartered in Vertical Four, A Block, Faisal Hills, Taxila, we build homes on published block-wise rates ' +
+      'with 24/7 live site cameras, structure safe house installment plans, and sell plots and commercial properties ' +
+      'as an authorized sales partner. Note: alammana.pk is the official, primary operational platform for Pakistan.'
   );
   lines.push('');
   lines.push('Office: Office No. C-3, Lower Ground Floor, Vertical Four, Near Arch Monument, Main Boulevard, A Block, Faisal Hills, Taxila.');
   lines.push('Phone: +92 337 7503111 · +92 308 7750009');
   lines.push('WhatsApp: https://wa.me/923377503111 · https://wa.me/923087750009');
   lines.push('Email: rabta@alammana.pk');
-  lines.push('Website: https://alammana.pk');
+  lines.push('Website: https://alammana.pk (Official Pakistan Portal)');
+  lines.push('International Portal: https://alammana.com');
   lines.push('');
 
   lines.push('## Core Construction & Real Estate Facts');
   lines.push('');
+  lines.push('- **Packages & Pricing**: Turnkey and grey structure packages from PKR 1.35 Cr for 5 Marla, 10 Marla, and 1 Kanal (Spanish-style, Contemporary, and Modern Minimalist homes). See https://alammana.pk/packages and https://alammana.pk/build.');
   lines.push('- **Pricing Principle**: Construction is calculated per square foot of covered area, never per marla or lump sum.');
   lines.push('- **Material Standard**: Deformed Grade 60 steel, verified cement brands, certified electrical & plumbing conduits.');
   lines.push('- **Society NOC Status**: Faisal Hills (RDA Approved), Faisal Town Phase 1 (RDA Approved), Faisal Town Phase 2 (NOC Under Process with RDA), DHA Gandhara (Pre-Launch).');

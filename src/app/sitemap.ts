@@ -57,6 +57,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticPages: MetadataRoute.Sitemap = [
     { url: siteUrl, lastModified, changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${siteUrl}/packages`, lastModified, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${siteUrl}/build`, lastModified, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${siteUrl}/payment-plans`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${siteUrl}/societies`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${siteUrl}/portfolio`, lastModified, changeFrequency: 'weekly', priority: 0.9 },
