@@ -25,23 +25,27 @@ export function GET() {
   lines.push('# Alammana Developers');
   lines.push('');
   lines.push(
-    '> Construction and real estate firm working in Faisal Hills and Faisal Town, ' +
-      'Taxila and Rawalpindi, Pakistan. We build houses on publicly published ' +
-      'block-wise rates, and sell plots and inventory in partner projects as an ' +
-      'authorised sales partner.'
+    '> Authorized Faisal Hills property dealers and premier Islamabad construction services company ' +
+      'headquartered in Vertical Four, A Block, Faisal Hills, Taxila. We build homes on published ' +
+      'block-wise rates with 24/7 live site cameras, structure safe house installment plans, and sell ' +
+      'plots and commercial properties in partner projects across Faisal Hills, Faisal Town Phase 1 & 2, ' +
+      'Taxila, Rawalpindi, and Islamabad.'
   );
   lines.push('');
   lines.push('Office: Office No. C-3, Lower Ground Floor, Vertical Four, Near Arch Monument, Main Boulevard, A Block, Faisal Hills, Taxila.');
-  lines.push('Contact: +92 335 8078262 · rabta@alammana.pk');
+  lines.push('Phone: +92 337 7503111 (Office & Construction Enquiries) · +92 308 7750009 (Sales & Plot Bookings)');
+  lines.push('WhatsApp: https://wa.me/923377503111 · https://wa.me/923087750009');
+  lines.push('Email: rabta@alammana.pk');
+  lines.push('Website: https://alammana.pk');
   lines.push('');
   lines.push('## Key facts');
   lines.push('');
-  lines.push('- Construction is priced per square foot of covered area, not per marla of plot.');
-  lines.push('- We publish fixed block-wise rates for gray structure and fully finished houses, downloadable as PDFs.');
-  lines.push('- Faisal Hills is RDA approved. Faisal Town Phase 1 is RDA approved. Faisal Town Phase 2 has its NOC under process. DHA Gandhara is pre-launch.');
-  lines.push('- We are not the developer of partner projects; each project page names the actual developer.');
-  lines.push('- Clients get 24/7 live camera access to their construction site and a private portal tracking stages completed, work in progress, next steps, responsible staff, materials used, site inventory and legal documents.');
-  lines.push('- We handle society transfers, approvals and construction documentation end to end, including acting under a power of attorney for overseas clients.');
+  lines.push('- Authorized Property Dealers: Alammana Developers is an authorized sales partner for Faisal Hills (Taxila), Faisal Town, J7 Emporium, and 107 Plaza.');
+  lines.push('- Best House Developers: Turnkey and grey structure house builders in Islamabad, Rawalpindi, and Taxila with 24/7 live camera access for clients and overseas Pakistanis.');
+  lines.push('- Construction Pricing: House construction is priced strictly per square foot of covered area on published block-wise rate sheets, never per marla or lump sum.');
+  lines.push('- Material Standard: Guaranteed Grade 60 deformed steel bars, top-tier cement brands, and full structural compliance with RDA / CDA bye-laws.');
+  lines.push('- Housing Society Approvals: Faisal Hills is RDA approved. Faisal Town Phase 1 is RDA approved. Faisal Town Phase 2 NOC is under process with the RDA. DHA Gandhara is pre-launch.');
+  lines.push('- Client Tracking Portal: Every client gets private online tracking of construction milestones, inventory, materials used, legal documents, and live video streams.');
   lines.push('');
 
   lines.push('## Languages');

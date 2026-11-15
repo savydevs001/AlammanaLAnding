@@ -105,14 +105,22 @@ export default function Footer() {
                   {CONTACT.email}
                 </a>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone size={16} className="text-sand shrink-0" />
-                <a
-                  href={`tel:${CONTACT.phoneHref}`}
-                  className="font-semibold hover:text-white ltr-nums"
-                >
-                  {CONTACT.phoneDisplay}
-                </a>
+              <li className="flex items-start gap-3">
+                <Phone size={16} className="text-sand shrink-0 mt-1" />
+                <div className="flex flex-col gap-1">
+                  <a
+                    href={`tel:${CONTACT.phoneHref}`}
+                    className="font-semibold hover:text-white ltr-nums"
+                  >
+                    {CONTACT.phoneDisplay}
+                  </a>
+                  <a
+                    href={`tel:${CONTACT.phoneHrefAlt}`}
+                    className="font-semibold hover:text-white ltr-nums text-xs text-beige/60"
+                  >
+                    {CONTACT.phoneDisplayAlt}
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <MapPin size={16} className="text-sand shrink-0" />

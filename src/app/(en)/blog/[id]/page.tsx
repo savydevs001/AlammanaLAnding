@@ -87,6 +87,17 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       },
       mainEntityOfPage: { '@type': 'WebPage', '@id': `${baseUrl}/blog/${post.id}` },
       articleSection: post.category,
+      ...(post.keyTakeaway ? { abstract: post.keyTakeaway, description: post.keyTakeaway } : {}),
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['h1', 'aside p', '.blog-body h2'],
+      },
+      about: [
+        { '@type': 'Thing', name: post.category },
+        { '@type': 'Place', name: 'Faisal Hills, Taxila' },
+        { '@type': 'Place', name: 'Islamabad' },
+        { '@type': 'Place', name: 'Rawalpindi' },
+      ],
       ...(post.tags ? { keywords: post.tags.join(', ') } : {}),
       inLanguage: 'en-PK',
       isAccessibleForFree: true,

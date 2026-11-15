@@ -18,7 +18,7 @@ export function organizationSchema(inLanguage: SchemaLanguage = 'en-PK') {
   return [
     {
       '@context': 'https://schema.org',
-      '@type': ['Organization', 'LocalBusiness', 'RealEstateAgent'],
+      '@type': ['Organization', 'LocalBusiness', 'RealEstateAgent', 'GeneralContractor'],
       '@id': `${SITE_URL}#organization`,
       name: 'Alammana Developers',
       alternateName: ['Al Ammana Developers', 'الامانہ ڈویلپرز', 'الأمانة ديفلوبرز'],
@@ -31,8 +31,10 @@ export function organizationSchema(inLanguage: SchemaLanguage = 'en-PK') {
       },
       image: `${SITE_URL}/assets/og-image.jpg`,
       description:
-        'Faisal Hills property dealers, top real estate agents in Taxila, and the best house developers in Islamabad. We offer houses on installments in Islamabad and Faisal Town real estate services, with 24/7 live site cameras.',
+        'Authorized Faisal Hills property dealers, top real estate agents in Taxila, and the best house developers in Islamabad. We offer houses on installments in Islamabad and Faisal Town real estate services with transparent per-sq-ft rates and 24/7 live site cameras.',
       foundingDate: '2015',
+      telephone: ['+92-337-7503111', '+92-308-7750009'],
+      email: 'rabta@alammana.pk',
       areaServed: [
         { '@type': 'Place', name: 'Faisal Hills' },
         { '@type': 'Place', name: 'Faisal Town' },
@@ -48,7 +50,13 @@ export function organizationSchema(inLanguage: SchemaLanguage = 'en-PK') {
         'House on installments in Islamabad',
         'Taxila property investment',
         'Faisal Town real estate',
-        'Real estate agents in Taxila'
+        'Real estate agents in Taxila',
+        'Rawalpindi house builders',
+        'Grey structure construction per sq ft',
+        'Turnkey house building contracts',
+        'Faisal Hills NOC and RDA approvals',
+        'Faisal Town Phase 1 and Phase 2 plots',
+        'DHA Gandhara investment'
       ],
       serviceType: [
         'Islamabad Construction Services',
@@ -56,6 +64,8 @@ export function organizationSchema(inLanguage: SchemaLanguage = 'en-PK') {
         'Faisal Hills Property Dealers',
         'Faisal Town Real Estate',
         'Best House Developers',
+        'Turnkey House Construction',
+        'Gray Structure Construction',
         'Property Marketing',
       ],
       address: {
@@ -67,14 +77,27 @@ export function organizationSchema(inLanguage: SchemaLanguage = 'en-PK') {
         addressCountry: 'PK',
       },
       geo: { '@type': 'GeoCoordinates', latitude: 33.7294, longitude: 73.0931 },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+          opens: '09:00',
+          closes: '19:00',
+        },
+      ],
       contactPoint: [
         {
           '@type': 'ContactPoint',
-          telephone: '+92-335-8078262',
+          telephone: '+92-337-7503111',
           contactType: 'customer service',
           areaServed: 'PK',
-          // Stated honestly: these are the languages the office actually
-          // answers the phone in, not the languages the website is published in.
+          availableLanguage: ['English', 'Urdu', 'Punjabi'],
+        },
+        {
+          '@type': 'ContactPoint',
+          telephone: '+92-308-7750009',
+          contactType: 'sales',
+          areaServed: 'PK',
           availableLanguage: ['English', 'Urdu', 'Punjabi'],
         },
         {
@@ -85,6 +108,8 @@ export function organizationSchema(inLanguage: SchemaLanguage = 'en-PK') {
           availableLanguage: ['English', 'Urdu'],
         },
       ],
+      currenciesAccepted: 'PKR',
+      paymentAccepted: 'Cash, Bank Transfer, Cheque, Pay Order, Installment Plans',
       sameAs: ['https://www.facebook.com/alammana.pk', 'https://www.instagram.com/alammanapk/'],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',

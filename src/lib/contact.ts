@@ -3,12 +3,38 @@
  * Change the number or email here and every button, form and link updates.
  */
 export const CONTACT = {
-  /** Display format, used in visible text. */
-  phoneDisplay: '+92 335 8078262',
-  /** tel: link format. */
-  phoneHref: '+923358078262',
-  /** wa.me format — country code + number, digits only, no leading +. */
-  whatsapp: '923358078262',
+  /** Primary display format, used in visible text. */
+  phoneDisplay: '+92 337 7503111',
+  /** Primary tel: link format. */
+  phoneHref: '+923377503111',
+  /** Primary wa.me format — country code + number, digits only, no leading +. */
+  whatsapp: '923377503111',
+
+  /** Secondary display format. */
+  phoneDisplayAlt: '+92 308 7750009',
+  /** Secondary tel: link format. */
+  phoneHrefAlt: '+923087750009',
+  /** Secondary wa.me format. */
+  whatsappAlt: '923087750009',
+
+  /** Both official contact phone lines for structured directory listings. */
+  phones: [
+    {
+      display: '+92 337 7503111',
+      href: '+923377503111',
+      raw: '03377503111',
+      whatsapp: '923377503111',
+      label: 'Main Office / Construction Enquiries',
+    },
+    {
+      display: '+92 308 7750009',
+      href: '+923087750009',
+      raw: '03087750009',
+      whatsapp: '923087750009',
+      label: 'Sales & Plot Bookings',
+    },
+  ],
+
   email: 'rabta@alammana.pk',
   /** Short form for tight spaces (footer, cards). */
   addressShort: 'Vertical Four, A Block, Faisal Hills',

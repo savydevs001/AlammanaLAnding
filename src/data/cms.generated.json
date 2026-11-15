@@ -1,5 +1,980 @@
 {
-  "generatedAt": null,
-  "source": null,
-  "listings": []
+  "generatedAt": "2026-11-15T10:55:12.471Z",
+  "source": "https://api.alammana.pk",
+  "listings": [
+    {
+      "kind": "PARTNER_PROJECT",
+      "slug": "107-plaza",
+      "sortOrder": 30,
+      "seoTitle": null,
+      "seoDescription": null,
+      "publishedAt": "2026-09-26T08:35:47.844Z",
+      "content": {
+        "faqs": [
+          {
+            "a": "Inside Faisal Hills, an RDA-approved housing society on the Main G.T. Road in Taxila.",
+            "q": "Where is 107 Plaza?"
+          },
+          {
+            "a": "Ground-floor retail shops and upper-floor office units, suited to both end-users and investors looking for rental income.",
+            "q": "What units are available in 107 Plaza?"
+          },
+          {
+            "a": "Contact Alammana Developers for the current availability and rate sheet — we handle bookings for the plaza.",
+            "q": "How do I get the price list for 107 Plaza?"
+          }
+        ],
+        "role": "Authorised Sales Partner",
+        "title": "107 Plaza",
+        "images": [
+          "/assets/projects/107-plaza.webp"
+        ],
+        "status": "In Progress",
+        "contact": {
+          "email": "rabta@alammana.pk",
+          "phone": "+92 335 8078262",
+          "address": "Faisal Hills, Taxila"
+        },
+        "category": "Commercial",
+        "features": [
+          "Ground-Floor Retail Shops",
+          "Upper-Floor Offices",
+          "Inside RDA-Approved Faisal Hills"
+        ],
+        "location": "Faisal Hills, Taxila",
+        "thumbnail": "/assets/projects/107-plaza.webp",
+        "description": "A commercial plaza in Faisal Hills offering ground-floor shops and upper-floor office space.",
+        "fullDescription": "107 Plaza is a commercial development inside Faisal Hills, Taxila, offering retail shops and office units suited to both end-users and investors looking for rental yield within an established RDA-approved society. Alammana Developers handles bookings and can share the current availability and rate sheet on request."
+      }
+    },
+    {
+      "kind": "PARTNER_PROJECT",
+      "slug": "faisal-hills-prime-block",
+      "sortOrder": 40,
+      "seoTitle": null,
+      "seoDescription": null,
+      "publishedAt": "2026-09-26T08:35:48.085Z",
+      "content": {
+        "faqs": [
+          {
+            "a": "A newly launched block of Faisal Hills offering residential and commercial plots on instalments.",
+            "q": "What is Faisal Hills Prime Block?"
+          },
+          {
+            "a": "Yes. Faisal Hills is approved by the Rawalpindi Development Authority (RDA).",
+            "q": "Is Faisal Hills approved?"
+          },
+          {
+            "a": "On the Main G.T. Road in Taxila, adjacent to Multi Gardens B-17 and minutes from the M-1 Motorway, spread over roughly 11,823 kanals.",
+            "q": "Where is Faisal Hills?"
+          },
+          {
+            "a": "Yes, Prime Block plots are offered on instalment plans. Alammana Developers handles bookings, transfers and resale in Faisal Hills and can share the current plan.",
+            "q": "Can I buy a plot in Prime Block on instalments?"
+          }
+        ],
+        "role": "Authorised Sales Partner",
+        "title": "Faisal Hills — Prime Block",
+        "images": [
+          "/assets/projects/prime-block.webp",
+          "/assets/projects/prime-block-map.webp"
+        ],
+        "status": "In Progress",
+        "contact": {
+          "email": "rabta@alammana.pk",
+          "phone": "+92 335 8078262",
+          "address": "Faisal Hills, Taxila"
+        },
+        "approval": "RDA Approved",
+        "category": "Development",
+        "features": [
+          "Easy Instalment Plans",
+          "RDA-Approved Society",
+          "Underground Electrification",
+          "Parks, Mosques & Wide Boulevards"
+        ],
+        "location": "Faisal Hills, Main G.T. Road, Taxila",
+        "developer": "Faisal Town Group / Zedem International",
+        "thumbnail": "/assets/projects/prime-block.webp",
+        "description": "Residential and commercial plots in the newly launched Prime Block of Faisal Hills, on easy instalments.",
+        "surroundings": [
+          "Main G.T. Road (N-5)",
+          "Taxila City",
+          "Wah Cantt",
+          "Multi Gardens B-17",
+          "M-1 Motorway",
+          "HITEC University",
+          "Margalla Avenue"
+        ],
+        "fullDescription": "Faisal Hills is an RDA-approved housing society by the Faisal Town Group, led by Ch. Abdul Majeed, spread over roughly 11,823 kanals on the Main G.T. Road in Taxila, adjacent to Multi Gardens B-17 and minutes from the M-1 Motorway. The newly launched Prime Block opens fresh residential and commercial plots in a master-planned community with wide carpeted roads, underground electrification, parks, mosques and a graveyard already in place across the developed blocks. Alammana Developers handles plot bookings, transfers and resale in Faisal Hills."
+      }
+    },
+    {
+      "kind": "PARTNER_PROJECT",
+      "slug": "faisal-jewel",
+      "sortOrder": 10,
+      "seoTitle": null,
+      "seoDescription": null,
+      "publishedAt": "2026-09-26T08:35:47.154Z",
+      "content": {
+        "faqs": [
+          {
+            "a": "In the Executive Block of Faisal Hills, Taxila, where Margalla Avenue, the G.T. Road and the M-1 Motorway meet, with the Margalla Hills National Park behind it.",
+            "q": "Where is Faisal Jewel located?"
+          },
+          {
+            "a": "Zedem International under the Faisal Town Group, with CAM Construction as co-developer and contractor. The architect is Jamshid Khan Associates. Alammana Developers is an authorised sales partner.",
+            "q": "Who is the developer of Faisal Jewel?"
+          },
+          {
+            "a": "The residential tower rises 27-plus storeys, alongside a separate 14-storey commercial tower, over three basement parking levels.",
+            "q": "How many floors does Faisal Jewel have?"
+          },
+          {
+            "a": "One-bedroom apartments of 1,295 sq ft, two-bedroom of 1,930 sq ft, three-bedroom of 2,435 sq ft, and penthouses on the 14th floor from 3,547 sq ft to 7,320 sq ft. Studios are available on enquiry.",
+            "q": "What apartment sizes are available in Faisal Jewel?"
+          },
+          {
+            "a": "Yes. The commercial tower has shops from the lower ground to the third floor, from about 153 sq ft upwards, and a food court on the fourth floor.",
+            "q": "Are there shops in Faisal Jewel?"
+          },
+          {
+            "a": "It is built inside RDA-approved Faisal Hills, with an NOC from the Rawalpindi Development Authority.",
+            "q": "Is Faisal Jewel approved?"
+          },
+          {
+            "a": "As of July 2026 the middle tower had reached the 8th floor, with columns under construction. Expected completion is Q4 2027.",
+            "q": "What is the construction status of Faisal Jewel?"
+          }
+        ],
+        "role": "Authorised Sales Partner",
+        "title": "Faisal Jewel",
+        "images": [
+          "/assets/projects/faisal-jewel/hero.webp",
+          "/assets/projects/faisal-jewel/night.webp",
+          "/assets/projects/faisal-jewel/tower-portrait.webp",
+          "/assets/projects/faisal-jewel/lobby.webp",
+          "/assets/projects/faisal-jewel/amenity-pool.webp",
+          "/assets/projects/faisal-jewel/plan-site.webp",
+          "/assets/projects/faisal-jewel/location-map.webp"
+        ],
+        "status": "In Progress",
+        "contact": {
+          "email": "rabta@alammana.pk",
+          "phone": "+92 335 8078262",
+          "address": "Faisal Hills, Taxila"
+        },
+        "mapLink": "https://maps.google.com/?q=Faisal+Jewel+Faisal+Hills+Taxila",
+        "approval": "Built inside RDA-approved Faisal Hills — NOC approved by the Rawalpindi Development Authority",
+        "category": "Commercial",
+        "features": [
+          "Luxury 1, 2 & 3 Bedroom Apartments",
+          "Penthouses from 3,547 sq ft",
+          "Retail, Food Court & Hotel Component",
+          "Three Basement Parking Levels"
+        ],
+        "location": "Executive Block, Faisal Hills, Taxila",
+        "amenities": [
+          "Swimming Pool",
+          "Fitness Centre",
+          "Rooftop Lounge",
+          "Café",
+          "Gaming Room",
+          "Retail Floors",
+          "24/7 Security & Surveillance",
+          "Three-Level Basement Parking"
+        ],
+        "architect": "Jamshid Khan Associates",
+        "developer": "Zedem International / Faisal Town Group with CAM Construction",
+        "structure": "Two towers over a shared podium. The residential tower rises 27-plus storeys with one, two and three-bedroom apartments and penthouses on the 14th floor. A separate 14-storey commercial tower holds retail levels, a fourth-floor food court and a four-to-five-star hotel component. Three basement levels are given over to parking.",
+        "thumbnail": "/assets/projects/faisal-jewel/hero.webp",
+        "unitPlans": [
+          {
+            "name": "Studio Apartment",
+            "size": "Enquire for availability",
+            "render": "/assets/projects/faisal-jewel/unit-studio.webp"
+          },
+          {
+            "name": "One Bedroom Apartment",
+            "plan": "/assets/projects/faisal-jewel/plan-1bed.webp",
+            "size": "1,295 sq ft",
+            "render": "/assets/projects/faisal-jewel/unit-1bed.webp"
+          },
+          {
+            "name": "Two Bedroom Apartment",
+            "plan": "/assets/projects/faisal-jewel/plan-2bed.webp",
+            "size": "1,930 sq ft",
+            "render": "/assets/projects/faisal-jewel/unit-2bed.webp"
+          },
+          {
+            "name": "Three Bedroom Apartment",
+            "plan": "/assets/projects/faisal-jewel/plan-3bed.webp",
+            "size": "2,435 sq ft",
+            "render": "/assets/projects/faisal-jewel/unit-3bed.webp"
+          },
+          {
+            "name": "Penthouse Type A",
+            "plan": "/assets/projects/faisal-jewel/plan-penthouse-a.webp",
+            "size": "3,547 sq ft",
+            "notes": "14th floor"
+          },
+          {
+            "name": "Penthouse Type B",
+            "plan": "/assets/projects/faisal-jewel/plan-penthouse-b.webp",
+            "size": "5,624 sq ft",
+            "notes": "14th floor"
+          },
+          {
+            "name": "Penthouse Type C",
+            "plan": "/assets/projects/faisal-jewel/plan-penthouse-c.webp",
+            "size": "7,320 sq ft",
+            "notes": "14th floor"
+          }
+        ],
+        "brochureUrl": "https://online.fliphtml5.com/lutjp/djgh/",
+        "description": "A 27-storey landmark in Faisal Hills Executive Block with luxury apartments, a commercial tower and hotel component.",
+        "progressDate": "July 2026",
+        "progressNote": "Middle tower has reached the 8th floor. Vertical columns under construction — steel, shuttering and concrete in progress.",
+        "summaryStats": [
+          {
+            "label": "Storeys",
+            "value": "27+"
+          },
+          {
+            "label": "Commercial Tower",
+            "value": "14"
+          },
+          {
+            "label": "Basement Parking",
+            "value": "3"
+          }
+        ],
+        "surroundings": [
+          "G.T. Road, Taxila",
+          "M-1 Motorway",
+          "M-2 Motorway",
+          "N-80 Road",
+          "Margalla Avenue",
+          "Margalla Hills National Park",
+          "Wah Cantt",
+          "Taxila City",
+          "Rawalpindi",
+          "Islamabad",
+          "UET Taxila",
+          "HITEC University Taxila",
+          "COMSATS University Taxila",
+          "Pakistan Ordnance Factories (POF)",
+          "B-17 Multi Gardens",
+          "CDA Sector C-15 & C-16",
+          "Jaulian & Sirkap, Taxila",
+          "Giri Fort, Taxila",
+          "New Islamabad International Airport"
+        ],
+        "unitBreakdown": [
+          {
+            "size": "1,295 sqft",
+            "label": "1 Bedroom"
+          },
+          {
+            "size": "1,930 sqft",
+            "label": "2 Bedroom"
+          },
+          {
+            "size": "2,435 sqft",
+            "label": "3 Bedroom"
+          },
+          {
+            "size": "3,547 sqft",
+            "label": "Penthouse (from)"
+          }
+        ],
+        "completionDate": "Q4 2027",
+        "progressPhotos": [
+          "/assets/projects/faisal-jewel/progress-2026-07.webp"
+        ],
+        "fullDescription": "Faisal Jewel is a 27-storey landmark in the Executive Block of Faisal Hills, positioned where Margalla Avenue, the G.T. Road and the M-1 Motorway meet, with the Margalla Hills National Park behind it. It is developed by Zedem International under the Faisal Town Group founded by Ch. Abdul Majeed, with CAM Construction as co-developer and contractor, and designed by Jamshid Khan Associates. The scheme pairs a residential tower of 27-plus storeys — one, two and three-bedroom apartments and penthouses — with a separate 14-storey commercial tower holding retail floors, a food court and a four-to-five-star hotel component, over three basement parking levels. Alammana Developers is an authorised sales partner and can arrange floor selection, availability and booking.",
+        "commercialFloors": [
+          {
+            "floor": "Lower Ground — Shops",
+            "maxArea": "2,683 sq ft",
+            "minArea": "153 sq ft"
+          },
+          {
+            "floor": "Ground Floor — Shops",
+            "maxArea": "765 sq ft",
+            "minArea": "169 sq ft"
+          },
+          {
+            "floor": "First Floor — Shops",
+            "maxArea": "842 sq ft",
+            "minArea": "169 sq ft"
+          },
+          {
+            "floor": "Second Floor — Shops",
+            "maxArea": "1,990 sq ft",
+            "minArea": "169 sq ft"
+          },
+          {
+            "floor": "Third Floor — Shops",
+            "maxArea": "1,279 sq ft",
+            "minArea": "169 sq ft"
+          },
+          {
+            "floor": "Fourth Floor — Food Court",
+            "maxArea": "1,899 sq ft",
+            "minArea": "210 sq ft"
+          }
+        ]
+      }
+    },
+    {
+      "kind": "PARTNER_PROJECT",
+      "slug": "j7-emporium",
+      "sortOrder": 20,
+      "seoTitle": null,
+      "seoDescription": null,
+      "publishedAt": "2026-09-26T08:35:47.591Z",
+      "content": {
+        "faqs": [
+          {
+            "a": "At Plot #01, MR-09, Block C, Multi Gardens, Sector B-17, Islamabad, near the M-1 Motorway, G.T. Road and Margalla Avenue.",
+            "q": "Where is J7 Emporium?"
+          },
+          {
+            "a": "It is a 30-storey mixed-use tower on roughly 46 kanals.",
+            "q": "How tall is J7 Emporium?"
+          },
+          {
+            "a": "A shopping mall, studio to four-bedroom apartments, corporate offices, food-court floors and hotel suites operated under the Radisson Blu brand, plus the J7 Club with pool, gym and spa.",
+            "q": "What does J7 Emporium include?"
+          },
+          {
+            "a": "J7 Group. Alammana Developers is an authorised sales partner and can arrange unit selection and booking.",
+            "q": "Who is the developer of J7 Emporium?"
+          }
+        ],
+        "role": "Authorised Sales Partner",
+        "title": "J7 Emporium",
+        "images": [
+          "/assets/projects/j7-emporium.webp"
+        ],
+        "status": "In Progress",
+        "contact": {
+          "email": "rabta@alammana.pk",
+          "phone": "+92 335 8078262",
+          "address": "B-17 Multi Gardens, Islamabad"
+        },
+        "mapLink": "https://maps.google.com/?q=J7+Emporium+B-17+Islamabad",
+        "category": "Commercial",
+        "features": [
+          "Shopping Mall & Retail Floors",
+          "Studio to 4-Bedroom Apartments",
+          "Radisson Blu Hotel Suites",
+          "J7 Club — Pool, Gym & Spa"
+        ],
+        "location": "Block C, Multi Gardens B-17, Islamabad",
+        "amenities": [
+          "24/7 Security with CCTV",
+          "Swimming Pool & Gym",
+          "Spa, Sauna & Steam Rooms",
+          "Banquet Hall",
+          "Rooftop Gardens & Dining",
+          "Smart Parking",
+          "Kids Play Area",
+          "Concierge Services"
+        ],
+        "developer": "J7 Group",
+        "structure": "A 30-storey tower on approximately 46 kanals: retail across the lower levels, the J7 Club leisure floor on level 5, corporate offices and food-court floors above, then residential apartments and Radisson Blu hotel suites on the upper levels.",
+        "thumbnail": "/assets/projects/j7-emporium.webp",
+        "description": "A 30-storey mixed-use tower in B-17 Islamabad with retail, apartments, offices and a Radisson Blu hotel.",
+        "summaryStats": [
+          {
+            "label": "Storeys",
+            "value": "30"
+          },
+          {
+            "label": "Land Area (Kanal)",
+            "value": "46"
+          }
+        ],
+        "surroundings": [
+          "Islamabad–Peshawar Motorway (M-1)",
+          "G.T. Road",
+          "Margalla Avenue",
+          "CPEC Route",
+          "New Islamabad Airport",
+          "Faisal Hills, Taxila"
+        ],
+        "fullDescription": "J7 Emporium is a 30-storey mixed-use high-rise spanning roughly 46 kanals at Plot #01, MR-09, Block C, Multi Gardens, Sector B-17, Islamabad. Developed by J7 Group, it brings together a shopping mall, studio to 4-bedroom residential apartments, corporate offices, dedicated food-court floors and hotel suites operated under the Radisson Blu brand. Its position near the M-1 Motorway, G.T. Road and Margalla Avenue makes it one of the most connected commercial addresses in the twin cities. Alammana Developers is an authorised sales partner and can arrange unit selection and booking."
+      }
+    },
+    {
+      "kind": "SOCIETY",
+      "slug": "dha-gandhara",
+      "sortOrder": 40,
+      "seoTitle": null,
+      "seoDescription": null,
+      "publishedAt": "2026-09-26T08:35:49.107Z",
+      "content": {
+        "city": "M-2 Motorway corridor, Islamabad",
+        "faqs": [
+          {
+            "a": "Not officially as of August 2026. Prices circulating in the market are pre-launch or projected figures. Wait for DHA's published schedule before committing, and be cautious of anyone presenting an unofficial rate as final.",
+            "q": "Has the DHA Gandhara payment plan been announced?"
+          },
+          {
+            "a": "DHA Gandhara (Phase 9) lies along the M-2 Motorway corridor near the New Islamabad International Airport, adjacent to Capital Smart City, with access via the DHA Expressway, Rawat–Chakbeli Road, the G.T. Road and the Islamabad Expressway.",
+            "q": "Where is DHA Gandhara?"
+          },
+          {
+            "a": "The master plan covers approximately 32,500 kanals, making it the largest phase of DHA Islamabad. It was designed by Surbana Jurong, the Singaporean urban planning firm.",
+            "q": "How large is DHA Gandhara?"
+          }
+        ],
+        "name": "DHA Gandhara (Phase 9)",
+        "image": "/assets/societies/dha-gandhara.webp",
+        "blocks": [
+          {
+            "name": "Residential Sectors",
+            "status": "Pre-launch / early allocation",
+            "bestFor": "Buyers comfortable with early-stage entry in a DHA project",
+            "summary": "Residential plots indicated from 5 Marla upward across the master plan. Sector-level detail is still being released by DHA.",
+            "plotSizes": [
+              "5 Marla",
+              "10 Marla",
+              "1 Kanal",
+              "Larger sizes indicated"
+            ]
+          },
+          {
+            "name": "Commercial",
+            "status": "Planned",
+            "summary": "Commercial allocations form part of the Surbana Jurong master plan.",
+            "plotSizes": [
+              "Enquire for current availability"
+            ]
+          }
+        ],
+        "sources": [
+          "https://makaansolutions.com/dha-gandhara/",
+          "https://manahilestate.com/dha-gandhara-phase-9-islamabad/",
+          "https://reallandmanagement.pk/dha-gandhara-phase-9/"
+        ],
+        "summary": "DHA Islamabad's largest phase, spanning roughly 32,500 kanals along the M-2 corridor with a master plan by Singapore's Surbana Jurong. Early-stage — the official payment plan is still being announced.",
+        "tagline": "DHA Islamabad's largest phase, master-planned by Surbana Jurong",
+        "approval": "Developed under the Defence Housing Authority framework",
+        "overview": [
+          "DHA Gandhara, launched as DHA Phase 9, is the largest phase of DHA Islamabad, spread over approximately 32,500 kanals along the M-2 Motorway corridor near the New Islamabad International Airport and adjacent to Capital Smart City. It is delivered under the Defence Housing Authority framework with the Army Welfare Trust and Habib Rafiq (Pvt) Ltd — the same development partnership behind several of DHA's better-executed phases.",
+          "Its master plan was prepared by Surbana Jurong, the Singaporean urban-design firm, which is unusual for the region and is the main reason the project has attracted attention beyond the usual DHA following. Access is via the DHA Expressway, Rawat–Chakbeli Road, the G.T. Road and the Islamabad Expressway, with the Rawat Interchange serving both Rawalpindi and Islamabad.",
+          "Be clear about the stage: this is early. Plot sizes are indicated from 5 Marla upward, but the official residential payment plan is still being announced, and figures circulating in the market are pre-launch or projected rather than confirmed. Treat any number you are quoted — including by us — as provisional until DHA publishes it. Alammana can register your interest and pass on the official schedule the moment it is released."
+        ],
+        "amenities": [
+          "Master plan by Surbana Jurong (Singapore)",
+          "DHA-standard infrastructure and security",
+          "Planned commercial districts",
+          "Planned parks and green corridors",
+          "Proximity to New Islamabad International Airport"
+        ],
+        "developer": "Defence Housing Authority with Army Welfare Trust (AWT) and Habib Rafiq (Pvt) Ltd",
+        "plotSizes": [
+          "5 Marla",
+          "10 Marla",
+          "1 Kanal",
+          "Larger sizes indicated"
+        ],
+        "totalArea": "Approx. 32,500 Kanal",
+        "mapEmbedUrl": "https://maps.google.com/maps?q=DHA+Phase+9+Gandhara+Islamabad&output=embed",
+        "paymentNote": "The official residential payment plan is still being announced by DHA. Any figure circulating before that is pre-launch or projected — we will share the official schedule as soon as it is published.",
+        "connectivity": [
+          "M-2 Motorway",
+          "DHA Expressway",
+          "Rawat Interchange",
+          "Rawat–Chakbeli Road",
+          "G.T. Road",
+          "Islamabad Expressway",
+          "Capital Smart City (adjacent)",
+          "New Islamabad International Airport"
+        ],
+        "approvalStatus": "Pre-Launch"
+      }
+    },
+    {
+      "kind": "SOCIETY",
+      "slug": "faisal-hills",
+      "sortOrder": 10,
+      "seoTitle": null,
+      "seoDescription": null,
+      "publishedAt": "2026-09-26T08:35:48.326Z",
+      "content": {
+        "city": "Taxila, Rawalpindi",
+        "faqs": [
+          {
+            "a": "Yes. Faisal Hills holds a No Objection Certificate from the Rawalpindi Development Authority (RDA) and is developed by the Faisal Town Group. Always ask to see the approval documentation for the specific block and plot you are buying.",
+            "q": "Is Faisal Hills approved?"
+          },
+          {
+            "a": "If you want to start construction immediately, the Executive Block and Block D are the most practical — both have developed infrastructure and Block D has possession handed over. Block A is developed with its main boulevard complete. Blocks B and C are still maturing, which usually means a lower entry price but a longer wait before you can build comfortably.",
+            "q": "Which block of Faisal Hills is best to build a house in right now?"
+          },
+          {
+            "a": "Across the society you will find 5 Marla, 7 Marla, 8 Marla, 10 Marla, 14 Marla, 1 Kanal and 2 Kanal residential plots, plus commercial plots and apartment sites. The exact mix varies by block — Block A and the Prime Block carry the widest range including 2 Kanal.",
+            "q": "What plot sizes are available in Faisal Hills?"
+          },
+          {
+            "a": "Faisal Hills is on the Main G.T. Road (N-5) at Taxila, in Rawalpindi district, roughly ten minutes from Taxila Cantt and adjacent to Multi Gardens B-17, with access to the M-1 Motorway and Margalla Avenue.",
+            "q": "Where exactly is Faisal Hills?"
+          },
+          {
+            "a": "Alammana publishes block-wise construction rates for both gray structure and fully finished houses, covering Blocks A, B, C, D and the Executive Block. You can view and download the current rate lists on our payment plans page rather than asking around for a quote.",
+            "q": "What does it cost to build a house in Faisal Hills?"
+          }
+        ],
+        "name": "Faisal Hills",
+        "image": "/assets/societies/faisal-hills.webp",
+        "blocks": [
+          {
+            "name": "Executive Block",
+            "status": "Most developed — roads complete, heavily populated",
+            "bestFor": "Buyers who want to build and move in now, and commercial investors",
+            "summary": "The civic and commercial heart of Faisal Hills, fronting the Grand Trunk Road. The most mature block, with the highest proportion of completed houses and working commercial activity.",
+            "plotSizes": [
+              "5 Marla",
+              "8 Marla",
+              "10 Marla",
+              "14 Marla",
+              "1 Kanal"
+            ],
+            "highlights": [
+              "Main boulevard and roads complete",
+              "Home to Faisal Jewel and Roots International School",
+              "Largest commercial component (approx. 504 commercial plots)",
+              "Margalla Hills views"
+            ]
+          },
+          {
+            "name": "Block A",
+            "status": "Developed — 225-ft main boulevard complete",
+            "bestFor": "Families and entrepreneurs who value accessibility",
+            "summary": "A fully developed block on the main boulevard with a balanced residential and commercial mix. Commercial areas, a hospital and a mosque are under construction.",
+            "plotSizes": [
+              "5 Marla",
+              "8 Marla",
+              "10 Marla",
+              "14 Marla",
+              "1 Kanal",
+              "2 Kanal"
+            ],
+            "highlights": [
+              "Widest plot-size range in the society, including 2 Kanal",
+              "Strong commercial frontage",
+              "Hospital and grand mosque under construction"
+            ]
+          },
+          {
+            "name": "Block B",
+            "status": "Developing — road network progressed through 2025",
+            "bestFor": "Families wanting a quieter street to build a home on",
+            "summary": "A quieter, predominantly residential block sitting between Blocks A and C, with scenic Margalla Hills views and a large share of mid-size plots.",
+            "plotSizes": [
+              "5 Marla",
+              "7 Marla",
+              "8 Marla",
+              "10 Marla",
+              "14 Marla",
+              "1 Kanal"
+            ],
+            "highlights": [
+              "Calmer residential character, less through-traffic",
+              "Large stock of 10 and 14 Marla plots",
+              "Margalla Hills outlook"
+            ]
+          },
+          {
+            "name": "Block B Extension",
+            "status": "Developing",
+            "bestFor": "Investors seeking a lower entry price inside an approved society",
+            "summary": "A smaller extension adjoining Blocks B and C, planned with its own mosque, park and green areas. Entry sizes dominate the mix.",
+            "plotSizes": [
+              "5 Marla",
+              "8 Marla",
+              "10 Marla"
+            ],
+            "highlights": [
+              "Dedicated mosque and park",
+              "Mostly 5 and 8 Marla plots"
+            ]
+          },
+          {
+            "name": "Block C",
+            "status": "Developing",
+            "bestFor": "Investors focused on medium-term capital growth",
+            "summary": "A large, primarily residential block positioned to benefit from future M-1 Motorway connectivity, with a substantial commercial allocation.",
+            "plotSizes": [
+              "5 Marla",
+              "8 Marla",
+              "10 Marla",
+              "1 Kanal"
+            ],
+            "highlights": [
+              "Expected to benefit from a future M-1 Motorway link",
+              "Large commercial component (approx. 815 commercial plots)",
+              "One of the highest plot counts in the society"
+            ]
+          },
+          {
+            "name": "Block D",
+            "status": "Possession handed over — construction actively underway",
+            "bestFor": "First-time buyers and anyone wanting to start construction immediately",
+            "summary": "Positioned between the G.T. Road and Taxila, this is the most budget-friendly developed block. Possession has been handed to owners and houses are going up now.",
+            "plotSizes": [
+              "5 Marla",
+              "8 Marla",
+              "10 Marla",
+              "14 Marla",
+              "1 Kanal"
+            ],
+            "highlights": [
+              "Possession already handed over",
+              "Close to existing schools, healthcare and shopping in Taxila",
+              "Significant apartment-site allocation"
+            ]
+          },
+          {
+            "name": "Prime Block",
+            "status": "Newer launch",
+            "bestFor": "Buyers wanting fresh files on an instalment plan",
+            "summary": "A more recently launched block offering a full ladder of plot sizes from 5.56 Marla up to 2 Kanal, aimed at buyers entering the society at current rates.",
+            "plotSizes": [
+              "5.56 Marla",
+              "8 Marla",
+              "10.89 Marla",
+              "14.22 Marla",
+              "1 Kanal",
+              "2 Kanal"
+            ],
+            "highlights": [
+              "Newest inventory in the society",
+              "Full range of plot sizes including 2 Kanal"
+            ]
+          },
+          {
+            "name": "Hill View Estate",
+            "status": "Premium enclave — limited plots",
+            "bestFor": "Buyers after a premium address inside Faisal Hills",
+            "summary": "A small, exclusive enclave of around 121 plots laid out for panoramic Margalla Hills views, with dedicated commercial and apartment land allocations.",
+            "plotSizes": [
+              "Limited — enquire for current availability"
+            ],
+            "highlights": [
+              "Approximately 121 exclusive plots",
+              "Panoramic Margalla Hills views"
+            ]
+          }
+        ],
+        "sources": [
+          "https://faisalhills.com/master-plan/",
+          "https://faisaltownphase2group.com/faisal-hills-islamabad/",
+          "https://www.zameen.com/new-projects/faisal_hills-921/"
+        ],
+        "summary": "A fully RDA-approved society on the Main G.T. Road at Taxila, with developed blocks, handed-over possession in several areas, and the Margalla Hills as a backdrop. This is where Alammana builds most of its homes.",
+        "tagline": "RDA-approved living on the Main G.T. Road, Taxila",
+        "approval": "RDA approved — NOC issued by the Rawalpindi Development Authority",
+        "launched": "2016",
+        "overview": [
+          "Faisal Hills is a Rawalpindi Development Authority approved housing society spread over roughly 11,823 kanals on the Main G.T. Road (N-5) at Taxila, developed by the Faisal Town Group under the leadership of Ch. Abdul Majeed. Launched in 2016, it has matured from a plot-file market into a genuine residential community, with possession handed over in several blocks and houses occupied rather than merely planned.",
+          "The society is organised around a 225-foot main boulevard, with internal streets between 40 and 110 feet. Its position matters as much as its plan: it sits on the G.T. Road with access to the M-1 Motorway, is minutes from Taxila Cantt, and looks onto the Margalla Hills — a combination very few approved societies in the twin-cities region can offer at this price point.",
+          "For buyers, the practical question is which block to buy in, because development status and price differ sharply between them. Alammana publishes block-wise construction rates for Blocks A, B, C, D and the Executive Block, and builds houses in each — so we can speak to what construction in a given block actually involves, not just what a plot costs."
+        ],
+        "amenities": [
+          "225-foot main boulevard",
+          "Underground electrification",
+          "Carpeted roads (40–110 ft internal)",
+          "Grand community mosque",
+          "Roots International School (operational)",
+          "Central hospital",
+          "Planned 101-kanal university campus",
+          "Planned 171-kanal sports complex",
+          "Parks, green belts & Hill Walk trail",
+          "Downtown commercial hub",
+          "24/7 security"
+        ],
+        "developer": "Faisal Town Group / Zedem International (Ch. Abdul Majeed)",
+        "plotSizes": [
+          "5 Marla",
+          "7 Marla",
+          "8 Marla",
+          "10 Marla",
+          "14 Marla",
+          "1 Kanal",
+          "2 Kanal"
+        ],
+        "totalArea": "11,823 Kanal",
+        "mapEmbedUrl": "https://maps.google.com/maps?q=Faisal+Hills+Taxila&output=embed",
+        "paymentNote": "Plots are available on instalment plans as well as outright purchase, and terms differ by block and by whether the file is fresh or resale. Contact us for the current schedule.",
+        "connectivity": [
+          "Main G.T. Road (N-5)",
+          "M-1 Motorway",
+          "Taxila Cantt — approx. 10 minutes",
+          "Margalla Avenue",
+          "Wah Cantt",
+          "HITEC University",
+          "Multi Gardens B-17",
+          "New Islamabad International Airport"
+        ],
+        "approvalStatus": "Approved",
+        "masterPlanImage": "/assets/societies/faisal-hills-master-plan.webp"
+      }
+    },
+    {
+      "kind": "SOCIETY",
+      "slug": "faisal-town-phase-1",
+      "sortOrder": 20,
+      "seoTitle": null,
+      "seoDescription": null,
+      "publishedAt": "2026-09-26T08:35:48.596Z",
+      "content": {
+        "city": "Sector F-18, Islamabad",
+        "faqs": [
+          {
+            "a": "Yes. Faisal Town Phase 1 holds a complete No Objection Certificate from the Rawalpindi Development Authority covering its full 4,735.9 kanals, with the layout plan approved and environmental authorisation granted in March 2014.",
+            "q": "Is Faisal Town Phase 1 approved by the RDA?"
+          },
+          {
+            "a": "It is in Sector F-18, Islamabad, with the main entrance on the N-80 near Tarnol and the Fateh Jang Interchange — around six minutes from the M-1 Motorway and about twenty-one minutes from the New Islamabad International Airport.",
+            "q": "Where is Faisal Town Phase 1?"
+          },
+          {
+            "a": "Phase 1 is a settled, fully approved society where infrastructure is complete and homes are occupied, so prices are higher and there is less room for development-driven growth. Faisal Hills is larger, still developing in several blocks, and generally offers a lower entry price with a longer horizon.",
+            "q": "How is Faisal Town Phase 1 different from Faisal Hills?"
+          }
+        ],
+        "name": "Faisal Town Phase 1",
+        "image": "/assets/societies/faisal-town-phase-1.webp",
+        "blocks": [
+          {
+            "name": "Block A",
+            "status": "Developed & populated",
+            "bestFor": "Buyers who want to move into a settled neighbourhood",
+            "summary": "An established residential block with completed infrastructure and occupied homes.",
+            "plotSizes": [
+              "5 Marla",
+              "8 Marla",
+              "10 Marla",
+              "1 Kanal",
+              "2 Kanal"
+            ]
+          },
+          {
+            "name": "Block B",
+            "status": "Developed & populated",
+            "bestFor": "Families wanting amenities within walking distance",
+            "summary": "Residential plots alongside commercial areas, parks, mosques, playgrounds and green space.",
+            "plotSizes": [
+              "5 Marla",
+              "8 Marla",
+              "10 Marla",
+              "1 Kanal",
+              "2 Kanal"
+            ],
+            "highlights": [
+              "Commercial areas",
+              "Parks and playgrounds",
+              "Mosques"
+            ]
+          },
+          {
+            "name": "Block B-1",
+            "status": "Developed",
+            "summary": "A smaller sub-block adjoining Block B with the same residential character.",
+            "plotSizes": [
+              "5 Marla",
+              "8 Marla",
+              "10 Marla",
+              "1 Kanal"
+            ]
+          },
+          {
+            "name": "Block C",
+            "status": "Developed",
+            "summary": "Residential block completing the Phase 1 master plan.",
+            "plotSizes": [
+              "5 Marla",
+              "8 Marla",
+              "10 Marla",
+              "1 Kanal",
+              "2 Kanal"
+            ]
+          }
+        ],
+        "sources": [
+          "https://faisaltown.org/faisal-town-phase-1-islamabad/",
+          "https://faisaltownislamabad.org/phase-1/"
+        ],
+        "summary": "A mature, fully approved society in Sector F-18 Islamabad with completed infrastructure and an established resident community — the Faisal Town Group project that set the standard for Faisal Hills.",
+        "tagline": "Fully RDA-approved and largely settled, in Sector F-18",
+        "approval": "RDA approved — NOC and layout plan approved in full for 4,735.9 Kanal; environmental approval granted March 2014",
+        "overview": [
+          "Faisal Town Phase 1 occupies roughly 4,735 kanals in Sector F-18, Islamabad, with its main entrance on the N-80 near Tarnol and the Fateh Jang Interchange. It is the project that established the Faisal Town Group's reputation, and it holds a complete Rawalpindi Development Authority NOC covering its entire land area, with the layout plan approved in full and environmental clearance granted in March 2014.",
+          "Unlike newer launches, Phase 1 is a settled society rather than a development site. Roads are carpeted, electricity runs underground, and the blocks are populated — which means you are buying into a working neighbourhood with a known character, at prices that reflect that maturity.",
+          "Alammana builds and handles resale in Faisal Town, and can advise honestly on how Phase 1 compares with Faisal Hills for a buyer weighing an established address against a lower entry price."
+        ],
+        "amenities": [
+          "Wide carpeted roads",
+          "Underground electricity",
+          "24-hour security",
+          "Schools",
+          "Mosques",
+          "Civic & commercial centre",
+          "Parks and green spaces"
+        ],
+        "developer": "Faisal Town Group (Ch. Abdul Majeed)",
+        "plotSizes": [
+          "5 Marla",
+          "8 Marla",
+          "10 Marla",
+          "1 Kanal",
+          "2 Kanal"
+        ],
+        "totalArea": "4,735 Kanal",
+        "mapEmbedUrl": "https://maps.google.com/maps?q=Faisal+Town+F-18+Islamabad&output=embed",
+        "connectivity": [
+          "N-80 Highway (main entrance)",
+          "Tarnol",
+          "Fateh Jang Interchange",
+          "M-1 Motorway — approx. 6 minutes",
+          "New Islamabad International Airport — approx. 21 minutes"
+        ],
+        "approvalStatus": "Approved"
+      }
+    },
+    {
+      "kind": "SOCIETY",
+      "slug": "faisal-town-phase-2",
+      "sortOrder": 30,
+      "seoTitle": null,
+      "seoDescription": null,
+      "publishedAt": "2026-09-26T08:35:48.857Z",
+      "content": {
+        "city": "Thalian Interchange, M-2 Motorway, Islamabad",
+        "faqs": [
+          {
+            "a": "Not yet. As of August 2026 the NOC for Faisal Town Phase 2 is under process with the Rawalpindi Development Authority. Phase 1 and Faisal Hills, by contrast, are already approved. Verify the current status directly with the RDA before making any payment.",
+            "q": "Is Faisal Town Phase 2 NOC approved?"
+          },
+          {
+            "a": "It is next to the Thalian Interchange, running parallel to the Lahore–Islamabad M-2 Motorway with around 12 km of motorway frontage and about 9 km along the Rawalpindi Ring Road, and is also accessible from Chakri Road.",
+            "q": "Where is Faisal Town Phase 2 located?"
+          },
+          {
+            "a": "The master plan comprises Sector O (the Model Block), the Overseas Enclave and the General Block, with N Block launched in September 2025 by Zedem International in collaboration with the Faisal Town Group.",
+            "q": "Which blocks does Faisal Town Phase 2 have?"
+          }
+        ],
+        "name": "Faisal Town Phase 2",
+        "image": "/assets/societies/faisal-town-phase-2.webp",
+        "blocks": [
+          {
+            "name": "Sector O (Model Block)",
+            "status": "Launched — development in progress",
+            "bestFor": "Buyers wanting the most developed part of Phase 2",
+            "summary": "The flagship sector of Phase 2, positioned as the model block and typically the first to see development activity.",
+            "plotSizes": [
+              "5.56 Marla",
+              "8 Marla",
+              "10.89 Marla",
+              "1 Kanal",
+              "2 Kanal"
+            ],
+            "highlights": [
+              "Model block of the master plan",
+              "Lump-sum discounts often applied here"
+            ]
+          },
+          {
+            "name": "Overseas Enclave",
+            "status": "Launched",
+            "bestFor": "Overseas Pakistanis buying remotely",
+            "summary": "A dedicated enclave aimed at overseas Pakistani buyers, typically with its own amenity allocation and entry.",
+            "plotSizes": [
+              "5.56 Marla",
+              "8 Marla",
+              "10.89 Marla",
+              "1 Kanal",
+              "2 Kanal"
+            ]
+          },
+          {
+            "name": "General Block",
+            "status": "Launched",
+            "bestFor": "Buyers looking for the widest choice of files",
+            "summary": "The main residential body of Phase 2, carrying the bulk of the plot inventory.",
+            "plotSizes": [
+              "5.56 Marla",
+              "8 Marla",
+              "10.89 Marla",
+              "1 Kanal",
+              "2 Kanal"
+            ]
+          },
+          {
+            "name": "N Block",
+            "status": "Launched September 2025",
+            "bestFor": "Buyers entering at the newest launch rates",
+            "summary": "A premium residential sector launched by Zedem International in collaboration with the Faisal Town Group.",
+            "plotSizes": [
+              "5.56 Marla",
+              "8 Marla",
+              "10.89 Marla",
+              "1 Kanal",
+              "2 Kanal"
+            ],
+            "highlights": [
+              "Newest inventory in Phase 2",
+              "Positioned as a premium sector"
+            ]
+          }
+        ],
+        "sources": [
+          "https://www.skymarketing.com.pk/faisal-town-phase-2-islamabad/",
+          "https://faisaltownphase2group.com/",
+          "https://wirasat.com/project/faisal-town-phase-2/"
+        ],
+        "summary": "The Faisal Town Group's largest launch, with 12 km of frontage on the M-2 Motorway at Thalian and access from the Rawalpindi Ring Road. Its NOC is still under process — buy with that in mind.",
+        "tagline": "12 km of M-2 Motorway frontage at the Thalian Interchange",
+        "approval": "NOC application under process with the Rawalpindi Development Authority (RDA)",
+        "overview": [
+          "Faisal Town Phase 2 sits beside the Thalian Interchange, running parallel to the Lahore–Islamabad (M-2) Motorway with roughly 12 kilometres of motorway frontage and a further 9 kilometres along the Rawalpindi Ring Road. It is also reachable from Chakri Road. In pure location terms it is the best-connected project the Faisal Town Group has launched.",
+          "The master plan is organised into Sector O (also called the Model Block), the Overseas Enclave and the General Block, with N Block added in September 2025 as a premium residential sector launched by Zedem International in collaboration with the Faisal Town Group. Plot sizes run from 5.56 Marla up to 2 Kanal.",
+          "One point we will not soften: the No Objection Certificate for Phase 2 is still under process with the RDA, unlike Phase 1 and Faisal Hills which are approved. That is normal for a project at this stage and the group has a track record of securing approvals, but it is a genuine risk you should weigh, and you should verify the current status yourself before paying anything."
+        ],
+        "amenities": [
+          "Planned wide carpeted roads",
+          "Underground utilities",
+          "Mosques",
+          "Parks & green belts",
+          "Commercial zones",
+          "Gated security"
+        ],
+        "developer": "Faisal Town Group with Zedem International",
+        "plotSizes": [
+          "5.56 Marla",
+          "8 Marla",
+          "10.89 Marla",
+          "14.22 Marla",
+          "1 Kanal",
+          "2 Kanal"
+        ],
+        "mapEmbedUrl": "https://maps.google.com/maps?q=Thalian+Interchange+M-2+Motorway+Islamabad&output=embed",
+        "paymentNote": "Reported as a down payment followed by instalments over three to four years, with lump-sum discounts on selected plots. Terms change between launches — confirm the live schedule with us before committing.",
+        "connectivity": [
+          "M-2 Lahore–Islamabad Motorway (approx. 12 km frontage)",
+          "Thalian Interchange",
+          "Rawalpindi Ring Road (approx. 9 km frontage)",
+          "Chakri Road",
+          "New Islamabad International Airport"
+        ],
+        "approvalStatus": "In Process"
+      }
+    }
+  ]
 }

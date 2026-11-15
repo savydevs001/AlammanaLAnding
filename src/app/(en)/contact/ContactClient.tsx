@@ -32,8 +32,11 @@ export default function ContactClient() {
                   <Phone size={20} className="md:w-6 md:h-6" />
                 </div>
                 <div>
-                  <h3 className="text-[12px] uppercase tracking-widest font-bold text-ink/40 mb-1">Direct Line</h3>
-                  <a href="tel:+923358078262" className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors">+92 335 8078262</a>
+                  <h3 className="text-[12px] uppercase tracking-widest font-bold text-ink/40 mb-1">Direct Lines</h3>
+                  <div className="flex flex-col space-y-1">
+                    <a href={`tel:${CONTACT.phoneHref}`} className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors">{CONTACT.phoneDisplay}</a>
+                    <a href={`tel:${CONTACT.phoneHrefAlt}`} className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors">{CONTACT.phoneDisplayAlt}</a>
+                  </div>
                 </div>
               </div>
 

@@ -90,3 +90,7 @@ User-agent: omgili
 Allow: /
 
 Sitemap: https://alammana.pk/sitemap.xml
+
+# AI / LLM Context Indexes
+# https://alammana.pk/llms.txt
+# https://alammana.pk/llms-full.txt

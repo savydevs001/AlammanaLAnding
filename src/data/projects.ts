@@ -145,7 +145,7 @@ const staticProjects: Project[] = [
       { q: 'What is the construction status of Faisal Jewel?', a: 'As of July 2026 the middle tower had reached the 8th floor, with columns under construction. Expected completion is Q4 2027.' },
     ],
     contact: {
-      phone: '+92 335 8078262',
+      phone: '+92 337 7503111',
       email: 'rabta@alammana.pk',
       address: 'Faisal Hills, Taxila',
     },
@@ -203,7 +203,7 @@ const staticProjects: Project[] = [
       { q: 'Who is the developer of J7 Emporium?', a: 'J7 Group. Alammana Developers is an authorised sales partner and can arrange unit selection and booking.' },
     ],
     contact: {
-      phone: '+92 335 8078262',
+      phone: '+92 337 7503111',
       email: 'rabta@alammana.pk',
       address: 'B-17 Multi Gardens, Islamabad',
     },
@@ -230,7 +230,7 @@ const staticProjects: Project[] = [
       { q: 'How do I get the price list for 107 Plaza?', a: 'Contact Alammana Developers for the current availability and rate sheet — we handle bookings for the plaza.' },
     ],
     contact: {
-      phone: '+92 335 8078262',
+      phone: '+92 337 7503111',
       email: 'rabta@alammana.pk',
       address: 'Faisal Hills, Taxila',
     },
@@ -272,7 +272,7 @@ const staticProjects: Project[] = [
       { q: 'Can I buy a plot in Prime Block on instalments?', a: 'Yes, Prime Block plots are offered on instalment plans. Alammana Developers handles bookings, transfers and resale in Faisal Hills and can share the current plan.' },
     ],
     contact: {
-      phone: '+92 335 8078262',
+      phone: '+92 337 7503111',
       email: 'rabta@alammana.pk',
       address: 'Faisal Hills, Taxila',
     },
