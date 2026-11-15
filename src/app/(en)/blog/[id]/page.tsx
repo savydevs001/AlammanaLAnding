@@ -77,10 +77,11 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
         '@type': 'Person',
         name: post.author,
         ...(author ? { url: `${baseUrl}/team/${author.id}`, jobTitle: author.role } : {}),
-        worksFor: { '@type': 'Organization', name: 'Alammana Developers', url: baseUrl },
+        worksFor: { '@type': 'HomeAndConstructionBusiness', '@id': `${baseUrl}#organization`, name: 'Alammana Developers', url: baseUrl },
       },
       publisher: {
-        '@type': 'Organization',
+        '@type': 'HomeAndConstructionBusiness',
+        '@id': `${baseUrl}#organization`,
         name: 'Alammana Developers',
         url: baseUrl,
         logo: { '@type': 'ImageObject', url: `${baseUrl}/assets/icon-512.png` },

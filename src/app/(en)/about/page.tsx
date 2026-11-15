@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd from '../../../components/JsonLd';
 import AboutClient from './AboutClient';
-import { pageMeta, webPage, breadcrumb } from '../../../lib/seo';
+import { pageMeta, webPage, breadcrumb, SITE_URL } from '../../../lib/seo';
 
 export const metadata: Metadata = pageMeta({
   title: 'About Us — Faisal Hills Builders',
@@ -17,9 +17,18 @@ export const metadata: Metadata = pageMeta({
 });
 
 export default function About() {
+  const aboutPageSchema = {
+    ...webPage('AboutPage', {
+      name: 'About Alammana Developers — Faisal Hills Builders',
+      description: 'Who we are, our history since 2015, and our transparent milestone construction model in Faisal Hills, Faisal Town, and Taxila.',
+      path: '/about',
+    }),
+    mainEntity: { '@id': `${SITE_URL}#organization` },
+  };
+
   return (
     <>
-      <JsonLd schema={[webPage('AboutPage', { name: 'About Alammana Developers', description: 'Who we are and how we work in Faisal Hills and Faisal Town.', path: '/about' }), breadcrumb([['About', '/about']])]} />
+      <JsonLd schema={[aboutPageSchema, breadcrumb([['About', '/about']])]} />
       <AboutClient />
     </>
   );

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import JsonLd from '../../../components/JsonLd';
 import ContactClient from './ContactClient';
-import { pageMeta, webPage, breadcrumb } from '../../../lib/seo';
+import { pageMeta, webPage, breadcrumb, SITE_URL } from '../../../lib/seo';
 
 export const metadata: Metadata = pageMeta({
   title: 'Contact Us — Faisal Hills Office',
@@ -17,9 +17,18 @@ export const metadata: Metadata = pageMeta({
 });
 
 export default function Contact() {
+  const contactPageSchema = {
+    ...webPage('ContactPage', {
+      name: 'Contact Alammana Developers — Faisal Hills Office',
+      description: 'Visit our Faisal Hills office at Vertical Four or call our construction & property consultation lines: 03377503111 and 03087750009.',
+      path: '/contact',
+    }),
+    mainEntity: { '@id': `${SITE_URL}#organization` },
+  };
+
   return (
     <>
-      <JsonLd schema={[webPage('ContactPage', { name: 'Contact Alammana Developers', description: 'Talk to us about construction rates, plots or partner projects.', path: '/contact' }), breadcrumb([['Contact', '/contact']])]} />
+      <JsonLd schema={[contactPageSchema, breadcrumb([['Contact', '/contact']])]} />
       <ContactClient />
     </>
   );

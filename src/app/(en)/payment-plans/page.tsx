@@ -38,8 +38,62 @@ export const metadata: Metadata = {
   },
 };
 
-// FAQ + ItemList structured data for the payment plans page
+// FAQ + ItemList + Service structured data for the payment plans page
 const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    '@id': `${siteUrl}/payment-plans#service`,
+    name: 'Faisal Hills House Construction Packages & Milestone Payment Plans',
+    serviceType: 'Residential Construction, Turnkey Building, and Grey Structure Contracting',
+    description:
+      'Milestone-based installment schedules and fixed-rate construction payment plans for gray structure and fully finished homes across Faisal Hills, Taxila, and Islamabad.',
+    provider: {
+      '@type': 'HomeAndConstructionBusiness',
+      '@id': `${siteUrl}#organization`,
+      name: 'Alammana Developers',
+      url: siteUrl,
+      telephone: '+923377503111',
+    },
+    areaServed: [
+      { '@type': 'Place', name: 'Faisal Hills' },
+      { '@type': 'City', name: 'Taxila' },
+      { '@type': 'City', name: 'Rawalpindi' },
+      { '@type': 'City', name: 'Islamabad' },
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Faisal Hills Construction Packages & Payment Schedules',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          name: 'Gray Structure Construction Package',
+          description:
+            'Excavation, foundation earthwork, seismic-resistant RCC frame, solid brickwork/block masonry, plumbing & electrical conduit piping, cement plastering, and bituminous roof waterproofing.',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            priceCurrency: 'PKR',
+            unitText: 'per sq ft',
+            minPrice: '2100',
+            maxPrice: '2500',
+          },
+        },
+        {
+          '@type': 'Offer',
+          name: 'Fully Finished Turnkey House Package',
+          description:
+            'Turnkey custom villa delivery including A+ porcelain tile flooring, ash/oak woodwork, designer modular kitchen with imported acrylic cabinets, Grohe/Porta sanitary ware, false ceilings, and weather-shield paint.',
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            priceCurrency: 'PKR',
+            unitText: 'per sq ft',
+            minPrice: '5300',
+            maxPrice: '7700',
+          },
+        },
+      ],
+    },
+  },
   {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',

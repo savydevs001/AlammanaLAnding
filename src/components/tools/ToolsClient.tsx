@@ -579,6 +579,387 @@ function OrientationTool() {
   );
 }
 
+// ── Prime Plot Feasibility Tool ──────────────────────────────────────────────
+function PrimePlotTool() {
+  const [society, setSociety] = useState<'faisal-hills' | 'b-17' | 'faisal-town'>('faisal-hills');
+  const [size, setSize] = useState<'5m' | '8m' | '10m' | '1k'>('5m');
+  const [facing, setFacing] = useState<'N' | 'S' | 'E' | 'W' | 'NE' | 'NW' | 'SE' | 'SW'>('N');
+  const [streetWidth, setStreetWidth] = useState<number>(40);
+  const [isCorner, setIsCorner] = useState(false);
+  const [isPark, setIsPark] = useState(false);
+  const [isBoulevard, setIsBoulevard] = useState(false);
+  const [hasPossession, setHasPossession] = useState(true);
+
+  const advice = orientationAdvice(facing);
+
+  // Score computation
+  const orientationPts = Math.round((advice.score / 10) * 25);
+  const streetPts = streetWidth >= 80 ? 25 : streetWidth >= 60 ? 20 : streetWidth >= 50 ? 17 : 14;
+  const attributePts = (isCorner ? 15 : 0) + (isPark ? 15 : 0) + (isBoulevard ? 15 : 0);
+  const cappedAttributePts = Math.min(25, Math.max(5, attributePts || 8));
+  const possessionPts = hasPossession ? 25 : 15;
+  const totalScore = Math.min(100, orientationPts + streetPts + cappedAttributePts + possessionPts);
+
+  // Price & construction estimate
+  const basePrices: Record<string, Record<string, [number, number]>> = {
+    'faisal-hills': {
+      '5m': [4200000, 6800000],
+      '8m': [5800000, 8500000],
+      '10m': [7800000, 12500000],
+      '1k': [15500000, 27000000],
+    },
+    'b-17': {
+      '5m': [4000000, 6500000],
+      '8m': [5500000, 8000000],
+      '10m': [8500000, 14500000],
+      '1k': [18000000, 32000000],
+    },
+    'faisal-town': {
+      '5m': [5000000, 7800000],
+      '8m': [6800000, 9800000],
+      '10m': [9500000, 15000000],
+      '1k': [20000000, 34000000],
+    },
+  };
+
+  const range = basePrices[society]?.[size] ?? [4000000, 6000000];
+  const premiumPct = (isCorner ? 10 : 0) + (isPark ? 10 : 0) + (isBoulevard ? 15 : 0);
+  const lowVal = Math.round(range[0] * (1 + premiumPct / 100));
+  const highVal = Math.round(range[1] * (1 + premiumPct / 100));
+
+  // Build footprint and typical setbacks
+  const dim = size === '5m' ? '25′ × 50′ (1,125 sq ft)' : size === '8m' ? '30′ × 60′ (1,620 sq ft)' : size === '10m' ? '35′ × 70′ (2,250 sq ft)' : '50′ × 90′ (4,500 sq ft)';
+  const covered = size === '5m' ? 2100 : size === '8m' ? 2750 : size === '10m' ? 3300 : 5200;
+  const greyEst = covered * RATES.construction.standard.grey;
+  const turnkeyEst = covered * (RATES.construction.luxury.grey + RATES.construction.luxury.finishing);
+
+  const scoreVerdict =
+    totalScore >= 88
+      ? 'Triple-A Prime Plot (Maximum Liquidity & Living Comfort)'
+      : totalScore >= 75
+      ? 'Grade-A Premium Plot (High Appreciation & Easy Construction)'
+      : totalScore >= 60
+      ? 'Solid Standard Residential Plot'
+      : 'Speculative Holding / Long-term Development Plot';
+
+  return (
+    <Layout
+      inputs={<>
+        <Choice
+          label="Housing Society"
+          value={society}
+          onChange={setSociety}
+          options={[
+            { value: 'faisal-hills', label: 'Faisal Hills (Taxila / Isb)' },
+            { value: 'b-17', label: 'MPCHS B-17 Multi Gardens' },
+            { value: 'faisal-town', label: 'Faisal Town / F-18' },
+          ]}
+        />
+        <Choice
+          label="Plot Size"
+          value={size}
+          onChange={setSize}
+          options={[
+            { value: '5m', label: '5 Marla' },
+            { value: '8m', label: '8 Marla' },
+            { value: '10m', label: '10 Marla' },
+            { value: '1k', label: '1 Kanal' },
+          ]}
+        />
+        <Choice
+          label="Street Width (Road facing)"
+          value={streetWidth}
+          onChange={setStreetWidth}
+          options={[
+            { value: 40, label: '40 ft (Standard)' },
+            { value: 50, label: '50 ft' },
+            { value: 60, label: '60 ft' },
+            { value: 80, label: '80 ft+' },
+          ]}
+        />
+        <Choice
+          label="Orientation / Sun Facing"
+          value={facing}
+          onChange={setFacing}
+          options={(['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'] as const).map((f) => ({ value: f, label: f }))}
+        />
+        <div className="rounded-xl border border-sand bg-paper p-4 space-y-2.5">
+          <p className="text-xs font-bold uppercase tracking-wider text-burgundy">Special Category & Status</p>
+          <label className="flex items-center gap-2.5 text-sm text-ink cursor-pointer">
+            <input type="checkbox" checked={isCorner} onChange={(e) => setIsCorner(e.target.checked)} className="rounded text-burgundy focus:ring-burgundy" />
+            <span>Corner Plot (+10% Premium, Dual Light & Ventilation)</span>
+          </label>
+          <label className="flex items-center gap-2.5 text-sm text-ink cursor-pointer">
+            <input type="checkbox" checked={isPark} onChange={(e) => setIsPark(e.target.checked)} className="rounded text-burgundy focus:ring-burgundy" />
+            <span>Park / Green Belt Facing (+10% Premium, Permanent Open View)</span>
+          </label>
+          <label className="flex items-center gap-2.5 text-sm text-ink cursor-pointer">
+            <input type="checkbox" checked={isBoulevard} onChange={(e) => setIsBoulevard(e.target.checked)} className="rounded text-burgundy focus:ring-burgundy" />
+            <span>Main Boulevard Location (+15% Premium, 80ft–225ft Road)</span>
+          </label>
+          <label className="flex items-center gap-2.5 text-sm text-ink cursor-pointer">
+            <input type="checkbox" checked={hasPossession} onChange={(e) => setHasPossession(e.target.checked)} className="rounded text-burgundy focus:ring-burgundy" />
+            <span>Physical Possession Ready (Immediate Map Approval & Construction)</span>
+          </label>
+        </div>
+      </>}
+      results={<>
+        <Stat label="Plot Scorecard Rating" highlight note={scoreVerdict}>
+          <div className="flex items-baseline gap-2">
+            <span className="font-serif text-3xl md:text-4xl">{totalScore}</span>
+            <span className="text-paper/70 font-sans text-lg">/ 100</span>
+            {premiumPct > 0 && <span className="ml-auto rounded-full bg-gold px-2.5 py-0.5 text-xs font-bold text-burgundy-deep">+{premiumPct}% Premium</span>}
+          </div>
+        </Stat>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <Stat label="Estimated Plot Value" note={`Includes ${premiumPct}% category premium`}>
+            <span className="font-semibold text-burgundy">{full(lowVal)} – {full(highVal)}</span>
+          </Stat>
+          <Stat label="Plot Dimensions" note={`Standard RDA/Society standard`}>
+            <span className="font-semibold">{dim}</span>
+          </Stat>
+          <Stat label="Est. Grey Structure Build" note={`≈ ${num(covered)} sq ft covered area`}>
+            <Money value={greyEst} />
+          </Stat>
+          <Stat label="Est. A+ Turnkey Build" note={`Full designer finish with solar`}>
+            <Money value={turnkeyEst} />
+          </Stat>
+        </div>
+        <div className="rounded-xl border border-sand/60 bg-paper p-4 text-xs space-y-1.5 text-ink/80">
+          <p className="font-bold text-burgundy uppercase tracking-wider">Setback & Construction Rules for this Plot:</p>
+          <p>• <strong>Front Setback:</strong> {size === '1k' ? '15 ft open front lawn' : size === '10m' ? '7.5 to 10 ft front lawn' : '5 ft mandatory front open space'}.</p>
+          <p>• <strong>Rear & Side Setbacks:</strong> 5 ft rear open space; {size === '1k' ? '5 ft on both sides' : size === '10m' ? '5 ft on one side' : 'Zero side setbacks (attached row design)'}.</p>
+          <p>• <strong>Orientation Note:</strong> {advice.summary}</p>
+        </div>
+      </>}
+      note="Values reflect Q1/Q2 2026 ground transactions in Faisal Hills & B-17 sectors. Actual market prices depend on specific street series, soil depth, and utility proximity. Consult our engineers for on-ground validation."
+    />
+  );
+}
+
+// ── Master Plan & Block Navigator Tool ───────────────────────────────────────
+function MasterPlanMapTool() {
+  const [society, setSociety] = useState<'faisal-hills' | 'b-17'>('faisal-hills');
+  const [selectedBlock, setSelectedBlock] = useState<string>('executive');
+
+  const blocksData: Record<string, Record<string, {
+    name: string;
+    possession: string;
+    possessionBadge: string;
+    prices: { size: string; range: string }[];
+    features: string[];
+    landmarks: string[];
+    builderTip: string;
+  }>> = {
+    'faisal-hills': {
+      executive: {
+        name: 'Executive Block (Main Entrance)',
+        possession: '100% On-Ground Physical Possession',
+        possessionBadge: 'Ready to Build',
+        prices: [
+          { size: '5 Marla (25×50)', range: 'PKR 58 Lacs – 75 Lacs' },
+          { size: '10 Marla (35×70)', range: 'PKR 1.10 Cr – 1.40 Cr' },
+          { size: '1 Kanal (50×90)', range: 'PKR 2.15 Cr – 2.90 Cr' },
+        ],
+        features: ['Direct access from GT Road through monumental entrance', '225ft wide Main Central Boulevard', 'Full commercial hub and completed mosque', 'Highest rental yield and immediate family settlement'],
+        landmarks: ['Faisal Hills Grand Monument', 'Executive Civic Commercial', 'Roots Millennium Campus'],
+        builderTip: 'Ideal for instant living or fast commercial rental. Immediate map approvals by RDA and society.',
+      },
+      blockA: {
+        name: 'Block A (Central Civic & Head Office)',
+        possession: '100% Possession with Peak Construction Activity',
+        possessionBadge: 'Active Community',
+        prices: [
+          { size: '5 Marla (25×50)', range: 'PKR 52 Lacs – 70 Lacs' },
+          { size: '8 Marla (30×60)', range: 'PKR 75 Lacs – 92 Lacs' },
+          { size: '10 Marla (35×70)', range: 'PKR 1.05 Cr – 1.32 Cr' },
+          { size: '1 Kanal (50×90)', range: 'PKR 1.95 Cr – 2.65 Cr' },
+        ],
+        features: ['Home of Al-Ammana Head Office (Plot 46, Main Civic Centre)', 'Operational high schools, banks, and grocery supermarkets', 'Central Park and Grand Jamia Masjid', 'Paved 40ft to 150ft street grid with underground power'],
+        landmarks: ['Al-Ammana Developers Head Office', 'Main Civic Centre Commercial', 'Block A Central Park'],
+        builderTip: 'Our construction teams are actively building 8+ turnkey villas in Block A. Fast site inspections available daily.',
+      },
+      blockB: {
+        name: 'Block B (Scenic Foothills & Cricket Ground)',
+        possession: '95% Possession with Fast Inhabitation',
+        possessionBadge: 'Ready to Build',
+        prices: [
+          { size: '5 Marla (25×50)', range: 'PKR 46 Lacs – 62 Lacs' },
+          { size: '8 Marla (30×60)', range: 'PKR 68 Lacs – 84 Lacs' },
+          { size: '10 Marla (35×70)', range: 'PKR 86 Lacs – 1.15 Cr' },
+          { size: '1 Kanal (50×90)', range: 'PKR 1.65 Cr – 2.25 Cr' },
+        ],
+        features: ['Picturesque Margalla foothills backdrop with natural air ventilation', 'Faisal Hills Cricket Stadium and sports arena', 'Direct connectivity to Block A and Executive Boulevard', 'Solid natural clay terrain minimizing foundation piling costs'],
+        landmarks: ['Faisal Hills Sports Ground', 'Block B Mini Commercial', 'Sector Green Belt Park'],
+        builderTip: 'Optimal soil bearing capacity across most streets; lower foundation earthwork overheads compared to depression zones.',
+      },
+      blockC: {
+        name: 'Block C (Lake View & Extended Residential)',
+        possession: 'Possession Available across Sector Streets',
+        possessionBadge: 'Rapid Construction',
+        prices: [
+          { size: '5 Marla (25×50)', range: 'PKR 40 Lacs – 56 Lacs' },
+          { size: '8 Marla (30×60)', range: 'PKR 60 Lacs – 76 Lacs' },
+          { size: '10 Marla (35×70)', range: 'PKR 76 Lacs – 98 Lacs' },
+          { size: '1 Kanal (50×90)', range: 'PKR 1.45 Cr – 2.05 Cr' },
+        ],
+        features: ['Planned central artificial lake and leisure waterpark', 'Spacious residential zoning with large community parks', 'Direct route to future Margalla Avenue northern extension', 'Attractive price-to-size ratio for long-term family residence'],
+        landmarks: ['Proposed Central Lake', 'Block C Markaz', 'Primary Sector School'],
+        builderTip: 'Check specific street filling depth before buying — street numbers near natural depression benefit from deep foundation beam design.',
+      },
+      blockD: {
+        name: 'Block D (Margalla Skyline & Mountain View)',
+        possession: 'Developing & Early Possession Phases',
+        possessionBadge: 'Emerging Value',
+        prices: [
+          { size: '5 Marla (25×50)', range: 'PKR 36 Lacs – 50 Lacs' },
+          { size: '8 Marla (30×60)', range: 'PKR 54 Lacs – 70 Lacs' },
+          { size: '10 Marla (35×70)', range: 'PKR 68 Lacs – 88 Lacs' },
+          { size: '1 Kanal (50×90)', range: 'PKR 1.30 Cr – 1.80 Cr' },
+        ],
+        features: ['Elevated ridgeline with direct unblocked Margalla mountain views', 'Cooler summer temperature due to mountain elevation', 'Low entry price points offering high upside potential', 'Wide internal arterial roads connected to Prime Block'],
+        landmarks: ['Block D Skyline Viewpoint', 'Sector D Commercial Zone'],
+        builderTip: 'Great for future residential build with breathtaking rooftop views; require contour-specific basement architectural planning.',
+      },
+      prime: {
+        name: 'Prime Block (New Master Planned Sector)',
+        possession: 'Rapid Development with Balloting Completed',
+        possessionBadge: 'High Appreciation',
+        prices: [
+          { size: '5 Marla (25×50)', range: 'PKR 34 Lacs – 46 Lacs' },
+          { size: '8 Marla (30×60)', range: 'PKR 50 Lacs – 65 Lacs' },
+          { size: '10 Marla (35×70)', range: 'PKR 62 Lacs – 80 Lacs' },
+          { size: '1 Kanal (50×90)', range: 'PKR 1.20 Cr – 1.60 Cr' },
+        ],
+        features: ['State-of-the-art underground utility infrastructure planned', '150ft central arterial boulevard connecting to Margalla Highway', 'Modern commercial boulevard and corporate towers zone', 'Strongest capital appreciation trajectory for 2026–2028'],
+        landmarks: ['Prime Central Boulevard', 'Future Commercial High-Street'],
+        builderTip: 'Recommended for investors seeking maximum 24-month returns before full home construction rollout.',
+      },
+    },
+    'b-17': {
+      blockA: {
+        name: 'Block A (CDA Sector Adjacent)',
+        possession: '100% Mature Sector, Fully Built',
+        possessionBadge: 'Established City',
+        prices: [
+          { size: '10 Marla (35×70)', range: 'PKR 1.40 Cr – 1.90 Cr' },
+          { size: '1 Kanal (50×90)', range: 'PKR 2.50 Cr – 3.60 Cr' },
+        ],
+        features: ['Immediate proximity to GT Road and Sector B-17 main gate', 'Established commercial banks, branded food chains, and clinics', 'Fully mature tree-lined avenues with underground gas/electricity', 'Highest rental stability in Zone II Islamabad'],
+        landmarks: ['B-17 Main Entrance', 'Block A Commercial Complex', 'Masjid-e-Quba'],
+        builderTip: 'High rental demand for executive tenants working in Islamabad and Taxila heavy industries.',
+      },
+      blockB: {
+        name: 'Block B (Central Community)',
+        possession: '100% Possession, Highly Populated',
+        possessionBadge: 'Active Community',
+        prices: [
+          { size: '10 Marla (35×70)', range: 'PKR 1.25 Cr – 1.70 Cr' },
+          { size: '1 Kanal (50×90)', range: 'PKR 2.20 Cr – 3.10 Cr' },
+        ],
+        features: ['Large community parks, badminton courts, and walking tracks', 'Central commercial hub with active departmental stores', 'High security gated sector with 24/7 surveillance'],
+        landmarks: ['Block B Central Park', 'Markaz B-17'],
+        builderTip: 'Well suited for double-unit Spanish or contemporary family villas with dual rental income.',
+      },
+      blockC: {
+        name: 'Block C (Scenic Central)',
+        possession: '100% Possession with Steady Construction',
+        possessionBadge: 'Ready to Build',
+        prices: [
+          { size: '10 Marla (35×70)', range: 'PKR 1.15 Cr – 1.55 Cr' },
+          { size: '1 Kanal (50×90)', range: 'PKR 2.00 Cr – 2.80 Cr' },
+        ],
+        features: ['Elevated natural slope offering natural drainage and valley vistas', 'Direct access to Multi Zoo and family recreation areas', 'Active street lighting and water filtration plants'],
+        landmarks: ['Multi Zoo B-17', 'Block C Commercial Zone'],
+        builderTip: 'Ideal foundation stability with rocky substrate; excellent for multi-storey residential builds.',
+      },
+      blockG: {
+        name: 'Block G (Motorway M-1 Interchange Gateway)',
+        possession: 'Possession Live with Rapid Expansion',
+        possessionBadge: 'High Growth Sector',
+        prices: [
+          { size: '5 Marla (25×50)', range: 'PKR 38 Lacs – 54 Lacs' },
+          { size: '8 Marla (30×60)', range: 'PKR 56 Lacs – 72 Lacs' },
+          { size: '10 Marla (35×70)', range: 'PKR 75 Lacs – 1.05 Cr' },
+          { size: '1 Kanal (50×90)', range: 'PKR 1.40 Cr – 1.95 Cr' },
+        ],
+        features: ['Direct dedicated interchange connecting to M-1 Islamabad-Peshawar Motorway', 'Newest master planned sector of MPCHS Multi Gardens', 'Modern commercial civic layout with expansive wide avenues', 'Fastest travel time to New Islamabad International Airport (15 mins)'],
+        landmarks: ['B-17 Motorway M-1 Interchange', 'Block G Central Boulevard'],
+        builderTip: 'Top sector choice for overseas Pakistanis and frequent flyers due to instant motorway connectivity.',
+      },
+    },
+  };
+
+  const currentSocietyBlocks = blocksData[society] ?? blocksData['faisal-hills'];
+  const blockKeys = Object.keys(currentSocietyBlocks);
+  const activeKey = currentSocietyBlocks[selectedBlock] ? selectedBlock : blockKeys[0];
+  const info = currentSocietyBlocks[activeKey] ?? currentSocietyBlocks[blockKeys[0]];
+
+  return (
+    <Layout
+      inputs={<>
+        <Choice
+          label="Select Housing Project"
+          value={society}
+          onChange={(s) => {
+            setSociety(s);
+            setSelectedBlock(s === 'faisal-hills' ? 'executive' : 'blockA');
+          }}
+          options={[
+            { value: 'faisal-hills', label: 'Faisal Hills (Taxila / Isb)' },
+            { value: 'b-17', label: 'MPCHS B-17 Multi Gardens' },
+          ]}
+        />
+        <Choice
+          label="Select Sector / Block"
+          value={activeKey}
+          onChange={setSelectedBlock}
+          options={blockKeys.map((k) => ({
+            value: k,
+            label: currentSocietyBlocks[k].name.split(' (')[0],
+          }))}
+        />
+        <div className="rounded-xl border border-sand bg-paper p-4 space-y-3">
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-bold uppercase tracking-wider text-burgundy">Possession Status</span>
+            <span className="rounded-full bg-burgundy/10 px-2.5 py-1 text-xs font-semibold text-burgundy">{info.possessionBadge}</span>
+          </div>
+          <p className="text-sm font-medium text-ink">{info.possession}</p>
+          <div className="border-t border-sand/50 pt-2.5">
+            <p className="text-xs font-bold uppercase tracking-wider text-burgundy mb-1">Key Landmarks & Points of Interest</p>
+            <ul className="text-xs text-ink/70 space-y-1">
+              {info.landmarks.map((l) => <li key={l}>📍 {l}</li>)}
+            </ul>
+          </div>
+        </div>
+      </>}
+      results={<>
+        <Stat label={`Verified 2026 Ground Rates · ${info.name}`} highlight note="Verified cash market transaction brackets">
+          <div className="space-y-1.5 mt-2">
+            {info.prices.map((p) => (
+              <div key={p.size} className="flex items-center justify-between border-b border-paper/20 pb-1 text-sm font-sans">
+                <span className="text-paper/90">{p.size}</span>
+                <span className="font-semibold text-gold">{p.range}</span>
+              </div>
+            ))}
+          </div>
+        </Stat>
+        <div className="rounded-xl border border-sand/60 bg-paper p-4 space-y-2">
+          <p className="text-xs font-bold uppercase tracking-wider text-burgundy">Block Features & Infrastructure</p>
+          <ul className="text-xs text-ink/80 space-y-1.5">
+            {info.features.map((f) => <li key={f} className="flex items-start gap-1.5"><span>✓</span><span>{f}</span></li>)}
+          </ul>
+        </div>
+        <div className="rounded-xl border border-sand/60 bg-paper p-4 space-y-1.5 text-xs text-ink/80">
+          <p className="font-bold text-burgundy uppercase tracking-wider">Al-Ammana Construction Engineering Advice:</p>
+          <p>{info.builderTip}</p>
+        </div>
+      </>}
+      note="Block rates are updated bi-weekly by Al-Ammana Developers based on executed registry & transfer records in Faisal Hills & B-17."
+    />
+  );
+}
+
 const TOOL_UI: Record<string, () => ReactNode> = {
   'construction-cost': ConstructionCostTool,
   materials: MaterialsTool,
@@ -595,6 +976,8 @@ const TOOL_UI: Record<string, () => ReactNode> = {
   portfolio: PortfolioTool,
   'rooftop-solar': RooftopSolarTool,
   'plot-orientation': OrientationTool,
+  'prime-plot': PrimePlotTool,
+  'master-plan-map': MasterPlanMapTool,
 };
 
 export default function ToolClient({ slug }: { slug: string }) {

@@ -89,7 +89,8 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
       priceCurrency: 'PKR',
       url: `${baseUrl}/portfolio/${project.id}`,
       seller: {
-        '@type': 'Organization',
+        '@type': 'HomeAndConstructionBusiness',
+        '@id': `${baseUrl}#organization`,
         name: 'Alammana Developers',
         url: baseUrl,
       },

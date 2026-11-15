@@ -17,9 +17,26 @@ export const metadata: Metadata = pageMeta({
 });
 
 export default function Team() {
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Alammana Developers Leadership & Engineering Team',
+    description: 'Executive management, civil engineers, project managers, and property consultants at Alammana Developers.',
+    itemListElement: team.map((member, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'Person',
+        name: member.name,
+        jobTitle: member.role,
+        url: `https://alammana.pk/team/${member.id}`,
+      },
+    })),
+  };
+
   return (
     <>
-      <JsonLd schema={[breadcrumb([['Team', '/team']])]} />
+      <JsonLd schema={[breadcrumb([['Team', '/team']]), itemListSchema]} />
       <TeamClient team={team} />
     </>
   );

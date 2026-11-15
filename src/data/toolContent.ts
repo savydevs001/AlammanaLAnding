@@ -563,4 +563,82 @@ Neighbouring buildings, trees and street width change the picture, so treat this
     relatedTools: ['rooftop-solar', 'buildable-area'],
     relatedBlogs: ['north-facing-vs-south-facing-house-pakistan', 'rooftop-solar-system-home-islamabad', 'house-construction-cost-faisal-hills', 'approved-map-noc-guide'],
   },
+  'prime-plot': {
+    answer:
+      'A prime plot feasibility study in Faisal Hills or B-17 evaluates four key variables before buying or breaking ground: legal RDA setback compliance (mandatory 5–10 ft open spaces), maximum permissible covered area across storeys, sun-path solar exposure, and estimated construction budget (grey structure from Rs. 2,850/sq ft vs turnkey from Rs. 5,600/sq ft). Verifying these upfront prevents costly architectural revisions and ensures optimal living comfort.',
+    body: `
+## Why run a plot feasibility study before purchasing?
+
+Every residential plot has unique physical, legal, and environmental constraints. Before committing capital to buy a plot or commission blueprints, you need to understand:
+1. **Buildable Footprint**: How much of your land can legally be covered with concrete under RDA bylaws.
+2. **Thermal Orientation**: Whether summer sun will overheat your bedrooms and where your lawn will receive winter sunlight.
+3. **Construction Budget**: What building a compliant double-storey house will actually cost at current material rates.
+
+## RDA setback regulations for Faisal Hills and the Twin Cities
+
+The Rawalpindi Development Authority (RDA) mandates open setbacks to ensure ventilation, fire safety, and aesthetic uniformity:
+- **5 Marla (25x50)**: Typically requires a 5 ft front setback and a 3 to 5 ft rear setback.
+- **8 & 10 Marla (35x70)**: Requires a mandatory 10 ft front setback and 5 ft rear setback.
+- **1 Kanal (50x90)**: Requires a 15 ft front setback, 7 ft rear setback, and 5 ft open side passages on both flanks.
+
+## Sun-path analysis: Thermal comfort and solar energy
+
+In Islamabad and Taxila, the sun rises in the east and tracks across the southern sky before setting in the west. A north-facing house avoids blistering summer glare on the front porch, while south-facing rear roofs provide maximum annual solar yield for rooftop PV arrays.
+
+## Financial budgeting: Grey structure vs turnkey packages
+
+Building on your plot starts with an engineered grey structure (foundation, columns, Grade 60 steel, slabs, masonry, and rough plumbing/wiring), followed by turnkey finishing. Review our [Faisal Hills construction packages](/packages) or test your custom parameters on our [construction cost calculator](/tools/construction-cost).
+`,
+    steps: [
+      'Select your target housing society (Faisal Hills, B-17, or Faisal Town) and block.',
+      'Enter your plot dimensions (5 Marla, 8 Marla, 10 Marla, 14 Marla, or 1 Kanal).',
+      'Specify the road facing direction to evaluate sun-path and thermal comfort.',
+      'Review the generated setback analysis, maximum covered area, and estimated construction budget.',
+      'Export the summary directly to WhatsApp for official engineering verification.',
+    ],
+    faqs: [
+      { q: 'What is a plot feasibility report?', a: 'A plot feasibility report is a technical and financial summary outlining a plot’s buildable area under society bylaws, mandatory setbacks, solar exposure, and estimated construction cost.' },
+      { q: 'Can I build up to the edge of my plot in Faisal Hills?', a: 'No. The RDA mandates open setbacks (typically 5 to 10 ft at the front and 5 ft at the rear) that cannot be covered by permanent roof slabs.' },
+      { q: 'How does Alammana Developers assist with plot feasibility?', a: 'We walk your plot with you, check soil and topography, verify the file with Zedem International, and prepare complete architectural floor plans and 3D elevations.' },
+      { q: 'What is the maximum covered area for a 10 Marla house?', a: 'A standard 10 Marla (35x70) plot allows approximately 3,300 to 3,600 sq ft of total covered area across ground and first floors plus the stair mumty.' },
+    ],
+    relatedTools: ['buildable-area', 'construction-cost', 'plot-orientation', 'master-plan-map'],
+    relatedBlogs: ['approved-map-noc-guide', '10-marla-house-construction-cost-faisal-hills-breakdown', 'house-construction-cost-faisal-hills'],
+  },
+  'master-plan-map': {
+    answer:
+      'The Faisal Hills and Sector B-17 master-plan map directory allows buyers and investors to explore block-by-block development dynamics: possession status, average plot rate ranges, road hierarchy (from 30-ft streets to 225-ft Main Boulevards), and connectivity to Margalla Avenue and the M-1 Motorway. Verifying active market rates by block ensures you never overpay for speculative resale files.',
+    body: `
+## How to use the interactive block rate heatmap
+
+Faisal Hills is spread over roughly 11,823 kanals across six distinct sectors: Executive Block, Block A, Block B, Block C, Block D, and the newly launched Prime Block. Sector B-17 Multi Gardens is situated adjacent to Faisal Hills, making both prime targets for residential construction and investment.
+
+## Faisal Hills block breakdown
+
+- **Executive Block**: Highest commercial value, situated at the grand monument entrance on the N-5 G.T. Road. Immediate possession, luxury 1 Kanal and 10 Marla villas.
+- **Block A**: Premium residential enclave with 225-ft main boulevard, underground utilities, parks, and Alammana Developers headquarters. Active possession.
+- **Block B & C**: Scenic blocks nestled against the Margalla mountains, offering serene living and attractive 5 and 10 Marla family plots.
+- **Block D**: Fast-growing residential sector with 100+ houses actively under construction. High liquidity and strong capital growth.
+- **Prime Block**: The newest expansion by Zedem International offering fresh residential and commercial plots on convenient installments.
+
+## Possession vs developing blocks: Where to put your capital
+
+If you plan to construct a house within the next 3 to 6 months, purchase an allotted plot in **Block A, Executive, or Block D** where possession is handed over and utility connections are operational. If your investment horizon is 2 to 4 years, **Prime Block** offers lower initial entry prices with maximum development-driven upside.
+`,
+    steps: [
+      'Select either Faisal Hills (Taxila) or Sector B-17 (Multi Gardens).',
+      'Filter blocks by possession status: Ready to Build, Developing, or Commercial.',
+      'Compare average verified price brackets across 5 Marla, 10 Marla, and 1 Kanal plots.',
+      'Check infrastructure specifications like road widths and utility availability.',
+      'Request instant file and NOC verification through our authorized sales desk.',
+    ],
+    faqs: [
+      { q: 'Which block in Faisal Hills has the highest plot prices?', a: 'Executive Block and Block A command the highest prices due to their immediate proximity to the main entrance, completed 225-ft boulevards, and commercial hubs.' },
+      { q: 'Is possession available in all blocks of Faisal Hills?', a: 'Possession has been handed over in Executive Block, Block A, Block B, and Block D. Prime Block is currently under development.' },
+      { q: 'How do I verify the authenticity of a plot file in Faisal Hills?', a: 'Always transact through an official Authorized Sales Partner like Alammana Developers. We cross-verify computerized NDC and allotment records directly with Zedem International.' },
+      { q: 'What is the road width inside Faisal Hills?', a: 'Internal residential streets range from 30 to 40 feet wide, while sector boulevards range from 60 to 150 feet, and the central Main Boulevard is 225 feet wide.' },
+    ],
+    relatedTools: ['prime-plot', 'investment', 'portfolio', 'transfer-costs'],
+    relatedBlogs: ['authorized-faisal-hills-property-dealers-taxila', 'why-invest-faisal-hills-taxila-islamabad-buyers', 'investing-in-faisal-hills'],
+  },
 };

@@ -68,30 +68,43 @@ export default async function Page({ params }: { params: Promise<{ id: string }>
     image: member.image.startsWith('http') ? member.image : `${baseUrl}${member.image}`,
     url: `${baseUrl}/team/${member.id}`,
     email: member.email,
-    ...(member.socials?.phone ? { telephone: member.socials.phone } : {}),
+    telephone: member.socials?.phone ?? '+92-337-7503111',
     worksFor: {
       '@type': 'Organization',
+      '@id': `${baseUrl}#organization`,
       name: 'Alammana Developers',
-      url: baseUrl
+      url: baseUrl,
     },
     knowsAbout: [
       member.specialization,
+      'Faisal Hills property dealers',
+      'Islamabad construction services',
+      'Best house developers',
+      'Faisal Town real estate',
+      'Taxila property investment',
       'Real Estate Development',
-      'Faisal Hills',
-      'Islamabad Construction',
-      'Property Development'
+      'Property Development',
     ],
     ...(sameAs.length > 0 ? { sameAs } : {}),
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Islamabad',
-      addressCountry: 'PK'
-    }
+      streetAddress: 'Vertical Four, Main Boulevard, A Block, Faisal Hills',
+      addressLocality: 'Faisal Hills, Taxila',
+      addressRegion: 'Rawalpindi, Punjab',
+      addressCountry: 'PK',
+    },
+  };
+
+  const profilePageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfilePage',
+    '@id': `${baseUrl}/team/${member.id}`,
+    mainEntity: { '@id': `${baseUrl}/team/${member.id}#person` },
   };
 
   return (
     <>
-      {[personSchema, breadcrumb([['Team', '/team'], [member.name, `/team/${member.id}`]])].map((sc, i) => (
+      {[personSchema, profilePageSchema, breadcrumb([['Team', '/team'], [member.name, `/team/${member.id}`]])].map((sc, i) => (
         <script
           key={i}
           type="application/ld+json"

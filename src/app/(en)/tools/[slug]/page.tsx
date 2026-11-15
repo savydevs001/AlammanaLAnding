@@ -52,7 +52,12 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
       operatingSystem: 'Any',
       isAccessibleForFree: true,
       offers: { '@type': 'Offer', price: '0', priceCurrency: 'PKR' },
-      provider: { '@type': 'Organization', name: 'Alammana Developers', url: siteUrl },
+      provider: {
+        '@type': 'HomeAndConstructionBusiness',
+        '@id': `${siteUrl}#organization`,
+        name: 'Alammana Developers',
+        url: siteUrl,
+      },
       areaServed: ['Islamabad', 'Rawalpindi', 'Taxila', 'Pakistan'],
     },
     {
