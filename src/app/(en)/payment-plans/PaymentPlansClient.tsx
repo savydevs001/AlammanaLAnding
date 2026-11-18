@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'motion/react';
-import { Download, ExternalLink, FileText, Home, Building, ArrowRight, MessageCircle, ShieldCheck, CheckCircle2, CreditCard } from 'lucide-react';
+import { Download, ExternalLink, FileText, Home, Building, ArrowRight, MessageCircle, ShieldCheck, CheckCircle2, CreditCard, Sparkles } from 'lucide-react';
 import {
   GRAY_STRUCTURE_PLANS,
   FINISHED_HOUSE_PLANS,
@@ -14,6 +14,8 @@ import {
 } from '../../../data/paymentPlansData';
 import { formatPKR } from '../../../lib/pricing';
 import { CONTACT, whatsappLink } from '../../../lib/contact';
+import { fetchLivePlans } from '../../../lib/publicPricing';
+import FinishingMaterialsMatrix from '../../../components/FinishingMaterialsMatrix';
 
 type FinishType = 'gray' | 'finished';
 
@@ -48,6 +50,30 @@ function pdfPath(block: string, finish: FinishType) {
 export default function PaymentPlansClient() {
   const [finish, setFinish] = useState<FinishType>('gray');
   const [block, setBlock] = useState(blocks[0]);
+  const [plansData, setPlansData] = useState<{
+    [blockKey: string]: {
+      greyPlans: GrayPlanRow[];
+      finishedPlans: FinishedPlanRow[];
+    };
+  }>({
+    'block-a': { greyPlans: GRAY_STRUCTURE_PLANS['block-a'] ?? [], finishedPlans: FINISHED_HOUSE_PLANS['block-a'] ?? [] },
+    'block-b': { greyPlans: GRAY_STRUCTURE_PLANS['block-b'] ?? [], finishedPlans: FINISHED_HOUSE_PLANS['block-b'] ?? [] },
+    'block-c': { greyPlans: GRAY_STRUCTURE_PLANS['block-c'] ?? [], finishedPlans: FINISHED_HOUSE_PLANS['block-c'] ?? [] },
+    'block-d': { greyPlans: GRAY_STRUCTURE_PLANS['block-d'] ?? [], finishedPlans: FINISHED_HOUSE_PLANS['block-d'] ?? [] },
+    'executive-block': { greyPlans: GRAY_STRUCTURE_PLANS['executive-block'] ?? [], finishedPlans: FINISHED_HOUSE_PLANS['executive-block'] ?? [] },
+  });
+
+  useEffect(() => {
+    let mounted = true;
+    fetchLivePlans().then((live) => {
+      if (mounted && live && Object.keys(live).length > 0) {
+        setPlansData(live);
+      }
+    });
+    return () => {
+      mounted = false;
+    };
+  }, []);
 
   const currentPdf = pdfPath(block.id, finish);
   const currentImage = currentPdf.replace(/\.pdf$/, '.webp');
@@ -75,12 +101,26 @@ export default function PaymentPlansClient() {
               structure rates with fully finished house prices for Block A, B, C, D and the Executive
               Block — preview each plan below or download the official PDF.
             </p>
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+              <a
+                href="#materials-matrix"
+                className="inline-flex items-center gap-2 rounded-full bg-burgundy text-white px-6 py-3 text-xs uppercase tracking-widest font-bold shadow-lg shadow-burgundy/20 hover:opacity-95 transition-all"
+              >
+                <Sparkles size={15} /> 3-Tier Materials Matrix
+              </a>
+              <a
+                href="#plans-viewer"
+                className="inline-flex items-center gap-2 rounded-full border border-burgundy/30 bg-white text-burgundy px-6 py-3 text-xs uppercase tracking-widest font-bold hover:bg-beige transition-all"
+              >
+                <FileText size={15} /> Browse Rate Sheets
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Selector + Viewer */}
-      <section className="py-16 md:py-24 bg-paper">
+      <section id="plans-viewer" className="py-16 md:py-24 bg-paper">
         <div className="max-w-[1600px] mx-auto px-4">
           {/* Finish type toggle */}
           <div className="mb-12">
@@ -218,7 +258,7 @@ export default function PaymentPlansClient() {
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-sand/40 bg-white text-xs md:text-sm">
-                        {(GRAY_STRUCTURE_PLANS[block.id] ?? []).map((row) => {
+                        {(plansData[block.id]?.greyPlans ?? GRAY_STRUCTURE_PLANS[block.id] ?? []).map((row) => {
                           const wa = whatsappLink(
                             `Assalam o Alaikum, I am inquiring about Faisal Hills ${block.label} Gray Structure: Plot Series ${row.plotSeries} (${row.size}, ${row.marla}). Total Price: ${formatPKR(row.totalPriceLuxury)}. Please confirm plot availability.`
                           );
@@ -265,7 +305,7 @@ export default function PaymentPlansClient() {
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-sand/40 bg-white text-xs md:text-sm">
-                        {(FINISHED_HOUSE_PLANS[block.id] ?? []).map((row) => {
+                        {(plansData[block.id]?.finishedPlans ?? FINISHED_HOUSE_PLANS[block.id] ?? []).map((row) => {
                           const wa = whatsappLink(
                             `Assalam o Alaikum, I am inquiring about Faisal Hills ${block.label} Finished House: Plot Series ${row.plotSeries} (${row.size}, ${row.marla}). Executive: ${formatPKR(row.priceExecutive)}, Premium: ${formatPKR(row.pricePremium)}, Luxury: ${formatPKR(row.priceLuxury)}. Please confirm availability.`
                           );
@@ -440,6 +480,9 @@ export default function PaymentPlansClient() {
           </div>
         </div>
       </section>
+
+      {/* 3-Tier Finishing Materials Specification Matrix */}
+      <FinishingMaterialsMatrix />
 
       {/* When you pay — milestone strip. The PDFs contain this but nobody reads a
           PDF to answer 'when does the money leave my account'. */}
