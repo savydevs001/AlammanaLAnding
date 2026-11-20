@@ -1,6 +1,7 @@
 'use client';
 
 import { whatsappLink } from '../lib/contact';
+import { trackClarityEvent, upgradeClaritySession } from '../lib/clarity';
 
 /**
  * Persistent WhatsApp call-to-action. Most enquiries in this market arrive on a
@@ -8,9 +9,15 @@ import { whatsappLink } from '../lib/contact';
  * position rather than making visitors hunt for the contact page.
  */
 export default function WhatsAppFloat() {
+  const handleClick = () => {
+    trackClarityEvent('whatsapp_float_click');
+    upgradeClaritySession('whatsapp_conversion');
+  };
+
   return (
     <a
       href={whatsappLink('Hello Alammana Developers, I found you on your website and would like more information.')}
+      onClick={handleClick}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with Alammana Developers on WhatsApp"

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { motion } from 'motion/react';
 import { Building2, Compass, ShieldCheck, Video, CalendarCheck, CheckCircle2, ArrowRight, Phone } from 'lucide-react';
 import { CONTACT, whatsappLink } from '../../../lib/contact';
+import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../../../lib/clarity';
 import { realConstructions } from '../../../data/constructions';
 import ConstructionCard from '../../../components/ConstructionCard';
 
@@ -157,6 +158,11 @@ export default function BuildClient() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href={`tel:${CONTACT.phoneHref}`}
+              onClick={() => {
+                trackClarityEvent('phone_call_click');
+                setClarityTag('call_source', 'build_page_cta');
+                upgradeClaritySession('phone_lead');
+              }}
               className="bg-white text-burgundy px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-beige transition-colors"
             >
               Call {CONTACT.phoneDisplay}
@@ -165,6 +171,11 @@ export default function BuildClient() {
               href={whatsappLink('Hello Alammana Developers, I would like to schedule a site meeting.')}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                trackClarityEvent('whatsapp_build_inquiry');
+                setClarityTag('cta_source', 'build_page_schedule');
+                upgradeClaritySession('build_site_meeting_request');
+              }}
               className="border border-white/40 px-8 py-4 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-white/10 transition-colors"
             >
               Schedule via WhatsApp

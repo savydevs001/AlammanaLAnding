@@ -16,6 +16,7 @@ import { formatPKR } from '../../../lib/pricing';
 import { CONTACT, whatsappLink } from '../../../lib/contact';
 import { fetchLivePlans } from '../../../lib/publicPricing';
 import FinishingMaterialsMatrix from '../../../components/FinishingMaterialsMatrix';
+import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../../../lib/clarity';
 
 type FinishType = 'gray' | 'finished';
 
@@ -131,7 +132,11 @@ export default function PaymentPlansClient() {
               {finishTypes.map((f) => (
                 <button
                   key={f.id}
-                  onClick={() => setFinish(f.id)}
+                  onClick={() => {
+                    setFinish(f.id);
+                    trackClarityEvent('pricing_type_toggled');
+                    setClarityTag('pricing_finish_type', f.id);
+                  }}
                   className={`text-left p-6 rounded-2xl border transition-all ${
                     finish === f.id
                       ? 'bg-burgundy text-white border-burgundy shadow-lg shadow-burgundy/20'
@@ -159,7 +164,11 @@ export default function PaymentPlansClient() {
               {blocks.map((b) => (
                 <button
                   key={b.id}
-                  onClick={() => setBlock(b)}
+                  onClick={() => {
+                    setBlock(b);
+                    trackClarityEvent('pricing_block_changed');
+                    setClarityTag('selected_block', b.label);
+                  }}
                   className={`px-6 py-3 rounded-full text-sm uppercase tracking-widest font-bold transition-all ${
                     block.id === b.id
                       ? 'bg-burgundy text-white shadow-lg shadow-burgundy/20'
@@ -180,6 +189,7 @@ export default function PaymentPlansClient() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.35 }}
+              data-clarity-unmask="true"
               className="bg-white rounded-3xl border border-sand/60 shadow-xl overflow-hidden"
             >
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-6 md:p-8 border-b border-sand/40">
@@ -199,6 +209,10 @@ export default function PaymentPlansClient() {
                     href={currentPdf}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => {
+                      trackClarityEvent('rate_sheet_pdf_viewed');
+                      setClarityTag('downloaded_plan', `${block.id}_${finish}`);
+                    }}
                     className="flex items-center gap-2 border border-sand text-ink px-5 py-3 rounded-full text-xs uppercase tracking-widest font-bold hover:bg-beige transition-colors"
                   >
                     <ExternalLink size={16} /> Full Screen
@@ -206,6 +220,11 @@ export default function PaymentPlansClient() {
                   <a
                     href={currentPdf}
                     download
+                    onClick={() => {
+                      trackClarityEvent('rate_sheet_pdf_downloaded');
+                      setClarityTag('downloaded_plan', `${block.id}_${finish}`);
+                      upgradeClaritySession('pdf_rate_sheet_download');
+                    }}
                     className="flex items-center gap-2 bg-burgundy text-white px-5 py-3 rounded-full text-xs uppercase tracking-widest font-bold hover:opacity-90 transition-opacity shadow-lg shadow-burgundy/20"
                   >
                     <Download size={16} /> Download
@@ -278,6 +297,11 @@ export default function PaymentPlansClient() {
                               <td className="px-4 py-3 text-right">
                                 <a
                                   href={wa}
+                                  onClick={() => {
+                                    trackClarityEvent('whatsapp_plan_inquiry');
+                                    setClarityTag('inquired_series', `Grey_${row.plotSeries}_${row.marla}`);
+                                    upgradeClaritySession('whatsapp_conversion');
+                                  }}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="inline-flex items-center gap-1.5 rounded-full bg-burgundy/10 px-3 py-1.5 text-xs font-semibold text-burgundy hover:bg-burgundy hover:text-white transition-colors"
@@ -333,6 +357,11 @@ export default function PaymentPlansClient() {
                               <td className="px-4 py-3 text-right">
                                 <a
                                   href={wa}
+                                  onClick={() => {
+                                    trackClarityEvent('whatsapp_plan_inquiry');
+                                    setClarityTag('inquired_series', `Finished_${row.plotSeries}_${row.marla}`);
+                                    upgradeClaritySession('whatsapp_conversion');
+                                  }}
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="inline-flex items-center gap-1.5 rounded-full bg-burgundy/10 px-3 py-1.5 text-xs font-semibold text-burgundy hover:bg-burgundy hover:text-white transition-colors"

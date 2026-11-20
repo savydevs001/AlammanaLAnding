@@ -13,6 +13,7 @@ import LeadForm from '../../components/LeadForm';
 import { ArrowRight, MapPin, Building2, Paintbrush, TrendingUp, CheckCircle2, Video, ListChecks, Package, ScrollText } from 'lucide-react';
 import Link from 'next/link';
 import { CONTACT, whatsappLink } from '../../lib/contact';
+import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../../lib/clarity';
 
 const services = [
   {
@@ -79,6 +80,10 @@ export default function HomeClient() {
             <div className="flex flex-col sm:flex-row gap-3 mb-10">
               <Link
                 href="/payment-plans"
+                onClick={() => {
+                  trackClarityEvent('hero_rates_cta_click');
+                  setClarityTag('cta_source', 'hero_rates');
+                }}
                 className="bg-burgundy text-white px-8 py-4 rounded-full text-sm uppercase tracking-widest font-bold hover:opacity-90 transition-opacity text-center shadow-lg shadow-black/30"
               >
                 See Construction Rates
@@ -87,6 +92,11 @@ export default function HomeClient() {
                 href={whatsappLink('Hello Alammana, I would like to know the construction rate for my plot in Faisal Hills.')}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => {
+                  trackClarityEvent('hero_whatsapp_click');
+                  setClarityTag('cta_source', 'hero_whatsapp');
+                  upgradeClaritySession('hero_whatsapp_inquiry');
+                }}
                 className="bg-white/95 text-ink px-8 py-4 rounded-full text-sm uppercase tracking-widest font-bold hover:bg-white transition-all text-center"
               >
                 Ask on WhatsApp
@@ -483,7 +493,14 @@ export default function HomeClient() {
               </p>
               
               <div className="space-y-8">
-                <a href={`mailto:${CONTACT.email}`} className="flex items-center space-x-6 group">
+                <a
+                  href={`mailto:${CONTACT.email}`}
+                  onClick={() => {
+                    trackClarityEvent('email_link_click');
+                    setClarityTag('email_source', 'home_contact_section');
+                  }}
+                  className="flex items-center space-x-6 group"
+                >
                   <div className="w-12 h-12 rounded-full border border-burgundy flex items-center justify-center group-hover:bg-burgundy group-hover:text-paper transition-all shrink-0">
                     <ArrowRight size={20} />
                   </div>
@@ -492,7 +509,15 @@ export default function HomeClient() {
                     <span className="text-xl font-serif group-hover:text-burgundy transition-colors">{CONTACT.email}</span>
                   </div>
                 </a>
-                <a href={`tel:${CONTACT.phoneHref}`} className="flex items-center space-x-6 group">
+                <a
+                  href={`tel:${CONTACT.phoneHref}`}
+                  onClick={() => {
+                    trackClarityEvent('phone_call_click');
+                    setClarityTag('call_source', 'home_contact_section');
+                    upgradeClaritySession('phone_lead');
+                  }}
+                  className="flex items-center space-x-6 group"
+                >
                   <div className="w-12 h-12 rounded-full border border-burgundy flex items-center justify-center group-hover:bg-burgundy group-hover:text-paper transition-all shrink-0">
                     <ArrowRight size={20} />
                   </div>

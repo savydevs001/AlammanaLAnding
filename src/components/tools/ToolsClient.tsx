@@ -2,11 +2,12 @@
 
 /** Every public calculator's UI. Maths lives in src/lib/calc.ts (verified by
  *  scripts/verify-calc.ts); this file is inputs, results and the enquiry CTA. */
-import { useMemo, useState, type ReactNode } from 'react';
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
 import Link from 'next/link';
 import { MessageCircle, Plus, Trash2 } from 'lucide-react';
 import { CONTACT } from '../../lib/contact';
 import { formatPKR } from '../../lib/pricing';
+import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../../lib/clarity';
 import {
   RATES, affordability, areaToSqft, buildableArea, buyVsBuild, constructionCost, financeOption, instalmentPlan,
   investmentGrowth, materialEstimate, orientationAdvice, partnership, prepayVsInvest, rankHolding, rentalYield,
@@ -46,7 +47,18 @@ function NumberInput({ label, value, onChange, suffix, hint, step, money }: { la
   return (
     <Field label={label} hint={reading ? `= ${reading}${hint ? ` · ${hint}` : ''}` : hint}>
       <div className="relative">
-        <input type="number" inputMode="decimal" step={step ?? 'any'} className={inputCls} value={Number.isFinite(value) ? value : ''} onChange={(e) => onChange(e.target.value === '' ? 0 : Number(e.target.value))} />
+        <input
+          type="number"
+          inputMode="decimal"
+          step={step ?? 'any'}
+          className={inputCls}
+          value={Number.isFinite(value) ? value : ''}
+          onChange={(e) => onChange(e.target.value === '' ? 0 : Number(e.target.value))}
+          onBlur={() => {
+            trackClarityEvent('calculator_input_modified');
+            setClarityTag('last_calculator_input', label);
+          }}
+        />
         {suffix && <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-ink/50">{suffix}</span>}
       </div>
     </Field>
@@ -58,8 +70,16 @@ function Choice<T extends string | number>({ label, value, onChange, options }: 
     <Field label={label}>
       <div className="flex flex-wrap gap-2">
         {options.map((o) => (
-          <button key={String(o.value)} type="button" onClick={() => onChange(o.value)}
-            className={`rounded-full border px-3 py-1.5 text-sm transition ${o.value === value ? 'border-burgundy bg-burgundy text-paper' : 'border-sand bg-paper text-ink hover:border-burgundy'}`}>
+          <button
+            key={String(o.value)}
+            type="button"
+            onClick={() => {
+              onChange(o.value);
+              trackClarityEvent('calculator_option_toggled');
+              setClarityTag('last_calculator_option', `${label}:${String(o.label)}`);
+            }}
+            className={`rounded-full border px-3 py-1.5 text-sm transition ${o.value === value ? 'border-burgundy bg-burgundy text-paper' : 'border-sand bg-paper text-ink hover:border-burgundy'}`}
+          >
             {o.label}
           </button>
         ))}
@@ -82,7 +102,7 @@ function Layout({ inputs, results, note }: { inputs: ReactNode; results: ReactNo
   return (
     <div className="grid gap-6 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)]">
       <div className="space-y-4 rounded-2xl border border-sand/60 bg-paper/70 p-5 md:p-6">{inputs}</div>
-      <div className="space-y-3">
+      <div className="space-y-3" data-clarity-unmask="true">
         {results}
         {note && <p className="text-xs leading-relaxed text-ink/60">{note}</p>}
       </div>
@@ -983,6 +1003,15 @@ const TOOL_UI: Record<string, () => ReactNode> = {
 export default function ToolClient({ slug }: { slug: string }) {
   const meta = toolBySlug(slug);
   const Tool = TOOL_UI[slug];
+
+  useEffect(() => {
+    trackClarityEvent('calculator_opened');
+    setClarityTag('active_calculator', slug);
+    if (meta?.group) {
+      setClarityTag('calculator_group', meta.group);
+    }
+  }, [slug, meta?.group]);
+
   const wa = useMemo(() => `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent(`Assalam o Alaikum, I used your ${meta?.name ?? 'calculator'} and would like exact figures.`)}`, [meta?.name]);
   if (!meta || !Tool) return null;
   return (
@@ -1003,8 +1032,29 @@ export default function ToolClient({ slug }: { slug: string }) {
             <p className="text-paper/70">Our team prices real projects in Faisal Hills and the Twin Cities every day.</p>
           </div>
           <div className="flex flex-wrap gap-3">
-            <a href={wa} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-3 font-semibold text-burgundy-deep"><MessageCircle size={18} /> WhatsApp us</a>
-            <Link href="/contact" className="inline-flex items-center rounded-full border border-paper/40 px-5 py-3">Contact form</Link>
+            <a
+              href={wa}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                trackClarityEvent('whatsapp_tool_inquiry');
+                setClarityTag('tool_inquired', slug);
+                upgradeClaritySession('calculator_whatsapp_conversion');
+              }}
+              className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-3 font-semibold text-burgundy-deep"
+            >
+              <MessageCircle size={18} /> WhatsApp us
+            </a>
+            <Link
+              href="/contact"
+              onClick={() => {
+                trackClarityEvent('tool_contact_form_click');
+                setClarityTag('tool_inquired', slug);
+              }}
+              className="inline-flex items-center rounded-full border border-paper/40 px-5 py-3"
+            >
+              Contact form
+            </Link>
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import LeadForm from '../../../components/LeadForm';
 import { CONTACT, whatsappLink } from '../../../lib/contact';
+import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../../../lib/clarity';
 
 export default function ContactClient() {
   return (
@@ -23,7 +24,16 @@ export default function ContactClient() {
                 </div>
                 <div>
                   <h3 className="text-[12px] uppercase tracking-widest font-bold text-ink/40 mb-1">Electronic Mail</h3>
-                  <a href="mailto:rabta@alammana.pk" className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors break-all">rabta@alammana.pk</a>
+                  <a
+                    href="mailto:rabta@alammana.pk"
+                    onClick={() => {
+                      trackClarityEvent('email_link_click');
+                      setClarityTag('email_source', 'contact_page');
+                    }}
+                    className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors break-all"
+                  >
+                    rabta@alammana.pk
+                  </a>
                 </div>
               </div>
 
@@ -34,8 +44,28 @@ export default function ContactClient() {
                 <div>
                   <h3 className="text-[12px] uppercase tracking-widest font-bold text-ink/40 mb-1">Direct Lines</h3>
                   <div className="flex flex-col space-y-1">
-                    <a href={`tel:${CONTACT.phoneHref}`} className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors">{CONTACT.phoneDisplay}</a>
-                    <a href={`tel:${CONTACT.phoneHrefAlt}`} className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors">{CONTACT.phoneDisplayAlt}</a>
+                    <a
+                      href={`tel:${CONTACT.phoneHref}`}
+                      onClick={() => {
+                        trackClarityEvent('phone_call_click');
+                        setClarityTag('call_source', 'contact_page_primary');
+                        upgradeClaritySession('phone_lead');
+                      }}
+                      className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors"
+                    >
+                      {CONTACT.phoneDisplay}
+                    </a>
+                    <a
+                      href={`tel:${CONTACT.phoneHrefAlt}`}
+                      onClick={() => {
+                        trackClarityEvent('phone_call_click');
+                        setClarityTag('call_source', 'contact_page_alt');
+                        upgradeClaritySession('phone_lead');
+                      }}
+                      className="text-xl md:text-2xl font-serif hover:text-burgundy transition-colors"
+                    >
+                      {CONTACT.phoneDisplayAlt}
+                    </a>
                   </div>
                 </div>
               </div>

@@ -8,6 +8,12 @@ import { CONTACT, whatsappLink, mailtoLink } from '../lib/contact';
 import { stripLocale } from '../lib/i18n';
 import { getDictionary } from '../lib/dictionaries';
 import { submitLead } from '../lib/leads';
+import {
+  trackClarityEvent,
+  setClarityTag,
+  identifyClarityUser,
+  upgradeClaritySession,
+} from '../lib/clarity';
 
 /**
  * Lead capture form.
@@ -46,6 +52,15 @@ export default function LeadForm({
   const [company, setCompany] = useState('');
   type Status = 'idle' | 'sending' | 'sent' | 'failed';
   const [status, setStatus] = useState<Status>('idle');
+  const [hasStarted, setHasStarted] = useState(false);
+
+  const handleFieldFocus = () => {
+    if (!hasStarted) {
+      setHasStarted(true);
+      trackClarityEvent('lead_form_started');
+      setClarityTag('form_name', subjectPrefix);
+    }
+  };
 
   const set = (k: string, v: string) => setForm(p => ({ ...p, [k]: v }));
 
@@ -67,6 +82,10 @@ export default function LeadForm({
     if (status === 'sending') return;
     setStatus('sending');
 
+    trackClarityEvent('lead_form_submit_attempt');
+    setClarityTag('form_name', subjectPrefix);
+    setClarityTag('lead_interest', form.interest);
+
     const ok = await submitLead({
       fullName: form.name,
       phone: form.phone,
@@ -77,6 +96,14 @@ export default function LeadForm({
       context,
       company,
     });
+
+    if (ok) {
+      trackClarityEvent('lead_form_success');
+      identifyClarityUser(form.phone || form.email || form.name, undefined, undefined, form.name);
+      upgradeClaritySession('lead_submission');
+    } else {
+      trackClarityEvent('lead_form_failed');
+    }
 
     setStatus(ok ? 'sent' : 'failed');
   }
@@ -125,6 +152,10 @@ export default function LeadForm({
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <a
             href={whatsappLink(compose())}
+            onClick={() => {
+              trackClarityEvent('lead_form_whatsapp_fallback');
+              upgradeClaritySession('whatsapp_conversion');
+            }}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#25D366] text-white px-6 py-3 rounded-full text-xs uppercase tracking-widest font-bold"
@@ -173,7 +204,9 @@ export default function LeadForm({
           <label htmlFor="lead-name" className={labelClass}>{t.fullName}</label>
           <input
             id="lead-name" name="name" type="text" required autoComplete="name"
-            value={form.name} onChange={e => set('name', e.target.value)}
+            value={form.name}
+            onFocus={handleFieldFocus}
+            onChange={e => set('name', e.target.value)}
             placeholder={t.namePlaceholder} className={inputClass}
           />
         </div>
@@ -181,7 +214,9 @@ export default function LeadForm({
           <label htmlFor="lead-phone" className={labelClass}>{t.phone}</label>
           <input
             id="lead-phone" name="phone" type="tel" required autoComplete="tel" dir="ltr"
-            value={form.phone} onChange={e => set('phone', e.target.value)}
+            value={form.phone}
+            onFocus={handleFieldFocus}
+            onChange={e => set('phone', e.target.value)}
             placeholder={t.phonePlaceholder} className={inputClass}
           />
         </div>
@@ -191,7 +226,9 @@ export default function LeadForm({
         <label htmlFor="lead-email" className={labelClass}>{t.email} <span className="normal-case tracking-normal font-normal">{t.emailOptional}</span></label>
         <input
           id="lead-email" name="email" type="email" autoComplete="email" dir="ltr"
-          value={form.email} onChange={e => set('email', e.target.value)}
+          value={form.email}
+          onFocus={handleFieldFocus}
+          onChange={e => set('email', e.target.value)}
           placeholder={t.emailPlaceholder} className={inputClass}
         />
       </div>
@@ -200,7 +237,12 @@ export default function LeadForm({
         <label htmlFor="lead-interest" className={labelClass}>{t.interest}</label>
         <select
           id="lead-interest" name="interest"
-          value={form.interest} onChange={e => set('interest', e.target.value)}
+          value={form.interest}
+          onFocus={handleFieldFocus}
+          onChange={e => {
+            set('interest', e.target.value);
+            setClarityTag('lead_interest', e.target.value);
+          }}
           className={`${inputClass} appearance-none`}
         >
           {interests.map(i => <option key={i} value={i}>{i}</option>)}
@@ -211,7 +253,9 @@ export default function LeadForm({
         <label htmlFor="lead-message" className={labelClass}>{t.message}</label>
         <textarea
           id="lead-message" name="message" rows={4}
-          value={form.message} onChange={e => set('message', e.target.value)}
+          value={form.message}
+          onFocus={handleFieldFocus}
+          onChange={e => set('message', e.target.value)}
           placeholder={t.messagePlaceholder}
           className={`${inputClass} resize-none`}
         />

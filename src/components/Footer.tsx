@@ -6,6 +6,7 @@ import { Mail, Phone, MapPin, Instagram, Facebook } from 'lucide-react';
 import { CONTACT } from '../lib/contact';
 import { stripLocale, localeHref } from '../lib/i18n';
 import { getPageDictionary } from '../lib/dictionaries.pages';
+import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../lib/clarity';
 
 /**
  * Reads its locale off the URL for the same reason the navbar does — one
@@ -57,6 +58,7 @@ export default function Footer() {
             <div className="flex gap-4">
               <a
                 href="https://www.instagram.com/alammanapk/"
+                onClick={() => trackClarityEvent('social_instagram_click')}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Alammana Developers on Instagram"
@@ -66,6 +68,7 @@ export default function Footer() {
               </a>
               <a
                 href="https://www.facebook.com/alammana.pk"
+                onClick={() => trackClarityEvent('social_facebook_click')}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Alammana Developers on Facebook"
@@ -103,7 +106,11 @@ export default function Footer() {
             <ul className="space-y-6 text-beige/70 text-sm">
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-sand shrink-0" />
-                <a href={`mailto:${CONTACT.email}`} className="font-semibold hover:text-white">
+                <a
+                  href={`mailto:${CONTACT.email}`}
+                  onClick={() => trackClarityEvent('email_link_click')}
+                  className="font-semibold hover:text-white"
+                >
                   {CONTACT.email}
                 </a>
               </li>
@@ -112,12 +119,22 @@ export default function Footer() {
                 <div className="flex flex-col gap-1">
                   <a
                     href={`tel:${CONTACT.phoneHref}`}
+                    onClick={() => {
+                      trackClarityEvent('phone_call_click');
+                      setClarityTag('call_source', 'footer_primary');
+                      upgradeClaritySession('phone_lead');
+                    }}
                     className="font-semibold hover:text-white ltr-nums"
                   >
                     {CONTACT.phoneDisplay}
                   </a>
                   <a
                     href={`tel:${CONTACT.phoneHrefAlt}`}
+                    onClick={() => {
+                      trackClarityEvent('phone_call_click');
+                      setClarityTag('call_source', 'footer_alt');
+                      upgradeClaritySession('phone_lead');
+                    }}
                     className="font-semibold hover:text-white ltr-nums text-xs text-beige/60"
                   >
                     {CONTACT.phoneDisplayAlt}

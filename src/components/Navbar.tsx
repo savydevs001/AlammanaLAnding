@@ -9,6 +9,7 @@ import { CONTACT } from '../lib/contact';
 import { stripLocale, localeHref } from '../lib/i18n';
 import { getDictionary } from '../lib/dictionaries';
 import LanguageSwitcher from './LanguageSwitcher';
+import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../lib/clarity';
 
 /**
  * The navbar reads its own locale off the URL rather than taking it as a prop.
@@ -86,6 +87,11 @@ export default function Navbar() {
             <LanguageSwitcher compact />
             <a
               href={`tel:${CONTACT.phoneHref}`}
+              onClick={() => {
+                trackClarityEvent('phone_call_click');
+                setClarityTag('call_source', 'navbar_desktop');
+                upgradeClaritySession('phone_lead');
+              }}
               className="flex items-center gap-1.5 text-xs 2xl:text-sm font-bold text-burgundy hover:opacity-70 transition-opacity whitespace-nowrap py-2"
               title={CONTACT.phoneDisplay}
             >
@@ -94,6 +100,7 @@ export default function Navbar() {
             </a>
             <Link
               href={localeHref('/contact', locale)}
+              onClick={() => trackClarityEvent('enquire_nav_click')}
               className="bg-burgundy text-white px-4 py-2 2xl:px-5 2xl:py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider hover:opacity-90 transition-opacity whitespace-nowrap shadow-xs"
             >
               {t.nav.enquire}
@@ -105,6 +112,11 @@ export default function Navbar() {
           <div className="flex items-center gap-1 xl:hidden">
             <a
               href={`tel:${CONTACT.phoneHref}`}
+              onClick={() => {
+                trackClarityEvent('phone_call_click');
+                setClarityTag('call_source', 'mobile_header');
+                upgradeClaritySession('phone_lead');
+              }}
               aria-label={`${t.nav.call} — ${CONTACT.phoneDisplay}`}
               className="flex items-center justify-center w-11 h-11 rounded-full bg-burgundy text-white"
             >

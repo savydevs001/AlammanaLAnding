@@ -17,6 +17,7 @@ import {
 import { FINISHING_MATERIALS, FINISHING_TIERS, type MaterialSpecItem } from '../data/finishingMaterialsData';
 import { fetchLiveMaterials } from '../lib/publicPricing';
 import { whatsappLink } from '../lib/contact';
+import { trackClarityEvent, setClarityTag, upgradeClaritySession } from '../lib/clarity';
 
 export default function FinishingMaterialsMatrix() {
   const [materials, setMaterials] = useState<MaterialSpecItem[]>(FINISHING_MATERIALS);
@@ -121,6 +122,11 @@ export default function FinishingMaterialsMatrix() {
               href={whatsappLink('Assalam o Alaikum, I would like to inquire about the Executive Finishing Tier specifications and floor plans.')}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                trackClarityEvent('whatsapp_materials_inquiry');
+                setClarityTag('active_finishing_tier', 'executive');
+                upgradeClaritySession('materials_executive_consult');
+              }}
               className="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-burgundy/30 py-3 text-xs uppercase tracking-widest font-bold text-burgundy hover:bg-burgundy hover:text-white transition-all text-center"
             >
               <MessageCircle size={14} /> Consult Executive Tier
@@ -173,6 +179,11 @@ export default function FinishingMaterialsMatrix() {
               href={whatsappLink('Assalam o Alaikum, I would like to inquire about the Premium Finishing Tier specifications and turn-key handover.')}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                trackClarityEvent('whatsapp_materials_inquiry');
+                setClarityTag('active_finishing_tier', 'premium');
+                upgradeClaritySession('materials_premium_consult');
+              }}
               className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-white text-burgundy py-3 text-xs uppercase tracking-widest font-bold hover:bg-beige transition-all shadow-md text-center"
             >
               <MessageCircle size={14} /> Book Premium Finishing
@@ -222,6 +233,11 @@ export default function FinishingMaterialsMatrix() {
               href={whatsappLink('Assalam o Alaikum, I would like to inquire about the Luxury Finishing Tier specifications for custom villa construction.')}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                trackClarityEvent('whatsapp_materials_inquiry');
+                setClarityTag('active_finishing_tier', 'luxury');
+                upgradeClaritySession('materials_luxury_consult');
+              }}
               className="mt-6 inline-flex items-center justify-center gap-2 rounded-full border border-burgundy/30 py-3 text-xs uppercase tracking-widest font-bold text-burgundy hover:bg-burgundy hover:text-white transition-all text-center"
             >
               <MessageCircle size={14} /> Consult Luxury Tier
@@ -234,7 +250,11 @@ export default function FinishingMaterialsMatrix() {
           <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"
-              onClick={() => setSelectedCategory('all')}
+              onClick={() => {
+                setSelectedCategory('all');
+                trackClarityEvent('materials_category_switched');
+                setClarityTag('material_category', 'all');
+              }}
               className={`rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wider transition ${
                 selectedCategory === 'all'
                   ? 'bg-burgundy text-white shadow-md shadow-burgundy/20'
@@ -247,7 +267,11 @@ export default function FinishingMaterialsMatrix() {
               <button
                 key={cat}
                 type="button"
-                onClick={() => setSelectedCategory(cat)}
+                onClick={() => {
+                  setSelectedCategory(cat);
+                  trackClarityEvent('materials_category_switched');
+                  setClarityTag('material_category', cat);
+                }}
                 className={`rounded-full px-4 py-2 text-xs font-bold uppercase tracking-wider transition ${
                   selectedCategory === cat
                     ? 'bg-burgundy text-white shadow-md shadow-burgundy/20'
@@ -265,14 +289,21 @@ export default function FinishingMaterialsMatrix() {
               type="text"
               placeholder="Search materials, brands (e.g. Cables, Grohe, Marble)…"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                const val = e.target.value;
+                setSearchQuery(val);
+                if (val.trim().length >= 3) {
+                  trackClarityEvent('materials_searched');
+                  setClarityTag('material_search_query', val.trim().slice(0, 50));
+                }
+              }}
               className="w-full rounded-full border border-sand bg-white py-2.5 pl-10 pr-4 text-xs text-ink outline-none transition focus:border-burgundy focus:ring-1 focus:ring-burgundy"
             />
           </div>
         </div>
 
         {/* Specification Matrix Table */}
-        <div className="overflow-hidden rounded-3xl border border-sand/70 bg-white shadow-xl">
+        <div className="overflow-hidden rounded-3xl border border-sand/70 bg-white shadow-xl" data-clarity-unmask="true">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm text-ink">
               <thead className="border-b border-sand bg-beige/60 text-[11px] font-bold uppercase tracking-wider text-burgundy">
@@ -315,6 +346,11 @@ export default function FinishingMaterialsMatrix() {
                           href={wa}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() => {
+                            trackClarityEvent('whatsapp_materials_item_inquiry');
+                            setClarityTag('inquired_material', item.name);
+                            upgradeClaritySession('material_item_inquiry');
+                          }}
                           className="inline-flex items-center gap-1 rounded-full bg-sand/30 px-3 py-1.5 text-xs font-semibold text-burgundy hover:bg-burgundy hover:text-white transition-colors"
                           title="Ask our engineering team about this material"
                         >
@@ -346,6 +382,10 @@ export default function FinishingMaterialsMatrix() {
               href="/payment-plans/faisal-hills-block-a-finished-house-payment-plan.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => {
+                trackClarityEvent('materials_brochure_download');
+                upgradeClaritySession('brochure_download');
+              }}
               className="inline-flex items-center gap-1.5 font-bold text-burgundy hover:underline shrink-0"
             >
               Download Complete Official Rate Brochure <ArrowRight size={14} />
