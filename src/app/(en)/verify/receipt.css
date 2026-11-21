@@ -115,8 +115,9 @@
   border-bottom: none;
 }
 .receipt-field {
-  display: grid;
-  grid-template-columns: 38% minmax(0, 62%);
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
   flex: 1 1 50%;
   min-width: 0;
 }
@@ -125,7 +126,6 @@
 }
 .receipt-field:only-child {
   flex: 1 1 100%;
-  grid-template-columns: 19% minmax(0, 81%);
 }
 .receipt-field dt {
   margin: 0;
@@ -139,6 +139,11 @@
   background: #FAF6EF;
   display: flex;
   align-items: center;
+  flex: 0 0 100px;
+  box-sizing: border-box;
+}
+.receipt-field:only-child dt {
+  flex: 0 0 115px;
 }
 .receipt-field dd {
   min-width: 0;
@@ -148,6 +153,37 @@
   white-space: pre-wrap;
   display: flex;
   align-items: center;
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+
+/* Asymmetric grid column sizing so long content like Address is never squished */
+.receipt-field-mobile {
+  flex: 0 0 32% !important;
+}
+.receipt-field-mobile dt {
+  flex: 0 0 65px !important;
+}
+
+.receipt-field-address {
+  flex: 1 1 68% !important;
+}
+.receipt-field-address dt {
+  flex: 0 0 75px !important;
+}
+
+.receipt-field-short-val {
+  flex: 0 0 42% !important;
+}
+.receipt-field-short-val dt {
+  flex: 0 0 65px !important;
+}
+
+.receipt-field-long-lbl {
+  flex: 1 1 58% !important;
+}
+.receipt-field-long-lbl dt {
+  flex: 0 0 145px !important;
 }
 
 .receipt-note {

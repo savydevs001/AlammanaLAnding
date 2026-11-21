@@ -546,16 +546,16 @@ export default function VerifyClient() {
                     <h3>Property Details</h3>
                     <dl>
                       <div className="receipt-row">
-                        <div className="receipt-field"><dt>PROJECT / SOCIETY</dt><dd>{fieldVal(s.project, 'Faisal Hills')}</dd></div>
-                        <div className="receipt-field"><dt>BLOCK</dt><dd>{fieldVal(s.block)}</dd></div>
+                        <div className="receipt-field receipt-field-long-lbl"><dt>PROJECT / SOCIETY</dt><dd>{fieldVal(s.project, 'Faisal Hills')}</dd></div>
+                        <div className="receipt-field receipt-field-short-val"><dt>BLOCK</dt><dd>{fieldVal(s.block)}</dd></div>
                       </div>
                       <div className="receipt-row">
-                        <div className="receipt-field"><dt>PLOT / HOUSE NO.</dt><dd>{fieldVal(s.plotNo)}</dd></div>
-                        <div className="receipt-field"><dt>SIZE</dt><dd>{fieldVal(s.size)}</dd></div>
+                        <div className="receipt-field receipt-field-long-lbl"><dt>PLOT / HOUSE NO.</dt><dd>{fieldVal(s.plotNo)}</dd></div>
+                        <div className="receipt-field receipt-field-short-val"><dt>SIZE</dt><dd>{fieldVal(s.size)}</dd></div>
                       </div>
                       <div className="receipt-row">
                         <div className="receipt-field"><dt>STATUS</dt><dd>{fieldVal(s.statusOther || s.status)}</dd></div>
-                        <div className="receipt-field"><dt>REG. MEMBERSHIP NO.</dt><dd>{fieldVal(s.regMembershipNo)}</dd></div>
+                        <div className="receipt-field receipt-field-long-lbl"><dt>REG. MEMBERSHIP NO.</dt><dd>{fieldVal(s.regMembershipNo)}</dd></div>
                       </div>
                       <div className="receipt-row">
                         <div className="receipt-field"><dt>MEASURING</dt><dd>{fieldVal(s.measuring)}</dd></div>
@@ -572,8 +572,8 @@ export default function VerifyClient() {
                         <div className="receipt-field"><dt>CNIC</dt><dd>{fieldVal(s.sellerCnic)}</dd></div>
                       </div>
                       <div className="receipt-row">
-                        <div className="receipt-field"><dt>MOBILE</dt><dd>{fieldVal(s.sellerMobile)}</dd></div>
-                        <div className="receipt-field"><dt>ADDRESS</dt><dd>{fieldVal(s.sellerAddress)}</dd></div>
+                        <div className="receipt-field receipt-field-mobile"><dt>MOBILE</dt><dd>{fieldVal(s.sellerMobile)}</dd></div>
+                        <div className="receipt-field receipt-field-address"><dt>ADDRESS</dt><dd>{fieldVal(s.sellerAddress)}</dd></div>
                       </div>
                     </dl>
                   </section>
@@ -587,8 +587,8 @@ export default function VerifyClient() {
                         <div className="receipt-field"><dt>CNIC</dt><dd>{fieldVal(s.purchaserCnic, '33303-7925690-7')}</dd></div>
                       </div>
                       <div className="receipt-row">
-                        <div className="receipt-field"><dt>MOBILE</dt><dd>{fieldVal(s.purchaserMobile, '+923358078262')}</dd></div>
-                        <div className="receipt-field"><dt>ADDRESS</dt><dd>{fieldVal(s.purchaserAddress, 'Alammana developers vertical arcade faisal hills')}</dd></div>
+                        <div className="receipt-field receipt-field-mobile"><dt>MOBILE</dt><dd>{fieldVal(s.purchaserMobile, '+923358078262')}</dd></div>
+                        <div className="receipt-field receipt-field-address"><dt>ADDRESS</dt><dd>{fieldVal(s.purchaserAddress, 'Alammana developers vertical arcade faisal hills')}</dd></div>
                       </div>
                     </dl>
                   </section>
