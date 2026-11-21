@@ -18,3 +18,6 @@
 # Legacy thin blog posts replaced by the Aug 2026 article programme
 /blog/future-of-islamabad-real-estate  /blog/investing-in-faisal-hills   301
 /blog/modern-architectural-trends      /blog                            301
+
+# Receipt verification SPA route rewrite for dynamic codes
+/verify/*  /verify/  200
