@@ -20,4 +20,4 @@
 /blog/modern-architectural-trends      /blog                            301
 
 # Receipt verification SPA route rewrite for dynamic codes
-/verify/*  /verify/  200
+/verify/*  /verify  200

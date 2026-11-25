@@ -241,6 +241,8 @@ export default function VerifyClient() {
     setIsCameraActive(false);
   }, []);
 
+  useEffect(() => stopCamera, [stopCamera]);
+
   // Handle scanned code
   const handleScannedCode = useCallback((rawCode: string) => {
     const extracted = extractVerifyCode(rawCode);
@@ -718,15 +720,16 @@ export default function VerifyClient() {
 
               {/* Camera Stream Viewport */}
               <div className="relative mx-auto w-full max-w-sm aspect-square rounded-2xl overflow-hidden bg-black border-2 border-[#D4B896] shadow-inner flex items-center justify-center">
+                {/* Always mounted so videoRef exists when the stream arrives */}
+                <video
+                  ref={videoRef}
+                  playsInline
+                  muted
+                  autoPlay
+                  className={isCameraActive ? 'w-full h-full object-cover' : 'hidden'}
+                />
                 {isCameraActive ? (
                   <>
-                    <video
-                      ref={videoRef}
-                      playsInline
-                      muted
-                      autoPlay
-                      className="w-full h-full object-cover"
-                    />
                     {/* Targeting reticle and animated laser scan bar */}
                     <div className="absolute inset-8 border-2 border-dashed border-[#C9A84C]/90 rounded-xl pointer-events-none flex flex-col justify-between p-2">
                       <div className="flex justify-between">
