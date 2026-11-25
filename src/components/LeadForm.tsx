@@ -8,6 +8,7 @@ import { CONTACT, whatsappLink, mailtoLink } from '../lib/contact';
 import { stripLocale } from '../lib/i18n';
 import { getDictionary } from '../lib/dictionaries';
 import { submitLead } from '../lib/leads';
+import { LandingPhoneInput, isValidPhoneNumber } from './LandingPhoneInput';
 import {
   trackClarityEvent,
   setClarityTag,
@@ -53,6 +54,7 @@ export default function LeadForm({
   type Status = 'idle' | 'sending' | 'sent' | 'failed';
   const [status, setStatus] = useState<Status>('idle');
   const [hasStarted, setHasStarted] = useState(false);
+  const [phoneError, setPhoneError] = useState('');
 
   const handleFieldFocus = () => {
     if (!hasStarted) {
@@ -80,6 +82,11 @@ export default function LeadForm({
   async function submit(e: React.FormEvent) {
     e.preventDefault();
     if (status === 'sending') return;
+    if (!form.phone || !isValidPhoneNumber(form.phone)) {
+      setPhoneError('Please enter a valid international phone number.');
+      return;
+    }
+    setPhoneError('');
     setStatus('sending');
 
     trackClarityEvent('lead_form_submit_attempt');
@@ -212,13 +219,14 @@ export default function LeadForm({
         </div>
         <div>
           <label htmlFor="lead-phone" className={labelClass}>{t.phone}</label>
-          <input
-            id="lead-phone" name="phone" type="tel" required autoComplete="tel" dir="ltr"
+          <LandingPhoneInput
+            id="lead-phone" name="phone" required
             value={form.phone}
             onFocus={handleFieldFocus}
-            onChange={e => set('phone', e.target.value)}
+            onChange={(v) => { set('phone', v); if (phoneError) setPhoneError(''); }}
             placeholder={t.phonePlaceholder} className={inputClass}
           />
+          {phoneError && <p className="mt-1 text-xs text-red-600">{phoneError}</p>}
         </div>
       </div>
 
